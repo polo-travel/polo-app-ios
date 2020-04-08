@@ -1,0 +1,6 @@
+framework module Pods_PoloTravel {
+  umbrella header "Pods-PoloTravel-umbrella.h"
+
+  export *
+  module * { export * }
+}
