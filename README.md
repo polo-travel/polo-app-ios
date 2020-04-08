@@ -27,3 +27,19 @@ $ pod install
 ├── Podfile.lock
 
 ```
+
+### Pull requests process
+
+To edit the application, you should open a pull request
+
+```Process
+st=>start: Open pull request
+op=>operation: Review by the Polo Team
+cond=>condition: Pull Request approved or not ?
+e=>end: Merge pull request on dev branch
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+
+```
