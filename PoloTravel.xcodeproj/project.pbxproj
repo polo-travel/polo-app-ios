@@ -165,11 +165,11 @@
 		7BCDA50C243E090600E9C4B6 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */,
+				7BCDA4ED243DF94300E9C4B6 /* Info.plist */,
 				7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */,
 				7BCDA4E5243DF94100E9C4B6 /* Main.storyboard */,
 				7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */,
-				7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */,
-				7BCDA4ED243DF94300E9C4B6 /* Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -507,7 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PoloTravel/Info.plist;
+				INFOPLIST_FILE = PoloTravel/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,7 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PoloTravel/Info.plist;
+				INFOPLIST_FILE = PoloTravel/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
