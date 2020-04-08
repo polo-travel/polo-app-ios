@@ -34,7 +34,7 @@ We work on the develop branch, a stable version must be on the master branch
 To each modifications, you have to work on a specific branch before merging to develop
 We use the GitHub Workflow
 
-####Branch naming
+#### Branch naming
 
 The convention for this app is <type>-<subject>
 Different types are : 
@@ -59,12 +59,4 @@ Pull request name must be like that : <type>(scope): <description of changes>
 4. Wait the approved of everybody
 5. Merge your branch into the "develop branch"
 
-```bash
-$ npm install
-```
-2. launch the app by entry point app.js
-```bash
-$ node app
-```
-3. launch [localhost:8080](localhost:8080) in local to display the client
 
