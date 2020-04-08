@@ -113,14 +113,13 @@
 		7BCDA4DE243DF94100E9C4B6 /* PoloTravel */ = {
 			isa = PBXGroup;
 			children = (
+				7BCDA50C243E090600E9C4B6 /* SupportingFiles */,
+				7BCDA50B243E08F800E9C4B6 /* ViewControllers */,
+				7BCDA50A243E08EF00E9C4B6 /* ViewModels */,
+				7BCDA509243E08E500E9C4B6 /* Protocols */,
+				7BCDA508243E08DB00E9C4B6 /* Extensions */,
 				7BCDA503243DF9CD00E9C4B6 /* GoogleService-Info.plist */,
-				7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */,
 				7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */,
-				7BCDA4E3243DF94100E9C4B6 /* ViewController.swift */,
-				7BCDA4E5243DF94100E9C4B6 /* Main.storyboard */,
-				7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */,
-				7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */,
-				7BCDA4ED243DF94300E9C4B6 /* Info.plist */,
 			);
 			path = PoloTravel;
 			sourceTree = "<group>";
@@ -132,6 +131,47 @@
 				7BCDA4F8243DF94300E9C4B6 /* Info.plist */,
 			);
 			path = PoloTravelTests;
+			sourceTree = "<group>";
+		};
+		7BCDA508243E08DB00E9C4B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7BCDA509243E08E500E9C4B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7BCDA50A243E08EF00E9C4B6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7BCDA50B243E08F800E9C4B6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BCDA4E3243DF94100E9C4B6 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7BCDA50C243E090600E9C4B6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */,
+				7BCDA4E5243DF94100E9C4B6 /* Main.storyboard */,
+				7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */,
+				7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */,
+				7BCDA4ED243DF94300E9C4B6 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
