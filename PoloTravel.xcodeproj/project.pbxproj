@@ -22,6 +22,13 @@
 		7BD538EE2449E9AA00AD9CB3 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */; };
 		7BD538EF2449E9AA00AD9CB3 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538ED2449E9AA00AD9CB3 /* Gilroy-Bold.ttf */; };
 		7BD538F12449EA2900AD9CB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538F02449EA2900AD9CB3 /* GoogleService-Info.plist */; };
+		7BD538F32449ED3B00AD9CB3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538F22449ED3B00AD9CB3 /* RegistrationViewController.swift */; };
+		7BD538F62449F48A00AD9CB3 /* Onboarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538F52449F48A00AD9CB3 /* Onboarding1ViewController.swift */; };
+		7BD538F82449F4A600AD9CB3 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538F72449F4A600AD9CB3 /* Onboarding2ViewController.swift */; };
+		7BD538FA2449F4B100AD9CB3 /* Onboarding3ViewController..swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538F92449F4B100AD9CB3 /* Onboarding3ViewController..swift */; };
+		7BD538FC2449F4BB00AD9CB3 /* Onboarding4ViewController..swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538FB2449F4BB00AD9CB3 /* Onboarding4ViewController..swift */; };
+		7BD538FE2449F4C900AD9CB3 /* Onboarding5ViewController..swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538FD2449F4C900AD9CB3 /* Onboarding5ViewController..swift */; };
+		7BD539002449F86900AD9CB3 /* RedBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538FF2449F86900AD9CB3 /* RedBasicButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +63,13 @@
 		7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
 		7BD538ED2449E9AA00AD9CB3 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		7BD538F02449EA2900AD9CB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7BD538F22449ED3B00AD9CB3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		7BD538F52449F48A00AD9CB3 /* Onboarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1ViewController.swift; sourceTree = "<group>"; };
+		7BD538F72449F4A600AD9CB3 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
+		7BD538F92449F4B100AD9CB3 /* Onboarding3ViewController..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3ViewController..swift; sourceTree = "<group>"; };
+		7BD538FB2449F4BB00AD9CB3 /* Onboarding4ViewController..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4ViewController..swift; sourceTree = "<group>"; };
+		7BD538FD2449F4C900AD9CB3 /* Onboarding5ViewController..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding5ViewController..swift; sourceTree = "<group>"; };
+		7BD538FF2449F86900AD9CB3 /* RedBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedBasicButton.swift; sourceTree = "<group>"; };
 		BC401F2D41B8D63FD49CC572 /* Pods-PoloTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravel.release.xcconfig"; path = "Target Support Files/Pods-PoloTravel/Pods-PoloTravel.release.xcconfig"; sourceTree = "<group>"; };
 		D9C97D5B5D545292F277E973 /* Pods-PoloTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravel.debug.xcconfig"; path = "Target Support Files/Pods-PoloTravel/Pods-PoloTravel.debug.xcconfig"; sourceTree = "<group>"; };
 		FB0E3DB6CC32C7391168F535 /* Pods-PoloTravelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravelTests.release.xcconfig"; path = "Target Support Files/Pods-PoloTravelTests/Pods-PoloTravelTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,7 +184,9 @@
 		7BCDA50B243E08F800E9C4B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7BD538F42449F45F00AD9CB3 /* OnboardingViewControllers */,
 				7BCDA4E3243DF94100E9C4B6 /* ViewController.swift */,
+				7BD538F22449ED3B00AD9CB3 /* RegistrationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +226,7 @@
 			children = (
 				7BD538DA2449B9BA00AD9CB3 /* LightBasicButton.swift */,
 				7BD538E32449C1F300AD9CB3 /* DarkBasicButton.swift */,
+				7BD538FF2449F86900AD9CB3 /* RedBasicButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -229,6 +246,18 @@
 				7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7BD538F42449F45F00AD9CB3 /* OnboardingViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BD538F52449F48A00AD9CB3 /* Onboarding1ViewController.swift */,
+				7BD538F72449F4A600AD9CB3 /* Onboarding2ViewController.swift */,
+				7BD538F92449F4B100AD9CB3 /* Onboarding3ViewController..swift */,
+				7BD538FB2449F4BB00AD9CB3 /* Onboarding4ViewController..swift */,
+				7BD538FD2449F4C900AD9CB3 /* Onboarding5ViewController..swift */,
+			);
+			path = OnboardingViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,8 +433,15 @@
 			files = (
 				7BD538DB2449B9BA00AD9CB3 /* LightBasicButton.swift in Sources */,
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
+				7BD538FC2449F4BB00AD9CB3 /* Onboarding4ViewController..swift in Sources */,
+				7BD539002449F86900AD9CB3 /* RedBasicButton.swift in Sources */,
+				7BD538FA2449F4B100AD9CB3 /* Onboarding3ViewController..swift in Sources */,
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
+				7BD538F82449F4A600AD9CB3 /* Onboarding2ViewController.swift in Sources */,
 				7BD538DD2449BB0F00AD9CB3 /* ColorConstants.swift in Sources */,
+				7BD538F32449ED3B00AD9CB3 /* RegistrationViewController.swift in Sources */,
+				7BD538FE2449F4C900AD9CB3 /* Onboarding5ViewController..swift in Sources */,
+				7BD538F62449F48A00AD9CB3 /* Onboarding1ViewController.swift in Sources */,
 				7BD538E42449C1F300AD9CB3 /* DarkBasicButton.swift in Sources */,
 				7BCDA4E2243DF94100E9C4B6 /* SceneDelegate.swift in Sources */,
 			);
