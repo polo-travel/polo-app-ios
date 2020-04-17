@@ -16,12 +16,12 @@
 		7BCDA4E9243DF94300E9C4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */; };
 		7BCDA4EC243DF94300E9C4B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */; };
 		7BCDA4F7243DF94300E9C4B6 /* PoloTravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4F6243DF94300E9C4B6 /* PoloTravelTests.swift */; };
-		7BCDA504243DF9CD00E9C4B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDA503243DF9CD00E9C4B6 /* GoogleService-Info.plist */; };
 		7BD538DB2449B9BA00AD9CB3 /* LightBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538DA2449B9BA00AD9CB3 /* LightBasicButton.swift */; };
 		7BD538DD2449BB0F00AD9CB3 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538DC2449BB0F00AD9CB3 /* ColorConstants.swift */; };
 		7BD538E42449C1F300AD9CB3 /* DarkBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538E32449C1F300AD9CB3 /* DarkBasicButton.swift */; };
-		7BD538E82449D46900AD9CB3 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538E62449D46900AD9CB3 /* Gilroy-Bold.ttf */; };
-		7BD538E92449D46900AD9CB3 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538E72449D46900AD9CB3 /* Gilroy-Medium.ttf */; };
+		7BD538EE2449E9AA00AD9CB3 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */; };
+		7BD538EF2449E9AA00AD9CB3 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538ED2449E9AA00AD9CB3 /* Gilroy-Bold.ttf */; };
+		7BD538F12449EA2900AD9CB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538F02449EA2900AD9CB3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +50,12 @@
 		7BCDA4F2243DF94300E9C4B6 /* PoloTravelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoloTravelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCDA4F6243DF94300E9C4B6 /* PoloTravelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoloTravelTests.swift; sourceTree = "<group>"; };
 		7BCDA4F8243DF94300E9C4B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BCDA503243DF9CD00E9C4B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7BD538DA2449B9BA00AD9CB3 /* LightBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightBasicButton.swift; sourceTree = "<group>"; };
 		7BD538DC2449BB0F00AD9CB3 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		7BD538E32449C1F300AD9CB3 /* DarkBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkBasicButton.swift; sourceTree = "<group>"; };
-		7BD538E62449D46900AD9CB3 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Bold.ttf"; path = "../../../../../../../../../../Downloads/gilroy-bold-cufonfonts/Gilroy-Bold.ttf"; sourceTree = "<group>"; };
-		7BD538E72449D46900AD9CB3 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Medium.ttf"; path = "../../../../../../../../../../Downloads/OnlineWebFonts_COM_df6b324d45915577e8a1998049b3680a/Gilroy-Medium/Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		7BD538ED2449E9AA00AD9CB3 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		7BD538F02449EA2900AD9CB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC401F2D41B8D63FD49CC572 /* Pods-PoloTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravel.release.xcconfig"; path = "Target Support Files/Pods-PoloTravel/Pods-PoloTravel.release.xcconfig"; sourceTree = "<group>"; };
 		D9C97D5B5D545292F277E973 /* Pods-PoloTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravel.debug.xcconfig"; path = "Target Support Files/Pods-PoloTravel/Pods-PoloTravel.debug.xcconfig"; sourceTree = "<group>"; };
 		FB0E3DB6CC32C7391168F535 /* Pods-PoloTravelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravelTests.release.xcconfig"; path = "Target Support Files/Pods-PoloTravelTests/Pods-PoloTravelTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,13 +125,13 @@
 		7BCDA4DE243DF94100E9C4B6 /* PoloTravel */ = {
 			isa = PBXGroup;
 			children = (
+				7BD538F02449EA2900AD9CB3 /* GoogleService-Info.plist */,
 				7BD538DF2449C18C00AD9CB3 /* UIFiles */,
 				7BCDA50C243E090600E9C4B6 /* SupportingFiles */,
 				7BCDA50B243E08F800E9C4B6 /* ViewControllers */,
 				7BCDA50A243E08EF00E9C4B6 /* ViewModels */,
 				7BCDA509243E08E500E9C4B6 /* Protocols */,
 				7BCDA508243E08DB00E9C4B6 /* Extensions */,
-				7BCDA503243DF9CD00E9C4B6 /* GoogleService-Info.plist */,
 				7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */,
 			);
 			path = PoloTravel;
@@ -225,8 +225,8 @@
 		7BD538E52449D40A00AD9CB3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7BD538E62449D46900AD9CB3 /* Gilroy-Bold.ttf */,
-				7BD538E72449D46900AD9CB3 /* Gilroy-Medium.ttf */,
+				7BD538ED2449E9AA00AD9CB3 /* Gilroy-Bold.ttf */,
+				7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -316,11 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BCDA4EC243DF94300E9C4B6 /* LaunchScreen.storyboard in Resources */,
-				7BD538E92449D46900AD9CB3 /* Gilroy-Medium.ttf in Resources */,
 				7BCDA4E9243DF94300E9C4B6 /* Assets.xcassets in Resources */,
-				7BD538E82449D46900AD9CB3 /* Gilroy-Bold.ttf in Resources */,
-				7BCDA504243DF9CD00E9C4B6 /* GoogleService-Info.plist in Resources */,
+				7BD538EE2449E9AA00AD9CB3 /* Gilroy-Medium.ttf in Resources */,
+				7BD538EF2449E9AA00AD9CB3 /* Gilroy-Bold.ttf in Resources */,
 				7BCDA4E7243DF94100E9C4B6 /* Main.storyboard in Resources */,
+				7BD538F12449EA2900AD9CB3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
