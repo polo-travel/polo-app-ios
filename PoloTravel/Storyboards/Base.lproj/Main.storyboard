@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Créer un compte"/>
                                 <connections>
-                                    <segue destination="fu1-hP-Pla" kind="show" id="wJK-sF-Ymd"/>
+                                    <segue destination="fu1-hP-Pla" kind="show" id="oUX-Dw-hcU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnA-bA-24G" customClass="DarkBasicButton" customModule="PoloTravel" customModuleProvider="target">
@@ -74,7 +74,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="suA-kr-Gxt" kind="show" id="EsM-Zv-QTU"/>
+                                    <segue destination="suA-kr-Gxt" kind="show" id="S3J-cc-vQM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="101.23152709359606"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="spp-QN-bsI">
             <objects>
-                <viewController id="suA-kr-Gxt" sceneMemberID="viewController">
+                <viewController id="suA-kr-Gxt" customClass="SignInViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QY9-l6-do6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +131,9 @@
                                 <state key="normal" title="Connexion">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonConnectClicked:" destination="suA-kr-Gxt" eventType="touchUpInside" id="arm-6b-L8a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH4-Tf-uje">
                                 <rect key="frame" x="143" y="580" width="59" height="29"/>
@@ -139,21 +142,46 @@
                                 <state key="normal" title="Annuler">
                                     <color key="titleColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonCancelClicked:" destination="suA-kr-Gxt" eventType="touchUpInside" id="awM-R7-U7i"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hf-8y-X67">
+                                <rect key="frame" x="41" y="452" width="292" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="12"/>
+                                <color key="textColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZK6-tF-g9Y"/>
                     </view>
                     <navigationItem key="navigationItem" id="AY0-t9-mm5"/>
+                    <connections>
+                        <outlet property="buttonCancel" destination="qH4-Tf-uje" id="QHv-pM-r86"/>
+                        <outlet property="buttonConnect" destination="eEI-qQ-LEb" id="60M-Vg-pfX"/>
+                        <outlet property="errorLabel" destination="7hf-8y-X67" id="4VM-QN-yhN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3g-gw-2OX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1873" y="456"/>
         </scene>
-        <!--Registration View Controller-->
+        <!--OnBoarding1ViewController-->
+        <scene sceneID="MC6-Xm-DFr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OnBoarding" referencedIdentifier="OnBoarding1ViewController" id="Ih3-79-4ME" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hBM-mF-fcw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEx-xK-qC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2898" y="-168"/>
+        </scene>
+        <!--Sign Up View Controller-->
         <scene sceneID="1yo-ye-IaL">
             <objects>
-                <viewController id="fu1-hP-Pla" customClass="RegistrationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fu1-hP-Pla" customClass="SignUpViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wQC-vF-1Fd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,6 +235,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonNextClicked:" destination="fu1-hP-Pla" eventType="touchUpInside" id="PR5-Fu-rnc"/>
+                                    <segue destination="Ih3-79-4ME" kind="show" id="akD-NU-G8J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xR4-r1-v4h">
@@ -216,8 +245,11 @@
                                 <state key="normal" title="Annuler">
                                     <color key="titleColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonCancelClicked:" destination="fu1-hP-Pla" eventType="touchUpInside" id="uAw-48-IJD"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu as fait une erreur ! Vérfie les infos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="St5-TJ-Qt3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="St5-TJ-Qt3">
                                 <rect key="frame" x="41" y="431" width="292" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="12"/>
@@ -248,54 +280,6 @@
             </objects>
             <point key="canvasLocation" x="1872.8" y="-215.02463054187194"/>
         </scene>
-        <!--Onboarding1 View Controller-->
-        <scene sceneID="dFD-4k-R4q">
-            <objects>
-                <viewController id="SWw-dg-uvA" customClass="Onboarding1ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZGJ-T6-I5X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_light_shape" translatesAutoresizingMaskIntoConstraints="NO" id="WYQ-lK-RAB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVo-1g-re2">
-                                <rect key="frame" x="17" y="129" width="340" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Prêt pour vivre une expérience inoubliable ?">
-                                        <attributes>
-                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="25" name="Gilroy-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk9-V5-bFG" customClass="RedBasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="81" y="621" width="213" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="C'est parti !">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oboarding_ready" translatesAutoresizingMaskIntoConstraints="NO" id="dCd-KA-Z4E">
-                                <rect key="frame" x="23" y="218" width="329" height="403"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="G4E-qg-Dtg"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="avH-yT-YGj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Oa-lZ-dmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2628" y="-217.24137931034483"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="qoR-iF-qq7">
             <objects>
@@ -316,9 +300,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg_light_shape" width="414" height="172.33332824707031"/>
         <image name="ilu_polo_connexion" width="309.66665649414062" height="328.66665649414062"/>
         <image name="logo" width="354" height="108.66666412353516"/>
-        <image name="oboarding_ready" width="358.33334350585938" height="395"/>
     </resources>
 </document>

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class RegistrationViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
     @IBOutlet weak var inputFirstName: UITextField!
     @IBOutlet weak var inputEmail: UITextField!
@@ -23,16 +23,16 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     let db = Firestore.firestore()
-    let onboardingController = Onboarding1ViewController()
+    let onboardingController = OnBoarding1ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        buttonNext.layer.cornerRadius = 30
     }
     
     @IBAction func buttonNextClicked(_ sender: Any) {
         activityIndicator.startAnimating()
+        self.errorLabel.text = ""
         
         let email = inputEmail.text!
         let password = inputPassword.text!
@@ -51,6 +51,9 @@ class RegistrationViewController: UIViewController {
         }
     }
     
+    @IBAction func buttonCancelClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 
