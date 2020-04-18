@@ -7,6 +7,8 @@ target 'PoloTravel' do
 
   # Pods for PoloTravel
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'PoloTravelTests' do
     inherit! :search_paths

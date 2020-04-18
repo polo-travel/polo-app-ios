@@ -22,6 +22,17 @@
 		7BD538EE2449E9AA00AD9CB3 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */; };
 		7BD538EF2449E9AA00AD9CB3 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538ED2449E9AA00AD9CB3 /* Gilroy-Bold.ttf */; };
 		7BD538F12449EA2900AD9CB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538F02449EA2900AD9CB3 /* GoogleService-Info.plist */; };
+		7BD538F32449ED3B00AD9CB3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538F22449ED3B00AD9CB3 /* SignUpViewController.swift */; };
+		7BD538F62449F48A00AD9CB3 /* OnBoarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538F52449F48A00AD9CB3 /* OnBoarding1ViewController.swift */; };
+		7BD538F82449F4A600AD9CB3 /* OnBoarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538F72449F4A600AD9CB3 /* OnBoarding2ViewController.swift */; };
+		7BD538FA2449F4B100AD9CB3 /* OnBoarding3ViewController..swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538F92449F4B100AD9CB3 /* OnBoarding3ViewController..swift */; };
+		7BD538FC2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538FB2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift */; };
+		7BD538FE2449F4C900AD9CB3 /* OnBoarding5ViewController..swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538FD2449F4C900AD9CB3 /* OnBoarding5ViewController..swift */; };
+		7BD539002449F86900AD9CB3 /* RedBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538FF2449F86900AD9CB3 /* RedBasicButton.swift */; };
+		7BD53902244B008700AD9CB3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD53901244B008700AD9CB3 /* SignInViewController.swift */; };
+		7BD53907244B059200AD9CB3 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD53906244B059200AD9CB3 /* OnBoarding.storyboard */; };
+		7BD53909244B1F4900AD9CB3 /* TravelCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD53908244B1F4900AD9CB3 /* TravelCreation.storyboard */; };
+		7BD5390C244B1FC300AD9CB3 /* TravelCreation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5390B244B1FC300AD9CB3 /* TravelCreation1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +67,17 @@
 		7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
 		7BD538ED2449E9AA00AD9CB3 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		7BD538F02449EA2900AD9CB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7BD538F22449ED3B00AD9CB3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7BD538F52449F48A00AD9CB3 /* OnBoarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1ViewController.swift; sourceTree = "<group>"; };
+		7BD538F72449F4A600AD9CB3 /* OnBoarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding2ViewController.swift; sourceTree = "<group>"; };
+		7BD538F92449F4B100AD9CB3 /* OnBoarding3ViewController..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController..swift; sourceTree = "<group>"; };
+		7BD538FB2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding4ViewController..swift; sourceTree = "<group>"; };
+		7BD538FD2449F4C900AD9CB3 /* OnBoarding5ViewController..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding5ViewController..swift; sourceTree = "<group>"; };
+		7BD538FF2449F86900AD9CB3 /* RedBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedBasicButton.swift; sourceTree = "<group>"; };
+		7BD53901244B008700AD9CB3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7BD53906244B059200AD9CB3 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		7BD53908244B1F4900AD9CB3 /* TravelCreation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelCreation.storyboard; sourceTree = "<group>"; };
+		7BD5390B244B1FC300AD9CB3 /* TravelCreation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCreation1ViewController.swift; sourceTree = "<group>"; };
 		BC401F2D41B8D63FD49CC572 /* Pods-PoloTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravel.release.xcconfig"; path = "Target Support Files/Pods-PoloTravel/Pods-PoloTravel.release.xcconfig"; sourceTree = "<group>"; };
 		D9C97D5B5D545292F277E973 /* Pods-PoloTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravel.debug.xcconfig"; path = "Target Support Files/Pods-PoloTravel/Pods-PoloTravel.debug.xcconfig"; sourceTree = "<group>"; };
 		FB0E3DB6CC32C7391168F535 /* Pods-PoloTravelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravelTests.release.xcconfig"; path = "Target Support Files/Pods-PoloTravelTests/Pods-PoloTravelTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,14 +147,15 @@
 		7BCDA4DE243DF94100E9C4B6 /* PoloTravel */ = {
 			isa = PBXGroup;
 			children = (
-				7BD538F02449EA2900AD9CB3 /* GoogleService-Info.plist */,
-				7BD538DF2449C18C00AD9CB3 /* UIFiles */,
+				7BCDA508243E08DB00E9C4B6 /* Extensions */,
+				7BCDA509243E08E500E9C4B6 /* Protocols */,
+				7BD53904244B04B300AD9CB3 /* Storyboards */,
 				7BCDA50C243E090600E9C4B6 /* SupportingFiles */,
+				7BD538DF2449C18C00AD9CB3 /* UIFiles */,
 				7BCDA50B243E08F800E9C4B6 /* ViewControllers */,
 				7BCDA50A243E08EF00E9C4B6 /* ViewModels */,
-				7BCDA509243E08E500E9C4B6 /* Protocols */,
-				7BCDA508243E08DB00E9C4B6 /* Extensions */,
 				7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */,
+				7BD538F02449EA2900AD9CB3 /* GoogleService-Info.plist */,
 			);
 			path = PoloTravel;
 			sourceTree = "<group>";
@@ -170,6 +193,9 @@
 		7BCDA50B243E08F800E9C4B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7BD5390A244B1F7100AD9CB3 /* TravelCreationViewControllers */,
+				7BD53903244B009100AD9CB3 /* SignViewControllers */,
+				7BD538F42449F45F00AD9CB3 /* OnBoardingViewControllers */,
 				7BCDA4E3243DF94100E9C4B6 /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -181,7 +207,6 @@
 				7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */,
 				7BCDA4ED243DF94300E9C4B6 /* Info.plist */,
 				7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */,
-				7BCDA4E5243DF94100E9C4B6 /* Main.storyboard */,
 				7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
@@ -210,6 +235,7 @@
 			children = (
 				7BD538DA2449B9BA00AD9CB3 /* LightBasicButton.swift */,
 				7BD538E32449C1F300AD9CB3 /* DarkBasicButton.swift */,
+				7BD538FF2449F86900AD9CB3 /* RedBasicButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -229,6 +255,45 @@
 				7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7BD538F42449F45F00AD9CB3 /* OnBoardingViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BD538F52449F48A00AD9CB3 /* OnBoarding1ViewController.swift */,
+				7BD538F72449F4A600AD9CB3 /* OnBoarding2ViewController.swift */,
+				7BD538F92449F4B100AD9CB3 /* OnBoarding3ViewController..swift */,
+				7BD538FB2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift */,
+				7BD538FD2449F4C900AD9CB3 /* OnBoarding5ViewController..swift */,
+			);
+			path = OnBoardingViewControllers;
+			sourceTree = "<group>";
+		};
+		7BD53903244B009100AD9CB3 /* SignViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BD538F22449ED3B00AD9CB3 /* SignUpViewController.swift */,
+				7BD53901244B008700AD9CB3 /* SignInViewController.swift */,
+			);
+			path = SignViewControllers;
+			sourceTree = "<group>";
+		};
+		7BD53904244B04B300AD9CB3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7BCDA4E5243DF94100E9C4B6 /* Main.storyboard */,
+				7BD53906244B059200AD9CB3 /* OnBoarding.storyboard */,
+				7BD53908244B1F4900AD9CB3 /* TravelCreation.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7BD5390A244B1F7100AD9CB3 /* TravelCreationViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BD5390B244B1FC300AD9CB3 /* TravelCreation1ViewController.swift */,
+			);
+			path = TravelCreationViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +383,9 @@
 				7BCDA4EC243DF94300E9C4B6 /* LaunchScreen.storyboard in Resources */,
 				7BCDA4E9243DF94300E9C4B6 /* Assets.xcassets in Resources */,
 				7BD538EE2449E9AA00AD9CB3 /* Gilroy-Medium.ttf in Resources */,
+				7BD53909244B1F4900AD9CB3 /* TravelCreation.storyboard in Resources */,
 				7BD538EF2449E9AA00AD9CB3 /* Gilroy-Bold.ttf in Resources */,
+				7BD53907244B059200AD9CB3 /* OnBoarding.storyboard in Resources */,
 				7BCDA4E7243DF94100E9C4B6 /* Main.storyboard in Resources */,
 				7BD538F12449EA2900AD9CB3 /* GoogleService-Info.plist in Resources */,
 			);
@@ -402,10 +469,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD53902244B008700AD9CB3 /* SignInViewController.swift in Sources */,
+				7BD5390C244B1FC300AD9CB3 /* TravelCreation1ViewController.swift in Sources */,
 				7BD538DB2449B9BA00AD9CB3 /* LightBasicButton.swift in Sources */,
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
+				7BD538FC2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift in Sources */,
+				7BD539002449F86900AD9CB3 /* RedBasicButton.swift in Sources */,
+				7BD538FA2449F4B100AD9CB3 /* OnBoarding3ViewController..swift in Sources */,
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
+				7BD538F82449F4A600AD9CB3 /* OnBoarding2ViewController.swift in Sources */,
 				7BD538DD2449BB0F00AD9CB3 /* ColorConstants.swift in Sources */,
+				7BD538F32449ED3B00AD9CB3 /* SignUpViewController.swift in Sources */,
+				7BD538FE2449F4C900AD9CB3 /* OnBoarding5ViewController..swift in Sources */,
+				7BD538F62449F48A00AD9CB3 /* OnBoarding1ViewController.swift in Sources */,
 				7BD538E42449C1F300AD9CB3 /* DarkBasicButton.swift in Sources */,
 				7BCDA4E2243DF94100E9C4B6 /* SceneDelegate.swift in Sources */,
 			);
