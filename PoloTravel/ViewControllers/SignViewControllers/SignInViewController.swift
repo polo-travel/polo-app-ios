@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class SignInViewController: UIViewController {
     
+    @IBOutlet weak var inputEmail: UITextField!
+    @IBOutlet weak var inputPassword: UITextField!
     @IBOutlet weak var buttonConnect: DarkBasicButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var buttonCancel: UIButton!
@@ -20,6 +26,28 @@ class SignInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func buttonConnectClicked(_ sender: Any) {
+        activityIndicator.startAnimating()
+        self.errorLabel.text = ""
+        
+        let email = inputEmail.text!
+        let password = inputPassword.text!
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+          guard let strongSelf = self else { return }
+          if(error != nil) {
+            self?.errorLabel.text = "Tu as fait une erreur ! Vérifie les infos"
+              print(error!)
+            self?.activityIndicator.stopAnimating()
+              return
+          }
+            self?.activityIndicator.stopAnimating()
+          
+          let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+          let mainVC = mainView.instantiateViewController(identifier: "MainTabBarController")
+            self?.show(mainVC, sender: nil)
+        }
+    }
     
     @IBAction func buttonCancelClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

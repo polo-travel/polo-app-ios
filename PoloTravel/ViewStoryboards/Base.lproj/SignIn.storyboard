@@ -132,7 +132,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LLb-sE-5dy" kind="show" id="jxt-Wg-6kd"/>
+                                    <action selector="buttonConnectClicked:" destination="suA-kr-Gxt" eventType="touchUpInside" id="gbP-ds-nDp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH4-Tf-uje">
@@ -153,15 +153,23 @@
                                 <color key="textColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hPs-Wt-wcK">
+                                <rect key="frame" x="228" y="517" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZK6-tF-g9Y"/>
                     </view>
                     <navigationItem key="navigationItem" id="AY0-t9-mm5"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="hPs-Wt-wcK" id="e6H-IB-0a0"/>
                         <outlet property="buttonCancel" destination="qH4-Tf-uje" id="QHv-pM-r86"/>
                         <outlet property="buttonConnect" destination="eEI-qQ-LEb" id="60M-Vg-pfX"/>
                         <outlet property="errorLabel" destination="7hf-8y-X67" id="4VM-QN-yhN"/>
+                        <outlet property="inputEmail" destination="OfP-Bv-pgl" id="wOg-uP-tbh"/>
+                        <outlet property="inputPassword" destination="5SD-zC-IkW" id="wfm-Xi-Vq1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3g-gw-2OX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
