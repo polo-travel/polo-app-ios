@@ -8,7 +8,10 @@
 
 import UIKit
 
+
 class RedBasicButton: UIButton {
+    
+    let gradientLayer = CAGradientLayer()
     
     override init(frame: CGRect) {
         super.init(frame : frame)
@@ -38,6 +41,8 @@ class RedBasicButton: UIButton {
         clipsToBounds       = true
         layer.masksToBounds = false
     }
+    
+
 
     
     
