@@ -25,7 +25,7 @@ class DarkBasicButton: UIButton {
         setTitleColor(.white, for: .normal)
     
         backgroundColor      = Colors.mainDarkBlue
-        titleLabel?.font     = UIFont(name: "Gilroy-Medium", size: 18)
+        titleLabel?.font     = UIFont(name: "Gilroy-Medium", size: 16)
         layer.cornerRadius   = 25
     }
     

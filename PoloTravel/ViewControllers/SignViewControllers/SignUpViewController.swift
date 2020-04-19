@@ -49,6 +49,10 @@ class SignUpViewController: UIViewController {
             ])
             self.errorLabel.text = "User created!"
             self.activityIndicator.stopAnimating()
+            
+            let onBoardingView: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+            let onBoarding1VC = onBoardingView.instantiateViewController(identifier: "OnBoarding1ViewController")
+            self.show(onBoarding1VC, sender: nil)
         }
     }
     

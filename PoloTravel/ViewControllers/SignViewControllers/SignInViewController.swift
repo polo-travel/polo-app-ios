@@ -19,10 +19,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func buttonConnectClicked(_ sender: Any) {
-        
-    }
+
     
     @IBAction func buttonCancelClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

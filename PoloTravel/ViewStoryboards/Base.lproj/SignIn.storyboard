@@ -132,7 +132,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonConnectClicked:" destination="suA-kr-Gxt" eventType="touchUpInside" id="arm-6b-L8a"/>
+                                    <segue destination="LLb-sE-5dy" kind="show" id="jxt-Wg-6kd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH4-Tf-uje">
@@ -166,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3g-gw-2OX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="456"/>
+            <point key="canvasLocation" x="2010" y="519"/>
         </scene>
         <!--OnBoarding1ViewController-->
         <scene sceneID="MC6-Xm-DFr">
@@ -235,7 +235,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonNextClicked:" destination="fu1-hP-Pla" eventType="touchUpInside" id="PR5-Fu-rnc"/>
-                                    <segue destination="Ih3-79-4ME" kind="show" id="akD-NU-G8J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xR4-r1-v4h">
@@ -261,6 +260,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etT-2z-EYW">
+                                <rect key="frame" x="171" y="647" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="sNq-St-Xvx"/>
@@ -297,6 +301,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flA-jD-nGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="101.23152709359606"/>
+        </scene>
+        <!--MainTabBarController-->
+        <scene sceneID="lvW-tq-Np5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainTabBarController" id="LLb-sE-5dy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NDU-uy-heq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EH9-kD-Krr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2898" y="519"/>
         </scene>
     </scenes>
     <resources>
