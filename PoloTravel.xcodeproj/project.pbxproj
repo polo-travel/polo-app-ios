@@ -147,6 +147,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B2E5BB5244D8C7B00DBD221 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7B3B45B9244BA55000CD00D4 /* MainViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +235,7 @@
 		7BCDA4DE243DF94100E9C4B6 /* PoloTravel */ = {
 			isa = PBXGroup;
 			children = (
+				7B2E5BB5244D8C7B00DBD221 /* Model */,
 				7BCDA508243E08DB00E9C4B6 /* Extensions */,
 				7BCDA509243E08E500E9C4B6 /* Protocols */,
 				7B3B45DD244D73C300CD00D4 /* Services */,

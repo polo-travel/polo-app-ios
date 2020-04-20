@@ -37,15 +37,18 @@ class SignInViewController: UIViewController {
             if (success) {
                 self.activityIndicator.stopAnimating()
     
-                let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let mainVC = mainView.instantiateViewController(identifier: "MainTabBarController")
-                self.show(mainVC, sender: nil)
-                
+                self.switchStoryboard()
             } else {
                 self.errorLabel.text = "Tu as fait une erreur ! Vérifie les infos"
                 self.activityIndicator.stopAnimating()
             }
         }
+    }
+    
+    private func switchStoryboard() {
+        let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = mainView.instantiateViewController(identifier: "MainTabBarController")
+        self.show(mainVC, sender: nil)
     }
     
     @IBAction func buttonCancelClicked(_ sender: Any) {
