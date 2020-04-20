@@ -16,13 +16,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var inputFirstName: UITextField!
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
-    
     @IBOutlet weak var errorLabel: UILabel!
-    
     @IBOutlet weak var buttonNext: DarkBasicButton!
     @IBOutlet weak var buttonCancel: UIButton!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    let signUpManager = AuthentificationService()
     let db = Firestore.firestore()
     let onboardingController = OnBoarding1ViewController()
     
@@ -35,25 +34,23 @@ class SignUpViewController: UIViewController {
         activityIndicator.startAnimating()
         self.errorLabel.text = ""
         
-        let email = inputEmail.text!
-        let password = inputPassword.text!
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            if(error != nil) {
-                self.errorLabel.text = "Tu as fait une erreur ! Vérifie les infos"
-                print(error!)
-                self.activityIndicator.stopAnimating()
-                return
+        if let email = inputEmail.text, let password = inputPassword.text, let firstname = inputFirstName.text {
+            signUpManager.createUser(email: email, password: password, firstname: firstname) {[weak self] (success) in
+                guard let `self` = self else { return }
+                if (success) {
+                    self.errorLabel.text = "User created!"
+                    self.activityIndicator.stopAnimating()
+                    
+                    let onBoardingView: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+                    let onBoarding1VC = onBoardingView.instantiateViewController(identifier: "OnBoarding1ViewController")
+                    self.show(onBoarding1VC, sender: nil)
+                } else {
+                    self.errorLabel.text = "Tu as fait une erreur ! Vérifie les infos"
+                    self.activityIndicator.stopAnimating()
+                }
             }
-            self.db.collection("users").document(authResult!.user.uid).setData([
-                "firstname": self.inputFirstName.text!,
-            ])
-            self.errorLabel.text = "User created!"
-            self.activityIndicator.stopAnimating()
-            
-            let onBoardingView: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
-            let onBoarding1VC = onBoardingView.instantiateViewController(identifier: "OnBoarding1ViewController")
-            self.show(onBoarding1VC, sender: nil)
         }
+            
     }
     
     @IBAction func buttonCancelClicked(_ sender: Any) {

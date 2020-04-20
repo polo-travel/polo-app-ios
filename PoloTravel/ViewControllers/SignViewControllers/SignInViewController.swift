@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class SignInViewController: UIViewController {
+    let loginManager = AuthentificationService()
     
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
@@ -30,22 +31,20 @@ class SignInViewController: UIViewController {
         activityIndicator.startAnimating()
         self.errorLabel.text = ""
         
-        let email = inputEmail.text!
-        let password = inputPassword.text!
-        
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-          guard let strongSelf = self else { return }
-          if(error != nil) {
-            self?.errorLabel.text = "Tu as fait une erreur ! Vérifie les infos"
-              print(error!)
-            self?.activityIndicator.stopAnimating()
-              return
-          }
-            self?.activityIndicator.stopAnimating()
-          
-          let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-          let mainVC = mainView.instantiateViewController(identifier: "MainTabBarController")
-            self?.show(mainVC, sender: nil)
+        guard let email = inputEmail.text, let password = inputPassword.text else { return }
+        loginManager.signIn(email: email, pass: password) {[weak self] (success) in
+            guard let `self` = self else { return }
+            if (success) {
+                self.activityIndicator.stopAnimating()
+    
+                let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainVC = mainView.instantiateViewController(identifier: "MainTabBarController")
+                self.show(mainVC, sender: nil)
+                
+            } else {
+                self.errorLabel.text = "Tu as fait une erreur ! Vérifie les infos"
+                self.activityIndicator.stopAnimating()
+            }
         }
     }
     

@@ -21,6 +21,7 @@
 		7B3B45D8244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45D7244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift */; };
 		7B3B45DA244C5C8200CD00D4 /* TravelsNextTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45D9244C5C8200CD00D4 /* TravelsNextTravelViewController.swift */; };
 		7B3B45DC244C786E00CD00D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B45DB244C786E00CD00D4 /* GoogleService-Info.plist */; };
+		7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */; };
 		7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */; };
 		7BCDA4E2243DF94100E9C4B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */; };
 		7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E3243DF94100E9C4B6 /* ViewController.swift */; };
@@ -73,6 +74,7 @@
 		7B3B45D7244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTravelHistoryViewController.swift; sourceTree = "<group>"; };
 		7B3B45D9244C5C8200CD00D4 /* TravelsNextTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsNextTravelViewController.swift; sourceTree = "<group>"; };
 		7B3B45DB244C786E00CD00D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationService.swift; sourceTree = "<group>"; };
 		7BCDA4DC243DF94100E9C4B6 /* PoloTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoloTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +196,14 @@
 			path = MainStoryboards;
 			sourceTree = "<group>";
 		};
+		7B3B45DD244D73C300CD00D4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		7BCDA4D3243DF94100E9C4B6 = {
 			isa = PBXGroup;
 			children = (
@@ -220,11 +230,12 @@
 			children = (
 				7BCDA508243E08DB00E9C4B6 /* Extensions */,
 				7BCDA509243E08E500E9C4B6 /* Protocols */,
+				7B3B45DD244D73C300CD00D4 /* Services */,
+				7BCDA50C243E090600E9C4B6 /* SupportingFiles */,
+				7BD538DF2449C18C00AD9CB3 /* UIFiles */,
 				7BCDA50B243E08F800E9C4B6 /* ViewControllers */,
 				7BCDA50A243E08EF00E9C4B6 /* ViewModels */,
 				7BD53904244B04B300AD9CB3 /* ViewStoryboards */,
-				7BCDA50C243E090600E9C4B6 /* SupportingFiles */,
-				7BD538DF2449C18C00AD9CB3 /* UIFiles */,
 				7B3B45DB244C786E00CD00D4 /* GoogleService-Info.plist */,
 				7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */,
 			);
@@ -550,6 +561,7 @@
 				7B3B45C2244BA94300CD00D4 /* TravelsViewController.swift in Sources */,
 				7BD5390C244B1FC300AD9CB3 /* TravelCreation1ViewController.swift in Sources */,
 				7B3B45D4244C598800CD00D4 /* PolowersAddPhotoViewController.swift in Sources */,
+				7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */,
 				7BD538DB2449B9BA00AD9CB3 /* LightBasicButton.swift in Sources */,
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
 				7BD538FC2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift in Sources */,
