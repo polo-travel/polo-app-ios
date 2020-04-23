@@ -86,6 +86,10 @@ extension PolowersViewController:UICollectionViewDataSource {
         
         cell.contentView.layer.cornerRadius = 25.0
         
+        cell.imageLikesBkg.backgroundColor = UIColor(patternImage: UIImage(named: "heart.png")!)
+        cell.polowerNameBkg.layer.cornerRadius = 9.0
+        cell.polowerNameBkg.backgroundColor = UIColor(red: 25/255, green: 56/255, blue: 79/255, alpha: 0.8)
+        
         cell.imageLikes.text = "\(photoList[indexPath.row].likes)"
         cell.polowerName.text = "\(photoList[indexPath.row].poster)"
         
