@@ -39,6 +39,9 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="6g9-R0-MKY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="Ou4-pY-TIk" id="HMG-Ob-PWt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1z-mf-9q6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,10 +10,17 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var emailLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let userManager = AuthentificationService()
+        print(userManager.currentUser()?.email ?? "")
+        emailLabel.text = userManager.currentUser()?.email
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

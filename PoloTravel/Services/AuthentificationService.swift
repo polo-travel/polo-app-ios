@@ -18,8 +18,9 @@ class AuthentificationService {
     func createUser(email: String, password: String, firstname: String, completionBlock: @escaping (_ success: Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
             if let user = authResult?.user {
-               self.db.collection("users").document(user.uid).setData([
+               self.db.collection("pl_users").document(user.uid).setData([
                     "firstname": firstname,
+                    "email": email,
                 ])
                 completionBlock(true)
             } else {
@@ -36,6 +37,10 @@ class AuthentificationService {
                 completionBlock(true)
             }
         }
+    }
+    
+    func currentUser() -> User? {
+        return Auth.auth().currentUser
     }
     
 }
