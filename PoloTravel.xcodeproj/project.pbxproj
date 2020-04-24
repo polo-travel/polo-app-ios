@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C620FC62300770CB1791372 /* Pods_PoloTravelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30138E37B599E0D360ADEA20 /* Pods_PoloTravelTests.framework */; };
+		0F1B4D91245C485400CF759D /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1B4D90245C485400CF759D /* SignIn.storyboard */; };
 		13B71F03E42A57D07F97BE17 /* Pods_PoloTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */; };
-		7B1676922452CC54008A464B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B1676912452CC54008A464B /* GoogleService-Info.plist */; };
 		7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B167693245309A1008A464B /* PolowersImagesService.swift */; };
 		7B3B45BE244BA7E900CD00D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45BD244BA7E900CD00D4 /* ProfileViewController.swift */; };
 		7B3B45C2244BA94300CD00D4 /* TravelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45C1244BA94300CD00D4 /* TravelsViewController.swift */; };
@@ -29,7 +29,6 @@
 		7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */; };
 		7BCDA4E2243DF94100E9C4B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */; };
 		7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E3243DF94100E9C4B6 /* ViewController.swift */; };
-		7BCDA4E7243DF94100E9C4B6 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E5243DF94100E9C4B6 /* SignIn.storyboard */; };
 		7BCDA4E9243DF94300E9C4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */; };
 		7BCDA4EC243DF94300E9C4B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */; };
 		7BCDA4F7243DF94300E9C4B6 /* PoloTravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4F6243DF94300E9C4B6 /* PoloTravelTests.swift */; };
@@ -61,10 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F1B4D90245C485400CF759D /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30138E37B599E0D360ADEA20 /* Pods_PoloTravelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloTravelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580F27B421CCFE465C3FC5B3 /* Pods-PoloTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-PoloTravelTests/Pods-PoloTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7B1676912452CC54008A464B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B167693245309A1008A464B /* PolowersImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersImagesService.swift; sourceTree = "<group>"; };
 		7B267C73243E6A8700C35032 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7B3B45BD244BA7E900CD00D4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +85,6 @@
 		7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7BCDA4E3243DF94100E9C4B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7BCDA4E6243DF94100E9C4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
 		7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BCDA4EB243DF94300E9C4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BCDA4ED243DF94300E9C4B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -382,7 +380,7 @@
 			children = (
 				7B3B45D2244C55EC00CD00D4 /* MainStoryboards */,
 				7BD53906244B059200AD9CB3 /* OnBoarding.storyboard */,
-				7BCDA4E5243DF94100E9C4B6 /* SignIn.storyboard */,
+				0F1B4D90245C485400CF759D /* SignIn.storyboard */,
 				7BD53908244B1F4900AD9CB3 /* TravelCreation.storyboard */,
 			);
 			path = ViewStoryboards;
@@ -485,13 +483,13 @@
 				7BD538EE2449E9AA00AD9CB3 /* Gilroy-Medium.ttf in Resources */,
 				7B3B45D1244C551500CD00D4 /* Main.storyboard in Resources */,
 				7B3B45CD244C502A00CD00D4 /* Polowers.storyboard in Resources */,
+				0F1B4D91245C485400CF759D /* SignIn.storyboard in Resources */,
 				7BD53909244B1F4900AD9CB3 /* TravelCreation.storyboard in Resources */,
 				7B3B45CF244C503900CD00D4 /* Travels.storyboard in Resources */,
 				7BD538EF2449E9AA00AD9CB3 /* Gilroy-Bold.ttf in Resources */,
 				7BD53907244B059200AD9CB3 /* OnBoarding.storyboard in Resources */,
 				7B3B45CB244C4E7700CD00D4 /* Profile.storyboard in Resources */,
 				7BFECF232455A88F00F5096C /* GoogleService-Info.plist in Resources */,
-				7BCDA4E7243DF94100E9C4B6 /* SignIn.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,14 +618,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7BCDA4E5243DF94100E9C4B6 /* SignIn.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BCDA4E6243DF94100E9C4B6 /* Base */,
-			);
-			name = SignIn.storyboard;
-			sourceTree = "<group>";
-		};
 		7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

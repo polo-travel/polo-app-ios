@@ -47,8 +47,8 @@ class SignInViewController: UIViewController {
     }
     
     private func switchStoryboard() {
-        let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = mainView.instantiateViewController(identifier: "MainTabBarController")
+        let mainView: UIStoryboard = UIStoryboard(name: "TravelCreation", bundle: nil)
+        let mainVC = mainView.instantiateViewController(identifier: "TravelCreation1ViewController")
         self.show(mainVC, sender: nil)
     }
     

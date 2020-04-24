@@ -19,6 +19,9 @@ class TravelCreation1ViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    @IBAction func createTravel(_ sender: UIButton) {
+        
+    }
 }
 
 
