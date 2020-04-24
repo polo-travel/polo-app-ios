@@ -75,20 +75,12 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8O-g6-fbt">
-                                                    <rect key="frame" x="7.5" y="149" width="24" height="21"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="1JM-6t-IE7">
+                                                    <rect key="frame" x="4.5" y="128" width="43" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyA-Bv-Wrv">
-                                                    <rect key="frame" x="7" y="150" width="25" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="10"/>
-                                                    <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </imageView>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCK-CZ-yrw">
-                                                    <rect key="frame" x="60" y="152" width="57" height="18"/>
+                                                    <rect key="frame" x="60" y="150" width="57" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cédric" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8t6-oN-XkA">
@@ -101,12 +93,18 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyA-Bv-Wrv">
+                                                    <rect key="frame" x="13" y="146" width="25" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="10"/>
+                                                    <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="177" height="180"/>
                                         <connections>
                                             <outlet property="imageLikes" destination="gyA-Bv-Wrv" id="74C-VA-PrB"/>
-                                            <outlet property="imageLikesBkg" destination="y8O-g6-fbt" id="ekd-cj-Ygh"/>
                                             <outlet property="imagePosted" destination="sZP-3j-HOF" id="XNH-3t-dEO"/>
                                             <outlet property="polowerName" destination="8t6-oN-XkA" id="fMB-A3-B26"/>
                                             <outlet property="polowerNameBkg" destination="XCK-CZ-yrw" id="NL2-pz-4EU"/>
@@ -139,22 +137,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOc-kC-YPa">
-                                <rect key="frame" x="139" y="276" width="80" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-Kt-DWk">
+                                <rect key="frame" x="30" y="440" width="354" height="173"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Polowers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-FX-hQ7">
+                                <rect key="frame" x="30" y="88" width="129" height="29"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="30"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynj-Dm-X3E" customClass="RedBasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="100.5" y="682" width="213" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="O5P-NF-Hhy"/>
+                                    <constraint firstAttribute="width" constant="213" id="WHE-sE-EDy"/>
+                                </constraints>
+                                <state key="normal" title="Publier"/>
+                                <connections>
+                                    <action selector="publishButtonClicked:" destination="K3I-Kf-8Xr" eventType="touchUpInside" id="Ly5-wm-3kG"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FxP-aM-iXi">
+                                <rect key="frame" x="278" y="698" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-FN-NAh">
+                                <rect key="frame" x="103" y="182" width="208" height="208"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="DjI-dh-I7K"/>
+                                    <constraint firstAttribute="height" constant="208" id="Wtf-Cw-eDG"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gqI-TI-aYz" firstAttribute="bottom" secondItem="Ynj-Dm-X3E" secondAttribute="bottom" constant="79" id="7Jd-2W-LuB"/>
+                            <constraint firstItem="dla-FX-hQ7" firstAttribute="leading" secondItem="gqI-TI-aYz" secondAttribute="leading" constant="30" id="9k0-nS-1Ng"/>
+                            <constraint firstItem="Ynj-Dm-X3E" firstAttribute="top" secondItem="JAN-Kt-DWk" secondAttribute="bottom" constant="69" id="ISP-np-XOR"/>
+                            <constraint firstItem="FxP-aM-iXi" firstAttribute="top" secondItem="Ynj-Dm-X3E" secondAttribute="bottom" constant="-36" id="SI8-f1-rkp"/>
+                            <constraint firstItem="JAN-Kt-DWk" firstAttribute="centerX" secondItem="gqI-TI-aYz" secondAttribute="centerX" id="TG5-Ed-9Lk"/>
+                            <constraint firstItem="dla-FX-hQ7" firstAttribute="top" secondItem="gqI-TI-aYz" secondAttribute="top" id="WPC-Ld-ffb"/>
+                            <constraint firstItem="JAN-Kt-DWk" firstAttribute="top" secondItem="gJy-FN-NAh" secondAttribute="bottom" constant="49" id="Wdi-HL-Jpw"/>
+                            <constraint firstItem="gJy-FN-NAh" firstAttribute="centerX" secondItem="gqI-TI-aYz" secondAttribute="centerX" id="Z8P-kI-ywe"/>
+                            <constraint firstItem="gqI-TI-aYz" firstAttribute="trailing" secondItem="JAN-Kt-DWk" secondAttribute="trailing" constant="30" id="iiN-Hx-PWx"/>
+                            <constraint firstItem="FxP-aM-iXi" firstAttribute="leading" secondItem="Ynj-Dm-X3E" secondAttribute="trailing" constant="-35.5" id="nz5-7d-b5n"/>
+                            <constraint firstItem="gJy-FN-NAh" firstAttribute="top" secondItem="dla-FX-hQ7" secondAttribute="bottom" constant="65" id="p4F-0Z-fqs"/>
+                            <constraint firstItem="JAN-Kt-DWk" firstAttribute="leading" secondItem="gqI-TI-aYz" secondAttribute="leading" constant="30" id="tcf-AP-RqN"/>
+                            <constraint firstItem="FxP-aM-iXi" firstAttribute="centerY" secondItem="Ynj-Dm-X3E" secondAttribute="centerY" id="wys-iz-FXi"/>
+                            <constraint firstItem="Ynj-Dm-X3E" firstAttribute="centerX" secondItem="gqI-TI-aYz" secondAttribute="centerX" id="y3z-Gk-0oN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gqI-TI-aYz"/>
                     </view>
                     <navigationItem key="navigationItem" id="dtX-kM-yf0"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="FxP-aM-iXi" id="yGO-7t-uQ3"/>
+                        <outlet property="buttonPublish" destination="Ynj-Dm-X3E" id="IEO-dM-vUX"/>
+                        <outlet property="currentImage" destination="gJy-FN-NAh" id="kkd-D2-WFb"/>
+                        <outlet property="inputDescription" destination="JAN-Kt-DWk" id="RlS-lg-nWt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1m-EZ-7P8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982.608695652174" y="247.76785714285714"/>
+            <point key="canvasLocation" x="1982.608695652174" y="241.74107142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cXX-Sj-1BC">
@@ -176,6 +225,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" width="54" height="51.5"/>
+        <image name="photo" width="238" height="238"/>
         <image name="tabbar_polowers" width="28" height="24.5"/>
         <image name="tabbar_polowers_active" width="27" height="23.5"/>
     </resources>
