@@ -14,9 +14,7 @@ import UIKit
 class PolowersImagesService {
     
     let db = Firestore.firestore()
-    // Get a reference to the storage service using the default Firebase App
     let storage = Storage.storage()
-    // Create a storage reference from our storage service
     lazy var storageRef = storage.reference()
     
     func addImageToDatabase(inputDescription:UITextView, imgToUpload: UIImage, completionBlock: @escaping (_ success: Bool) -> Void) {
@@ -31,6 +29,14 @@ class PolowersImagesService {
                 return
             }
             print("im in upload media")
+            self.db.collection("pl_resources").document("r_polowers_photo").setData([
+                "5200004": [
+                    "posterName": "Jack",
+                    "posterId": "Erogiregeri",
+                    "description": "loloooo",
+                    "imageUrl": url,
+                ],
+            ])
             completionBlock(true)
              
         }
