@@ -9,43 +9,102 @@
 import Foundation
 import UIKit
 
-class MyView: UIView {
-   var text:UILabel!
-    override init(frame: CGRect) {
-        super.init(frame : frame)
-        
-        setupTextBox()
-    }
+class TextBlockView: UIView {
+//  lazy var addButton: UIButton = {
+//    let addButton = UIButton(type: .contactAdd)
+//    addButton.translatesAutoresizingMaskIntoConstraints = false
+//    return addButton
+//  }()
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupTextBox()
-    }
-    
-    func setupTextBox() {
-        //setTitleColor(Colors.mainDarkBlue, for: .normal)
+    lazy var contentText: UILabel = {
+      let contentText = UILabel()
+      contentText.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+      contentText.text = "Moi c’est Polo, ton assistant de voyage!, c’est moi qui vais te surprendre ! Comme tu peux le voir je suis très peu équipé pour partir à l’aventure. Je vais donc te poser quelques questions pour savoir ce que je peux te préparer comme surprise. Cela te prendra 5 minutes !"
+        contentText.lineBreakMode = .byWordWrapping
+        contentText.numberOfLines = 0
+        contentText.textColor = UIColor.black
         
-        let title = UILabel(frame: CGRect(origin: CGPoint(x: 100, y: 50), size: CGSize.zero))
-              title.text = "Hello Cédric !"
-              title.textColor = UIColor.black
-              title.sizeToFit()
-              addSubview(title)
-        
-        
-        let content = UILabel(frame: CGRect(origin: CGPoint(x: 0, y: 100), size: CGSize.zero))
-                     content.text = "Moi c’est Polo, ton assistant de voyage, c’est moi qui vais te surprendre  ! Comme tu peux le voir je suis très peu équipé pour partir à l’aventure. Je vais donc te poser quelques questions pour savoir ce que je peux te préparer comme surprise. Cela te prendra 5 minutes !"
-                     content.textColor = UIColor.black
-                     content.sizeToFit()
-                     addSubview(content)
-       
+      contentText.translatesAutoresizingMaskIntoConstraints = false
+      return contentText
+    }()
     
-        backgroundColor      = UIColor.yellow
-        layer.cornerRadius   = 25
-        layer.borderWidth    = 1.0
-        layer.borderColor    = UIColor.darkGray.cgColor
-    }
-    
+  lazy var contentView: UIView = {
+    let contentView = UIView()
+        contentView.addSubview(contentText)
+    contentView.translatesAutoresizingMaskIntoConstraints = false
 
+    return contentView
+  }()
+      
     
-    
+  lazy var headerTitle: UILabel = {
+    let headerTitle = UILabel()
+    headerTitle.font = UIFont.systemFont(ofSize: 22, weight: .medium)
+    headerTitle.text = "Hello Cédric"
+    headerTitle.textColor = UIColor.black
+    headerTitle.textAlignment = .center
+    headerTitle.translatesAutoresizingMaskIntoConstraints = false
+    return headerTitle
+  }()
+  
+  lazy var headerView: UIView = {
+    let headerView = UIView()
+    headerView.addSubview(headerTitle)
+    headerView.translatesAutoresizingMaskIntoConstraints = false
+    return headerView
+  }()
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setupView()
+
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    setupView()
+  }
+  
+  private func setupView() {
+    backgroundColor = .white
+    layer.cornerRadius = 29
+    addSubview(contentView)
+    addSubview(headerView)
+    setupLayout()
+  }
+  
+  private func setupLayout() {
+    NSLayoutConstraint.activate([
+      //pin headerTitle to headerView
+      headerTitle.topAnchor.constraint(equalTo: headerView.topAnchor),
+      headerTitle.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
+      headerTitle.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),
+      headerTitle.trailingAnchor.constraint(equalTo: headerView.trailingAnchor),
+      
+      
+      //pin headerView to top
+      headerView.topAnchor.constraint(equalTo: topAnchor),
+      headerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      headerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+      headerView.heightAnchor.constraint(equalToConstant: 40),
+      
+      //layout contentView
+      contentView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+      contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
+      contentView.heightAnchor.constraint(equalTo: contentText.heightAnchor),
+      
+      // layout contentText
+      contentText.widthAnchor.constraint(equalTo: contentView.widthAnchor)
+
+    ])
+  }
+  
+  //custom views should override this to return true if
+  //they cannot layout correctly using autoresizing.
+  //from apple docs https://developer.apple.com/documentation/uikit/uiview/1622549-requiresconstraintbasedlayout
+  override class var requiresConstraintBasedLayout: Bool {
+    return true
+  }
 }

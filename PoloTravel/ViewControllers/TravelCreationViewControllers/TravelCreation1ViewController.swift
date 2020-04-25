@@ -10,13 +10,15 @@ import UIKit
 
 class TravelCreation1ViewController: UIViewController {
     
+    @IBOutlet weak var Textblock: TextBlockView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textlabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        titleLabel.sizeToFit()
-        textlabel.sizeToFit()
+//
+  
+//        titleLabel.sizeToFit()
+//        textlabel.sizeToFit()
         // Do any additional setup after loading the view.
     }
     
