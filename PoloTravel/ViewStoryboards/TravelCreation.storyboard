@@ -26,16 +26,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bg_redbig_shape" translatesAutoresizingMaskIntoConstraints="NO" id="OAd-92-rQi">
                                 <rect key="frame" x="0.0" y="5" width="382" height="295"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV1-Hu-0Wd" customClass="RedBasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="82" y="710" width="236" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Créer mon voyage">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ICN-Vp-AFb" kind="show" id="JQo-gs-hPY"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-rJ-QbJ" customClass="TextBlockView" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="57.666666666666657" y="155" width="260" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -44,6 +34,16 @@
                                 </constraints>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="30" bottom="8" trailing="30"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV1-Hu-0Wd" customClass="RedBasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="69" y="700" width="236" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Créer mon voyage">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ICN-Vp-AFb" kind="show" id="JQo-gs-hPY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.73153918979999999" green="0.87287902829999997" blue="0.93726629019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -70,14 +70,37 @@
                     <view key="view" contentMode="scaleToFill" id="pEi-fM-4Wm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="polo_travelers" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-PB-ORR">
+                                <rect key="frame" x="23" y="268" width="329" height="175"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqW-fD-qkW">
+                                <rect key="frame" x="30" y="187" width="315" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="u0x-kN-uQO"/>
+                                </constraints>
+                                <string key="text">Pour commencer, je dois préparer ce voyage pour combien de personnes ?
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.69679754969999996" green="0.87668329479999996" blue="0.94511049989999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="fWd-PB-ORR" firstAttribute="top" secondItem="qqW-fD-qkW" secondAttribute="bottom" constant="60" id="Ehv-49-O4N"/>
+                            <constraint firstItem="qqW-fD-qkW" firstAttribute="centerX" secondItem="fWd-PB-ORR" secondAttribute="centerX" id="Nho-Je-a1K"/>
+                            <constraint firstItem="99G-q5-iI1" firstAttribute="trailing" secondItem="qqW-fD-qkW" secondAttribute="trailing" constant="30" id="Uzm-yb-xfm"/>
+                            <constraint firstItem="qqW-fD-qkW" firstAttribute="top" secondItem="99G-q5-iI1" secondAttribute="top" constant="99" id="kSB-Fc-lkb"/>
+                            <constraint firstItem="qqW-fD-qkW" firstAttribute="leading" secondItem="99G-q5-iI1" secondAttribute="leading" constant="30" id="tS6-io-PY7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="99G-q5-iI1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Sy3-jb-1YP"/>
+                    <navigationItem key="navigationItem" id="tMy-u7-kLf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iD-Am-IfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="115"/>
+            <point key="canvasLocation" x="1901.5999999999999" y="114.53201970443351"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kPn-vu-Nob">
@@ -102,5 +125,6 @@
         <image name="bg_bluebig_shape" width="280.33334350585938" height="333"/>
         <image name="bg_redbig_shape" width="377" height="295"/>
         <image name="polo_character" width="411" height="374"/>
+        <image name="polo_travelers" width="337" height="304"/>
     </resources>
 </document>
