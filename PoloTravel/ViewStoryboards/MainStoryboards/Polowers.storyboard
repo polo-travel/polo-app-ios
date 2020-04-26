@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-rJ-udV" customClass="RedBasicButton" customModule="PoloTravel" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-rJ-udV" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="98" y="703" width="218" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Publier une photo"/>
@@ -122,6 +122,7 @@
                     <navigationItem key="navigationItem" id="GlV-m4-cl7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buttonPublish" destination="0xT-rJ-udV" id="CL7-mG-ylx"/>
                         <outlet property="collectionView" destination="PqD-NF-ba6" id="WhG-eo-eMX"/>
                     </connections>
                 </viewController>
@@ -150,7 +151,7 @@
                                 <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynj-Dm-X3E" customClass="RedBasicButton" customModule="PoloTravel" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynj-Dm-X3E" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="100.5" y="682" width="213" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="O5P-NF-Hhy"/>

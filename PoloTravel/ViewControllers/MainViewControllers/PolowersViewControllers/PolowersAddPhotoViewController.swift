@@ -14,7 +14,7 @@ class PolowersAddPhotoViewController: UIViewController, UIImagePickerControllerD
     
     @IBOutlet weak var currentImage: UIImageView!
     @IBOutlet weak var inputDescription: UITextView!
-    @IBOutlet weak var buttonPublish: RedBasicButton!
+    @IBOutlet weak var buttonPublish: BasicButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let imagesManager = PolowersImagesService()
@@ -22,7 +22,8 @@ class PolowersAddPhotoViewController: UIViewController, UIImagePickerControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        buttonPublish.setRedButton()
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(addNewPerson))
         currentImage.addGestureRecognizer(tap)
         currentImage.isUserInteractionEnabled = true

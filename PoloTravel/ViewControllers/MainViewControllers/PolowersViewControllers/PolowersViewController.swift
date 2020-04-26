@@ -12,12 +12,14 @@ class PolowersViewController: UIViewController {
     
     var photoList:Photo = []
     var imagePlaceholder = UIImage(named: "onboarding_ready")
+    @IBOutlet weak var buttonPublish: BasicButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        buttonPublish.setRedButton()
         
         collectionView.delegate = self
         collectionView.dataSource = self
