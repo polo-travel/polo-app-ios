@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>953623448248-gllo03l322jp0jnfj617rsbdnlr1572s.apps.googleusercontent.com</string>
+	<string>953623448248-694idfu0ttqpsbiru0udadf0ob7sd3lm.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.953623448248-gllo03l322jp0jnfj617rsbdnlr1572s</string>
+	<string>com.googleusercontent.apps.953623448248-694idfu0ttqpsbiru0udadf0ob7sd3lm</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDlLYuH0owkbC3yngjpqco9Re2CaSjRpGw</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.bddi.PoloTravel</string>
+	<string>com.bddi.PoloVoyages</string>
 	<key>PROJECT_ID</key>
 	<string>bddi1-polotravel</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:953623448248:ios:6f6712d14cc000d233824d</string>
+	<string>1:953623448248:ios:f377420bbec81f7833824d</string>
 	<key>DATABASE_URL</key>
 	<string>https://bddi1-polotravel.firebaseio.com</string>
 </dict>
