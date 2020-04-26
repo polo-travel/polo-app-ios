@@ -4,8 +4,17 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Bold.ttf">
+            <string>Gilroy-Bold</string>
+        </array>
+        <array key="Gilroy-Medium.ttf">
+            <string>Gilroy-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Polowers-->
         <scene sceneID="3CM-ae-kbC">
@@ -15,21 +24,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Polowers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzt-NM-C2l">
-                                <rect key="frame" x="186" y="269" width="87" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-rJ-udV" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="98" y="703" width="218" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-rJ-udV">
-                                <rect key="frame" x="173" y="457" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add photo"/>
+                                <state key="normal" title="Publier une photo"/>
                                 <connections>
                                     <segue destination="K3I-Kf-8Xr" kind="show" id="wv5-N5-GL8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Polowers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzt-NM-C2l">
+                                <rect key="frame" x="29" y="89" width="129" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="30"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apq-h7-yA2">
+                                <rect key="frame" x="72" y="153" width="271" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Découvre les photos des autres Polowers et toi aussi partage les tiennes">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Gilroy-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PqD-NF-ba6">
+                                <rect key="frame" x="31" y="225" width="354" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MRJ-dQ-d42">
+                                    <size key="itemSize" width="168" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="PolowersCollectionViewCell" id="oXv-6E-gps" customClass="PolowersCollectionViewCell" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="88.5" y="0.0" width="177" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A1o-8M-IM8">
+                                            <rect key="frame" x="0.0" y="0.0" width="177" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZP-3j-HOF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="180"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="1JM-6t-IE7">
+                                                    <rect key="frame" x="4.5" y="128" width="43" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCK-CZ-yrw">
+                                                    <rect key="frame" x="60" y="150" width="57" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cédric" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8t6-oN-XkA">
+                                                            <rect key="frame" x="13" y="4" width="31" height="10"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyA-Bv-Wrv">
+                                                    <rect key="frame" x="13" y="146" width="25" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="10"/>
+                                                    <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="177" height="180"/>
+                                        <connections>
+                                            <outlet property="imageLikes" destination="gyA-Bv-Wrv" id="74C-VA-PrB"/>
+                                            <outlet property="imagePosted" destination="sZP-3j-HOF" id="XNH-3t-dEO"/>
+                                            <outlet property="polowerName" destination="8t6-oN-XkA" id="fMB-A3-B26"/>
+                                            <outlet property="polowerNameBkg" destination="XCK-CZ-yrw" id="NL2-pz-4EU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="PH4-MD-uYw"/>
@@ -39,6 +121,10 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="GlV-m4-cl7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonPublish" destination="0xT-rJ-udV" id="CL7-mG-ylx"/>
+                        <outlet property="collectionView" destination="PqD-NF-ba6" id="WhG-eo-eMX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkF-Fc-khq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,22 +138,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOc-kC-YPa">
-                                <rect key="frame" x="139" y="276" width="80" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-Kt-DWk">
+                                <rect key="frame" x="30" y="440" width="354" height="173"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Polowers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-FX-hQ7">
+                                <rect key="frame" x="30" y="88" width="129" height="29"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="30"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynj-Dm-X3E" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="100.5" y="682" width="213" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="O5P-NF-Hhy"/>
+                                    <constraint firstAttribute="width" constant="213" id="WHE-sE-EDy"/>
+                                </constraints>
+                                <state key="normal" title="Publier"/>
+                                <connections>
+                                    <action selector="publishButtonClicked:" destination="K3I-Kf-8Xr" eventType="touchUpInside" id="Ly5-wm-3kG"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FxP-aM-iXi">
+                                <rect key="frame" x="278" y="698" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-FN-NAh">
+                                <rect key="frame" x="103" y="182" width="208" height="208"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="DjI-dh-I7K"/>
+                                    <constraint firstAttribute="height" constant="208" id="Wtf-Cw-eDG"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gqI-TI-aYz" firstAttribute="bottom" secondItem="Ynj-Dm-X3E" secondAttribute="bottom" constant="79" id="7Jd-2W-LuB"/>
+                            <constraint firstItem="dla-FX-hQ7" firstAttribute="leading" secondItem="gqI-TI-aYz" secondAttribute="leading" constant="30" id="9k0-nS-1Ng"/>
+                            <constraint firstItem="Ynj-Dm-X3E" firstAttribute="top" secondItem="JAN-Kt-DWk" secondAttribute="bottom" constant="69" id="ISP-np-XOR"/>
+                            <constraint firstItem="FxP-aM-iXi" firstAttribute="top" secondItem="Ynj-Dm-X3E" secondAttribute="bottom" constant="-36" id="SI8-f1-rkp"/>
+                            <constraint firstItem="JAN-Kt-DWk" firstAttribute="centerX" secondItem="gqI-TI-aYz" secondAttribute="centerX" id="TG5-Ed-9Lk"/>
+                            <constraint firstItem="dla-FX-hQ7" firstAttribute="top" secondItem="gqI-TI-aYz" secondAttribute="top" id="WPC-Ld-ffb"/>
+                            <constraint firstItem="JAN-Kt-DWk" firstAttribute="top" secondItem="gJy-FN-NAh" secondAttribute="bottom" constant="49" id="Wdi-HL-Jpw"/>
+                            <constraint firstItem="gJy-FN-NAh" firstAttribute="centerX" secondItem="gqI-TI-aYz" secondAttribute="centerX" id="Z8P-kI-ywe"/>
+                            <constraint firstItem="gqI-TI-aYz" firstAttribute="trailing" secondItem="JAN-Kt-DWk" secondAttribute="trailing" constant="30" id="iiN-Hx-PWx"/>
+                            <constraint firstItem="FxP-aM-iXi" firstAttribute="leading" secondItem="Ynj-Dm-X3E" secondAttribute="trailing" constant="-35.5" id="nz5-7d-b5n"/>
+                            <constraint firstItem="gJy-FN-NAh" firstAttribute="top" secondItem="dla-FX-hQ7" secondAttribute="bottom" constant="65" id="p4F-0Z-fqs"/>
+                            <constraint firstItem="JAN-Kt-DWk" firstAttribute="leading" secondItem="gqI-TI-aYz" secondAttribute="leading" constant="30" id="tcf-AP-RqN"/>
+                            <constraint firstItem="FxP-aM-iXi" firstAttribute="centerY" secondItem="Ynj-Dm-X3E" secondAttribute="centerY" id="wys-iz-FXi"/>
+                            <constraint firstItem="Ynj-Dm-X3E" firstAttribute="centerX" secondItem="gqI-TI-aYz" secondAttribute="centerX" id="y3z-Gk-0oN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gqI-TI-aYz"/>
                     </view>
                     <navigationItem key="navigationItem" id="dtX-kM-yf0"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="FxP-aM-iXi" id="yGO-7t-uQ3"/>
+                        <outlet property="buttonPublish" destination="Ynj-Dm-X3E" id="IEO-dM-vUX"/>
+                        <outlet property="currentImage" destination="gJy-FN-NAh" id="kkd-D2-WFb"/>
+                        <outlet property="inputDescription" destination="JAN-Kt-DWk" id="RlS-lg-nWt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1m-EZ-7P8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982.608695652174" y="247.76785714285714"/>
+            <point key="canvasLocation" x="1982.608695652174" y="241.74107142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cXX-Sj-1BC">
@@ -89,6 +226,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" width="54" height="51.5"/>
+        <image name="photo" width="238" height="238"/>
         <image name="tabbar_polowers" width="28" height="24.5"/>
         <image name="tabbar_polowers_active" width="27" height="23.5"/>
     </resources>
