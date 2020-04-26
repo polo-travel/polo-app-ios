@@ -23,9 +23,8 @@
                                 <rect key="frame" x="70" y="378" width="410" height="374"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_redbig_shape" translatesAutoresizingMaskIntoConstraints="NO" id="OAd-92-rQi">
-                                <rect key="frame" x="0.0" y="0.0" width="382" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bg_redbig_shape" translatesAutoresizingMaskIntoConstraints="NO" id="OAd-92-rQi">
+                                <rect key="frame" x="0.0" y="5" width="382" height="295"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV1-Hu-0Wd" customClass="RedBasicButton" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="82" y="710" width="236" height="52"/>
@@ -34,26 +33,51 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="createTravel:" destination="YKX-PR-Q68" eventType="touchUpInside" id="OGY-Db-WAg"/>
+                                    <segue destination="ICN-Vp-AFb" kind="show" id="JQo-gs-hPY"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-rJ-QbJ" customClass="TextBlockView" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="10" y="242" width="355" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-rJ-QbJ" customClass="TextBlockView" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="57.666666666666657" y="155" width="260" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="1Lr-ck-sj9"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="30" bottom="8" trailing="30"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.73153918979999999" green="0.87287902829999997" blue="0.93726629019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="KI3-rJ-QbJ" firstAttribute="top" secondItem="OAd-92-rQi" secondAttribute="bottom" constant="-145" id="HLQ-9b-TsP"/>
+                            <constraint firstItem="KI3-rJ-QbJ" firstAttribute="top" secondItem="MFr-uF-uvq" secondAttribute="top" constant="67" id="enJ-ki-VeV"/>
+                            <constraint firstItem="KI3-rJ-QbJ" firstAttribute="centerX" secondItem="Slp-MR-73s" secondAttribute="centerX" id="l2i-0d-tAF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MFr-uF-uvq"/>
                     </view>
                     <navigationItem key="navigationItem" id="4cV-BA-57J"/>
                     <connections>
                         <outlet property="Textblock" destination="KI3-rJ-QbJ" id="Jdb-VK-hv4"/>
+                        <outlet property="poloCharacter" destination="k4Z-FM-QN8" id="Ajk-vi-Z6F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqG-UK-IYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028" y="115.27093596059113"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5ud-t2-HfZ">
+            <objects>
+                <viewController id="ICN-Vp-AFb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEi-fM-4Wm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.69679754969999996" green="0.87668329479999996" blue="0.94511049989999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="99G-q5-iI1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sy3-jb-1YP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iD-Am-IfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kPn-vu-Nob">

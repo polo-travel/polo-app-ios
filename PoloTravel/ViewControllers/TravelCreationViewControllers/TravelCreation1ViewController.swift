@@ -11,24 +11,26 @@ import UIKit
 class TravelCreation1ViewController: UIViewController {
     
     @IBOutlet weak var Textblock: TextBlockView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var textlabel: UILabel!
+    @IBOutlet weak var poloCharacter: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-  
-//        titleLabel.sizeToFit()
-//        textlabel.sizeToFit()
+        setupLayout()
         // Do any additional setup after loading the view.
     }
+    
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    @IBAction func createTravel(_ sender: UIButton) {
-        
+    
+    func setupLayout(){
+        Textblock.translatesAutoresizingMaskIntoConstraints = false
+        poloCharacter.layer.zPosition = 9
     }
+
 }
 
 
