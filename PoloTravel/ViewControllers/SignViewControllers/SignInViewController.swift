@@ -16,7 +16,7 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
-    @IBOutlet weak var buttonConnect: DarkBasicButton!
+    @IBOutlet weak var buttonConnect: BasicButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var errorLabel: UILabel!
@@ -25,6 +25,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        buttonConnect.setDarkButton()
     }
 
     @IBAction func buttonConnectClicked(_ sender: Any) {

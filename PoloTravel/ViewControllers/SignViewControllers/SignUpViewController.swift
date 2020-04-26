@@ -17,7 +17,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
-    @IBOutlet weak var buttonNext: DarkBasicButton!
+    @IBOutlet weak var buttonNext: BasicButton!
     @IBOutlet weak var buttonCancel: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -28,6 +28,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        buttonNext.setDarkButton()
     }
     
     @IBAction func buttonNextClicked(_ sender: Any) {

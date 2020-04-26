@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var googleButton: BasicButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        googleButton.setDarkButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
