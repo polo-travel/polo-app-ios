@@ -13,8 +13,15 @@ class Step1TravelCreationViewController: UIViewController {
     var rotationAngle : CGFloat!
     @IBOutlet weak var poloCharacters: UIImageView!
     
+    var index = 0
+    let animationDuration: TimeInterval = 0.25
+    let switchingInterval: TimeInterval = 3
+    
     @IBOutlet weak var picker: UIPickerView!
     let data = ["1","2","3","4","5"]
+    
+    let imgArray = ["polo_travelers_1","polo_travelers_2","polo_travelers_3","polo_travelers_4"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +41,7 @@ class Step1TravelCreationViewController: UIViewController {
         pickerView.transform = CGAffineTransform(rotationAngle: rotationAngle)
         pickerView.frame = CGRect(x: x, y: y, width: pickerView.frame.height , height: pickerView.frame.width)
     }
+    
 
 }
 extension Step1TravelCreationViewController:UIPickerViewDataSource {
@@ -66,30 +74,28 @@ extension Step1TravelCreationViewController:UIPickerViewDelegate{
         label.textAlignment = .center
         label.transform = CGAffineTransform(rotationAngle: 90 * (.pi / 180 ))
 
-        //Put your values in an array like Minutes,Temperature etc.
         label.text = data[row]
 
         return label
     }
-    
 
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        100
+        80
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(data[row])
         
-        
-        switch data[row] {
-        case "2":
-            poloCharacters.image = UIImage(named: "polo_travelers_2")
-        case "3":
-            poloCharacters.image = UIImage(named: "polo_travelers_3")
-        case "4":
-            poloCharacters.image = UIImage(named: "polo_travelers_4")
-        default:
-            poloCharacters.image = UIImage(named: "polo_travelers_1")
+        if data[row] == data[row] {
+            print("ekip")
+            print(data[row])
+             UIView.transition(with: self.poloCharacters,
+                            duration: 0.7,
+                            options: .transitionCrossDissolve,
+                            animations: {
+                            self.poloCharacters.image = self.poloCharacters.image
+                        },completion: nil)
+            poloCharacters.image = UIImage(named: "polo_travelers_\(data[row])")
         }
         
     }
