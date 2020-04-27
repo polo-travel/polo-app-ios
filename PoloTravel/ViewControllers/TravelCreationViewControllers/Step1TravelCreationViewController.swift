@@ -11,7 +11,8 @@ import UIKit
 class Step1TravelCreationViewController: UIViewController {
 
     var rotationAngle : CGFloat!
-
+    @IBOutlet weak var poloCharacters: UIImageView!
+    
     @IBOutlet weak var picker: UIPickerView!
     let data = ["1","2","3","4","5"]
     override func viewDidLoad() {
@@ -59,11 +60,10 @@ extension Step1TravelCreationViewController:UIPickerViewDelegate{
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel()
-        label.font = UIFont(name: "Helvetica", size: 40)
-        label.font = UIFont.systemFont(ofSize: 40, weight: .bold)
+        label.font = UIFont(name: "Gilroy-Bold", size: 120)
+        label.textColor = Colors.mainDarkBlue
         label.minimumScaleFactor = 0.5
         label.textAlignment = .center
-        label.textColor = UIColor.white
         label.transform = CGAffineTransform(rotationAngle: 90 * (.pi / 180 ))
 
         //Put your values in an array like Minutes,Temperature etc.
@@ -74,12 +74,24 @@ extension Step1TravelCreationViewController:UIPickerViewDelegate{
     
 
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        50
+        100
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("KOKOKOKOKOK")
         print(data[row])
+        
+        
+        switch data[row] {
+        case "2":
+            poloCharacters.image = UIImage(named: "polo_travelers_2")
+        case "3":
+            poloCharacters.image = UIImage(named: "polo_travelers_3")
+        case "4":
+            poloCharacters.image = UIImage(named: "polo_travelers_4")
+        default:
+            poloCharacters.image = UIImage(named: "polo_travelers_1")
+        }
+        
     }
     
 }

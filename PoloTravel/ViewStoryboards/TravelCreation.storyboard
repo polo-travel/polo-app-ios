@@ -71,7 +71,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="polo_travelers" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-PB-ORR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="polo_travelers_1" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-PB-ORR">
                                 <rect key="frame" x="23" y="268" width="329" height="175"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqW-fD-qkW">
@@ -96,10 +96,10 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT2-F8-pyH">
-                                <rect key="frame" x="0.0" y="541" width="375" height="162"/>
+                                <rect key="frame" x="0.0" y="529" width="375" height="174"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="69I-Gn-z39"/>
-                                    <constraint firstAttribute="height" constant="162" id="P3V-Zf-zRW"/>
+                                    <constraint firstAttribute="height" constant="174" id="P3V-Zf-zRW"/>
                                 </constraints>
                             </pickerView>
                         </subviews>
@@ -111,7 +111,7 @@
                             <constraint firstItem="qqW-fD-qkW" firstAttribute="centerX" secondItem="fWd-PB-ORR" secondAttribute="centerX" id="Nho-Je-a1K"/>
                             <constraint firstItem="99G-q5-iI1" firstAttribute="trailing" secondItem="qT2-F8-pyH" secondAttribute="trailing" id="P0F-tB-ujI"/>
                             <constraint firstItem="99G-q5-iI1" firstAttribute="trailing" secondItem="qqW-fD-qkW" secondAttribute="trailing" constant="30" id="Uzm-yb-xfm"/>
-                            <constraint firstItem="qT2-F8-pyH" firstAttribute="top" secondItem="99G-q5-iI1" secondAttribute="top" constant="453" id="csS-7H-XDF"/>
+                            <constraint firstItem="qT2-F8-pyH" firstAttribute="top" secondItem="99G-q5-iI1" secondAttribute="top" constant="441" id="csS-7H-XDF"/>
                             <constraint firstItem="qqW-fD-qkW" firstAttribute="top" secondItem="99G-q5-iI1" secondAttribute="top" constant="99" id="kSB-Fc-lkb"/>
                             <constraint firstItem="qqW-fD-qkW" firstAttribute="leading" secondItem="99G-q5-iI1" secondAttribute="leading" constant="30" id="tS6-io-PY7"/>
                         </constraints>
@@ -120,6 +120,7 @@
                     <navigationItem key="navigationItem" id="tMy-u7-kLf"/>
                     <connections>
                         <outlet property="picker" destination="qT2-F8-pyH" id="W3o-Dr-HWb"/>
+                        <outlet property="poloCharacters" destination="fWd-PB-ORR" id="w6S-Kg-FNC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iD-Am-IfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -165,6 +166,6 @@
         <image name="bg_bluebig_shape" width="280.33334350585938" height="333"/>
         <image name="bg_redbig_shape" width="377" height="295"/>
         <image name="polo_character" width="411" height="374"/>
-        <image name="polo_travelers" width="337" height="304"/>
+        <image name="polo_travelers_1" width="239" height="304"/>
     </resources>
 </document>
