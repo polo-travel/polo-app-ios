@@ -9,13 +9,9 @@
 import UIKit
 
 class OnBoarding4ViewController: UIViewController {
- 
-    @IBOutlet weak var nextViewButton: BasicButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        nextViewButton.setRedButton()
  
     }
     
