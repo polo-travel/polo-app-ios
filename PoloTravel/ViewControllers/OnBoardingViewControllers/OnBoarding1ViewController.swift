@@ -13,6 +13,7 @@ class OnBoarding1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,5 +25,6 @@ class OnBoarding1ViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+   
 }
 

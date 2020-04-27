@@ -54,7 +54,7 @@ class SignUpViewController: UIViewController {
     
     private func switchStoryboard() {
         let onBoardingView: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
-        let onBoarding1VC = onBoardingView.instantiateViewController(identifier: "OnBoarding1ViewController")
+        let onBoarding1VC = onBoardingView.instantiateViewController(identifier: "OnBoardingMainViewController")
         self.show(onBoarding1VC, sender: nil)
     }
     

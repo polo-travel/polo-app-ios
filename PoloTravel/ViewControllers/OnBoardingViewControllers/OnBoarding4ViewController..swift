@@ -6,4 +6,22 @@
 //  Copyright © 2020 PoloTeam. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class OnBoarding4ViewController: UIViewController {
+ 
+    @IBOutlet weak var nextViewButton: BasicButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        nextViewButton.setRedButton()
+ 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+}
+
