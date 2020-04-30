@@ -25,27 +25,5 @@ class OnBoardingMainViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func moveFirst(_ sender: Any) {
-        pageVC.setViewControllerFromIndex(index: 0)
-    }
-    
-    @IBAction func moveSecond(_ sender: Any) {
-        pageVC.setViewControllerFromIndex(index: 1)
-    }
-    
-    @IBAction func moveThird(_ sender: Any) {
-        pageVC.setViewControllerFromIndex(index: 2)
-    }
-    
-    @IBAction func moveFourth(_ sender: Any) {
-        pageVC.setViewControllerFromIndex(index: 3)
-    }
-    
-    @IBAction func moveFifth(_ sender: Any) {
-        pageVC.setViewControllerFromIndex(index: 4)
-    }
-    
-    
-    
+
 }
