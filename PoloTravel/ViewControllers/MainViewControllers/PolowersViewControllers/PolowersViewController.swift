@@ -84,7 +84,6 @@ extension PolowersViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PolowersCollectionViewCell", for: indexPath) as! PolowersCollectionViewCell
-    
         
         cell.contentView.layer.cornerRadius = 25.0
         
