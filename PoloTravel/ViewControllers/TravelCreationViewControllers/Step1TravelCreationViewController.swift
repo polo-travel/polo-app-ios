@@ -69,7 +69,7 @@ extension Step1TravelCreationViewController:UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel()
         label.font = UIFont(name: "Gilroy-Bold", size: 120)
-        label.textColor = Colors.mainDarkBlue
+        label.textColor = UIColor.MainTheme.mainDarkBlue
         label.minimumScaleFactor = 0.5
         label.textAlignment = .center
         label.transform = CGAffineTransform(rotationAngle: 90 * (.pi / 180 ))

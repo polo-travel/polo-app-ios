@@ -12,10 +12,12 @@ class TravelCreation1ViewController: UIViewController {
     
     @IBOutlet weak var Textblock: TextBlockView!
     @IBOutlet weak var poloCharacter: UIImageView!
+    @IBOutlet weak var button: BasicButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        button.setRedButton()
         // Do any additional setup after loading the view.
     }
     

@@ -34,7 +34,7 @@
                                 </constraints>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="30" bottom="8" trailing="30"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV1-Hu-0Wd" customClass="RedBasicButton" customModule="PoloTravel" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV1-Hu-0Wd" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="69" y="700" width="236" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Créer mon voyage">
@@ -56,6 +56,7 @@
                     <navigationItem key="navigationItem" id="4cV-BA-57J"/>
                     <connections>
                         <outlet property="Textblock" destination="KI3-rJ-QbJ" id="Jdb-VK-hv4"/>
+                        <outlet property="button" destination="NV1-Hu-0Wd" id="2ll-1k-GZw"/>
                         <outlet property="poloCharacter" destination="k4Z-FM-QN8" id="Ajk-vi-Z6F"/>
                     </connections>
                 </viewController>
