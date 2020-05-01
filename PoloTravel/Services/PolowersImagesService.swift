@@ -39,7 +39,7 @@ class PolowersImagesService {
                     "userId": self.userManager.currentUser()?.uid as Any,
                     "userName": self.userManager.currentUser()?.firstName as Any,
                 ],
-            ])
+            ], merge: true)
             completionBlock(true)
              
         }
