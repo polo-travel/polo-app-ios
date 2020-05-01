@@ -18,9 +18,9 @@ class Step1TravelCreationViewController: UIViewController {
     let switchingInterval: TimeInterval = 3
     
     @IBOutlet weak var picker: UIPickerView!
-    let data = ["1","2","3","4","5"]
+    let data = ["1","2","3","4","5","6"]
     
-    let imgArray = ["polo_travelers_1","polo_travelers_2","polo_travelers_3","polo_travelers_4"]
+    let imgArray = ["polo_travelers_1","polo_travelers_2","polo_travelers_3","polo_travelers_4","polo_travelers_5","polo_travelers_6"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,11 +83,8 @@ extension Step1TravelCreationViewController:UIPickerViewDelegate{
         80
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(data[row])
-        
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {        
         if data[row] == data[row] {
-            print("ekip")
             print(data[row])
              UIView.transition(with: self.poloCharacters,
                             duration: 0.7,
