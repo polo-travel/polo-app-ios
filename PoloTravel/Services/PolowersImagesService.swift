@@ -37,7 +37,7 @@ class PolowersImagesService {
                     "nbLikes": 0,
                     "publicationDate": Date(),
                     "userId": self.userManager.currentUser()?.uid as Any,
-                    "userName": "Jack",
+                    "userName": self.userManager.currentUser()?.firstName as Any,
                 ],
             ])
             completionBlock(true)
@@ -47,7 +47,7 @@ class PolowersImagesService {
     }
     
     func uploadMedia(imgToUpload: UIImage, completion: @escaping (_ url: String?) -> Void) {
-       storageRef = storageRef.child("polowers_photos/"+UUID().uuidString)
+       storageRef = storageRef.child("polowers_images/"+UUID().uuidString)
         if let uploadData = imgToUpload.jpegData(compressionQuality: 0.5) {
             storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
                 if error != nil {
