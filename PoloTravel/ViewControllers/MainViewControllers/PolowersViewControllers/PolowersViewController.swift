@@ -10,7 +10,7 @@ import UIKit
 
 class PolowersViewController: UIViewController {
     
-    var photoList:Photo = []
+    let feedManager = PolowersFeedService()
     var imagePlaceholder = UIImage(named: "onboarding_ready")
     @IBOutlet weak var buttonPublish: BasicButton!
     
@@ -26,17 +26,15 @@ class PolowersViewController: UIViewController {
         
         collectionView.backgroundColor = UIColor(white: 1, alpha: 0)
         
-        photoList = [
-            PhotoElement(imageURL: "https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F03.2F16.2F217d2f8d-ce31-4ef9-a08a-0eeb9efba706.2Ejpeg/1120x630/background-color/ffffff/quality/70/les-plus-belles-photos-de-nature-capturees-dans-les-parcs-nationaux-du-royaume-uni.jpg", poster: "Cédric", likes: 0),
-            PhotoElement(imageURL: "https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F03.2F16.2F217d2f8d-ce31-4ef9-a08a-0eeb9efba706.2Ejpeg/1120x630/background-color/ffffff/quality/70/les-plus-belles-photos-de-nature-capturees-dans-les-parcs-nationaux-du-royaume-uni.jpg", poster: "Alexia", likes: 15),
-            PhotoElement(imageURL: "https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F03.2F16.2F217d2f8d-ce31-4ef9-a08a-0eeb9efba706.2Ejpeg/1120x630/background-color/ffffff/quality/70/les-plus-belles-photos-de-nature-capturees-dans-les-parcs-nationaux-du-royaume-uni.jpg", poster: "Manon", likes: 500),
-            PhotoElement(imageURL: "https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F03.2F16.2F217d2f8d-ce31-4ef9-a08a-0eeb9efba706.2Ejpeg/1120x630/background-color/ffffff/quality/70/les-plus-belles-photos-de-nature-capturees-dans-les-parcs-nationaux-du-royaume-uni.jpg", poster: "Lucas", likes: 30),
-            PhotoElement(imageURL: "https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F03.2F16.2F217d2f8d-ce31-4ef9-a08a-0eeb9efba706.2Ejpeg/1120x630/background-color/ffffff/quality/70/les-plus-belles-photos-de-nature-capturees-dans-les-parcs-nationaux-du-royaume-uni.jpg", poster: "Manon", likes: 500),
-            PhotoElement(imageURL: "https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F03.2F16.2F217d2f8d-ce31-4ef9-a08a-0eeb9efba706.2Ejpeg/1120x630/background-color/ffffff/quality/70/les-plus-belles-photos-de-nature-capturees-dans-les-parcs-nationaux-du-royaume-uni.jpg", poster: "Lucas", likes: 30),
-            PhotoElement(imageURL: "https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F03.2F16.2F217d2f8d-ce31-4ef9-a08a-0eeb9efba706.2Ejpeg/1120x630/background-color/ffffff/quality/70/les-plus-belles-photos-de-nature-capturees-dans-les-parcs-nationaux-du-royaume-uni.jpg", poster: "Manon", likes: 500),
-            PhotoElement(imageURL: "https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F03.2F16.2F217d2f8d-ce31-4ef9-a08a-0eeb9efba706.2Ejpeg/1120x630/background-color/ffffff/quality/70/les-plus-belles-photos-de-nature-capturees-dans-les-parcs-nationaux-du-royaume-uni.jpg", poster: "Lucas", likes: 30),
-        ]
-        
+        feedManager.updateFeed() {[weak self] (success) in
+            guard let `self` = self else { return }
+            if (success) {
+                self.collectionView.reloadData()
+                print(self.feedManager.photoList)
+            } else {
+                print("notgood")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,7 +76,7 @@ extension PolowersViewController:UICollectionViewDelegate {
 
 extension PolowersViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.photoList.count
+        return feedManager.photoList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -90,11 +88,11 @@ extension PolowersViewController:UICollectionViewDataSource {
         cell.polowerNameBkg.layer.cornerRadius = 9.0
         cell.polowerNameBkg.backgroundColor = UIColor(red: 25/255, green: 56/255, blue: 79/255, alpha: 0.8)
         
-        cell.imageLikes.text = "\(photoList[indexPath.row].likes)"
-        cell.polowerName.text = "\(photoList[indexPath.row].poster)"
+        cell.imageLikes.text = "\(feedManager.photoList[indexPath.row].likes)"
+        cell.polowerName.text = "\(feedManager.photoList[indexPath.row].poster)"
         
         cell.imagePosted?.image = imagePlaceholder
-        if let url = URL(string: "\(photoList[indexPath.row].imageURL)") {
+        if let url = URL(string: "\(feedManager.photoList[indexPath.row].imageURL)") {
             cell.imagePosted?.load(url: url)
         }
         
