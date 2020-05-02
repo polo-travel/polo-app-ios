@@ -366,6 +366,9 @@
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ULp-8f-ast" kind="show" id="Eev-xL-WbV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58517342809999995" green="0.88820040229999997" blue="0.96472090479999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -389,6 +392,129 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HvN-FI-Q57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4140" y="115"/>
+        </scene>
+        <!--Step5 Travel Creation View Controller-->
+        <scene sceneID="BjL-05-Xjt">
+            <objects>
+                <viewController id="ULp-8f-ast" customClass="Step5TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g7y-Xp-2Fr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quand veux-tu que je te te surprenne ?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxM-Zj-q0J">
+                                <rect key="frame" x="18" y="160" width="338" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-9P-TN3">
+                                <rect key="frame" x="0.0" y="271" width="375" height="288"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyG-dB-Nn5" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="251" y="732" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Bzb-S2-8cE" kind="show" id="DqW-k6-9oZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58517342809999995" green="0.88820040229999997" blue="0.96472090479999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="NLH-U0-Lid"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="70T-cL-8It"/>
+                    <connections>
+                        <outlet property="nextButton" destination="hyG-dB-Nn5" id="brE-kp-Lga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-AS-W04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4868" y="114.53201970443351"/>
+        </scene>
+        <!--Step6 Travel Creation View Controller-->
+        <scene sceneID="xH6-tm-Ovd">
+            <objects>
+                <viewController id="Bzb-S2-8cE" customClass="Step6TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZYA-HX-Qju">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour finir, le plus important, quel est ton budget ?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krq-Z3-EH4">
+                                <rect key="frame" x="21" y="163" width="338" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_step_6" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-cP-UpN">
+                                <rect key="frame" x="16" y="223" width="343" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4I8-eM-DCd">
+                                <rect key="frame" x="19" y="490" width="342" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="priceSlider:" destination="Bzb-S2-8cE" eventType="valueChanged" id="P49-5m-hE9"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8b-PG-wvg" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="254" y="732" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="H9B-HB-Wz2" kind="show" id="7Sx-Yz-CO6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour une expérience optimale, je te conseille de choisir au minimum 40 euros par jour et par personne" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cai-M6-zd5">
+                                <rect key="frame" x="21" y="598" width="338" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48956382269999998" green="0.89591211079999999" blue="0.97648710009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="krq-Z3-EH4" firstAttribute="top" secondItem="rBs-Pw-bac" secondAttribute="top" constant="75" id="1kT-3O-dwV"/>
+                            <constraint firstItem="krq-Z3-EH4" firstAttribute="leading" secondItem="rBs-Pw-bac" secondAttribute="leading" constant="21" id="Asf-lh-ll8"/>
+                            <constraint firstItem="rBs-Pw-bac" firstAttribute="trailing" secondItem="Cai-M6-zd5" secondAttribute="trailing" constant="16" id="HnQ-rg-yRn"/>
+                            <constraint firstItem="rBs-Pw-bac" firstAttribute="bottom" secondItem="Cai-M6-zd5" secondAttribute="bottom" constant="149" id="JOB-mD-AdU"/>
+                            <constraint firstItem="Cai-M6-zd5" firstAttribute="top" secondItem="rBs-Pw-bac" secondAttribute="top" constant="510" id="S53-O2-iMC"/>
+                            <constraint firstItem="rBs-Pw-bac" firstAttribute="trailing" secondItem="krq-Z3-EH4" secondAttribute="trailing" constant="16" id="iYE-fR-gGC"/>
+                            <constraint firstItem="Cai-M6-zd5" firstAttribute="leading" secondItem="rBs-Pw-bac" secondAttribute="leading" constant="21" id="rNx-xL-B5h"/>
+                            <constraint firstItem="rBs-Pw-bac" firstAttribute="bottom" secondItem="krq-Z3-EH4" secondAttribute="bottom" constant="584" id="yGl-u1-E2E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rBs-Pw-bac"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wfn-vn-OUe"/>
+                    <connections>
+                        <outlet property="nextButton" destination="a8b-PG-wvg" id="qBF-wP-lxJ"/>
+                        <outlet property="slider" destination="4I8-eM-DCd" id="jBL-vu-rKX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKG-1w-qUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5644" y="113.79310344827587"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kK6-wO-fWe">
+            <objects>
+                <viewController id="H9B-HB-Wz2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c7N-kz-uzj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NK6-k9-1Pf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vj8-50-AYG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMA-WL-nBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6430" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kPn-vu-Nob">
@@ -416,6 +542,7 @@
         <image name="polo_step_2" width="431" height="286"/>
         <image name="polo_step_3" width="463" height="299"/>
         <image name="polo_step_4" width="328" height="285"/>
+        <image name="polo_step_6" width="196" height="225"/>
         <image name="polo_travelers_1" width="798" height="600"/>
     </resources>
 </document>
