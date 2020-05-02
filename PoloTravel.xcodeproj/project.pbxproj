@@ -51,6 +51,8 @@
 		7BD5390C244B1FC300AD9CB3 /* TravelCreation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5390B244B1FC300AD9CB3 /* TravelCreation1ViewController.swift */; };
 		7BFECF1F2455A65400F5096C /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFECF1E2455A65400F5096C /* BasicButton.swift */; };
 		7BFECF232455A88F00F5096C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BFECF222455A88F00F5096C /* GoogleService-Info.plist */; };
+		7BFECF252456CFE800F5096C /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFECF242456CFE800F5096C /* OnBoardingPageViewController.swift */; };
+		7BFECF2B2456E23300F5096C /* OnBoardingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFECF2A2456E23300F5096C /* OnBoardingMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		7BD5390B244B1FC300AD9CB3 /* TravelCreation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCreation1ViewController.swift; sourceTree = "<group>"; };
 		7BFECF1E2455A65400F5096C /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
 		7BFECF222455A88F00F5096C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7BFECF242456CFE800F5096C /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
+		7BFECF2A2456E23300F5096C /* OnBoardingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingMainViewController.swift; sourceTree = "<group>"; };
 		BC401F2D41B8D63FD49CC572 /* Pods-PoloTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravel.release.xcconfig"; path = "Target Support Files/Pods-PoloTravel/Pods-PoloTravel.release.xcconfig"; sourceTree = "<group>"; };
 		D9C97D5B5D545292F277E973 /* Pods-PoloTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravel.debug.xcconfig"; path = "Target Support Files/Pods-PoloTravel/Pods-PoloTravel.debug.xcconfig"; sourceTree = "<group>"; };
 		FB0E3DB6CC32C7391168F535 /* Pods-PoloTravelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravelTests.release.xcconfig"; path = "Target Support Files/Pods-PoloTravelTests/Pods-PoloTravelTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -381,6 +385,8 @@
 				7BD538F92449F4B100AD9CB3 /* OnBoarding3ViewController..swift */,
 				7BD538FB2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift */,
 				7BD538FD2449F4C900AD9CB3 /* OnBoarding5ViewController..swift */,
+				7BFECF242456CFE800F5096C /* OnBoardingPageViewController.swift */,
+				7BFECF2A2456E23300F5096C /* OnBoardingMainViewController.swift */,
 			);
 			path = OnBoardingViewControllers;
 			sourceTree = "<group>";
@@ -604,6 +610,7 @@
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
 				7BD538FC2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift in Sources */,
 				7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */,
+				7BFECF252456CFE800F5096C /* OnBoardingPageViewController.swift in Sources */,
 				7B3B45BE244BA7E900CD00D4 /* ProfileViewController.swift in Sources */,
 				7BD538FA2449F4B100AD9CB3 /* OnBoarding3ViewController..swift in Sources */,
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
@@ -612,6 +619,7 @@
 				7BD538DD2449BB0F00AD9CB3 /* ColorConstants.swift in Sources */,
 				7BD538F32449ED3B00AD9CB3 /* SignUpViewController.swift in Sources */,
 				7B3B45C4244BA95800CD00D4 /* PolowersViewController.swift in Sources */,
+				7BFECF2B2456E23300F5096C /* OnBoardingMainViewController.swift in Sources */,
 				7B3B45DA244C5C8200CD00D4 /* TravelsNextTravelViewController.swift in Sources */,
 				7BD538FE2449F4C900AD9CB3 /* OnBoarding5ViewController..swift in Sources */,
 				7BFECF1F2455A65400F5096C /* BasicButton.swift in Sources */,
@@ -773,7 +781,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L62MC7T8XG;
+				DEVELOPMENT_TEAM = 37J2MVMMBY;
 				INFOPLIST_FILE = PoloTravel/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -792,7 +800,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L62MC7T8XG;
+				DEVELOPMENT_TEAM = 37J2MVMMBY;
 				INFOPLIST_FILE = PoloTravel/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

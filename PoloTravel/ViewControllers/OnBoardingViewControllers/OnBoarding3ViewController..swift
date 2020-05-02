@@ -6,4 +6,17 @@
 //  Copyright © 2020 PoloTeam. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class OnBoarding3ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+}
+
