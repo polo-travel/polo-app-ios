@@ -25,27 +25,28 @@ class PolowersImagesService {
             
             userManager.currentUser() { result  in
                 self.user = result
-            }
-
-        uploadMedia(imgToUpload: imgToUpload) { url in
-             guard let url = url else {
-                completionBlock(false)
                 
-                return
-            }
+                self.uploadMedia(imgToUpload: imgToUpload) { url in
+                     guard let url = url else {
+                        completionBlock(false)
+                        
+                        return
+                    }
 
-            self.db.collection("pl_resources").document("r_polowers_photos").setData([
-                UUID().uuidString: [
-                    "description": inputDescription.text ?? "",
-                    "imageUrl": url,
-                    "nbLikes": 0,
-                    "publicationDate": Date(),
-                    "userId": self.user?.uid as Any,
-                    "userName": self.user?.firstName as Any,
-                ],
-            ], merge: true)
-            completionBlock(true)
-        }
+                    self.db.collection("pl_resources").document("r_polowers_photos").setData([
+                        UUID().uuidString: [
+                            "description": inputDescription.text ?? "",
+                            "imageUrl": url,
+                            "nbLikes": 0,
+                            "publicationDate": Date(),
+                            "userId": self.user?.uid as Any,
+                            "userName": self.user?.firstName as Any,
+                            "lastName": self.user?.lastName as Any,
+                        ],
+                    ], merge: true)
+                    completionBlock(true)
+                }
+            }
         }
     }
     

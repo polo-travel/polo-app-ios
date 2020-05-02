@@ -92,7 +92,7 @@ extension PolowersViewController:UICollectionViewDataSource {
         cell.polowerNameBkg.backgroundColor = UIColor(red: 25/255, green: 56/255, blue: 79/255, alpha: 0.8)
         
         cell.imageLikes.text = "\(feedManager.photoList[indexPath.row].likes)"
-        cell.polowerName.text = "\(feedManager.photoList[indexPath.row].poster)"
+        cell.polowerName.text = "\(feedManager.photoList[indexPath.row].userName)"
         
         cell.imagePosted?.image = imagePlaceholder
         if let url = URL(string: "\(feedManager.photoList[indexPath.row].imageURL)") {

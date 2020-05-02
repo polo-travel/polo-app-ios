@@ -22,11 +22,12 @@ class PolowersFeedService {
                 document.data()?.forEach{ photo in
                     let photoProps = photo.value as? NSDictionary
                     let imageUrl = photoProps?["imageUrl"] as? String
-                    let poster = photoProps?["userId"] as? String
+                    let userId = photoProps?["userId"] as? String
+                    let userName = photoProps?["userName"] as? String
                     let nbLikes = photoProps?["nbLikes"] as? Int
                     
-                    if (self.photoList.contains(PhotoElement(imageURL: imageUrl!, poster: poster!, likes: nbLikes!))) == false {
-                        self.photoList.append(PhotoElement(imageURL: imageUrl ?? "", poster: poster ?? "", likes: nbLikes ?? 0))
+                    if (self.photoList.contains(PhotoElement(imageURL: imageUrl!, userId: userId!, userName: userName!, likes: nbLikes!))) == false {
+                        self.photoList.append(PhotoElement(imageURL: imageUrl ?? "", userId: userId ?? "", userName: userName ?? "", likes: nbLikes ?? 0))
                     }
                 }
                 
