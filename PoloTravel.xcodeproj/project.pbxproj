@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C620FC62300770CB1791372 /* Pods_PoloTravelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30138E37B599E0D360ADEA20 /* Pods_PoloTravelTests.framework */; };
 		0F1B4D91245C485400CF759D /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1B4D90245C485400CF759D /* SignIn.storyboard */; };
+		0F461D38245CE8BF00E69741 /* Step2TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */; };
 		0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CD561245387D200DB2DAC /* TextBlock.swift */; };
 		0FE90B1E2456E3BA00E6D51C /* Step1TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */; };
 		13B71F03E42A57D07F97BE17 /* Pods_PoloTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		0F1B4D90245C485400CF759D /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2TravelCreationViewController.swift; sourceTree = "<group>"; };
 		0F8CD561245387D200DB2DAC /* TextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlock.swift; sourceTree = "<group>"; };
 		0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1TravelCreationViewController.swift; sourceTree = "<group>"; };
 		20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -404,6 +406,7 @@
 			children = (
 				7BD5390B244B1FC300AD9CB3 /* TravelCreation1ViewController.swift */,
 				0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */,
+				0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */,
 			);
 			path = TravelCreationViewControllers;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				7BD538F62449F48A00AD9CB3 /* OnBoarding1ViewController.swift in Sources */,
 				7B3B45D8244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift in Sources */,
 				7B3B45D6244C59B000CD00D4 /* PolowersAddActivity.swift in Sources */,
+				0F461D38245CE8BF00E69741 /* Step2TravelCreationViewController.swift in Sources */,
 				7BCDA4E2243DF94100E9C4B6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

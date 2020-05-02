@@ -133,21 +133,48 @@
             </objects>
             <point key="canvasLocation" x="1901.5999999999999" y="114.53201970443351"/>
         </scene>
-        <!--View Controller2-->
+        <!--Step2 Travel Creation View Controller-->
         <scene sceneID="rLf-Ox-VpM">
             <objects>
-                <viewController id="Avi-vD-D33" customClass="ViewController2" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Avi-vD-D33" customClass="Step2TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iyz-in-obQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whk-fp-VXK" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="230" y="706" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="polo_travelers_1" translatesAutoresizingMaskIntoConstraints="NO" id="opm-aE-WfH">
+                                <rect key="frame" x="16" y="251" width="343" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="kRD-w3-ecu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="J’aime bien les sensations fortes, est-ce que tu me suivrais si je t’en propose ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-Qf-RUN">
+                                <rect key="frame" x="16" y="171" width="319" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65052300689999998" green="0.88048392529999997" blue="0.95295494790000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="opm-aE-WfH" firstAttribute="leading" secondItem="JYj-Aq-5i8" secondAttribute="leading" constant="16" id="RSM-5T-t7M"/>
+                            <constraint firstItem="opm-aE-WfH" firstAttribute="top" secondItem="JYj-Aq-5i8" secondAttribute="top" constant="163" id="h72-4y-ScX"/>
+                            <constraint firstItem="opm-aE-WfH" firstAttribute="centerX" secondItem="Iyz-in-obQ" secondAttribute="centerX" id="qWK-BY-ypX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JYj-Aq-5i8"/>
                     </view>
                     <navigationItem key="navigationItem" id="2nl-F8-Qum"/>
+                    <connections>
+                        <outlet property="nextButton" destination="whk-fp-VXK" id="Uqg-I1-gsh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9l-cN-rhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="117"/>
+            <point key="canvasLocation" x="2640.8000000000002" y="116.74876847290641"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kPn-vu-Nob">

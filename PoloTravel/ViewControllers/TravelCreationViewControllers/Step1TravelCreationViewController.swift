@@ -39,7 +39,7 @@ class Step1TravelCreationViewController: UIViewController {
     func customButton(){
         
         nextButton.setImage(UIImage(named: "right_arrow"), for: .normal)
-        //nextButton.imageEdgeInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
+        nextButton.imageEdgeInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
         nextButton.contentMode = .center
         nextButton.imageView?.contentMode = .scaleAspectFit
         nextButton.setDarkButton()
