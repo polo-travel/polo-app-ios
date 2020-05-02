@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Bold.ttf">
+            <string>Gilroy-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--On Boarding Main View Controller-->
         <scene sceneID="3x6-Eq-YHb">
@@ -40,8 +45,8 @@
                                     <constraint firstAttribute="bottom" secondItem="JRk-3r-bbf" secondAttribute="bottom" id="zuK-7o-Esh"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-QL-yyw">
-                                <rect key="frame" x="146" y="737" width="83" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-QL-yyw">
+                                <rect key="frame" x="152" y="737" width="71" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
@@ -50,6 +55,7 @@
                         <constraints>
                             <constraint firstItem="CB9-QL-yyw" firstAttribute="top" secondItem="JRk-3r-bbf" secondAttribute="bottom" constant="31" id="2TY-pb-N5c"/>
                             <constraint firstItem="EOB-CS-7gs" firstAttribute="top" secondItem="FtR-Qq-nsW" secondAttribute="top" constant="44" id="7U0-3V-OUQ"/>
+                            <constraint firstItem="CB9-QL-yyw" firstAttribute="centerX" secondItem="EOB-CS-7gs" secondAttribute="centerX" id="J6f-Cy-Agx"/>
                             <constraint firstItem="JRk-3r-bbf" firstAttribute="leading" secondItem="EOB-CS-7gs" secondAttribute="leading" id="SKk-IM-MIy"/>
                             <constraint firstItem="EOB-CS-7gs" firstAttribute="bottom" secondItem="CB9-QL-yyw" secondAttribute="bottom" constant="4" id="Tfq-8C-aKP"/>
                             <constraint firstItem="EOB-CS-7gs" firstAttribute="trailing" secondItem="JRk-3r-bbf" secondAttribute="trailing" id="hAR-nP-X0Z"/>
@@ -87,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-eO-WUa">
-                                <rect key="frame" x="75.666666666666686" y="49" width="224" height="22"/>
+                                <rect key="frame" x="73.000000000000014" y="49" width="229.33333333333337" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="85F-iD-Q3K"/>
                                 </constraints>
@@ -95,7 +101,7 @@
                                     <fragment content="Bienvenue prénom !">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="25"/>
+                                            <font key="NSFont" size="25" name="Gilroy-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -154,7 +160,7 @@
                                 <rect key="frame" x="25" y="211" width="325" height="265"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmG-JU-zcY">
-                                <rect key="frame" x="50.666666666666657" y="49" width="273.66666666666674" height="33"/>
+                                <rect key="frame" x="46.333333333333343" y="49" width="282.33333333333326" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="TWP-Wp-3VP"/>
                                 </constraints>
@@ -162,7 +168,7 @@
                                     <fragment content="Personnalise ton voyage">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="25"/>
+                                            <font key="NSFont" size="25" name="Gilroy-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -170,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3Z-vk-mQF">
-                                <rect key="frame" x="16" y="89" width="323.66666666666669" height="67"/>
+                                <rect key="frame" x="16" y="89" width="337" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="IlB-9N-7m5"/>
                                 </constraints>
@@ -215,20 +221,6 @@ connaitre ton profil d’aventurier</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVH-75-cga">
-                                <rect key="frame" x="70" y="44" width="234" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Explore la ville">
-                                        <attributes>
-                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="25"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U47-nx-9Nb">
                                 <rect key="frame" x="24" y="85" width="327" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -247,6 +239,20 @@ connaitre ton profil d’aventurier</string>
                                 <rect key="frame" x="24" y="175" width="327" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVH-75-cga">
+                                <rect key="frame" x="70" y="33" width="234" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Explore la ville">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Gilroy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="x3n-Gp-cUI"/>
@@ -272,7 +278,7 @@ connaitre ton profil d’aventurier</string>
                                     <fragment content="Partage ton aventure">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="25"/>
+                                            <font key="NSFont" size="25" name="Gilroy-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -318,24 +324,27 @@ partager les tiennes !</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KG-Js-kfd">
-                                <rect key="frame" x="19" y="34" width="340" height="66"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oboarding_ready" translatesAutoresizingMaskIntoConstraints="NO" id="eBx-gn-mn6">
+                                <rect key="frame" x="8" y="121" width="358.33333333333331" height="274"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-Wv-r15">
+                                <rect key="frame" x="25" y="11" width="325" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="LL1-ap-0iw"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Prêt pour vivre une expérience inoubliable ?">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="25"/>
+                                            <font key="NSFont" size="25" name="Gilroy-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="oboarding_ready" translatesAutoresizingMaskIntoConstraints="NO" id="eBx-gn-mn6">
-                                <rect key="frame" x="8.3333333333333428" y="121" width="358.33333333333326" height="274"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yco-mP-Xfu" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="81" y="417" width="213" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yco-mP-Xfu" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="112" y="434" width="150" height="52"/>
                                 <color key="backgroundColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="lL4-sL-MUU"/>
@@ -350,12 +359,13 @@ partager les tiennes !</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Yco-mP-Xfu" firstAttribute="top" secondItem="eBx-gn-mn6" secondAttribute="bottom" constant="22" id="3gX-Uy-RJr"/>
-                            <constraint firstItem="Vd5-X7-XEz" firstAttribute="bottom" secondItem="Yco-mP-Xfu" secondAttribute="bottom" constant="48" id="VIw-cE-AAO"/>
-                            <constraint firstItem="eBx-gn-mn6" firstAttribute="top" secondItem="8KG-Js-kfd" secondAttribute="bottom" constant="21" id="Zg2-a0-DCp"/>
-                            <constraint firstItem="8KG-Js-kfd" firstAttribute="top" secondItem="Vd5-X7-XEz" secondAttribute="top" constant="34" id="iO9-yL-A2N"/>
-                            <constraint firstItem="eBx-gn-mn6" firstAttribute="centerX" secondItem="Vd5-X7-XEz" secondAttribute="centerX" id="mae-rx-Ucb"/>
-                            <constraint firstItem="8KG-Js-kfd" firstAttribute="centerX" secondItem="Vd5-X7-XEz" secondAttribute="centerX" id="vBW-Yh-Bfg"/>
+                            <constraint firstItem="eBx-gn-mn6" firstAttribute="top" secondItem="EZ6-Wv-r15" secondAttribute="bottom" constant="27" id="1ez-YU-xkQ"/>
+                            <constraint firstItem="Yco-mP-Xfu" firstAttribute="top" secondItem="eBx-gn-mn6" secondAttribute="bottom" constant="39" id="25e-sg-gWG"/>
+                            <constraint firstItem="EZ6-Wv-r15" firstAttribute="top" secondItem="Vd5-X7-XEz" secondAttribute="top" constant="11" id="77C-Ak-L4A"/>
+                            <constraint firstItem="eBx-gn-mn6" firstAttribute="leading" secondItem="Vd5-X7-XEz" secondAttribute="leading" constant="8" id="ClV-5S-4vt"/>
+                            <constraint firstItem="Yco-mP-Xfu" firstAttribute="centerX" secondItem="Vd5-X7-XEz" secondAttribute="centerX" id="JKl-Py-s51"/>
+                            <constraint firstItem="Vd5-X7-XEz" firstAttribute="trailing" secondItem="eBx-gn-mn6" secondAttribute="trailing" constant="8.6666666666667425" id="PLI-Gq-qGn"/>
+                            <constraint firstItem="Vd5-X7-XEz" firstAttribute="bottom" secondItem="Yco-mP-Xfu" secondAttribute="bottom" constant="31" id="PTA-57-DY2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vd5-X7-XEz"/>
                     </view>
@@ -366,7 +376,7 @@ partager les tiennes !</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngu-Nj-Gzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4525.6000000000004" y="-89.408866995073893"/>
+            <point key="canvasLocation" x="4525.6000000000004" y="-89.778325123152712"/>
         </scene>
         <!--TravelCreation1ViewController-->
         <scene sceneID="YVg-gq-Zyi">
