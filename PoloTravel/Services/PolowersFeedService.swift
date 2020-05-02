@@ -15,6 +15,7 @@ class PolowersFeedService {
     var photoList:Photo = []
     
     func updateFeed(completionBlock: @escaping (_ success: Bool) -> Void) {
+        photoList.removeAll()
         let docRef = db.collection("pl_resources").document("r_polowers_photos")
 
         docRef.getDocument { (document, error) in

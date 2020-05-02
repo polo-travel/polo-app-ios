@@ -25,7 +25,18 @@ class PolowersViewController: UIViewController {
         collectionView.dataSource = self
         
         collectionView.backgroundColor = UIColor(white: 1, alpha: 0)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
+        updateFeed()
+    }
+    
+    func updateFeed() {
         feedManager.updateFeed() {[weak self] (success) in
             guard let `self` = self else { return }
             if (success) {
@@ -35,13 +46,6 @@ class PolowersViewController: UIViewController {
                 print("notgood")
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        // Hide the navigation bar on the this view controller
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
 }

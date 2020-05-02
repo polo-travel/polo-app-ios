@@ -53,7 +53,6 @@ class AuthentificationService {
           docRef.getDocument { (document, error) in
               if let document = document, document.exists {
                 firstName = document.get("firstname") as? String
-                print("firstName", firstName)
               } else {
                   print("User does'nt exist")
               }

@@ -14,9 +14,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         let userManager = AuthentificationService()
-        print(userManager.currentUser()?.email ?? "")
         emailLabel.text = userManager.currentUser()?.email
     }
     
