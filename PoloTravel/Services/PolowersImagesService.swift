@@ -17,9 +17,15 @@ class PolowersImagesService {
     let storage = Storage.storage()
     lazy var storageRef = storage.reference()
     let userManager = AuthentificationService()
+    var user: User?
     
+
     func addImageToDatabase(inputDescription:UITextView, imgToUpload: UIImage, completionBlock: @escaping (_ success: Bool) -> Void) {
         if inputDescription.text != "" {
+            
+            userManager.currentUser() { result  in
+                self.user = result
+            }
 
         uploadMedia(imgToUpload: imgToUpload) { url in
              guard let url = url else {
@@ -34,8 +40,8 @@ class PolowersImagesService {
                     "imageUrl": url,
                     "nbLikes": 0,
                     "publicationDate": Date(),
-                    "userId": self.userManager.currentUser()?.uid as Any,
-                    "userName": self.userManager.currentUser()?.firstName as Any,
+                    "userId": self.user?.uid as Any,
+                    "userName": self.user?.firstName as Any,
                 ],
             ], merge: true)
             completionBlock(true)

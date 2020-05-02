@@ -6,11 +6,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Gilroy-Bold.ttf">
-            <string>Gilroy-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--On Boarding Main View Controller-->
         <scene sceneID="3x6-Eq-YHb">
@@ -93,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-eO-WUa">
-                                <rect key="frame" x="73.000000000000014" y="49" width="229.33333333333337" height="22"/>
+                                <rect key="frame" x="75.666666666666686" y="49" width="224" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="85F-iD-Q3K"/>
                                 </constraints>
@@ -160,7 +155,7 @@
                                 <rect key="frame" x="25" y="211" width="325" height="265"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmG-JU-zcY">
-                                <rect key="frame" x="46.333333333333343" y="49" width="282.33333333333326" height="33"/>
+                                <rect key="frame" x="50.666666666666657" y="49" width="273.66666666666674" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="TWP-Wp-3VP"/>
                                 </constraints>
@@ -176,7 +171,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3Z-vk-mQF">
-                                <rect key="frame" x="16" y="89" width="337" height="67"/>
+                                <rect key="frame" x="16" y="89" width="323.66666666666669" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="IlB-9N-7m5"/>
                                 </constraints>

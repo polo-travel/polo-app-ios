@@ -11,12 +11,21 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var buttonEditProfile: BasicButton!
+    @IBOutlet weak var buttonCreateTravel: BasicButton!
+    @IBOutlet weak var firstNameLabel: UILabel!
+    var user:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AuthentificationService().currentUser() { result  in
+            self.user = result
+            self.firstNameLabel.text = self.user?.firstName
+        }
 
-        let userManager = AuthentificationService()
-        emailLabel.text = userManager.currentUser()?.email
+        buttonCreateTravel.setDarkButton()
+        buttonEditProfile.setRedButton()
     }
     
     
