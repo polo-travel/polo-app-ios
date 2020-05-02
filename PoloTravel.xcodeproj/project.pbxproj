@@ -27,6 +27,7 @@
 		7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */; };
 		7B4990EE245C08D80095EA20 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990ED245C08D80095EA20 /* User.swift */; };
 		7B4990F0245C5F860095EA20 /* PolowersFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */; };
+		7B4990F2245DA72D0095EA20 /* ProfileEditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990F1245DA72D0095EA20 /* ProfileEditionViewController.swift */; };
 		7B4F4F3524518A18000CFB75 /* PolowersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */; };
 		7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3724518F42000CFB75 /* Photo.swift */; };
 		7B4F4F3B2451A393000CFB75 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */; };
@@ -88,6 +89,7 @@
 		7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationService.swift; sourceTree = "<group>"; };
 		7B4990ED245C08D80095EA20 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersFeedService.swift; sourceTree = "<group>"; };
+		7B4990F1245DA72D0095EA20 /* ProfileEditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditionViewController.swift; sourceTree = "<group>"; };
 		7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B4F4F3724518F42000CFB75 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				7B3B45BD244BA7E900CD00D4 /* ProfileViewController.swift */,
 				7B3B45D7244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift */,
+				7B4990F1245DA72D0095EA20 /* ProfileEditionViewController.swift */,
 			);
 			path = ProfileViewControllers;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				7BD538F62449F48A00AD9CB3 /* OnBoarding1ViewController.swift in Sources */,
 				7B3B45D8244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift in Sources */,
 				7B4990F0245C5F860095EA20 /* PolowersFeedService.swift in Sources */,
+				7B4990F2245DA72D0095EA20 /* ProfileEditionViewController.swift in Sources */,
 				7B3B45D6244C59B000CD00D4 /* PolowersAddActivity.swift in Sources */,
 				7BCDA4E2243DF94100E9C4B6 /* SceneDelegate.swift in Sources */,
 			);

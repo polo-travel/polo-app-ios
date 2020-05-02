@@ -55,6 +55,11 @@ class SignInViewController: UIViewController {
     @IBAction func buttonCancelClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func buttonBackClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 
