@@ -9,12 +9,9 @@
 import UIKit
 
 class PolowersCollectionViewCell: UICollectionViewCell {
-
     @IBOutlet weak var imagePosted: UIImageView!
     @IBOutlet weak var imageLikes: UILabel!
     @IBOutlet weak var polowerName: UILabel!
     @IBOutlet weak var polowerNameBkg: UIView!
-
-
 }
 

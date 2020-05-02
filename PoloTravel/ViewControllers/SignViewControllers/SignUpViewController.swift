@@ -14,6 +14,7 @@ import FirebaseFirestore
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var inputFirstName: UITextField!
+    @IBOutlet weak var inputLastName: UITextField!
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
@@ -27,7 +28,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
+
         buttonNext.setDarkButton()
     }
     
@@ -35,8 +37,8 @@ class SignUpViewController: UIViewController {
         activityIndicator.startAnimating()
         self.errorLabel.text = ""
         
-        if let email = inputEmail.text, let password = inputPassword.text, let firstname = inputFirstName.text {
-            signUpManager.createUser(email: email, password: password, firstname: firstname) {[weak self] (success) in
+        if let email = inputEmail.text, let password = inputPassword.text, let firstname = inputFirstName.text, let lastname = inputLastName.text {
+            signUpManager.createUser(email: email, password: password, firstname: firstname, lastname: lastname) {[weak self] (success) in
                 guard let `self` = self else { return }
                 if (success) {
                     self.errorLabel.text = "User created!"
@@ -61,6 +63,11 @@ class SignUpViewController: UIViewController {
     @IBAction func buttonCancelClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func buttonBackClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 

@@ -21,5 +21,7 @@ class TravelsNextTravelViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
-
+    @IBAction func buttonBackClicked(_ sender: Any) {
+    }
+    
 }

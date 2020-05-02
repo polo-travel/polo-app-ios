@@ -27,6 +27,10 @@
 		7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */; };
 		7B4990EE245C08D80095EA20 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990ED245C08D80095EA20 /* User.swift */; };
 		7B4990F0245C5F860095EA20 /* PolowersFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */; };
+		7B4990F2245DA72D0095EA20 /* ProfileEditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990F1245DA72D0095EA20 /* ProfileEditionViewController.swift */; };
+		7B4990F4245DC1720095EA20 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990F3245DC1720095EA20 /* UserService.swift */; };
+		7B4990F6245DD2F80095EA20 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990F5245DD2F80095EA20 /* KeyboardExtension.swift */; };
+		7B4990F8245DDC440095EA20 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990F7245DDC440095EA20 /* AddButton.swift */; };
 		7B4F4F3524518A18000CFB75 /* PolowersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */; };
 		7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3724518F42000CFB75 /* Photo.swift */; };
 		7B4F4F3B2451A393000CFB75 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */; };
@@ -88,6 +92,10 @@
 		7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationService.swift; sourceTree = "<group>"; };
 		7B4990ED245C08D80095EA20 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersFeedService.swift; sourceTree = "<group>"; };
+		7B4990F1245DA72D0095EA20 /* ProfileEditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditionViewController.swift; sourceTree = "<group>"; };
+		7B4990F3245DC1720095EA20 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		7B4990F5245DD2F80095EA20 /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
+		7B4990F7245DDC440095EA20 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B4F4F3724518F42000CFB75 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
@@ -195,6 +203,7 @@
 			children = (
 				7B3B45BD244BA7E900CD00D4 /* ProfileViewController.swift */,
 				7B3B45D7244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift */,
+				7B4990F1245DA72D0095EA20 /* ProfileEditionViewController.swift */,
 			);
 			path = ProfileViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +245,7 @@
 				7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */,
 				7B167693245309A1008A464B /* PolowersImagesService.swift */,
 				7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */,
+				7B4990F3245DC1720095EA20 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -266,12 +276,10 @@
 			children = (
 				7B2E5BB5244D8C7B00DBD221 /* Model */,
 				7BCDA508243E08DB00E9C4B6 /* Extensions */,
-				7BCDA509243E08E500E9C4B6 /* Protocols */,
 				7B3B45DD244D73C300CD00D4 /* Services */,
 				7BCDA50C243E090600E9C4B6 /* SupportingFiles */,
 				7BD538DF2449C18C00AD9CB3 /* UIFiles */,
 				7BCDA50B243E08F800E9C4B6 /* ViewControllers */,
-				7BCDA50A243E08EF00E9C4B6 /* ViewModels */,
 				7BD53904244B04B300AD9CB3 /* ViewStoryboards */,
 				7BFECF222455A88F00F5096C /* GoogleService-Info.plist */,
 				7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */,
@@ -292,22 +300,9 @@
 			isa = PBXGroup;
 			children = (
 				7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */,
+				7B4990F5245DD2F80095EA20 /* KeyboardExtension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		7BCDA509243E08E500E9C4B6 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		7BCDA50A243E08EF00E9C4B6 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7BCDA50B243E08F800E9C4B6 /* ViewControllers */ = {
@@ -356,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				7BFECF1E2455A65400F5096C /* BasicButton.swift */,
+				7B4990F7245DDC440095EA20 /* AddButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -599,11 +595,13 @@
 			files = (
 				7B4990EE245C08D80095EA20 /* User.swift in Sources */,
 				7BD53902244B008700AD9CB3 /* SignInViewController.swift in Sources */,
+				7B4990F6245DD2F80095EA20 /* KeyboardExtension.swift in Sources */,
 				7B3B45C2244BA94300CD00D4 /* TravelsViewController.swift in Sources */,
 				7B4F4F3524518A18000CFB75 /* PolowersCollectionViewCell.swift in Sources */,
 				0FE90B1E2456E3BA00E6D51C /* Step1TravelCreationViewController.swift in Sources */,
 				0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */,
 				7BD5390C244B1FC300AD9CB3 /* TravelCreation1ViewController.swift in Sources */,
+				7B4990F8245DDC440095EA20 /* AddButton.swift in Sources */,
 				7B3B45D4244C598800CD00D4 /* PolowersAddPhotoViewController.swift in Sources */,
 				7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */,
 				7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */,
@@ -626,8 +624,10 @@
 				7BD538F62449F48A00AD9CB3 /* OnBoarding1ViewController.swift in Sources */,
 				7B3B45D8244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift in Sources */,
 				7B4990F0245C5F860095EA20 /* PolowersFeedService.swift in Sources */,
+				7B4990F2245DA72D0095EA20 /* ProfileEditionViewController.swift in Sources */,
 				7B3B45D6244C59B000CD00D4 /* PolowersAddActivity.swift in Sources */,
 				7BCDA4E2243DF94100E9C4B6 /* SceneDelegate.swift in Sources */,
+				7B4990F4245DC1720095EA20 /* UserService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

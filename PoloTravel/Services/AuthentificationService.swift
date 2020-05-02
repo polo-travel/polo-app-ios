@@ -15,11 +15,12 @@ class AuthentificationService {
     
     let db = Firestore.firestore()
     
-    func createUser(email: String, password: String, firstname: String, completionBlock: @escaping (_ success: Bool) -> Void) {
+    func createUser(email: String, password: String, firstname: String, lastname: String, completionBlock: @escaping (_ success: Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
             if let user = authResult?.user {
                self.db.collection("pl_users").document(user.uid).setData([
                     "firstname": firstname,
+                    "lastname": lastname,
                     "email": email,
                 ])
                 completionBlock(true)
@@ -38,33 +39,5 @@ class AuthentificationService {
             }
         }
     }
-    
-    func currentUser() -> User? {
-        let user = Auth.auth().currentUser
-        var firstName: String?
-        
-        if let user = user {
-          let uid = user.uid
-          let email = user.email
-          let photoURL = user.photoURL
-          
-          let docRef = db.collection("pl_users").document(user.uid)
 
-          docRef.getDocument { (document, error) in
-              if let document = document, document.exists {
-                firstName = document.get("firstname") as? String
-              } else {
-                  print("User does'nt exist")
-              }
-          }
-            
-          return User(firstName: firstName, uid: uid, email: email, photoURL: photoURL)
-            
-        } else {
-            
-          return nil
-        }
-    }
-    
 }
-
