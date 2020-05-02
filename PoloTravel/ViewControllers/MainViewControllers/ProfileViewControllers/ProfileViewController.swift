@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
         
         AuthentificationService().currentUser() { result  in
             self.user = result
-            self.firstNameLabel.text = self.user?.firstName
+            self.firstNameLabel.text = "\(String(self.user?.firstName ?? "")) \(String(self.user?.lastName ?? ""))"
         }
 
         buttonCreateTravel.setDarkButton()

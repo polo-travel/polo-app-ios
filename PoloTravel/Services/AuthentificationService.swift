@@ -43,6 +43,7 @@ class AuthentificationService {
     func currentUser(completionHandler: @escaping (_ result: User?) -> Void) {
         let user = Auth.auth().currentUser
         var firstName: String?
+        var lastName: String?
         
         if let user = user {
           let uid = user.uid
@@ -53,7 +54,8 @@ class AuthentificationService {
           docRef.getDocument { (document, error) in
               if let document = document, document.exists {
                 firstName = document.get("firstname") as? String
-                completionHandler(User(firstName: firstName, uid: uid, email: email, photoURL: photoURL))
+                lastName = document.get("lastname") as? String
+                completionHandler(User(firstName: firstName, lastName: lastName, uid: uid, email: email, photoURL: photoURL))
               } else {
                   print("User does'nt exist")
                   completionHandler(nil)
