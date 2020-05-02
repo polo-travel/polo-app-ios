@@ -15,9 +15,8 @@ class TravelsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         let userManager = AuthentificationService()
-        print(userManager.currentUser()?.uid ?? 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {

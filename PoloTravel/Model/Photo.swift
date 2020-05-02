@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PhotoElement: Codable {
+struct PhotoElement: Codable, Equatable {
     let imageURL, poster: String
     let likes: Int
 

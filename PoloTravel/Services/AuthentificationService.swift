@@ -40,7 +40,30 @@ class AuthentificationService {
     }
     
     func currentUser() -> User? {
-        return Auth.auth().currentUser
+        let user = Auth.auth().currentUser
+        var firstName: String?
+        
+        if let user = user {
+          let uid = user.uid
+          let email = user.email
+          let photoURL = user.photoURL
+          
+          let docRef = db.collection("pl_users").document(user.uid)
+
+          docRef.getDocument { (document, error) in
+              if let document = document, document.exists {
+                firstName = document.get("firstname") as? String
+              } else {
+                  print("User does'nt exist")
+              }
+          }
+            
+          return User(firstName: firstName, uid: uid, email: email, photoURL: photoURL)
+            
+        } else {
+            
+          return nil
+        }
     }
     
 }
