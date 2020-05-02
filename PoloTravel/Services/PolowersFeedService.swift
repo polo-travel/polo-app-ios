@@ -15,7 +15,6 @@ class PolowersFeedService {
     var photoList:Photo = []
     
     func updateFeed(completionBlock: @escaping (_ success: Bool) -> Void) {
-        photoList.removeAll()
         let docRef = db.collection("pl_resources").document("r_polowers_photos")
 
         docRef.getDocument { (document, error) in
@@ -26,9 +25,12 @@ class PolowersFeedService {
                     let poster = photoProps?["userId"] as? String
                     let nbLikes = photoProps?["nbLikes"] as? Int
                     
-                    self.photoList.append(PhotoElement(imageURL: imageUrl ?? "", poster: poster ?? "", likes: nbLikes ?? 0))
-                    completionBlock(true)
+                    if (self.photoList.contains(PhotoElement(imageURL: imageUrl!, poster: poster!, likes: nbLikes!))) == false {
+                        self.photoList.append(PhotoElement(imageURL: imageUrl ?? "", poster: poster ?? "", likes: nbLikes ?? 0))
+                    }
                 }
+                
+                completionBlock(true)
             } else {
                 completionBlock(false)
                 print("Document does not exist")

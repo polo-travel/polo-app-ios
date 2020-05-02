@@ -41,7 +41,6 @@ class PolowersViewController: UIViewController {
             guard let `self` = self else { return }
             if (success) {
                 self.collectionView.reloadData()
-                print(self.feedManager.photoList)
             } else {
                 print("notgood")
             }
