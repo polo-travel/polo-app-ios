@@ -250,9 +250,15 @@
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6F-is-MhC" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="112" y="610" width="194" height="52"/>
+                                <rect key="frame" x="110" y="612" width="194" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Valider"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonConfirmClicked:" destination="etB-B7-fsY" eventType="touchUpInside" id="iLX-it-cFC"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="b1n-Lu-61I">
                                 <rect key="frame" x="144" y="158" width="127" height="127"/>
@@ -267,16 +273,30 @@
                                     <action selector="buttonBackClicked:" destination="etB-B7-fsY" eventType="touchUpInside" id="oD0-I7-SzR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLd-P5-sl3">
+                                <rect key="frame" x="40" y="569" width="292" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="14"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="dhK-Qf-wmb">
+                                <rect key="frame" x="269" y="628" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="4rq-b3-epc"/>
                     </view>
                     <navigationItem key="navigationItem" id="Koh-iE-gkm"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="dhK-Qf-wmb" id="fuh-g0-U8r"/>
                         <outlet property="buttonBack" destination="x3n-Hd-NUM" id="j29-uf-ZA5"/>
                         <outlet property="buttonConfirm" destination="a6F-is-MhC" id="M4c-KY-T4v"/>
                         <outlet property="emailInput" destination="m7V-mw-QwA" id="8wa-8Z-qPW"/>
                         <outlet property="firstNameInput" destination="wYo-ub-LuW" id="Ia8-Xq-QWS"/>
+                        <outlet property="infoLabel" destination="qLd-P5-sl3" id="8E2-22-YNm"/>
                         <outlet property="lastNameInput" destination="Jd2-lg-nZU" id="Qrv-yg-7wS"/>
                         <outlet property="passwordInput" destination="PiA-b1-ulM" id="2GU-5F-kbb"/>
                         <outlet property="profilePhoto" destination="b1n-Lu-61I" id="cf6-D4-ari"/>

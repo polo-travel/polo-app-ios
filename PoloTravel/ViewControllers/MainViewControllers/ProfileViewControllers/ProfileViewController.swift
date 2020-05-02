@@ -18,11 +18,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        AuthentificationService().currentUser() { result  in
-            self.user = result
-            self.firstNameLabel.text = "\(String(self.user?.firstName ?? "")) \(String(self.user?.lastName ?? ""))"
-        }
 
         buttonCreateTravel.setDarkButton()
         buttonEditProfile.setRedButton()
@@ -32,6 +27,11 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        UserService().currentUser() { result  in
+            self.user = result
+            self.firstNameLabel.text = "\(String(self.user?.firstName ?? "")) \(String(self.user?.lastName ?? ""))"
+        }
 
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)

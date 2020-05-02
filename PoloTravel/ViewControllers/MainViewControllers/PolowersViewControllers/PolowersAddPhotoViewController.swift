@@ -21,6 +21,7 @@ class PolowersAddPhotoViewController: UIViewController, UIImagePickerControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         buttonPublish.setRedButton()
         

@@ -17,14 +17,17 @@ class ProfileEditionViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var passwordInput: UILabel!
     @IBOutlet weak var buttonConfirm: BasicButton!
     @IBOutlet weak var profilePhoto: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var infoLabel: UILabel!
     
     var user:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         buttonConfirm.setDarkButton()
         
-        AuthentificationService().currentUser() { result  in
+        UserService().currentUser() { result  in
             self.user = result
             
             self.firstNameInput.text = "\(String(self.user?.firstName ?? ""))"
@@ -66,6 +69,30 @@ class ProfileEditionViewController: UIViewController, UIImagePickerControllerDel
 
     }
 
+    @IBAction func buttonConfirmClicked(_ sender: Any) {
+        self.infoLabel.text = ""
+        
+        activityIndicator.startAnimating()
+        if let email = emailInput.text, let password = passwordInput.text, let firstname = firstNameInput.text, let lastname = lastNameInput.text {
+            UserService().updateProfile(firstname: firstname, lastname: lastname, email: email, password: password) {[weak self] (success) in
+                guard let `self` = self else { return }
+                if (success) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        self.activityIndicator.stopAnimating()
+                        self.infoLabel.text = "C'est tout bon !"
+                    }
+                    
+                } else {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        self.activityIndicator.stopAnimating()
+                        self.infoLabel.text = "Tu as fait une erreur !"
+                    }
+                }
+            }
+        }
+    
+    }
+    
     @IBAction func buttonBackClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

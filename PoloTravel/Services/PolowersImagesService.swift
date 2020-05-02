@@ -16,7 +16,7 @@ class PolowersImagesService {
     let db = Firestore.firestore()
     let storage = Storage.storage()
     lazy var storageRef = storage.reference()
-    let userManager = AuthentificationService()
+    let userManager = UserService()
     var user: User?
     
 
