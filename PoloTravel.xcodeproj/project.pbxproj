@@ -12,6 +12,7 @@
 		0F0CF5FF245DEB4800018191 /* Step4TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF5FE245DEB4800018191 /* Step4TravelCreationViewController.swift */; };
 		0F0CF601245DF15200018191 /* Step5TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF600245DF15200018191 /* Step5TravelCreationViewController.swift */; };
 		0F0CF603245DF36300018191 /* Step6TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF602245DF36300018191 /* Step6TravelCreationViewController.swift */; };
+		0F0CF605245DFD2D00018191 /* RecapStepTravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */; };
 		0F1B4D91245C485400CF759D /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1B4D90245C485400CF759D /* SignIn.storyboard */; };
 		0F461D38245CE8BF00E69741 /* Step2TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */; };
 		0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CD561245387D200DB2DAC /* TextBlock.swift */; };
@@ -71,6 +72,7 @@
 		0F0CF5FE245DEB4800018191 /* Step4TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4TravelCreationViewController.swift; sourceTree = "<group>"; };
 		0F0CF600245DF15200018191 /* Step5TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step5TravelCreationViewController.swift; sourceTree = "<group>"; };
 		0F0CF602245DF36300018191 /* Step6TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step6TravelCreationViewController.swift; sourceTree = "<group>"; };
+		0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapStepTravelCreationViewController.swift; sourceTree = "<group>"; };
 		0F1B4D90245C485400CF759D /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2TravelCreationViewController.swift; sourceTree = "<group>"; };
 		0F8CD561245387D200DB2DAC /* TextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlock.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				0F0CF5FE245DEB4800018191 /* Step4TravelCreationViewController.swift */,
 				0F0CF600245DF15200018191 /* Step5TravelCreationViewController.swift */,
 				0F0CF602245DF36300018191 /* Step6TravelCreationViewController.swift */,
+				0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */,
 			);
 			path = TravelCreationViewControllers;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */,
 				0F0CF5FD245DE04900018191 /* Step3TravelCreationViewController.swift in Sources */,
 				7B3B45BE244BA7E900CD00D4 /* ProfileViewController.swift in Sources */,
+				0F0CF605245DFD2D00018191 /* RecapStepTravelCreationViewController.swift in Sources */,
 				7BD538FA2449F4B100AD9CB3 /* OnBoarding3ViewController..swift in Sources */,
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
 				0F0CF601245DF15200018191 /* Step5TravelCreationViewController.swift in Sources */,
