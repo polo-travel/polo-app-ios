@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PolowersViewController: UIViewController {
     
@@ -96,7 +97,7 @@ extension PolowersViewController:UICollectionViewDataSource {
         
         cell.imagePosted?.image = imagePlaceholder
         if let url = URL(string: "\(feedManager.photoList[indexPath.row].imageURL)") {
-            cell.imagePosted?.load(url: url)
+            cell.imagePosted?.sd_setImage(with: URL(string: url.absoluteString), placeholderImage: UIImage(named: "photo.png"))
         }
         
         return cell
