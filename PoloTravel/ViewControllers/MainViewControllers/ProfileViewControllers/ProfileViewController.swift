@@ -30,6 +30,7 @@ class ProfileViewController: UIViewController {
         
         UserService().currentUser() { result  in
             self.user = result
+            print(result)
             self.firstNameLabel.text = "\(String(self.user?.firstName ?? "")) \(String(self.user?.lastName ?? ""))"
         }
 

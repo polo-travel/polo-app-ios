@@ -31,6 +31,10 @@
 		7B3B45D8244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45D7244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift */; };
 		7B3B45DA244C5C8200CD00D4 /* TravelsNextTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45D9244C5C8200CD00D4 /* TravelsNextTravelViewController.swift */; };
 		7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */; };
+		7B49322F245F4673006DB7F2 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49322E245F4673006DB7F2 /* Travel.swift */; };
+		7B493231245F47D2006DB7F2 /* TravelDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493230245F47D2006DB7F2 /* TravelDay.swift */; };
+		7B493233245F4955006DB7F2 /* TravelActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493232245F4955006DB7F2 /* TravelActivity.swift */; };
+		7B493237245F5B75006DB7F2 /* TravelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493236245F5B75006DB7F2 /* TravelService.swift */; };
 		7B4990EE245C08D80095EA20 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990ED245C08D80095EA20 /* User.swift */; };
 		7B4990F0245C5F860095EA20 /* PolowersFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */; };
 		7B4990F2245DA72D0095EA20 /* ProfileEditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990F1245DA72D0095EA20 /* ProfileEditionViewController.swift */; };
@@ -102,6 +106,10 @@
 		7B3B45D7244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTravelHistoryViewController.swift; sourceTree = "<group>"; };
 		7B3B45D9244C5C8200CD00D4 /* TravelsNextTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsNextTravelViewController.swift; sourceTree = "<group>"; };
 		7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationService.swift; sourceTree = "<group>"; };
+		7B49322E245F4673006DB7F2 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
+		7B493230245F47D2006DB7F2 /* TravelDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDay.swift; sourceTree = "<group>"; };
+		7B493232245F4955006DB7F2 /* TravelActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelActivity.swift; sourceTree = "<group>"; };
+		7B493236245F5B75006DB7F2 /* TravelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelService.swift; sourceTree = "<group>"; };
 		7B4990ED245C08D80095EA20 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersFeedService.swift; sourceTree = "<group>"; };
 		7B4990F1245DA72D0095EA20 /* ProfileEditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditionViewController.swift; sourceTree = "<group>"; };
@@ -191,13 +199,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7B2E5BB5244D8C7B00DBD221 /* Model */ = {
+		7B2E5BB5244D8C7B00DBD221 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7B493234245F4A80006DB7F2 /* TravelModels */,
 				7B4F4F3724518F42000CFB75 /* Photo.swift */,
 				7B4990ED245C08D80095EA20 /* User.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7B3B45B9244BA55000CD00D4 /* MainViewControllers */ = {
@@ -258,8 +267,19 @@
 				7B167693245309A1008A464B /* PolowersImagesService.swift */,
 				7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */,
 				7B4990F3245DC1720095EA20 /* UserService.swift */,
+				7B493236245F5B75006DB7F2 /* TravelService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7B493234245F4A80006DB7F2 /* TravelModels */ = {
+			isa = PBXGroup;
+			children = (
+				7B49322E245F4673006DB7F2 /* Travel.swift */,
+				7B493230245F47D2006DB7F2 /* TravelDay.swift */,
+				7B493232245F4955006DB7F2 /* TravelActivity.swift */,
+			);
+			path = TravelModels;
 			sourceTree = "<group>";
 		};
 		7BCDA4D3243DF94100E9C4B6 = {
@@ -286,7 +306,7 @@
 		7BCDA4DE243DF94100E9C4B6 /* PoloTravel */ = {
 			isa = PBXGroup;
 			children = (
-				7B2E5BB5244D8C7B00DBD221 /* Model */,
+				7B2E5BB5244D8C7B00DBD221 /* Models */,
 				7BCDA508243E08DB00E9C4B6 /* Extensions */,
 				7B3B45DD244D73C300CD00D4 /* Services */,
 				7BCDA50C243E090600E9C4B6 /* SupportingFiles */,
@@ -618,6 +638,7 @@
 				7B4F4F3524518A18000CFB75 /* PolowersCollectionViewCell.swift in Sources */,
 				0FE90B1E2456E3BA00E6D51C /* Step1TravelCreationViewController.swift in Sources */,
 				0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */,
+				7B493237245F5B75006DB7F2 /* TravelService.swift in Sources */,
 				7BD5390C244B1FC300AD9CB3 /* TravelCreation1ViewController.swift in Sources */,
 				7B4990F8245DDC440095EA20 /* AddButton.swift in Sources */,
 				7B3B45D4244C598800CD00D4 /* PolowersAddPhotoViewController.swift in Sources */,
@@ -625,6 +646,7 @@
 				0F0CF5FF245DEB4800018191 /* Step4TravelCreationViewController.swift in Sources */,
 				7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */,
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
+				7B493233245F4955006DB7F2 /* TravelActivity.swift in Sources */,
 				7BD538FC2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift in Sources */,
 				7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */,
 				0F0CF5FD245DE04900018191 /* Step3TravelCreationViewController.swift in Sources */,
@@ -632,6 +654,7 @@
 				7B3B45BE244BA7E900CD00D4 /* ProfileViewController.swift in Sources */,
 				0F0CF605245DFD2D00018191 /* RecapStepTravelCreationViewController.swift in Sources */,
 				7BD538FA2449F4B100AD9CB3 /* OnBoarding3ViewController..swift in Sources */,
+				7B49322F245F4673006DB7F2 /* Travel.swift in Sources */,
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
 				0F0CF601245DF15200018191 /* Step5TravelCreationViewController.swift in Sources */,
 				7BD538F82449F4A600AD9CB3 /* OnBoarding2ViewController.swift in Sources */,
@@ -646,6 +669,7 @@
 				7BFECF1F2455A65400F5096C /* BasicButton.swift in Sources */,
 				7BD538F62449F48A00AD9CB3 /* OnBoarding1ViewController.swift in Sources */,
 				7B3B45D8244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift in Sources */,
+				7B493231245F47D2006DB7F2 /* TravelDay.swift in Sources */,
 				7B4990F0245C5F860095EA20 /* PolowersFeedService.swift in Sources */,
 				7B4990F2245DA72D0095EA20 /* ProfileEditionViewController.swift in Sources */,
 				7B3B45D6244C59B000CD00D4 /* PolowersAddActivity.swift in Sources */,
