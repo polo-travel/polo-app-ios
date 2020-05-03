@@ -16,6 +16,9 @@
 		0F1B4D91245C485400CF759D /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1B4D90245C485400CF759D /* SignIn.storyboard */; };
 		0F461D38245CE8BF00E69741 /* Step2TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */; };
 		0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CD561245387D200DB2DAC /* TextBlock.swift */; };
+		0F9DCECA245F2C8800DDB097 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */; };
+		0F9DCECE245F2D1000DDB097 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9DCECD245F2D1000DDB097 /* Map.storyboard */; };
+		0F9DCED0245F2F4200DDB097 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9DCECF245F2F4200DDB097 /* MapboxMobileEvents.framework */; };
 		0FE90B1E2456E3BA00E6D51C /* Step1TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */; };
 		13B71F03E42A57D07F97BE17 /* Pods_PoloTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */; };
 		7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B167693245309A1008A464B /* PolowersImagesService.swift */; };
@@ -84,6 +87,9 @@
 		0F1B4D90245C485400CF759D /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2TravelCreationViewController.swift; sourceTree = "<group>"; };
 		0F8CD561245387D200DB2DAC /* TextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlock.swift; sourceTree = "<group>"; };
+		0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0F9DCECD245F2D1000DDB097 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		0F9DCECF245F2F4200DDB097 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1TravelCreationViewController.swift; sourceTree = "<group>"; };
 		20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30138E37B599E0D360ADEA20 /* Pods_PoloTravelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloTravelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F9DCED0245F2F4200DDB097 /* MapboxMobileEvents.framework in Frameworks */,
 				13B71F03E42A57D07F97BE17 /* Pods_PoloTravel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,9 +189,18 @@
 			path = Blocks;
 			sourceTree = "<group>";
 		};
+		0F9DCEC8245F2C5F00DDB097 /* MapViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */,
+			);
+			path = MapViewControllers;
+			sourceTree = "<group>";
+		};
 		4E86B5A0ABEFA8A145D66E66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F9DCECF245F2F4200DDB097 /* MapboxMobileEvents.framework */,
 				20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */,
 				30138E37B599E0D360ADEA20 /* Pods_PoloTravelTests.framework */,
 			);
@@ -320,6 +336,7 @@
 		7BCDA50B243E08F800E9C4B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F9DCEC8245F2C5F00DDB097 /* MapViewControllers */,
 				7B3B45B9244BA55000CD00D4 /* MainViewControllers */,
 				7BD538F42449F45F00AD9CB3 /* OnBoardingViewControllers */,
 				7BD53903244B009100AD9CB3 /* SignViewControllers */,
@@ -415,6 +432,7 @@
 				7BD53906244B059200AD9CB3 /* OnBoarding.storyboard */,
 				0F1B4D90245C485400CF759D /* SignIn.storyboard */,
 				7BD53908244B1F4900AD9CB3 /* TravelCreation.storyboard */,
+				0F9DCECD245F2D1000DDB097 /* Map.storyboard */,
 			);
 			path = ViewStoryboards;
 			sourceTree = "<group>";
@@ -530,6 +548,7 @@
 				7BD538EF2449E9AA00AD9CB3 /* Gilroy-Bold.ttf in Resources */,
 				7BD53907244B059200AD9CB3 /* OnBoarding.storyboard in Resources */,
 				7B3B45CB244C4E7700CD00D4 /* Profile.storyboard in Resources */,
+				0F9DCECE245F2D1000DDB097 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +643,7 @@
 				7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */,
 				0F0CF5FF245DEB4800018191 /* Step4TravelCreationViewController.swift in Sources */,
 				7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */,
+				0F9DCECA245F2C8800DDB097 /* MapViewController.swift in Sources */,
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
 				7BD538FC2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift in Sources */,
 				7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */,
@@ -805,7 +825,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37J2MVMMBY;
+				DEVELOPMENT_TEAM = L62MC7T8XG;
 				INFOPLIST_FILE = PoloTravel/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -824,7 +844,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37J2MVMMBY;
+				DEVELOPMENT_TEAM = L62MC7T8XG;
 				INFOPLIST_FILE = PoloTravel/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
