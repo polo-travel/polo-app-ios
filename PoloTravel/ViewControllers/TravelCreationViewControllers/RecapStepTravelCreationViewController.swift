@@ -18,32 +18,23 @@ class RecapStepTravelCreationViewController: UIViewController {
 
         confirmButton.setDarkButton()
         getBtn()
-        // Do any additional setup after loading the view.
     }
     
     func getBtn(){
         for view in recapWrapper.subviews as [UIView] {
             if let btn = view as? BasicButton {
                 btn.setWhiteButton()
-                //btn.backgroundColor = UIColor.MainTheme.mainDarkBlue
                 
                 btn.setTitle(questions[btn.tag], for: .normal)
-               // btn.contentMode = .center
                 btn.titleLabel?.textAlignment = .center
                 btn.titleLabel?.font = UIFont(name: "Gilroy-Medium", size: 15)
-                //btn.titleLabel?.textColor = .white
             }
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
+    
 
 }

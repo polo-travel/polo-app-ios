@@ -32,21 +32,10 @@ class Step1TravelCreationViewController: UIViewController {
         picker.delegate = self
         picker.dataSource = self
         
-        customButton()
-        // Do any additional setup after loading the view.
+        nextButton.setNextButton()
     }
     
-    func customButton(){
-        
-        nextButton.setImage(UIImage(named: "right_arrow"), for: .normal)
-        nextButton.imageEdgeInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
-        nextButton.contentMode = .center
-        nextButton.imageView?.contentMode = .scaleAspectFit
-        nextButton.setDarkButton()
-
-    }
-
-       func rotatePickerView(pickerView : UIPickerView) {
+    func rotatePickerView(pickerView : UIPickerView) {
         let y = pickerView.frame.origin.y
         let x = pickerView.frame.origin.x
 
@@ -54,8 +43,14 @@ class Step1TravelCreationViewController: UIViewController {
         pickerView.frame = CGRect(x: x, y: y, width: pickerView.frame.height , height: pickerView.frame.width)
     }
     
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
 
 }
+
 extension Step1TravelCreationViewController:UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
       

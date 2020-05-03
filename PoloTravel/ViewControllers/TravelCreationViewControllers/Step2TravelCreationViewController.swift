@@ -19,11 +19,10 @@ class Step2TravelCreationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        customNextButton()
+        nextButton.setNextButton()
         getBtn()
     
     }
-
 
     func getBtn(){
         for view in buttonWrapper.subviews as [UIView] {
@@ -36,22 +35,18 @@ class Step2TravelCreationViewController: UIViewController {
     
     
     @IBAction func show(sender: UIButton) {
-
          self.buttons.forEach { (button) in
             button.backgroundColor = (button === sender) ? UIColor.MainTheme.mainDarkBlue : .white
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
         }
         print(sender.tag)
     }
-  
-    func customNextButton(){
-        
-        nextButton.setImage(UIImage(named: "right_arrow"), for: .normal)
-        nextButton.imageEdgeInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
-        nextButton.contentMode = .center
-        nextButton.imageView?.contentMode = .scaleAspectFit
-        nextButton.setDarkButton()
-
+    
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    
 
 }

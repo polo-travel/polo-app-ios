@@ -51,8 +51,14 @@ class BasicButton: UIButton {
         setTitleColor(.white, for: .normal)
         layer.cornerRadius = 10.0
         setTitleColor(UIColor.MainTheme.mainDarkBlue, for: .normal)
-        //setShadow(shadowColor: UIColor.MainTheme.mainDarkBlue.cgColor)
-        //applyGradient(colors: [UIColor.MainTheme.mainDarkBlue.cgColor, UIColor.MainTheme.mainMidBlue.cgColor])
+    }
+    
+    func setNextButton() {
+        setImage(UIImage(named: "right_arrow"), for: .normal)
+        imageEdgeInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
+        contentMode = .center
+        imageView?.contentMode = .scaleAspectFit
+        setDarkButton()
     }
     
     private func setShadow(shadowColor: CGColor) {
