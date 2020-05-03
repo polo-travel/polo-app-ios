@@ -11,13 +11,12 @@ import FirebaseAuth
 
 class TravelsViewController: UIViewController {
     
-
+    @IBOutlet weak var buttonLookTravel: BasicButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let userManager = AuthentificationService()
-        print(userManager.currentUser()?.uid ?? 0)
+        
+        buttonLookTravel.setRedButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {

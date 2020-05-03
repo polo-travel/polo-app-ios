@@ -8,6 +8,12 @@
 .idea/
 .DS_Store
 
+##Dependencies
+Pods/
+
+##Firebase
+GoogleService-Info.plist
+
 ## User settings
 xcuserdata/
 

@@ -1,6 +1,0 @@
-framework module Pods_PoloTravelTests {
-  umbrella header "Pods-PoloTravelTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
