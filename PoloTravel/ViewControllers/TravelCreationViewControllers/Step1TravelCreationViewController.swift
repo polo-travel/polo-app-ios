@@ -13,6 +13,7 @@ class Step1TravelCreationViewController: UIViewController {
     var rotationAngle : CGFloat!
     @IBOutlet weak var poloCharacters: UIImageView!
     
+    @IBOutlet weak var nextButton: BasicButton!
     var index = 0
     let animationDuration: TimeInterval = 0.25
     let switchingInterval: TimeInterval = 3
@@ -30,9 +31,20 @@ class Step1TravelCreationViewController: UIViewController {
         rotatePickerView(pickerView: picker)
         picker.delegate = self
         picker.dataSource = self
+        
+        customButton()
         // Do any additional setup after loading the view.
     }
     
+    func customButton(){
+        
+        nextButton.setImage(UIImage(named: "right_arrow"), for: .normal)
+        nextButton.imageEdgeInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
+        nextButton.contentMode = .center
+        nextButton.imageView?.contentMode = .scaleAspectFit
+        nextButton.setDarkButton()
+
+    }
 
        func rotatePickerView(pickerView : UIPickerView) {
         let y = pickerView.frame.origin.y

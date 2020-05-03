@@ -45,6 +45,16 @@ class BasicButton: UIButton {
         applyGradient(colors: [UIColor.MainTheme.mainDarkBlue.cgColor, UIColor.MainTheme.mainMidBlue.cgColor])
     }
     
+    func setWhiteButton() {
+        backgroundColor = UIColor.white
+        layer.borderWidth = 0.0
+        setTitleColor(.white, for: .normal)
+        layer.cornerRadius = 10.0
+        setTitleColor(UIColor.MainTheme.mainDarkBlue, for: .normal)
+        //setShadow(shadowColor: UIColor.MainTheme.mainDarkBlue.cgColor)
+        //applyGradient(colors: [UIColor.MainTheme.mainDarkBlue.cgColor, UIColor.MainTheme.mainMidBlue.cgColor])
+    }
+    
     private func setShadow(shadowColor: CGColor) {
         layer.shadowColor   = shadowColor
         layer.shadowOffset  = CGSize(width: 0.0, height: 0.0)

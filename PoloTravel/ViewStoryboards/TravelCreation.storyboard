@@ -73,13 +73,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="polo_travelers_1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-PB-ORR">
-                                <rect key="frame" x="23" y="268" width="329" height="175"/>
+                                <rect key="frame" x="23" y="268" width="329" height="233"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="2Kj-JO-Xa1"/>
+                                    <constraint firstAttribute="height" constant="233" id="2Kj-JO-Xa1"/>
                                     <constraint firstAttribute="width" constant="329" id="Pzu-mi-4Gd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqW-fD-qkW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqW-fD-qkW">
                                 <rect key="frame" x="30" y="187" width="315" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="u0x-kN-uQO"/>
@@ -90,33 +90,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLi-jF-hcE">
-                                <rect key="frame" x="231" y="723" width="114" height="30"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT2-F8-pyH">
+                                <rect key="frame" x="103" y="523" width="168" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="69I-Gn-z39"/>
+                                    <constraint firstAttribute="height" constant="102" id="P3V-Zf-zRW"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLi-jF-hcE" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="240" y="722" width="105" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="Avi-vD-D33" kind="show" id="WtT-lV-MVh"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT2-F8-pyH">
-                                <rect key="frame" x="0.0" y="529" width="375" height="174"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="69I-Gn-z39"/>
-                                    <constraint firstAttribute="height" constant="174" id="P3V-Zf-zRW"/>
-                                </constraints>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.69679754969999996" green="0.87668329479999996" blue="0.94511049989999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="qT2-F8-pyH" firstAttribute="leading" secondItem="99G-q5-iI1" secondAttribute="leading" id="539-e3-WKa"/>
-                            <constraint firstItem="99G-q5-iI1" firstAttribute="bottom" secondItem="qT2-F8-pyH" secondAttribute="bottom" constant="75" id="9jF-Jf-Dgv"/>
+                            <constraint firstItem="qT2-F8-pyH" firstAttribute="leading" secondItem="99G-q5-iI1" secondAttribute="leading" constant="103" id="539-e3-WKa"/>
+                            <constraint firstItem="99G-q5-iI1" firstAttribute="bottom" secondItem="qT2-F8-pyH" secondAttribute="bottom" constant="153" id="9jF-Jf-Dgv"/>
+                            <constraint firstItem="99G-q5-iI1" firstAttribute="bottom" secondItem="qqW-fD-qkW" secondAttribute="bottom" constant="570" id="EE7-K9-spa"/>
                             <constraint firstItem="fWd-PB-ORR" firstAttribute="top" secondItem="qqW-fD-qkW" secondAttribute="bottom" constant="60" id="Ehv-49-O4N"/>
                             <constraint firstItem="qqW-fD-qkW" firstAttribute="centerX" secondItem="fWd-PB-ORR" secondAttribute="centerX" id="Nho-Je-a1K"/>
-                            <constraint firstItem="99G-q5-iI1" firstAttribute="trailing" secondItem="qT2-F8-pyH" secondAttribute="trailing" id="P0F-tB-ujI"/>
+                            <constraint firstItem="99G-q5-iI1" firstAttribute="trailing" secondItem="qT2-F8-pyH" secondAttribute="trailing" constant="104" id="P0F-tB-ujI"/>
                             <constraint firstItem="99G-q5-iI1" firstAttribute="trailing" secondItem="qqW-fD-qkW" secondAttribute="trailing" constant="30" id="Uzm-yb-xfm"/>
-                            <constraint firstItem="qT2-F8-pyH" firstAttribute="top" secondItem="99G-q5-iI1" secondAttribute="top" constant="441" id="csS-7H-XDF"/>
+                            <constraint firstItem="qT2-F8-pyH" firstAttribute="top" secondItem="99G-q5-iI1" secondAttribute="top" constant="435" id="csS-7H-XDF"/>
                             <constraint firstItem="qqW-fD-qkW" firstAttribute="top" secondItem="99G-q5-iI1" secondAttribute="top" constant="99" id="kSB-Fc-lkb"/>
                             <constraint firstItem="qqW-fD-qkW" firstAttribute="leading" secondItem="99G-q5-iI1" secondAttribute="leading" constant="30" id="tS6-io-PY7"/>
                         </constraints>
@@ -124,6 +125,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tMy-u7-kLf"/>
                     <connections>
+                        <outlet property="nextButton" destination="LLi-jF-hcE" id="Tex-FX-y9D"/>
                         <outlet property="picker" destination="qT2-F8-pyH" id="W3o-Dr-HWb"/>
                         <outlet property="poloCharacters" destination="fWd-PB-ORR" id="w6S-Kg-FNC"/>
                     </connections>
@@ -132,21 +134,462 @@
             </objects>
             <point key="canvasLocation" x="1901.5999999999999" y="114.53201970443351"/>
         </scene>
-        <!--View Controller2-->
+        <!--Step2 Travel Creation View Controller-->
         <scene sceneID="rLf-Ox-VpM">
             <objects>
-                <viewController id="Avi-vD-D33" customClass="ViewController2" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Avi-vD-D33" customClass="Step2TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iyz-in-obQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whk-fp-VXK" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="254" y="732" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3iX-OZ-SRQ" kind="show" id="EVg-Gg-tAh"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="polo_step_2" translatesAutoresizingMaskIntoConstraints="NO" id="opm-aE-WfH">
+                                <rect key="frame" x="16" y="251" width="343" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="kRD-w3-ecu"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="buttonWrapper" translatesAutoresizingMaskIntoConstraints="NO" id="8H0-DZ-VAx">
+                                <rect key="frame" x="-11" y="468" width="396" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0B-km-mMw" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="356" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="Avi-vD-D33" eventType="touchUpInside" id="ngg-ig-LIN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7D-x8-Box" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="88" width="356" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="Avi-vD-D33" eventType="touchUpInside" id="lni-LY-6tE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amn-cX-fqH" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="156" width="356" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="Avi-vD-D33" eventType="touchUpInside" id="8Gs-C1-xFU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J’aime bien les sensations fortes, est-ce que tu me suivrais si je t’en propose ?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-Qf-RUN">
+                                <rect key="frame" x="28" y="170" width="319" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65052300689999998" green="0.88048392529999997" blue="0.95295494790000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JYj-Aq-5i8" firstAttribute="trailing" secondItem="c4U-Qf-RUN" secondAttribute="trailing" constant="28" id="7O9-9y-ngz"/>
+                            <constraint firstItem="opm-aE-WfH" firstAttribute="leading" secondItem="JYj-Aq-5i8" secondAttribute="leading" constant="16" id="RSM-5T-t7M"/>
+                            <constraint firstItem="opm-aE-WfH" firstAttribute="top" secondItem="JYj-Aq-5i8" secondAttribute="top" constant="163" id="h72-4y-ScX"/>
+                            <constraint firstItem="c4U-Qf-RUN" firstAttribute="leading" secondItem="JYj-Aq-5i8" secondAttribute="leading" constant="28" id="iW5-8y-QiO"/>
+                            <constraint firstItem="c4U-Qf-RUN" firstAttribute="top" secondItem="JYj-Aq-5i8" secondAttribute="top" constant="82" id="njF-0I-asm"/>
+                            <constraint firstItem="opm-aE-WfH" firstAttribute="centerX" secondItem="Iyz-in-obQ" secondAttribute="centerX" id="qWK-BY-ypX"/>
+                            <constraint firstItem="JYj-Aq-5i8" firstAttribute="bottom" secondItem="c4U-Qf-RUN" secondAttribute="bottom" constant="587" id="u5x-tb-i51"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JYj-Aq-5i8"/>
                     </view>
                     <navigationItem key="navigationItem" id="2nl-F8-Qum"/>
+                    <connections>
+                        <outlet property="buttonWrapper" destination="8H0-DZ-VAx" id="Ix4-76-8iE"/>
+                        <outlet property="nextButton" destination="whk-fp-VXK" id="Uqg-I1-gsh"/>
+                        <outletCollection property="buttons" destination="C0B-km-mMw" collectionClass="NSMutableArray" id="izx-xb-cux"/>
+                        <outletCollection property="buttons" destination="r7D-x8-Box" collectionClass="NSMutableArray" id="2Rw-9x-hVD"/>
+                        <outletCollection property="buttons" destination="amn-cX-fqH" collectionClass="NSMutableArray" id="QGd-so-yUg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9l-cN-rhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="117"/>
+            <point key="canvasLocation" x="2640.8000000000002" y="116.74876847290641"/>
+        </scene>
+        <!--Step3 Travel Creation View Controller-->
+        <scene sceneID="MfG-3S-0Ea">
+            <objects>
+                <viewController id="3iX-OZ-SRQ" customClass="Step3TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Moc-fc-5L2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_step_3" translatesAutoresizingMaskIntoConstraints="NO" id="erk-8E-QxE">
+                                <rect key="frame" x="16" y="231" width="343" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH5-cR-usK" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="254" y="732" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QRg-nY-yde" kind="show" id="fTs-lx-mjx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="buttonWrapper" translatesAutoresizingMaskIntoConstraints="NO" id="22S-WA-IKL">
+                                <rect key="frame" x="-11" y="471" width="396" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="78x-oX-UQP" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="5" width="356" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="3iX-OZ-SRQ" eventType="touchUpInside" id="4jb-d2-8oN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4nK-pf-2ZH" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="88" width="356" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="3iX-OZ-SRQ" eventType="touchUpInside" id="Ft2-db-3Kf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3tc-k5-IoS" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="171" width="356" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="3iX-OZ-SRQ" eventType="touchUpInside" id="Z5f-na-dXF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2y-u0-pMx">
+                                <rect key="frame" x="18" y="169" width="338" height="31"/>
+                                <string key="text">Si tu te perds en forêt, que fais-tu ?
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65052300689999998" green="0.88048392529999997" blue="0.95295494790000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="P2y-u0-pMx" firstAttribute="leading" secondItem="K0U-re-hpm" secondAttribute="leading" constant="18" id="2cy-Qw-JZ6"/>
+                            <constraint firstItem="K0U-re-hpm" firstAttribute="bottom" secondItem="P2y-u0-pMx" secondAttribute="bottom" constant="578" id="ITj-bt-ayX"/>
+                            <constraint firstItem="P2y-u0-pMx" firstAttribute="top" secondItem="K0U-re-hpm" secondAttribute="top" constant="81" id="aNu-Cs-PI4"/>
+                            <constraint firstItem="K0U-re-hpm" firstAttribute="trailing" secondItem="P2y-u0-pMx" secondAttribute="trailing" constant="19" id="cO8-fm-A3S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K0U-re-hpm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1WC-S0-M9a"/>
+                    <connections>
+                        <outlet property="buttonWrapper" destination="22S-WA-IKL" id="mTG-Y7-Ila"/>
+                        <outlet property="nextButton" destination="fH5-cR-usK" id="QD5-cj-zOV"/>
+                        <outletCollection property="buttons" destination="78x-oX-UQP" collectionClass="NSMutableArray" id="fXF-2H-42H"/>
+                        <outletCollection property="buttons" destination="4nK-pf-2ZH" collectionClass="NSMutableArray" id="MBH-NX-wfU"/>
+                        <outletCollection property="buttons" destination="3tc-k5-IoS" collectionClass="NSMutableArray" id="zjK-tk-XdJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDE-ql-gqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3428" y="114.53201970443351"/>
+        </scene>
+        <!--Step4 Travel Creation View Controller-->
+        <scene sceneID="50g-hz-OEi">
+            <objects>
+                <viewController id="QRg-nY-yde" customClass="Step4TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CL2-Od-aZh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_step_4" translatesAutoresizingMaskIntoConstraints="NO" id="gr9-QX-0fA">
+                                <rect key="frame" x="16" y="222" width="343" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Très bien, j’en sais un peu plus sur toi, maintenant si tu as le choix entre ces 3 propositions, tu préférerais dormir :" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYY-py-WR7">
+                                <rect key="frame" x="18" y="160" width="338" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="buttonWrapper" translatesAutoresizingMaskIntoConstraints="NO" id="IG0-aO-0GU">
+                                <rect key="frame" x="-11" y="471" width="396" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWe-kp-rNH" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="356" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="QRg-nY-yde" eventType="touchUpInside" id="QUB-Yu-QX6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt0-1V-Mso" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="88" width="356" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="QRg-nY-yde" eventType="touchUpInside" id="l5A-Zz-6rb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HP-BO-GFR" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="156" width="356" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="QRg-nY-yde" eventType="touchUpInside" id="UtA-kn-aTI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKi-Q8-DhO" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="254" y="715" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ULp-8f-ast" kind="show" id="Eev-xL-WbV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58517342809999995" green="0.88820040229999997" blue="0.96472090479999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Zbl-Yw-bF1" firstAttribute="bottom" secondItem="iYY-py-WR7" secondAttribute="bottom" constant="587" id="Aid-tD-dNh"/>
+                            <constraint firstItem="Zbl-Yw-bF1" firstAttribute="trailing" secondItem="iYY-py-WR7" secondAttribute="trailing" constant="19" id="KOb-3i-t1e"/>
+                            <constraint firstItem="iYY-py-WR7" firstAttribute="top" secondItem="Zbl-Yw-bF1" secondAttribute="top" constant="72" id="XRY-2T-FWY"/>
+                            <constraint firstItem="iYY-py-WR7" firstAttribute="leading" secondItem="Zbl-Yw-bF1" secondAttribute="leading" constant="18" id="i6R-mI-IbW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zbl-Yw-bF1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="27Q-sb-bbY"/>
+                    <connections>
+                        <outlet property="buttonWrapper" destination="IG0-aO-0GU" id="PG8-z2-TeY"/>
+                        <outlet property="nextButton" destination="CKi-Q8-DhO" id="FdQ-8D-etO"/>
+                        <outletCollection property="buttons" destination="dWe-kp-rNH" collectionClass="NSMutableArray" id="fxG-nq-A6x"/>
+                        <outletCollection property="buttons" destination="mt0-1V-Mso" collectionClass="NSMutableArray" id="BSS-6z-Z1t"/>
+                        <outletCollection property="buttons" destination="0HP-BO-GFR" collectionClass="NSMutableArray" id="FWr-UE-WDU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HvN-FI-Q57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4140" y="115"/>
+        </scene>
+        <!--Step5 Travel Creation View Controller-->
+        <scene sceneID="BjL-05-Xjt">
+            <objects>
+                <viewController id="ULp-8f-ast" customClass="Step5TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g7y-Xp-2Fr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quand veux-tu que je te te surprenne ?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxM-Zj-q0J">
+                                <rect key="frame" x="18" y="160" width="338" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-9P-TN3">
+                                <rect key="frame" x="0.0" y="271" width="375" height="288"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyG-dB-Nn5" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="251" y="732" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Bzb-S2-8cE" kind="show" id="DqW-k6-9oZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58517342809999995" green="0.88820040229999997" blue="0.96472090479999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="NLH-U0-Lid"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="70T-cL-8It"/>
+                    <connections>
+                        <outlet property="nextButton" destination="hyG-dB-Nn5" id="brE-kp-Lga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-AS-W04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4868" y="114.53201970443351"/>
+        </scene>
+        <!--Step6 Travel Creation View Controller-->
+        <scene sceneID="xH6-tm-Ovd">
+            <objects>
+                <viewController id="Bzb-S2-8cE" customClass="Step6TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZYA-HX-Qju">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour finir, le plus important, quel est ton budget ?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krq-Z3-EH4">
+                                <rect key="frame" x="21" y="163" width="338" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_step_6" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-cP-UpN">
+                                <rect key="frame" x="16" y="223" width="343" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4I8-eM-DCd">
+                                <rect key="frame" x="19" y="490" width="342" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="priceSlider:" destination="Bzb-S2-8cE" eventType="valueChanged" id="P49-5m-hE9"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8b-PG-wvg" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="254" y="732" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="H9B-HB-Wz2" kind="show" id="7Sx-Yz-CO6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour une expérience optimale, je te conseille de choisir au minimum 40 euros par jour et par personne" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cai-M6-zd5">
+                                <rect key="frame" x="21" y="598" width="338" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48956382269999998" green="0.89591211079999999" blue="0.97648710009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="krq-Z3-EH4" firstAttribute="top" secondItem="rBs-Pw-bac" secondAttribute="top" constant="75" id="1kT-3O-dwV"/>
+                            <constraint firstItem="krq-Z3-EH4" firstAttribute="leading" secondItem="rBs-Pw-bac" secondAttribute="leading" constant="21" id="Asf-lh-ll8"/>
+                            <constraint firstItem="rBs-Pw-bac" firstAttribute="trailing" secondItem="Cai-M6-zd5" secondAttribute="trailing" constant="16" id="HnQ-rg-yRn"/>
+                            <constraint firstItem="rBs-Pw-bac" firstAttribute="bottom" secondItem="Cai-M6-zd5" secondAttribute="bottom" constant="149" id="JOB-mD-AdU"/>
+                            <constraint firstItem="Cai-M6-zd5" firstAttribute="top" secondItem="rBs-Pw-bac" secondAttribute="top" constant="510" id="S53-O2-iMC"/>
+                            <constraint firstItem="rBs-Pw-bac" firstAttribute="trailing" secondItem="krq-Z3-EH4" secondAttribute="trailing" constant="16" id="iYE-fR-gGC"/>
+                            <constraint firstItem="Cai-M6-zd5" firstAttribute="leading" secondItem="rBs-Pw-bac" secondAttribute="leading" constant="21" id="rNx-xL-B5h"/>
+                            <constraint firstItem="rBs-Pw-bac" firstAttribute="bottom" secondItem="krq-Z3-EH4" secondAttribute="bottom" constant="584" id="yGl-u1-E2E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rBs-Pw-bac"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wfn-vn-OUe"/>
+                    <connections>
+                        <outlet property="nextButton" destination="a8b-PG-wvg" id="qBF-wP-lxJ"/>
+                        <outlet property="slider" destination="4I8-eM-DCd" id="jBL-vu-rKX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKG-1w-qUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5644" y="113.79310344827587"/>
+        </scene>
+        <!--Recap Step Travel Creation View Controller-->
+        <scene sceneID="kK6-wO-fWe">
+            <objects>
+                <viewController id="H9B-HB-Wz2" customClass="RecapStepTravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c7N-kz-uzj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Récapitulatif" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uz-QR-bUD">
+                                <rect key="frame" x="18" y="145" width="338" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Au vu des réponses au questionnaire, rien ne te fais peur, tu as choisi le niveau aventurier expert !" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKi-mu-svK">
+                                <rect key="frame" x="21" y="214" width="338" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="buttonWrapper" translatesAutoresizingMaskIntoConstraints="NO" id="Ao3-s6-vOE">
+                                <rect key="frame" x="-11" y="273" width="396" height="319"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAR-a8-Pgi" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="15" width="356" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="QRg-nY-yde" eventType="touchUpInside" id="3gs-L2-Hvz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqw-GE-F6C" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="118" width="356" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="QRg-nY-yde" eventType="touchUpInside" id="Uvt-WV-5Jf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mki-hJ-hEJ" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="221" width="356" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWithSender:" destination="QRg-nY-yde" eventType="touchUpInside" id="7oc-pB-cvj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Niveau : aventurier expert" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpF-G3-Mgp">
+                                <rect key="frame" x="21" y="614" width="338" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2Y-Rl-lnI" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="18" y="712" width="155" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Annuler"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KG-OY-H5l" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="204" y="712" width="155" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Valider"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48956382269999998" green="0.89591211079999999" blue="0.97648710009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="NK6-k9-1Pf" firstAttribute="trailing" secondItem="wKi-mu-svK" secondAttribute="trailing" constant="16" id="O1J-BE-wT4"/>
+                            <constraint firstItem="wKi-mu-svK" firstAttribute="top" secondItem="NK6-k9-1Pf" secondAttribute="top" constant="126" id="XVB-90-tO7"/>
+                            <constraint firstItem="NK6-k9-1Pf" firstAttribute="bottom" secondItem="wKi-mu-svK" secondAttribute="bottom" constant="533" id="sbs-CC-A0c"/>
+                            <constraint firstItem="wKi-mu-svK" firstAttribute="leading" secondItem="NK6-k9-1Pf" secondAttribute="leading" constant="21" id="u9T-lZ-4Zn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NK6-k9-1Pf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vj8-50-AYG"/>
+                    <connections>
+                        <outlet property="confirmButton" destination="4KG-OY-H5l" id="I9X-Ga-4fF"/>
+                        <outlet property="recapWrapper" destination="Ao3-s6-vOE" id="YXC-I0-9Ha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMA-WL-nBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6416.8000000000002" y="113.79310344827587"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kPn-vu-Nob">
@@ -171,6 +614,10 @@
         <image name="bg_bluebig_shape" width="280.33334350585938" height="333"/>
         <image name="bg_redbig_shape" width="377" height="295"/>
         <image name="polo_character" width="411" height="374"/>
+        <image name="polo_step_2" width="431" height="286"/>
+        <image name="polo_step_3" width="463" height="299"/>
+        <image name="polo_step_4" width="328" height="285"/>
+        <image name="polo_step_6" width="196" height="225"/>
         <image name="polo_travelers_1" width="798" height="600"/>
     </resources>
 </document>

@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0C620FC62300770CB1791372 /* Pods_PoloTravelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30138E37B599E0D360ADEA20 /* Pods_PoloTravelTests.framework */; };
+		0F0CF5FD245DE04900018191 /* Step3TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF5FC245DE04900018191 /* Step3TravelCreationViewController.swift */; };
+		0F0CF5FF245DEB4800018191 /* Step4TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF5FE245DEB4800018191 /* Step4TravelCreationViewController.swift */; };
+		0F0CF601245DF15200018191 /* Step5TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF600245DF15200018191 /* Step5TravelCreationViewController.swift */; };
+		0F0CF603245DF36300018191 /* Step6TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF602245DF36300018191 /* Step6TravelCreationViewController.swift */; };
+		0F0CF605245DFD2D00018191 /* RecapStepTravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */; };
 		0F1B4D91245C485400CF759D /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1B4D90245C485400CF759D /* SignIn.storyboard */; };
+		0F461D38245CE8BF00E69741 /* Step2TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */; };
 		0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CD561245387D200DB2DAC /* TextBlock.swift */; };
 		0FE90B1E2456E3BA00E6D51C /* Step1TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */; };
 		13B71F03E42A57D07F97BE17 /* Pods_PoloTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */; };
@@ -70,7 +76,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F0CF5FC245DE04900018191 /* Step3TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3TravelCreationViewController.swift; sourceTree = "<group>"; };
+		0F0CF5FE245DEB4800018191 /* Step4TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4TravelCreationViewController.swift; sourceTree = "<group>"; };
+		0F0CF600245DF15200018191 /* Step5TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step5TravelCreationViewController.swift; sourceTree = "<group>"; };
+		0F0CF602245DF36300018191 /* Step6TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step6TravelCreationViewController.swift; sourceTree = "<group>"; };
+		0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapStepTravelCreationViewController.swift; sourceTree = "<group>"; };
 		0F1B4D90245C485400CF759D /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2TravelCreationViewController.swift; sourceTree = "<group>"; };
 		0F8CD561245387D200DB2DAC /* TextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlock.swift; sourceTree = "<group>"; };
 		0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1TravelCreationViewController.swift; sourceTree = "<group>"; };
 		20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -412,6 +424,12 @@
 			children = (
 				7BD5390B244B1FC300AD9CB3 /* TravelCreation1ViewController.swift */,
 				0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */,
+				0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */,
+				0F0CF5FC245DE04900018191 /* Step3TravelCreationViewController.swift */,
+				0F0CF5FE245DEB4800018191 /* Step4TravelCreationViewController.swift */,
+				0F0CF600245DF15200018191 /* Step5TravelCreationViewController.swift */,
+				0F0CF602245DF36300018191 /* Step6TravelCreationViewController.swift */,
+				0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */,
 			);
 			path = TravelCreationViewControllers;
 			sourceTree = "<group>";
@@ -604,18 +622,23 @@
 				7B4990F8245DDC440095EA20 /* AddButton.swift in Sources */,
 				7B3B45D4244C598800CD00D4 /* PolowersAddPhotoViewController.swift in Sources */,
 				7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */,
+				0F0CF5FF245DEB4800018191 /* Step4TravelCreationViewController.swift in Sources */,
 				7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */,
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
 				7BD538FC2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift in Sources */,
 				7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */,
+				0F0CF5FD245DE04900018191 /* Step3TravelCreationViewController.swift in Sources */,
 				7BFECF252456CFE800F5096C /* OnBoardingPageViewController.swift in Sources */,
 				7B3B45BE244BA7E900CD00D4 /* ProfileViewController.swift in Sources */,
+				0F0CF605245DFD2D00018191 /* RecapStepTravelCreationViewController.swift in Sources */,
 				7BD538FA2449F4B100AD9CB3 /* OnBoarding3ViewController..swift in Sources */,
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
+				0F0CF601245DF15200018191 /* Step5TravelCreationViewController.swift in Sources */,
 				7BD538F82449F4A600AD9CB3 /* OnBoarding2ViewController.swift in Sources */,
 				7B4F4F3B2451A393000CFB75 /* ImageExtension.swift in Sources */,
 				7BD538DD2449BB0F00AD9CB3 /* ColorConstants.swift in Sources */,
 				7BD538F32449ED3B00AD9CB3 /* SignUpViewController.swift in Sources */,
+				0F0CF603245DF36300018191 /* Step6TravelCreationViewController.swift in Sources */,
 				7B3B45C4244BA95800CD00D4 /* PolowersViewController.swift in Sources */,
 				7BFECF2B2456E23300F5096C /* OnBoardingMainViewController.swift in Sources */,
 				7B3B45DA244C5C8200CD00D4 /* TravelsNextTravelViewController.swift in Sources */,
@@ -626,6 +649,7 @@
 				7B4990F0245C5F860095EA20 /* PolowersFeedService.swift in Sources */,
 				7B4990F2245DA72D0095EA20 /* ProfileEditionViewController.swift in Sources */,
 				7B3B45D6244C59B000CD00D4 /* PolowersAddActivity.swift in Sources */,
+				0F461D38245CE8BF00E69741 /* Step2TravelCreationViewController.swift in Sources */,
 				7BCDA4E2243DF94100E9C4B6 /* SceneDelegate.swift in Sources */,
 				7B4990F4245DC1720095EA20 /* UserService.swift in Sources */,
 			);
