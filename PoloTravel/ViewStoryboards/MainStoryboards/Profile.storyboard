@@ -33,122 +33,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="gE1-oX-YYz">
-                                <rect key="frame" x="75" y="145" width="262" height="85"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="bxd-1i-oHO">
+                                <rect key="frame" x="70" y="135" width="99" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUJ-bH-j3H">
+                                <rect key="frame" x="204" y="153" width="122" height="17.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Cédric Decroux">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Gilroy-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8L9-x7-4fZ" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="194" y="179" width="150" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Modifier mon profil"/>
+                                <connections>
+                                    <segue destination="etB-B7-fsY" kind="show" id="hq1-OW-cv3"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JX9-bm-WH9" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="48" y="273" width="318" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="bxd-1i-oHO">
-                                        <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
-                                        <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="85" id="0V4-H4-6VC"/>
-                                            <constraint firstAttribute="width" constant="85" id="cAH-T2-6Ti"/>
-                                        </constraints>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boussole" translatesAutoresizingMaskIntoConstraints="NO" id="91Y-rb-mO6">
+                                        <rect key="frame" x="52" y="72" width="51" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vYY-5p-PfK">
-                                        <rect key="frame" x="112" y="0.0" width="150" height="85"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUJ-bH-j3H">
-                                                <rect key="frame" x="0.0" y="0.0" width="122" height="38"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Cédric Decroux">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="17" name="Gilroy-Bold"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8L9-x7-4fZ" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="46" width="150" height="39"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="NTB-V1-IUu"/>
-                                                    <constraint firstAttribute="height" constant="39" id="PcS-9a-jZp"/>
-                                                </constraints>
-                                                <state key="normal" title="Modifier mon profil"/>
-                                                <connections>
-                                                    <segue destination="etB-B7-fsY" kind="show" id="hq1-OW-cv3"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX9-bm-WH9">
-                                <rect key="frame" x="48" y="273" width="318" height="142"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="uN7-hR-A5y">
-                                        <rect key="frame" x="74" y="24" width="170.5" height="94.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon prochain voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUB-cb-aO9">
-                                                <rect key="frame" x="0.0" y="0.0" width="170.5" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
-                                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aucun voyage prévu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWG-xv-LDD">
-                                                <rect key="frame" x="0.0" y="34.5" width="170.5" height="13"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="13"/>
-                                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuW-4y-DF6" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="64.5" width="170.5" height="30"/>
-                                                <state key="normal" title="Créer un voyage"/>
-                                                <connections>
-                                                    <segue destination="1jd-IE-gDT" kind="show" id="4wn-Tg-Q07"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kW-cU-99j">
+                                        <rect key="frame" x="118" y="118" width="100" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="14"/>
+                                        <state key="normal" title="En savoir plus...">
+                                            <color key="titleColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWG-xv-LDD">
+                                        <rect key="frame" x="118" y="72" width="159" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mon prochain voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUB-cb-aO9">
+                                        <rect key="frame" x="68" y="31" width="181" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="18"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-lD-IYe">
+                                        <rect key="frame" x="118" y="91" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyt-2S-0nM">
+                                        <rect key="frame" x="118" y="95" width="135" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="uN7-hR-A5y" firstAttribute="centerX" secondItem="JX9-bm-WH9" secondAttribute="centerX" id="8cV-Zv-m3Y"/>
-                                    <constraint firstItem="uN7-hR-A5y" firstAttribute="centerY" secondItem="JX9-bm-WH9" secondAttribute="centerY" id="EVB-e1-jZj"/>
-                                    <constraint firstAttribute="height" constant="142" id="eUS-fw-Axq"/>
-                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tvd-ek-myg">
-                                <rect key="frame" x="48" y="449" width="318" height="95"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tvd-ek-myg" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="48" y="463" width="318" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zb2-Vc-YLu">
-                                        <rect key="frame" x="40.5" y="27.5" width="237.5" height="40.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Historique de mes voyages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOu-Pj-ccq">
-                                                <rect key="frame" x="0.0" y="0.0" width="237.5" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
-                                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu n'as pas encore terminé de voyages !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA7-Ef-34E">
-                                                <rect key="frame" x="0.0" y="27.5" width="237.5" height="13"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="13"/>
-                                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Historique de mes voyages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOu-Pj-ccq">
+                                        <rect key="frame" x="41" y="25" width="237.5" height="17.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu n'as pas encore terminé de voyages !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA7-Ef-34E">
+                                        <rect key="frame" x="41" y="56" width="237.5" height="13"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="13"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Zb2-Vc-YLu" firstAttribute="centerY" secondItem="Tvd-ek-myg" secondAttribute="centerY" id="JFQ-el-3Is"/>
-                                    <constraint firstItem="Zb2-Vc-YLu" firstAttribute="centerX" secondItem="Tvd-ek-myg" secondAttribute="centerX" id="erR-EE-axW"/>
-                                    <constraint firstAttribute="height" constant="95" id="q01-eT-PME"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="gE1-oX-YYz" firstAttribute="top" secondItem="aOv-4e-Reu" secondAttribute="top" constant="57" id="9M0-LD-20o"/>
-                            <constraint firstItem="Tvd-ek-myg" firstAttribute="leading" secondItem="aOv-4e-Reu" secondAttribute="leading" constant="48" id="BrM-Lv-kHx"/>
-                            <constraint firstItem="aOv-4e-Reu" firstAttribute="trailing" secondItem="Tvd-ek-myg" secondAttribute="trailing" constant="48" id="KKY-gl-iuT"/>
-                            <constraint firstItem="gE1-oX-YYz" firstAttribute="centerX" secondItem="aOv-4e-Reu" secondAttribute="centerX" id="L3G-rf-Mb5"/>
-                            <constraint firstItem="JX9-bm-WH9" firstAttribute="leading" secondItem="aOv-4e-Reu" secondAttribute="leading" constant="48" id="hQx-7a-72Q"/>
-                            <constraint firstItem="Tvd-ek-myg" firstAttribute="top" secondItem="JX9-bm-WH9" secondAttribute="bottom" constant="34" id="iUe-0j-xP9"/>
-                            <constraint firstItem="aOv-4e-Reu" firstAttribute="trailing" secondItem="JX9-bm-WH9" secondAttribute="trailing" constant="48" id="kiW-9c-ff0"/>
-                            <constraint firstItem="JX9-bm-WH9" firstAttribute="top" secondItem="gE1-oX-YYz" secondAttribute="bottom" constant="43" id="q5s-BO-IY4"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aOv-4e-Reu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profil" image="tabbar_profile" selectedImage="tabbar_profile_active" id="KRX-hU-Rlc">
@@ -157,9 +135,12 @@
                     <navigationItem key="navigationItem" id="6g9-R0-MKY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="buttonCreateTravel" destination="vuW-4y-DF6" id="2nW-oK-MRA"/>
+                        <outlet property="activityIndicator" destination="mEW-lD-IYe" id="ysD-JU-EIy"/>
                         <outlet property="buttonEditProfile" destination="8L9-x7-4fZ" id="e8u-rR-kEe"/>
+                        <outlet property="buttonKnowMore" destination="8kW-cU-99j" id="AgD-9z-NRR"/>
                         <outlet property="firstNameLabel" destination="RUJ-bH-j3H" id="f6E-lE-GCB"/>
+                        <outlet property="nextTravelDate" destination="zWG-xv-LDD" id="M9s-AE-bUY"/>
+                        <outlet property="typeAventurerLabel" destination="kyt-2S-0nM" id="D02-7T-5qq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1z-mf-9q6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -343,6 +324,7 @@
     </scenes>
     <resources>
         <image name="arrow_back" width="35" height="30"/>
+        <image name="boussole" width="46.5" height="57"/>
         <image name="photo" width="238" height="238"/>
         <image name="tabbar_profile" width="25" height="25"/>
         <image name="tabbar_profile_active" width="25" height="24"/>

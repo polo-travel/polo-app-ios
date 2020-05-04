@@ -18,10 +18,10 @@ class TravelsNextTravelViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     @IBAction func buttonBackClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

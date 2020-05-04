@@ -17,6 +17,8 @@ class UserService {
     func currentUser(completionHandler: @escaping (_ result: User?) -> Void) {
         var firstName: String?
         var lastName: String?
+        var travels: [Travel]?
+        var testTravels: [Travel]?
         
         if let user = user {
           let uid = user.uid
@@ -28,7 +30,40 @@ class UserService {
               if let document = document, document.exists {
                 firstName = document.get("firstname") as? String
                 lastName = document.get("lastname") as? String
-                completionHandler(User(firstName: firstName, lastName: lastName, uid: uid, email: email, photoURL: photoURL))
+                travels = document.get("travels") as? [Travel]
+
+                testTravels = [
+                    Travel(startDate: Date(timeIntervalSinceNow: 1728000),
+                           endDate: Date(timeIntervalSinceNow: 1900800),
+                           price: 145,
+                           daysDatas: [
+                            TravelDay(
+                                day: Date(timeIntervalSinceNow: 1728000),
+                                price: 45,
+                                morningActivity: TravelActivity(price: 29, localization: [0.6, 4,6], indication: "indice"),
+                                afternoonActivity: TravelActivity(price: 20, localization: [0.6, 4,6], indication: "indice"),
+                                meal: TravelActivity(price: 15, localization: [0.6, 4,6], indication: "indice")
+                            ),
+                            TravelDay(
+                                day: Date(timeIntervalSinceNow: 1814400),
+                                price: 55,
+                                morningActivity: TravelActivity(price: 29, localization: [0.6, 4,6], indication: "indice"),
+                                afternoonActivity: TravelActivity(price: 20, localization: [0.6, 4,6], indication: "indice"),
+                                meal: TravelActivity(price: 15, localization: [0.6, 4,6], indication: "indice")
+                            ),
+                            TravelDay(
+                                day: Date(timeIntervalSinceNow: 1900800),
+                                price: 45,
+                                morningActivity: TravelActivity(price: 29, localization: [0.6, 4,6], indication: "indice"),
+                                afternoonActivity: TravelActivity(price: 20, localization: [0.6, 4,6], indication: "indice"),
+                                meal: TravelActivity(price: 15, localization: [0.6, 4,6], indication: "indice")
+                            ),
+                           ]
+                    )
+                    
+                ]
+                
+                completionHandler(User(firstName: firstName ?? "", lastName: lastName ?? "", uid: uid, email: email ?? "", photoURL: photoURL, travels: testTravels))
               } else {
                   print("User does'nt exist")
                   completionHandler(nil)
