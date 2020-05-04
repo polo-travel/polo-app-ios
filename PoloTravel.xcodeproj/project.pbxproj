@@ -18,9 +18,9 @@
 		0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CD561245387D200DB2DAC /* TextBlock.swift */; };
 		0F9DCECA245F2C8800DDB097 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */; };
 		0F9DCECE245F2D1000DDB097 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9DCECD245F2D1000DDB097 /* Map.storyboard */; };
-		0F9DCED0245F2F4200DDB097 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9DCECF245F2F4200DDB097 /* MapboxMobileEvents.framework */; };
+		0FB0566324605727003977CA /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9DCECF245F2F4200DDB097 /* MapboxMobileEvents.framework */; };
+		0FB056662460572E003977CA /* Pods_PoloTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */; };
 		0FE90B1E2456E3BA00E6D51C /* Step1TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */; };
-		13B71F03E42A57D07F97BE17 /* Pods_PoloTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */; };
 		7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B167693245309A1008A464B /* PolowersImagesService.swift */; };
 		7B3B45BE244BA7E900CD00D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45BD244BA7E900CD00D4 /* ProfileViewController.swift */; };
 		7B3B45C2244BA94300CD00D4 /* TravelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45C1244BA94300CD00D4 /* TravelsViewController.swift */; };
@@ -154,8 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F9DCED0245F2F4200DDB097 /* MapboxMobileEvents.framework in Frameworks */,
-				13B71F03E42A57D07F97BE17 /* Pods_PoloTravel.framework in Frameworks */,
+				0FB056662460572E003977CA /* Pods_PoloTravel.framework in Frameworks */,
+				0FB0566324605727003977CA /* MapboxMobileEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ target 'PoloTravel' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'SDWebImage', '~> 5.0'
+  pod 'Mapbox-iOS-SDK', '~> 5.5.1'
   pod 'MapboxNavigation', '~> 0.39.0'
 
   target 'PoloTravelTests' do

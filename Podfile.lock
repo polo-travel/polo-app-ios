@@ -309,6 +309,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - Firebase/Storage
+  - Mapbox-iOS-SDK (~> 5.5.1)
   - MapboxNavigation (~> 0.39.0)
   - SDWebImage (~> 5.0)
 
@@ -383,6 +384,6 @@ SPEC CHECKSUMS:
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
   Turf: c6bdf62d6a70c647874f295dd1cf4eefc0c3e9e6
 
-PODFILE CHECKSUM: 452c51254faefc4e67c128ddb58c12788ed04c3d
+PODFILE CHECKSUM: 8ae267b95f113358532f61f110d95afc0ab1d60d
 
 COCOAPODS: 1.9.1
