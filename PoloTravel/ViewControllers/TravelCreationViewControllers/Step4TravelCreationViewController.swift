@@ -40,7 +40,6 @@ class Step4TravelCreationViewController: UIViewController {
             button.backgroundColor = (button === sender) ? UIColor.MainTheme.mainDarkBlue : .white
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
         }
-        print(sender.tag)
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {

@@ -12,15 +12,20 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var buttonEditProfile: BasicButton!
-    @IBOutlet weak var buttonCreateTravel: BasicButton!
     @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var nextTravelDate: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var typeAventurerLabel: UILabel!
+    @IBOutlet weak var buttonKnowMore: UIButton!
     var user:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        buttonCreateTravel.setDarkButton()
         buttonEditProfile.setRedButton()
+        buttonEditProfile.titleLabel?.font = UIFont(name: "Gilroy-Medium", size: 14)
+        self.buttonKnowMore.isHidden = true
+        activityIndicator.startAnimating()
     }
     
     
@@ -30,7 +35,27 @@ class ProfileViewController: UIViewController {
         
         UserService().currentUser() { result  in
             self.user = result
-            print(result)
+            //print(result)
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM"
+            
+            TravelService().currentTravel() { result in
+                if let currentTravel = result {
+                    let startDate = formatter.string(from: currentTravel.startDate)
+                    let endDate = formatter.string(from: currentTravel.endDate)
+                    
+                    self.activityIndicator.stopAnimating()
+                    self.nextTravelDate.text = "Du \(startDate) au \(endDate)"
+                    self.typeAventurerLabel.text = "Aventurier expert"
+                    self.buttonKnowMore.isHidden = false
+                } else {
+                    self.activityIndicator.stopAnimating()
+                    self.nextTravelDate.text = "Aucun voyage prévu"
+                    self.typeAventurerLabel.text = ""
+                }
+            }
+            
             self.firstNameLabel.text = "\(String(self.user?.firstName ?? "")) \(String(self.user?.lastName ?? ""))"
         }
 
