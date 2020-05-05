@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e6i-kA-n3o">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController storyboardIdentifier="OnBoardingMainViewController" id="e6i-kA-n3o" customClass="OnBoardingMainViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="haZ-EL-jRn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bg_light_shape" translatesAutoresizingMaskIntoConstraints="NO" id="FtR-Qq-nsW">
@@ -22,10 +22,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9u-mp-Ci9">
-                                <rect key="frame" x="0.0" y="136" width="375" height="570"/>
+                                <rect key="frame" x="0.0" y="136" width="414" height="654"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRk-3r-bbf">
-                                        <rect key="frame" x="0.0" y="-1" width="375" height="571"/>
+                                        <rect key="frame" x="0.0" y="-1" width="414" height="655"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="hyu-3k-cWh" kind="embed" id="LdM-Hx-4mC"/>
@@ -41,7 +41,7 @@
                                 </constraints>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-QL-yyw">
-                                <rect key="frame" x="152" y="737" width="71" height="37"/>
+                                <rect key="frame" x="171.5" y="821" width="71" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
@@ -84,14 +84,12 @@
             <objects>
                 <viewController storyboardIdentifier="OnBoarding1ViewController" id="8yW-0I-BW5" customClass="OnBoarding1ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUr-vj-Fnm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-eO-WUa">
-                                <rect key="frame" x="75.666666666666686" y="49" width="224" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="85F-iD-Q3K"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-eO-WUa">
+                                <rect key="frame" x="92.5" y="49" width="229.5" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Bienvenue prénom !">
                                         <attributes>
@@ -103,14 +101,13 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_view1" translatesAutoresizingMaskIntoConstraints="NO" id="9oS-O4-l3R">
-                                <rect key="frame" x="38" y="187" width="299" height="294"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view1" translatesAutoresizingMaskIntoConstraints="NO" id="9oS-O4-l3R">
+                                <rect key="frame" x="38" y="187" width="338" height="378"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRE-I8-cj1">
-                                <rect key="frame" x="31" y="79" width="310" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="dzB-5Z-O5j"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRE-I8-cj1">
+                                <rect key="frame" x="31" y="79" width="349" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Polo est une application qui va te faire voyager autrement !">
                                         <attributes>
@@ -124,17 +121,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="9oS-O4-l3R" firstAttribute="leading" secondItem="9y8-3u-NbJ" secondAttribute="leading" constant="38" id="9gf-Cd-9oK"/>
-                            <constraint firstItem="sk1-eO-WUa" firstAttribute="centerX" secondItem="9y8-3u-NbJ" secondAttribute="centerX" id="D0I-lp-snf"/>
-                            <constraint firstItem="9y8-3u-NbJ" firstAttribute="trailing" secondItem="9oS-O4-l3R" secondAttribute="trailing" constant="38" id="E8D-md-UYR"/>
-                            <constraint firstItem="RRE-I8-cj1" firstAttribute="top" secondItem="sk1-eO-WUa" secondAttribute="bottom" constant="8" id="IDE-hw-vFr"/>
-                            <constraint firstItem="RRE-I8-cj1" firstAttribute="trailing" secondItem="9y8-3u-NbJ" secondAttribute="trailing" constant="-34" id="JNW-Zv-1va"/>
-                            <constraint firstItem="9y8-3u-NbJ" firstAttribute="bottom" secondItem="9oS-O4-l3R" secondAttribute="bottom" constant="36" id="KBx-iE-POE"/>
-                            <constraint firstItem="sk1-eO-WUa" firstAttribute="top" secondItem="9y8-3u-NbJ" secondAttribute="top" constant="49" id="YWG-uC-CaF"/>
-                            <constraint firstItem="9oS-O4-l3R" firstAttribute="top" secondItem="RRE-I8-cj1" secondAttribute="bottom" constant="60" id="ak4-l6-KEK"/>
-                            <constraint firstItem="RRE-I8-cj1" firstAttribute="leading" secondItem="9y8-3u-NbJ" secondAttribute="leading" constant="31" id="hJD-jF-TRa"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9y8-3u-NbJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="QNY-H7-hE3"/>
@@ -148,17 +134,12 @@
             <objects>
                 <viewController storyboardIdentifier="OnBoarding2ViewController" id="w2b-gK-HqF" customClass="OnBoarding2ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0lP-Ml-dPJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onboarding_view2" translatesAutoresizingMaskIntoConstraints="NO" id="Xw3-TT-H8l">
-                                <rect key="frame" x="25" y="211" width="325" height="265"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmG-JU-zcY">
-                                <rect key="frame" x="50.666666666666657" y="49" width="273.66666666666674" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="TWP-Wp-3VP"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmG-JU-zcY">
+                                <rect key="frame" x="66" y="49" width="282.5" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Personnalise ton voyage">
                                         <attributes>
@@ -170,11 +151,9 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3Z-vk-mQF">
-                                <rect key="frame" x="16" y="89" width="323.66666666666669" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="IlB-9N-7m5"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3Z-vk-mQF">
+                                <rect key="frame" x="39" y="90" width="337" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Polo t’aide à créer ton voyage en 
@@ -189,35 +168,34 @@ connaitre ton profil d’aventurier</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view2" translatesAutoresizingMaskIntoConstraints="NO" id="Xw3-TT-H8l">
+                                <rect key="frame" x="0.0" y="204" width="414" height="370"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="H2B-29-ILr" firstAttribute="bottom" secondItem="Xw3-TT-H8l" secondAttribute="bottom" constant="41" id="2Mb-nU-m9T"/>
-                            <constraint firstItem="q3Z-vk-mQF" firstAttribute="leading" secondItem="0lP-Ml-dPJ" secondAttribute="leadingMargin" id="3i6-3M-h9X"/>
-                            <constraint firstItem="Xw3-TT-H8l" firstAttribute="centerX" secondItem="H2B-29-ILr" secondAttribute="centerX" id="CLw-A3-Iks"/>
-                            <constraint firstItem="ZmG-JU-zcY" firstAttribute="top" secondItem="H2B-29-ILr" secondAttribute="top" constant="49" id="kIO-OF-u5R"/>
-                            <constraint firstItem="Xw3-TT-H8l" firstAttribute="top" secondItem="q3Z-vk-mQF" secondAttribute="bottom" constant="55" id="uv8-Zz-PzO"/>
-                            <constraint firstItem="q3Z-vk-mQF" firstAttribute="top" secondItem="ZmG-JU-zcY" secondAttribute="bottom" constant="7" id="xgB-wE-i4R"/>
-                            <constraint firstItem="ZmG-JU-zcY" firstAttribute="centerX" secondItem="H2B-29-ILr" secondAttribute="centerX" id="yAd-cH-LI3"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="H2B-29-ILr"/>
                     </view>
                     <navigationItem key="navigationItem" id="At6-QD-uRz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8V4-Eh-w2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4525.6000000000004" y="-1574.2610837438424"/>
+            <point key="canvasLocation" x="4524.6376811594209" y="-1574.6651785714284"/>
         </scene>
         <!--On Boarding3 View Controller-->
         <scene sceneID="Tv0-lu-Aqd">
             <objects>
                 <viewController storyboardIdentifier="OnBoarding3ViewController" id="UoX-oh-1aD" customClass="OnBoarding3ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lXI-6a-9GQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view3" translatesAutoresizingMaskIntoConstraints="NO" id="JRm-wu-ITB">
+                                <rect key="frame" x="0.0" y="200" width="414" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U47-nx-9Nb">
-                                <rect key="frame" x="24" y="85" width="327" height="48"/>
+                                <rect key="frame" x="44" y="98" width="327" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Suis les indications de Polo et découvre tes activités au long de ton voyage">
@@ -230,12 +208,8 @@ connaitre ton profil d’aventurier</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view3" translatesAutoresizingMaskIntoConstraints="NO" id="JRm-wu-ITB">
-                                <rect key="frame" x="24" y="175" width="327" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVH-75-cga">
-                                <rect key="frame" x="70" y="33" width="234" height="44"/>
+                                <rect key="frame" x="90" y="46" width="234" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Explore la ville">
@@ -256,18 +230,18 @@ connaitre ton profil d’aventurier</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqi-9T-boz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4525.6000000000004" y="-1078.4482758620691"/>
+            <point key="canvasLocation" x="4524.6376811594209" y="-1078.4598214285713"/>
         </scene>
         <!--On Boarding4 View Controller-->
         <scene sceneID="i90-4G-Skw">
             <objects>
                 <viewController storyboardIdentifier="OnBoarding4ViewController" id="9ql-Tu-caP" customClass="OnBoarding4ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ea5-g0-i3N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcF-J8-XNZ">
-                                <rect key="frame" x="52" y="44" width="249" height="33"/>
+                                <rect key="frame" x="75" y="49" width="249" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Partage ton aventure">
@@ -281,7 +255,7 @@ connaitre ton profil d’aventurier</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEf-gM-v06">
-                                <rect key="frame" x="16" y="85" width="337" height="83"/>
+                                <rect key="frame" x="39" y="90" width="337" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -297,8 +271,8 @@ partager les tiennes !</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oboarding_ready" translatesAutoresizingMaskIntoConstraints="NO" id="CWT-4p-AdA">
-                                <rect key="frame" x="71" y="181" width="211" height="259"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view4" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-gY-jKf">
+                                <rect key="frame" x="0.0" y="181" width="414" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -309,24 +283,34 @@ partager les tiennes !</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGa-Yk-6SS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4526" y="-587"/>
+            <point key="canvasLocation" x="4524.6376811594209" y="-587.61160714285711"/>
         </scene>
         <!--On Boarding5 View Controller-->
         <scene sceneID="Ff6-UE-0lt">
             <objects>
                 <viewController storyboardIdentifier="OnBoarding5ViewController" id="8Ya-YQ-iuH" customClass="OnBoarding5ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWV-il-RED">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oboarding_ready" translatesAutoresizingMaskIntoConstraints="NO" id="eBx-gn-mn6">
-                                <rect key="frame" x="8" y="121" width="358.33333333333331" height="274"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oboarding_ready" translatesAutoresizingMaskIntoConstraints="NO" id="eBx-gn-mn6">
+                                <rect key="frame" x="8" y="121" width="397.5" height="358"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-Wv-r15">
-                                <rect key="frame" x="25" y="11" width="325" height="83"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="LL1-ap-0iw"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yco-mP-Xfu" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="100" y="509" width="213" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="C'est parti !">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ieT-dZ-oMx" kind="show" id="Dqy-hk-DXl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-Wv-r15">
+                                <rect key="frame" x="28" y="20" width="357" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Prêt pour vivre une expérience inoubliable ?">
                                         <attributes>
@@ -338,30 +322,8 @@ partager les tiennes !</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yco-mP-Xfu" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="112" y="434" width="150" height="52"/>
-                                <color key="backgroundColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="lL4-sL-MUU"/>
-                                </constraints>
-                                <state key="normal" title="C'est parti !">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ieT-dZ-oMx" kind="show" id="Dqy-hk-DXl"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="eBx-gn-mn6" firstAttribute="top" secondItem="EZ6-Wv-r15" secondAttribute="bottom" constant="27" id="1ez-YU-xkQ"/>
-                            <constraint firstItem="Yco-mP-Xfu" firstAttribute="top" secondItem="eBx-gn-mn6" secondAttribute="bottom" constant="39" id="25e-sg-gWG"/>
-                            <constraint firstItem="EZ6-Wv-r15" firstAttribute="top" secondItem="Vd5-X7-XEz" secondAttribute="top" constant="11" id="77C-Ak-L4A"/>
-                            <constraint firstItem="eBx-gn-mn6" firstAttribute="leading" secondItem="Vd5-X7-XEz" secondAttribute="leading" constant="8" id="ClV-5S-4vt"/>
-                            <constraint firstItem="Yco-mP-Xfu" firstAttribute="centerX" secondItem="Vd5-X7-XEz" secondAttribute="centerX" id="JKl-Py-s51"/>
-                            <constraint firstItem="Vd5-X7-XEz" firstAttribute="trailing" secondItem="eBx-gn-mn6" secondAttribute="trailing" constant="8.6666666666667425" id="PLI-Gq-qGn"/>
-                            <constraint firstItem="Vd5-X7-XEz" firstAttribute="bottom" secondItem="Yco-mP-Xfu" secondAttribute="bottom" constant="31" id="PTA-57-DY2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vd5-X7-XEz"/>
                     </view>
                     <navigationItem key="navigationItem" id="qo8-xi-Ouo"/>
@@ -371,7 +333,7 @@ partager les tiennes !</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngu-Nj-Gzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4525.6000000000004" y="-89.778325123152712"/>
+            <point key="canvasLocation" x="4524.6376811594209" y="-90.066964285714278"/>
         </scene>
         <!--TravelCreation1ViewController-->
         <scene sceneID="YVg-gq-Zyi">
@@ -385,10 +347,11 @@ partager les tiennes !</string>
         </scene>
     </scenes>
     <resources>
-        <image name="bg_light_shape" width="414" height="172.33332824707031"/>
-        <image name="oboarding_ready" width="358.33334350585938" height="395"/>
-        <image name="onboarding_view1" width="135" height="294.33334350585938"/>
-        <image name="onboarding_view2" width="357.33334350585938" height="350.66665649414062"/>
-        <image name="onboarding_view3" width="367" height="243.66667175292969"/>
+        <image name="bg_light_shape" width="414" height="172.5"/>
+        <image name="oboarding_ready" width="358.5" height="395"/>
+        <image name="onboarding_view1" width="135" height="294.5"/>
+        <image name="onboarding_view2" width="357.5" height="350.5"/>
+        <image name="onboarding_view3" width="367" height="244"/>
+        <image name="onboarding_view4" width="412" height="433"/>
     </resources>
 </document>
