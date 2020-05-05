@@ -32,6 +32,7 @@
 		7B3B45DA244C5C8200CD00D4 /* TravelsNextTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45D9244C5C8200CD00D4 /* TravelsNextTravelViewController.swift */; };
 		7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */; };
 		7B3C8EF124615C5700EE3C6F /* TravelChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8EF024615C5700EE3C6F /* TravelChoices.swift */; };
+		7B3C8EF32461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8EF22461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift */; };
 		7B45F8392460409B00A758C3 /* RadiusBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45F8382460409B00A758C3 /* RadiusBlock.swift */; };
 		7B49322F245F4673006DB7F2 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49322E245F4673006DB7F2 /* Travel.swift */; };
 		7B493231245F47D2006DB7F2 /* TravelDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493230245F47D2006DB7F2 /* TravelDay.swift */; };
@@ -109,6 +110,7 @@
 		7B3B45D9244C5C8200CD00D4 /* TravelsNextTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsNextTravelViewController.swift; sourceTree = "<group>"; };
 		7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationService.swift; sourceTree = "<group>"; };
 		7B3C8EF024615C5700EE3C6F /* TravelChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelChoices.swift; sourceTree = "<group>"; };
+		7B3C8EF22461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelReadyTravelCreationViewController.swift; sourceTree = "<group>"; };
 		7B45F8382460409B00A758C3 /* RadiusBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusBlock.swift; sourceTree = "<group>"; };
 		7B49322E245F4673006DB7F2 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		7B493230245F47D2006DB7F2 /* TravelDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDay.swift; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 				0F0CF600245DF15200018191 /* Step5TravelCreationViewController.swift */,
 				0F0CF602245DF36300018191 /* Step6TravelCreationViewController.swift */,
 				0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */,
+				7B3C8EF22461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift */,
 			);
 			path = TravelCreationViewControllers;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
 				0F0CF601245DF15200018191 /* Step5TravelCreationViewController.swift in Sources */,
 				7BD538F82449F4A600AD9CB3 /* OnBoarding2ViewController.swift in Sources */,
+				7B3C8EF32461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift in Sources */,
 				7B4F4F3B2451A393000CFB75 /* ImageExtension.swift in Sources */,
 				7BD538DD2449BB0F00AD9CB3 /* ColorConstants.swift in Sources */,
 				7BD538F32449ED3B00AD9CB3 /* SignUpViewController.swift in Sources */,

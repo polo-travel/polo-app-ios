@@ -724,10 +724,10 @@
             </objects>
             <point key="canvasLocation" x="6415.9420289855079" y="113.16964285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Travel Ready Travel Creation1 View Controller-->
         <scene sceneID="zNK-hh-0Rk">
             <objects>
-                <viewController id="eiY-WI-4FL" sceneMemberID="viewController">
+                <viewController id="eiY-WI-4FL" customClass="TravelReadyTravelCreation1ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0nI-cQ-qgp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -757,7 +757,7 @@
                                 <rect key="frame" x="0.0" y="324" width="414" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22b-F9-mIw">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22b-F9-mIw" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="110" y="709" width="192" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -778,6 +778,9 @@
                         <viewLayoutGuide key="safeArea" id="Tbk-x9-xLT"/>
                     </view>
                     <navigationItem key="navigationItem" id="MyN-Te-Uzf"/>
+                    <connections>
+                        <outlet property="buttonSeeTravel" destination="22b-F9-mIw" id="VYB-dK-egA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3V-6p-v3E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
