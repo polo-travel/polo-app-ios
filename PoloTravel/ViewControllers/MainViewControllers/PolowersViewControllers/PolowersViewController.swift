@@ -13,14 +13,12 @@ class PolowersViewController: UIViewController {
     
     let feedManager = PolowersFeedService()
     var imagePlaceholder = UIImage(named: "onboarding_ready")
-    @IBOutlet weak var buttonPublish: BasicButton!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        buttonPublish.setRedButton()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -56,7 +54,7 @@ extension PolowersViewController:UICollectionViewDelegateFlowLayout {
         let w = collectionView.frame.width
         let h = collectionView.frame.height
         
-        return CGSize(width: w/2-6, height: h/2-6)
+        return CGSize(width: w/2-6, height: h/3-6)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

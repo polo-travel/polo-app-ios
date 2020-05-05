@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qZZ-SG-kES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,17 +21,9 @@
             <objects>
                 <viewController storyboardIdentifier="PolowersViewController" id="XgU-cq-c3A" customClass="PolowersViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fYT-OF-LTK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-rJ-udV" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="98" y="703" width="218" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Publier une photo"/>
-                                <connections>
-                                    <segue destination="K3I-Kf-8Xr" kind="show" id="wv5-N5-GL8"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Polowers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzt-NM-C2l">
                                 <rect key="frame" x="29" y="89" width="129" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PqD-NF-ba6">
-                                <rect key="frame" x="31" y="225" width="354" height="360"/>
+                                <rect key="frame" x="30" y="325" width="354" height="520"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MRJ-dQ-d42">
                                     <size key="itemSize" width="168" height="180"/>
@@ -64,7 +56,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="PolowersCollectionViewCell" id="oXv-6E-gps" customClass="PolowersCollectionViewCell" customModule="PoloTravel" customModuleProvider="target">
-                                        <rect key="frame" x="88.666666666666671" y="0.0" width="177" height="180"/>
+                                        <rect key="frame" x="88.5" y="0.0" width="177" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A1o-8M-IM8">
                                             <rect key="frame" x="0.0" y="0.0" width="177" height="180"/>
@@ -112,6 +104,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Rechercher" translatesAutoresizingMaskIntoConstraints="NO" id="sOh-CY-oyD">
+                                <rect key="frame" x="30" y="231" width="354" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="PH4-MD-uYw"/>
@@ -122,8 +120,8 @@
                     <navigationItem key="navigationItem" id="GlV-m4-cl7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="buttonPublish" destination="0xT-rJ-udV" id="CL7-mG-ylx"/>
                         <outlet property="collectionView" destination="PqD-NF-ba6" id="WhG-eo-eMX"/>
+                        <outlet property="searchBar" destination="sOh-CY-oyD" id="eV9-ow-4v6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkF-Fc-khq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -135,11 +133,11 @@
             <objects>
                 <viewController id="K3I-Kf-8Xr" customClass="PolowersAddPhotoViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t7y-Ob-cWB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-Kt-DWk">
-                                <rect key="frame" x="30" y="440" width="315" height="89"/>
+                                <rect key="frame" x="30" y="396" width="354" height="266"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -152,7 +150,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynj-Dm-X3E" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="81" y="598" width="213" height="52"/>
+                                <rect key="frame" x="100.5" y="731" width="213" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="O5P-NF-Hhy"/>
                                     <constraint firstAttribute="width" constant="213" id="WHE-sE-EDy"/>
@@ -163,7 +161,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FxP-aM-iXi">
-                                <rect key="frame" x="258.66666666666669" y="614" width="20" height="20"/>
+                                <rect key="frame" x="278" y="747" width="20" height="20"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-FN-NAh">
@@ -212,7 +210,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qZZ-SG-kES" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wQO-qS-gHA">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -226,9 +224,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" width="54" height="51.333332061767578"/>
+        <image name="heart" width="54" height="51.5"/>
         <image name="photo" width="238" height="238"/>
-        <image name="tabbar_polowers" width="28" height="24.666666030883789"/>
-        <image name="tabbar_polowers_active" width="27" height="23.666666030883789"/>
+        <image name="tabbar_polowers" width="28" height="24.5"/>
+        <image name="tabbar_polowers_active" width="27" height="23.5"/>
     </resources>
 </document>

@@ -36,6 +36,7 @@ class UserService {
                     Travel(startDate: Date(timeIntervalSinceNow: 1728000),
                            endDate: Date(timeIntervalSinceNow: 1900800),
                            price: 145,
+                           travelGear: ["Des chaussures de randonnée", "Un sac à dos étanche", "Un maillot de bain", "Une lampe torche"],
                            daysDatas: [
                             TravelDay(
                                 day: Date(timeIntervalSinceNow: 1728000),
