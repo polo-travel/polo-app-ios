@@ -23,6 +23,7 @@ class Step3TravelCreationViewController: UIViewController {
         super.viewDidLoad()
 
         nextButton.setNextButton()
+        nextButton.isEnabled = false
         getBtn()
     }
     
@@ -44,6 +45,9 @@ class Step3TravelCreationViewController: UIViewController {
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
         }
         forestLosted = sender.tag
+        if (nextButton.isEnabled == false) {
+            nextButton.isEnabled = true
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

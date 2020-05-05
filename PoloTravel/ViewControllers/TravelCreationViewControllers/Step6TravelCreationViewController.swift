@@ -20,11 +20,15 @@ class Step6TravelCreationViewController: UIViewController {
         super.viewDidLoad()
 
         nextButton.setNextButton()
+        nextButton.isEnabled = false
     }
     
 
     @IBAction func priceSlider(_ sender: UISlider) {
         budget = sender.value
+        if (nextButton.isEnabled == false) {
+            nextButton.isEnabled = true
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

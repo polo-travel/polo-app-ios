@@ -23,6 +23,7 @@ class Step4TravelCreationViewController: UIViewController {
         super.viewDidLoad()
 
         nextButton.setNextButton()
+        nextButton.isEnabled = false
         getBtn()
     }
     
@@ -45,6 +46,9 @@ class Step4TravelCreationViewController: UIViewController {
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
         }
         sleepPlace = sender.tag
+        if (nextButton.isEnabled == false) {
+            nextButton.isEnabled = true
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -16,6 +16,7 @@ class Step2TravelCreationViewController: UIViewController {
     
     var travelChoices: TravelChoices?
     var selectedDanger: Int?
+    
 
     let questions = ["J’adore l’adrénaline !!","Bof, mais je le fais quand même", "Jamais de la vie"]
     
@@ -23,8 +24,8 @@ class Step2TravelCreationViewController: UIViewController {
         super.viewDidLoad()
 
         nextButton.setNextButton()
+        nextButton.isEnabled = false
         getBtn()
-    
     }
 
     func getBtn(){
@@ -44,6 +45,9 @@ class Step2TravelCreationViewController: UIViewController {
         }
         print(sender.tag)
         selectedDanger = sender.tag
+        if (nextButton.isEnabled == false) {
+            nextButton.isEnabled = true
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,11 +59,7 @@ class Step2TravelCreationViewController: UIViewController {
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
-        if selectedDanger != nil {
-            self.performSegue(withIdentifier: "toStep3", sender: nil)
-        } else {
-            print("Sélectionnez une réponse")
-        }
+        self.performSegue(withIdentifier: "toStep3", sender: nil)
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
