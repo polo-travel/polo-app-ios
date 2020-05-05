@@ -14,6 +14,8 @@ class Step1TravelCreationViewController: UIViewController {
     @IBOutlet weak var poloCharacters: UIImageView!
     
     @IBOutlet weak var nextButton: BasicButton!
+
+    var selectedNbPeople: String = "1"
     var index = 0
     let animationDuration: TimeInterval = 0.25
     let switchingInterval: TimeInterval = 3
@@ -43,12 +45,21 @@ class Step1TravelCreationViewController: UIViewController {
         pickerView.frame = CGRect(x: x, y: y, width: pickerView.frame.height , height: pickerView.frame.width)
     }
     
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        self.performSegue(withIdentifier: "toStep2", sender: nil)
+    }
+    
     @IBAction func backButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStep2" {
+            if let dest = segue.destination as? Step2TravelCreationViewController {
+                dest.travelChoices = TravelChoices(nbPeople: selectedNbPeople)
+            }
+        }
+    }
 }
 
 extension Step1TravelCreationViewController:UIPickerViewDataSource {
@@ -93,6 +104,7 @@ extension Step1TravelCreationViewController:UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {        
         if data[row] == data[row] {
             print(data[row])
+            self.selectedNbPeople = data[row]
              UIView.transition(with: self.poloCharacters,
                             duration: 0.7,
                             options: .transitionCrossDissolve,

@@ -14,6 +14,9 @@ class Step3TravelCreationViewController: UIViewController {
     @IBOutlet weak var nextButton: BasicButton!
     @IBOutlet var buttons: [UIButton]!
 
+    var travelChoices: TravelChoices?
+    var forestLosted: Int?
+    
     let questions = ["Je me construis un abri \net je mange des sauterelles","Je crie « Au secours! »\n en courant dans tous les sens", "Je sors ma boussole et retrouve\n rapidement mon chemin"]
     
     override func viewDidLoad() {
@@ -40,8 +43,26 @@ class Step3TravelCreationViewController: UIViewController {
             button.backgroundColor = (button === sender) ? UIColor.MainTheme.mainDarkBlue : .white
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
         }
-        print(sender.tag)
+        forestLosted = sender.tag
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStep4" {
+            if let dest = segue.destination as? Step4TravelCreationViewController {
+                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: forestLosted)
+            }
+        }
+    }
+    
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        if forestLosted != nil {
+            self.performSegue(withIdentifier: "toStep4", sender: nil)
+        } else {
+            print("Sélectionnez une réponse")
+        }
+        
+    }
+    
     
     @IBAction func backButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

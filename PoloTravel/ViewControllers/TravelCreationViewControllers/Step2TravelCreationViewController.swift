@@ -12,10 +12,13 @@ class Step2TravelCreationViewController: UIViewController {
 
     @IBOutlet weak var nextButton: BasicButton!
     @IBOutlet weak var buttonWrapper: UIView!
-    
     @IBOutlet var buttons: [UIButton]!
+    
+    var travelChoices: TravelChoices?
+    var selectedDanger: Int?
 
     let questions = ["J’adore l’adrénaline !!","Bof, mais je le fais quand même", "Jamais de la vie"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +43,23 @@ class Step2TravelCreationViewController: UIViewController {
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
         }
         print(sender.tag)
+        selectedDanger = sender.tag
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStep3" {
+            if let dest = segue.destination as? Step3TravelCreationViewController {
+                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger: selectedDanger)
+            }
+        }
+    }
+    
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        if selectedDanger != nil {
+            self.performSegue(withIdentifier: "toStep3", sender: nil)
+        } else {
+            print("Sélectionnez une réponse")
+        }
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {

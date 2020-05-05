@@ -116,7 +116,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Avi-vD-D33" kind="show" id="WtT-lV-MVh"/>
+                                    <action selector="nextButtonClicked:" destination="ICN-Vp-AFb" eventType="touchUpInside" id="moS-4j-rBC"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qT2-F8-pyH">
@@ -132,6 +132,7 @@
                         <outlet property="nextButton" destination="LLi-jF-hcE" id="Tex-FX-y9D"/>
                         <outlet property="picker" destination="qT2-F8-pyH" id="W3o-Dr-HWb"/>
                         <outlet property="poloCharacters" destination="fWd-PB-ORR" id="w6S-Kg-FNC"/>
+                        <segue destination="Avi-vD-D33" kind="show" identifier="toStep2" id="G8h-94-jP2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iD-Am-IfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,7 +142,7 @@
         <!--Step2 Travel Creation View Controller-->
         <scene sceneID="rLf-Ox-VpM">
             <objects>
-                <viewController id="Avi-vD-D33" customClass="Step2TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Step2TravelCreationViewController" id="Avi-vD-D33" customClass="Step2TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iyz-in-obQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +155,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3iX-OZ-SRQ" kind="show" id="EVg-Gg-tAh"/>
+                                    <action selector="nextButtonClicked:" destination="Avi-vD-D33" eventType="touchUpInside" id="R3G-Fc-7uB"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="travel_creation_step2" translatesAutoresizingMaskIntoConstraints="NO" id="opm-aE-WfH">
@@ -162,7 +163,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-Qf-RUN">
-                                <rect key="frame" x="30" y="178" width="358" height="47"/>
+                                <rect key="frame" x="30" y="178" width="364" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="J’aime bien les sensations fortes, est-ce que tu me suivrais si je t’en propose ?">
@@ -227,6 +228,7 @@
                         <outletCollection property="buttons" destination="C0B-km-mMw" collectionClass="NSMutableArray" id="izx-xb-cux"/>
                         <outletCollection property="buttons" destination="r7D-x8-Box" collectionClass="NSMutableArray" id="2Rw-9x-hVD"/>
                         <outletCollection property="buttons" destination="amn-cX-fqH" collectionClass="NSMutableArray" id="QGd-so-yUg"/>
+                        <segue destination="3iX-OZ-SRQ" kind="show" identifier="toStep3" id="axP-a8-eMi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9l-cN-rhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -249,7 +251,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QRg-nY-yde" kind="show" id="fTs-lx-mjx"/>
+                                    <action selector="nextButtonClicked:" destination="3iX-OZ-SRQ" eventType="touchUpInside" id="Ygl-7t-luM"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="buttonWrapper" translatesAutoresizingMaskIntoConstraints="NO" id="22S-WA-IKL">
@@ -322,6 +324,7 @@
                         <outletCollection property="buttons" destination="78x-oX-UQP" collectionClass="NSMutableArray" id="fXF-2H-42H"/>
                         <outletCollection property="buttons" destination="4nK-pf-2ZH" collectionClass="NSMutableArray" id="MBH-NX-wfU"/>
                         <outletCollection property="buttons" destination="3tc-k5-IoS" collectionClass="NSMutableArray" id="zjK-tk-XdJ"/>
+                        <segue destination="QRg-nY-yde" kind="show" identifier="toStep4" id="GZK-Bc-NKU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDE-ql-gqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -391,7 +394,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ULp-8f-ast" kind="show" id="Eev-xL-WbV"/>
+                                    <action selector="nextButtonClicked:" destination="QRg-nY-yde" eventType="touchUpInside" id="yIl-p3-frQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SI-Bz-TED">
@@ -417,6 +420,7 @@
                         <outletCollection property="buttons" destination="dWe-kp-rNH" collectionClass="NSMutableArray" id="fxG-nq-A6x"/>
                         <outletCollection property="buttons" destination="mt0-1V-Mso" collectionClass="NSMutableArray" id="BSS-6z-Z1t"/>
                         <outletCollection property="buttons" destination="0HP-BO-GFR" collectionClass="NSMutableArray" id="FWr-UE-WDU"/>
+                        <segue destination="ULp-8f-ast" kind="show" identifier="toStep5" id="can-Vx-8nt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HvN-FI-Q57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -431,10 +435,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-9P-TN3">
-                                <rect key="frame" x="0.0" y="271" width="414" height="288"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyG-dB-Nn5" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="280" y="770" width="105" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -443,7 +443,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Bzb-S2-8cE" kind="show" id="DqW-k6-9oZ"/>
+                                    <action selector="nextButtonClicked:" destination="ULp-8f-ast" eventType="touchUpInside" id="Erf-NF-Ow3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBT-wp-B6S">
@@ -468,6 +468,56 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqk-Z5-Rty">
+                                <rect key="frame" x="137" y="276" width="137" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Date de départ ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="Gilroy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Asp-5g-hnB">
+                                <rect key="frame" x="84" y="501" width="247" height="120"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <locale key="locale" localeIdentifier="fr_FR"/>
+                                <connections>
+                                    <action selector="endDateChanged:" destination="ULp-8f-ast" eventType="valueChanged" id="eXv-mY-IsL"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9T-rb-nGH">
+                                <rect key="frame" x="156" y="471" width="118" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Date de fin">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="Gilroy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-9P-TN3">
+                                <rect key="frame" x="84" y="308" width="247" height="120"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="fr"/>
+                                <connections>
+                                    <action selector="startDateChanged:" destination="ULp-8f-ast" eventType="valueChanged" id="Ugx-6I-89K"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="NLH-U0-Lid"/>
@@ -475,6 +525,7 @@
                     <navigationItem key="navigationItem" id="70T-cL-8It"/>
                     <connections>
                         <outlet property="nextButton" destination="hyG-dB-Nn5" id="brE-kp-Lga"/>
+                        <segue destination="Bzb-S2-8cE" kind="show" identifier="toStep6" id="OyQ-ou-tK5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-AS-W04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -493,13 +544,6 @@
                                 <rect key="frame" x="16" y="223" width="343" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4I8-eM-DCd">
-                                <rect key="frame" x="19" y="490" width="342" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="priceSlider:" destination="Bzb-S2-8cE" eventType="valueChanged" id="P49-5m-hE9"/>
-                                </connections>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8b-PG-wvg" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="280" y="770" width="105" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -508,7 +552,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="H9B-HB-Wz2" kind="show" id="7Sx-Yz-CO6"/>
+                                    <action selector="nextButtonClicked:" destination="Bzb-S2-8cE" eventType="touchUpInside" id="SpS-LO-pp2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cai-M6-zd5">
@@ -546,6 +590,13 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4I8-eM-DCd">
+                                <rect key="frame" x="38" y="490" width="342" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="priceSlider:" destination="Bzb-S2-8cE" eventType="valueChanged" id="P49-5m-hE9"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
@@ -560,6 +611,7 @@
                     <connections>
                         <outlet property="nextButton" destination="a8b-PG-wvg" id="qBF-wP-lxJ"/>
                         <outlet property="slider" destination="4I8-eM-DCd" id="jBL-vu-rKX"/>
+                        <segue destination="H9B-HB-Wz2" kind="show" identifier="toStepRecap" id="n5Y-TA-ZTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKG-1w-qUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

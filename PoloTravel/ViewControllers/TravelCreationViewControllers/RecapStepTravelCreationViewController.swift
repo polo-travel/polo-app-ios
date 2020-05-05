@@ -13,11 +13,14 @@ class RecapStepTravelCreationViewController: UIViewController {
     @IBOutlet weak var confirmButton: BasicButton!
     @IBOutlet weak var recapWrapper: UIView!
     let questions = ["3 personnes","Du 8 au 14 juin 2020 ", "Budget : 300€"]
+    var travelChoices: TravelChoices?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         confirmButton.setDarkButton()
         getBtn()
+        print(travelChoices)
     }
     
     func getBtn(){
