@@ -16,8 +16,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
 
     var mapView: NavigationMapView!
     var navigateButton: BasicButton!
+    var directionsRoute: Route?
     
-    let lyonCoord = CLLocationCoordinate2D(latitude: 45.75, longitude: 4.85)
+    let lyonCoord = CLLocationCoordinate2D(latitude: 45.756797, longitude: 4.832319)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         customNavigateButton()
-       // mapView.zoomLevel = 6.0
         // Do any additional setup after loading the view.
     }
     
@@ -45,8 +45,39 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     }
     
     @objc func navigateButtonPressed(_ sender: BasicButton){
-        
+        mapView.setUserTrackingMode(.none, animated: true)
+
         print("button pressed")
+        
+        calculateRoute(from: (mapView.userLocation!.coordinate), to: lyonCoord) { (route, error) in
+               if error != nil{
+                   print("error getting route")
+               }
+           }
+        
+    }
+    
+    
+    func calculateRoute(from originCoord:CLLocationCoordinate2D, to destinationCoord: CLLocationCoordinate2D, completion:@escaping (Route?, Error?)-> Void){
+        
+        let origin = Waypoint(coordinate: originCoord, coordinateAccuracy: -1, name: "Start")
+        let destination = Waypoint(coordinate: destinationCoord, coordinateAccuracy: -1, name: "Finish")
+        
+        let navigationOptions = NavigationRouteOptions(waypoints: [origin,destination], profileIdentifier: .automobileAvoidingTraffic)
+        _ = Directions.shared.calculate(navigationOptions, completionHandler: {(waypoints, routes, error) in
+            
+            self.directionsRoute = routes?.first
+            
+            var coordinateBounce = MGLCoordinateBounds(sw: destinationCoord, ne: originCoord)
+            let insets = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
+            let routeCam = self.mapView.cameraThatFitsCoordinateBounds(coordinateBounce, edgePadding: insets)
+            
+            self.mapView.setCamera(routeCam, animated: true)
+            
+            print(coordinateBounce)
+            
+        })
+
         
     }
     
