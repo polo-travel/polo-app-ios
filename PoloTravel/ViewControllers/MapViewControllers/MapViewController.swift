@@ -49,6 +49,10 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
 
         print("button pressed")
         
+        let annotation = MGLPointAnnotation()
+        annotation.coordinate = lyonCoord
+        mapView.addAnnotation(annotation)
+        
         calculateRoute(from: (mapView.userLocation!.coordinate), to: lyonCoord) { (route, error) in
                if error != nil{
                    print("error getting route")
@@ -67,7 +71,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         _ = Directions.shared.calculate(navigationOptions, completionHandler: {(waypoints, routes, error) in
             
             self.directionsRoute = routes?.first
-            
+            self.drawRoute(route: self.directionsRoute!)
             var coordinateBounce = MGLCoordinateBounds(sw: destinationCoord, ne: originCoord)
             let insets = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
             let routeCam = self.mapView.cameraThatFitsCoordinateBounds(coordinateBounce, edgePadding: insets)
@@ -79,6 +83,32 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         })
 
         
+    }
+    
+    func drawRoute(route:Route){
+    
+        guard route.coordinateCount > 0 else{return}
+        
+        var routeCoordinates = route.coordinates!
+        let polyline = MGLPolylineFeature(coordinates: &routeCoordinates, count: route.coordinateCount)
+
+        if let source = mapView.style?.source(withIdentifier: "route-source") as? MGLShapeSource{
+            source.shape = polyline
+        } else{
+            let source = MGLShapeSource(identifier: "route-source", features: [polyline], options: nil)
+            let lineStyle = MGLLineStyleLayer(identifier: "route-style", source: source)
+            
+            lineStyle.lineColor = NSExpression(forConstantValue: UIColor.red)
+            lineStyle.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
+            [14: 2, 18: 20])
+            
+            mapView.style?.addSource(source)
+            mapView.style?.addLayer(lineStyle)
+        }
+    }
+    
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        return true
     }
     
     
