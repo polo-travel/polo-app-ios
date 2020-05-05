@@ -51,6 +51,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         let annotation = MGLPointAnnotation()
         annotation.coordinate = lyonCoord
+        annotation.title = "Start Navigation"
         mapView.addAnnotation(annotation)
         
         calculateRoute(from: (mapView.userLocation!.coordinate), to: lyonCoord) { (route, error) in
@@ -109,6 +110,13 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         return true
+    }
+    
+    func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
+        let navigationVC = NavigationViewController(for: directionsRoute!)
+    
+        present(navigationVC,animated: true,completion: nil)
+        
     }
     
     
