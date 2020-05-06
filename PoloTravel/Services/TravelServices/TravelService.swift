@@ -9,7 +9,6 @@
 import Foundation
 
 class TravelService {
-    
     func getTravels(completionHandler: @escaping (_ result: [Travel]?) -> Void) {
         UserService().currentUser() { result  in
             if let user = result {
@@ -30,7 +29,7 @@ class TravelService {
         }
     }
     
-    func currentTravelsDays(completionHandler: @escaping (_ result: [TravelDay]?) -> Void){
+    func currentTravelDays(completionHandler: @escaping (_ result: [TravelDay]?) -> Void){
         currentTravel() { result in
             if let currentTravel = result {
                 completionHandler(currentTravel.daysDatas)
@@ -41,6 +40,4 @@ class TravelService {
     }
     
     var photoList:Photo = []
-    
-
 }

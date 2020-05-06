@@ -13,12 +13,17 @@ class Step4TravelCreationViewController: UIViewController {
     @IBOutlet weak var nextButton: BasicButton!
     @IBOutlet weak var buttonWrapper: UIView!
     @IBOutlet var buttons: [UIButton]!
+    
+    var travelChoices: TravelChoices?
+    var sleepPlace: Int?
 
      let questions = [" A l’hôtel, pour un max de confort","A la belle étoile, je suis chaud  !", "Chez moi, pour être tranquille"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         nextButton.setNextButton()
+        nextButton.isEnabled = false
         getBtn()
     }
     
@@ -39,6 +44,26 @@ class Step4TravelCreationViewController: UIViewController {
          self.buttons.forEach { (button) in
             button.backgroundColor = (button === sender) ? UIColor.MainTheme.mainDarkBlue : .white
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
+        }
+        sleepPlace = sender.tag
+        if (nextButton.isEnabled == false) {
+            nextButton.isEnabled = true
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStep5" {
+            if let dest = segue.destination as? Step5TravelCreationViewController {
+                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: sleepPlace)
+            }
+        }
+    }
+    
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        if sleepPlace != nil {
+            self.performSegue(withIdentifier: "toStep5", sender: nil)
+        } else {
+            print("Sélectionnez une réponse")
         }
     }
     

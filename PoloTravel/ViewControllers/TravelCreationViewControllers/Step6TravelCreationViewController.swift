@@ -12,15 +12,42 @@ class Step6TravelCreationViewController: UIViewController {
 
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var nextButton: BasicButton!
+    var travelChoices: TravelChoices?
+    var budget: Int?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         nextButton.setNextButton()
+        nextButton.isEnabled = false
     }
     
 
     @IBAction func priceSlider(_ sender: UISlider) {
-        print(sender.value)
+        let fixed = roundf(sender.value / 10.0) * 10.0;
+        sender.setValue(fixed, animated: true)
+        budget = Int(sender.value)
+        print(budget)
+        if (nextButton.isEnabled == false) {
+            nextButton.isEnabled = true
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStepRecap" {
+            if let dest = segue.destination as? RecapStepTravelCreationViewController {
+                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: travelChoices?.date, budget: budget)
+            }
+        }
+    }
+    
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        if budget != nil {
+            self.performSegue(withIdentifier: "toStepRecap", sender: nil)
+        } else {
+            print("Sélectionnez un budget")
+        }
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
