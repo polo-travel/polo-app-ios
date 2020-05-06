@@ -33,6 +33,9 @@
 		7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */; };
 		7B3C8EF124615C5700EE3C6F /* TravelChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8EF024615C5700EE3C6F /* TravelChoices.swift */; };
 		7B3C8EF32461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8EF22461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift */; };
+		7B3C8EFA2462D2C600EE3C6F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8EF92462D2C600EE3C6F /* DateExtension.swift */; };
+		7B3C8EFC2462D97D00EE3C6F /* TravelCreationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8EFB2462D97D00EE3C6F /* TravelCreationService.swift */; };
+		7B3C8F022462F09C00EE3C6F /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8F012462F09C00EE3C6F /* DateUtils.swift */; };
 		7B45F8392460409B00A758C3 /* RadiusBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45F8382460409B00A758C3 /* RadiusBlock.swift */; };
 		7B49322F245F4673006DB7F2 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49322E245F4673006DB7F2 /* Travel.swift */; };
 		7B493231245F47D2006DB7F2 /* TravelDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493230245F47D2006DB7F2 /* TravelDay.swift */; };
@@ -111,6 +114,9 @@
 		7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationService.swift; sourceTree = "<group>"; };
 		7B3C8EF024615C5700EE3C6F /* TravelChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelChoices.swift; sourceTree = "<group>"; };
 		7B3C8EF22461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelReadyTravelCreationViewController.swift; sourceTree = "<group>"; };
+		7B3C8EF92462D2C600EE3C6F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		7B3C8EFB2462D97D00EE3C6F /* TravelCreationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCreationService.swift; sourceTree = "<group>"; };
+		7B3C8F012462F09C00EE3C6F /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		7B45F8382460409B00A758C3 /* RadiusBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusBlock.swift; sourceTree = "<group>"; };
 		7B49322E245F4673006DB7F2 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		7B493230245F47D2006DB7F2 /* TravelDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDay.swift; sourceTree = "<group>"; };
@@ -270,13 +276,46 @@
 		7B3B45DD244D73C300CD00D4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */,
-				7B167693245309A1008A464B /* PolowersImagesService.swift */,
-				7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */,
-				7B4990F3245DC1720095EA20 /* UserService.swift */,
-				7B493236245F5B75006DB7F2 /* TravelService.swift */,
+				7B3C8EF82462BEE400EE3C6F /* UserServices */,
+				7B3C8EF72462BED500EE3C6F /* TravelServices */,
+				7B3C8EF62462BEBC00EE3C6F /* PolowersServices */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7B3C8EF62462BEBC00EE3C6F /* PolowersServices */ = {
+			isa = PBXGroup;
+			children = (
+				7B167693245309A1008A464B /* PolowersImagesService.swift */,
+				7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */,
+			);
+			path = PolowersServices;
+			sourceTree = "<group>";
+		};
+		7B3C8EF72462BED500EE3C6F /* TravelServices */ = {
+			isa = PBXGroup;
+			children = (
+				7B493236245F5B75006DB7F2 /* TravelService.swift */,
+				7B3C8EFB2462D97D00EE3C6F /* TravelCreationService.swift */,
+			);
+			path = TravelServices;
+			sourceTree = "<group>";
+		};
+		7B3C8EF82462BEE400EE3C6F /* UserServices */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B45DE244D75E500CD00D4 /* AuthentificationService.swift */,
+				7B4990F3245DC1720095EA20 /* UserService.swift */,
+			);
+			path = UserServices;
+			sourceTree = "<group>";
+		};
+		7B3C8F002462F08D00EE3C6F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C8F012462F09C00EE3C6F /* DateUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		7B493234245F4A80006DB7F2 /* TravelModels */ = {
@@ -314,6 +353,7 @@
 		7BCDA4DE243DF94100E9C4B6 /* PoloTravel */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C8F002462F08D00EE3C6F /* Utils */,
 				7B2E5BB5244D8C7B00DBD221 /* Models */,
 				7BCDA508243E08DB00E9C4B6 /* Extensions */,
 				7B3B45DD244D73C300CD00D4 /* Services */,
@@ -341,6 +381,7 @@
 			children = (
 				7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */,
 				7B4990F5245DD2F80095EA20 /* KeyboardExtension.swift */,
+				7B3C8EF92462D2C600EE3C6F /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -653,6 +694,7 @@
 				7B3B45D4244C598800CD00D4 /* PolowersAddPhotoViewController.swift in Sources */,
 				7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */,
 				0F0CF5FF245DEB4800018191 /* Step4TravelCreationViewController.swift in Sources */,
+				7B3C8F022462F09C00EE3C6F /* DateUtils.swift in Sources */,
 				7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */,
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
 				7B493233245F4955006DB7F2 /* TravelActivity.swift in Sources */,
@@ -676,7 +718,9 @@
 				0F0CF603245DF36300018191 /* Step6TravelCreationViewController.swift in Sources */,
 				7B3B45C4244BA95800CD00D4 /* PolowersViewController.swift in Sources */,
 				7BFECF2B2456E23300F5096C /* OnBoardingMainViewController.swift in Sources */,
+				7B3C8EFA2462D2C600EE3C6F /* DateExtension.swift in Sources */,
 				7B3B45DA244C5C8200CD00D4 /* TravelsNextTravelViewController.swift in Sources */,
+				7B3C8EFC2462D97D00EE3C6F /* TravelCreationService.swift in Sources */,
 				7BD538FE2449F4C900AD9CB3 /* OnBoarding5ViewController..swift in Sources */,
 				7BFECF1F2455A65400F5096C /* BasicButton.swift in Sources */,
 				7BD538F62449F48A00AD9CB3 /* OnBoarding1ViewController.swift in Sources */,

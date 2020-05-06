@@ -14,14 +14,16 @@ struct TravelChoices: Decodable {
   var forestLosted: Int?
   var sleepPlace: Int?
   var date: [Date]?
-  var budget: Float?
+  var budget: Int?
+  var adventurerLevel: Int?
     
-  init(nbPeople: String? = nil, danger: Int? = nil, forestLosted: Int? = nil, sleepPlace: Int? = nil, date: [Date]? = nil, budget: Float? = nil) {
+    init(nbPeople: String? = nil, danger: Int? = nil, forestLosted: Int? = nil, sleepPlace: Int? = nil, date: [Date]? = nil, budget: Int? = nil, adventurerLevel: Int? = nil) {
       self.nbPeople = nbPeople
       self.danger = danger
       self.forestLosted = forestLosted
       self.sleepPlace = sleepPlace
       self.date = date
       self.budget = budget
+      self.adventurerLevel = adventurerLevel
   }
 }

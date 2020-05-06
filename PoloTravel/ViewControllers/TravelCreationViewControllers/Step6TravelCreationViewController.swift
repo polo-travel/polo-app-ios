@@ -13,7 +13,7 @@ class Step6TravelCreationViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var nextButton: BasicButton!
     var travelChoices: TravelChoices?
-    var budget: Float?
+    var budget: Int?
 
     
     override func viewDidLoad() {
@@ -25,7 +25,10 @@ class Step6TravelCreationViewController: UIViewController {
     
 
     @IBAction func priceSlider(_ sender: UISlider) {
-        budget = sender.value
+        let fixed = roundf(sender.value / 10.0) * 10.0;
+        sender.setValue(fixed, animated: true)
+        budget = Int(sender.value)
+        print(budget)
         if (nextButton.isEnabled == false) {
             nextButton.isEnabled = true
         }
