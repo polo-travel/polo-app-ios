@@ -826,6 +826,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="MgD-DM-2Q0" id="HSX-ND-Amh"/>
                         <outlet property="buttonSeeTravel" destination="22b-F9-mIw" id="VYB-dK-egA"/>
+                        <outlet property="labelReady" destination="bik-q6-aQg" id="Sc4-B6-Oa6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3V-6p-v3E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

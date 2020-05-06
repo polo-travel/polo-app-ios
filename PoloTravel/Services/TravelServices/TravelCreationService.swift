@@ -36,13 +36,11 @@ class TravelCreationService {
                        completionBlock(true)
                     }
                 }
-               
             }
     }
     
     func createDaysDatas(date1: Date, date2: Date, completionHandler: @escaping (_ daysDatas: [Any]?) -> Void) {
         var daysDatas: [Any] = []
-        var test:String?
         
         let numberOfDays = DateUtils.daysBetween(start: date1, end: date2)
         print("numberOfDays", numberOfDays, "date1", date1, "date2", date2)
