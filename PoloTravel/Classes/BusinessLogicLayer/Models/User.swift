@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct User: Decodable {
+struct User {
   let firstName: String
   let lastName: String
   let uid: String
   let email: String
   let photoURL: URL?
-  let travels: [Travel]?
+  let travels: [NSDictionary]?
     
-  init(firstName: String, lastName: String, uid: String, email: String, photoURL: URL? = nil, travels: [Travel]? = nil) {
+  init(firstName: String, lastName: String, uid: String, email: String, photoURL: URL? = nil, travels: [NSDictionary]? = nil) {
       self.firstName = firstName
       self.lastName = lastName
       self.uid = uid

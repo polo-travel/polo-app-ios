@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         googleButton.setDarkButton()
+        TravelService().getTravels() { result in
+            //print("travels", result)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
