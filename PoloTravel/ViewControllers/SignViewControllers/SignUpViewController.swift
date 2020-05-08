@@ -38,16 +38,14 @@ class SignUpViewController: UIViewController {
         self.errorLabel.text = ""
         
         if let email = inputEmail.text, let password = inputPassword.text, let firstname = inputFirstName.text, let lastname = inputLastName.text {
-            signUpManager.createUser(email: email, password: password, firstname: firstname, lastname: lastname) {[weak self] (success) in
-                guard let `self` = self else { return }
-                if (success) {
-                    self.errorLabel.text = "User created!"
+            signUpManager.createUser(email: email, password: password, firstname: firstname, lastname: lastname) { error in
+                if error != nil {
+                    self.errorLabel.text = error?.errorMessage
+                    self.activityIndicator.stopAnimating()
+                } else {
                     self.activityIndicator.stopAnimating()
                     
                     self.switchStoryboard()
-                } else {
-                    self.errorLabel.text = "Tu as fait une erreur ! Vérifie les infos"
-                    self.activityIndicator.stopAnimating()
                 }
             }
         }

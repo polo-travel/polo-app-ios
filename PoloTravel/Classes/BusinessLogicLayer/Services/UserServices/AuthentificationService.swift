@@ -15,17 +15,20 @@ class AuthentificationService {
     
     let db = Firestore.firestore()
     
-    func createUser(email: String, password: String, firstname: String, lastname: String, completionBlock: @escaping (_ success: Bool) -> Void) {
+    func createUser(email: String, password: String, firstname: String, lastname: String, completionHandler: @escaping (_ error: AuthErrorCode?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
-            if let user = authResult?.user {
-               self.db.collection("pl_users").document(user.uid).setData([
-                    "firstname": firstname,
-                    "lastname": lastname,
-                    "email": email,
-                ])
-                completionBlock(true)
+            if let error = error, let errorCode = AuthErrorCode(rawValue: error._code) {
+                completionHandler(errorCode)
             } else {
-                completionBlock(false)
+                if let user = authResult?.user {
+                   self.db.collection("pl_users").document(user.uid).setData([
+                        "firstname": firstname,
+                        "lastname": lastname,
+                        "email": email,
+                    ])
+                    completionHandler(nil)
+                }
+                completionHandler(nil)
             }
         }
     }
