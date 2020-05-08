@@ -24,9 +24,9 @@ class TravelCreationService {
                 if let dateStart = travelChoices.date?[0], let dateEnd = travelChoices.date?[1] {
                     self.createDaysDatas(date1: dateStart, date2: dateEnd) { daysDatas in
                         self.db.collection("pl_users").document(self.user!.uid).updateData([
-                            "travelsTest": FieldValue.arrayUnion([
+                            "travels": FieldValue.arrayUnion([
                                 [
-                                    "days_datas": daysDatas as Any,
+                                    "daysDatas": daysDatas as Any,
                                     "startDate": travelChoices.date?[0] as Any,
                                     "endDate": travelChoices.date?[1] as Any,
                                     "price": 175,
@@ -47,7 +47,7 @@ class TravelCreationService {
         
         
         for i in 0...numberOfDays {
-            daysDatas.append(["date": Calendar.current.date(byAdding: .day, value: i, to: date1)!, "price": 200, "morning_activity": "zz", "meal": "meal", "afternoon_activity": "afternoon"])
+            daysDatas.append(["date": Calendar.current.date(byAdding: .day, value: i, to: date1)!, "price": 200, "morningActivity": ["price": 20, "localization": [0.0, 0,0], "indication": "Tourne à droite mon ami"], "meal": ["price": 20, "localization": [0.0, 0,0], "indication": "Mangerrrrrrrr"], "afternoonActivity": ["price": 20, "localization": [0.0, 0,0], "indication": "Aprèsmidiiiii indication"]])
         }
         
         completionHandler(daysDatas)

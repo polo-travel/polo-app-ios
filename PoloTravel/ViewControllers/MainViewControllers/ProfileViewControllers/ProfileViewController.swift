@@ -35,7 +35,6 @@ class ProfileViewController: UIViewController {
         
         UserService().currentUser() { result  in
             self.user = result
-            //print(result)
             
             let formatter = DateFormatter()
             formatter.dateFormat = "dd.MM"
