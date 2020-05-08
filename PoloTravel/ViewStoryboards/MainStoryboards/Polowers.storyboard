@@ -110,6 +110,55 @@
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-Yf-dN8">
+                                <rect key="frame" x="344" y="88" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pointsMenu"/>
+                                <connections>
+                                    <action selector="buttonMenuClicked:" destination="XgU-cq-c3A" eventType="touchUpInside" id="QaQ-wp-7G6"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yg-yy-e6V">
+                                <rect key="frame" x="0.0" y="604" width="414" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mK-j4-p8Z">
+                                        <rect key="frame" x="0.0" y="13" width="414" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="21"/>
+                                        <state key="normal" title="Publier une photo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPublishClicked:" destination="XgU-cq-c3A" eventType="touchUpInside" id="q8V-5h-V3F"/>
+                                            <segue destination="K3I-Kf-8Xr" kind="show" id="Rhc-dA-yr0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oez-q2-9t3">
+                                        <rect key="frame" x="0.0" y="73" width="414" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="21"/>
+                                        <state key="normal" title="Proposer une activité">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonProposeClicked:" destination="XgU-cq-c3A" eventType="touchUpInside" id="Zz0-ZK-HVO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVF-WG-4gv">
+                                        <rect key="frame" x="0.0" y="132" width="414" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="21"/>
+                                        <state key="normal" title="Annuler">
+                                            <color key="titleColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonCancelClicked:" destination="XgU-cq-c3A" eventType="touchUpInside" id="byU-3q-LLR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="PH4-MD-uYw"/>
@@ -121,6 +170,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="PqD-NF-ba6" id="WhG-eo-eMX"/>
+                        <outlet property="menuView" destination="1yg-yy-e6V" id="tx5-TK-kSF"/>
                         <outlet property="searchBar" destination="sOh-CY-oyD" id="eV9-ow-4v6"/>
                     </connections>
                 </viewController>
@@ -136,60 +186,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-Kt-DWk">
-                                <rect key="frame" x="30" y="396" width="354" height="266"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-Kt-DWk">
+                                <rect key="frame" x="30" y="440" width="354" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Polowers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-FX-hQ7">
-                                <rect key="frame" x="30" y="88" width="129" height="29"/>
-                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="30"/>
-                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynj-Dm-X3E" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="100.5" y="731" width="213" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="O5P-NF-Hhy"/>
-                                    <constraint firstAttribute="width" constant="213" id="WHE-sE-EDy"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynj-Dm-X3E" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="100.5" y="682" width="213" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Publier"/>
                                 <connections>
                                     <action selector="publishButtonClicked:" destination="K3I-Kf-8Xr" eventType="touchUpInside" id="Ly5-wm-3kG"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FxP-aM-iXi">
-                                <rect key="frame" x="278" y="747" width="20" height="20"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FxP-aM-iXi">
+                                <rect key="frame" x="278" y="698" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-FN-NAh">
-                                <rect key="frame" x="103" y="182" width="208" height="208"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-FN-NAh">
+                                <rect key="frame" x="88" y="182" width="238" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="208" id="DjI-dh-I7K"/>
-                                    <constraint firstAttribute="height" constant="208" id="Wtf-Cw-eDG"/>
-                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79H-1W-X5O">
+                                <rect key="frame" x="40" y="88" width="29.5" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow_back"/>
+                                <connections>
+                                    <action selector="buttonBackClicked:" destination="K3I-Kf-8Xr" eventType="touchUpInside" id="OFl-TZ-SDH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="gqI-TI-aYz" firstAttribute="bottom" secondItem="Ynj-Dm-X3E" secondAttribute="bottom" constant="79" id="7Jd-2W-LuB"/>
-                            <constraint firstItem="dla-FX-hQ7" firstAttribute="leading" secondItem="gqI-TI-aYz" secondAttribute="leading" constant="30" id="9k0-nS-1Ng"/>
-                            <constraint firstItem="Ynj-Dm-X3E" firstAttribute="top" secondItem="JAN-Kt-DWk" secondAttribute="bottom" constant="69" id="ISP-np-XOR"/>
-                            <constraint firstItem="FxP-aM-iXi" firstAttribute="top" secondItem="Ynj-Dm-X3E" secondAttribute="bottom" constant="-36" id="SI8-f1-rkp"/>
-                            <constraint firstItem="JAN-Kt-DWk" firstAttribute="centerX" secondItem="gqI-TI-aYz" secondAttribute="centerX" id="TG5-Ed-9Lk"/>
-                            <constraint firstItem="dla-FX-hQ7" firstAttribute="top" secondItem="gqI-TI-aYz" secondAttribute="top" id="WPC-Ld-ffb"/>
-                            <constraint firstItem="JAN-Kt-DWk" firstAttribute="top" secondItem="gJy-FN-NAh" secondAttribute="bottom" constant="49" id="Wdi-HL-Jpw"/>
-                            <constraint firstItem="gJy-FN-NAh" firstAttribute="centerX" secondItem="gqI-TI-aYz" secondAttribute="centerX" id="Z8P-kI-ywe"/>
-                            <constraint firstItem="gqI-TI-aYz" firstAttribute="trailing" secondItem="JAN-Kt-DWk" secondAttribute="trailing" constant="30" id="iiN-Hx-PWx"/>
-                            <constraint firstItem="FxP-aM-iXi" firstAttribute="leading" secondItem="Ynj-Dm-X3E" secondAttribute="trailing" constant="-35.5" id="nz5-7d-b5n"/>
-                            <constraint firstItem="gJy-FN-NAh" firstAttribute="top" secondItem="dla-FX-hQ7" secondAttribute="bottom" constant="65" id="p4F-0Z-fqs"/>
-                            <constraint firstItem="JAN-Kt-DWk" firstAttribute="leading" secondItem="gqI-TI-aYz" secondAttribute="leading" constant="30" id="tcf-AP-RqN"/>
-                            <constraint firstItem="FxP-aM-iXi" firstAttribute="centerY" secondItem="Ynj-Dm-X3E" secondAttribute="centerY" id="wys-iz-FXi"/>
-                            <constraint firstItem="Ynj-Dm-X3E" firstAttribute="centerX" secondItem="gqI-TI-aYz" secondAttribute="centerX" id="y3z-Gk-0oN"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gqI-TI-aYz"/>
                     </view>
                     <navigationItem key="navigationItem" id="dtX-kM-yf0"/>
@@ -224,8 +256,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow_back" width="35" height="30"/>
         <image name="heart" width="54" height="51.5"/>
         <image name="photo" width="238" height="238"/>
+        <image name="pointsMenu" width="7" height="25"/>
         <image name="tabbar_polowers" width="28" height="24.5"/>
         <image name="tabbar_polowers_active" width="27" height="23.5"/>
     </resources>
