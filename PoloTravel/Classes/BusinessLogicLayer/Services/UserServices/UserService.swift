@@ -38,7 +38,6 @@ class UserService {
               }
           }
         }
-
     }
     
     func updateProfile(firstname: String, lastname: String, email: String, password: String, completionBlock: @escaping (_ success: Bool) -> Void) {
