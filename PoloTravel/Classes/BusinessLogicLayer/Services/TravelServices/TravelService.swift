@@ -14,57 +14,16 @@ class TravelService {
         UserService().currentUser() { result  in
             if let user = result {
                 let travels = user.travels
-                var travelsConverted: [Travel] = []
-                var daysDatas:[TravelDay] = []
                 
-                travels?.forEach { travel in
-                    let startDateTS = travel["startDate"] as! Timestamp
-                    let startDate = startDateTS.dateValue()
-                    
-                    let endDateTS = travel["endDate"] as! Timestamp
-                    let endDate = endDateTS.dateValue()
-                    
-                    let price = travel["price"] as! Int
-                    
-                    travelsConverted.append(Travel(startDate: startDate, endDate: endDate, price: price, travelGear: ["zz", "zz"], daysDatas: []))
-                    
+                if let travels = travels {
+                    self.convertTravelsToModels(travels: travels) { result in
+                        print(result)
+                        completionHandler(result)
+                    }
+                } else {
+                    completionHandler(nil)
                 }
-                print(travelsConverted)
                 
-                
-                let testTravels = [
-                    Travel(startDate: Date(timeIntervalSinceNow: 1728000),
-                           endDate: Date(timeIntervalSinceNow: 1900800),
-                           price: 145,
-                           travelGear: ["Des chaussures de randonnée", "Un sac à dos étanche", "Un maillot de bain", "Une lampe torche"],
-                           daysDatas: [
-                            TravelDay(
-                                day: Date(timeIntervalSinceNow: 1728000),
-                                price: 45,
-                                morningActivity: TravelActivity(price: 29, localization: [0.6, 4,6], indication: "indice"),
-                                afternoonActivity: TravelActivity(price: 20, localization: [0.6, 4,6], indication: "indice"),
-                                meal: TravelActivity(price: 15, localization: [0.6, 4,6], indication: "indice")
-                            ),
-                            TravelDay(
-                                day: Date(timeIntervalSinceNow: 1814400),
-                                price: 55,
-                                morningActivity: TravelActivity(price: 29, localization: [0.6, 4,6], indication: "indice"),
-                                afternoonActivity: TravelActivity(price: 20, localization: [0.6, 4,6], indication: "indice"),
-                                meal: TravelActivity(price: 15, localization: [0.6, 4,6], indication: "indice")
-                            ),
-                            TravelDay(
-                                day: Date(timeIntervalSinceNow: 1900800),
-                                price: 45,
-                                morningActivity: TravelActivity(price: 29, localization: [0.6, 4,6], indication: "indice"),
-                                afternoonActivity: TravelActivity(price: 20, localization: [0.6, 4,6], indication: "indice"),
-                                meal: TravelActivity(price: 15, localization: [0.6, 4,6], indication: "indice")
-                            ),
-                           ]
-                    )
-                    
-                ]
-                
-                completionHandler(testTravels)
             } else {
                 completionHandler(nil)
             }
@@ -91,6 +50,59 @@ class TravelService {
         }
     }
     
+    func convertTravelsToModels(travels: [NSDictionary], completionHandler: @escaping (_ result: [Travel]) -> Void) {
+        var travelsConverted: [Travel] = []
+        
+        travels.forEach { travel in
+            let startDateTS = travel["startDate"] as! Timestamp
+            let startDate = startDateTS.dateValue()
+            
+            let endDateTS = travel["endDate"] as! Timestamp
+            let endDate = endDateTS.dateValue()
+            
+            let price = travel["price"] as! Int
+            
+            let daysDatasInitial = travel["daysDatas"] as! NSArray
+            
+            convertDaysDatasToModels(daysDatas: daysDatasInitial) { daysDatas in
+                travelsConverted.append(Travel(startDate: startDate, endDate: endDate, price: price, travelGear: ["zz", "zz"], daysDatas: daysDatas))
+            }
+        }
+        
+        completionHandler(travelsConverted)
+    }
     
-    var photoList:Photo = []
+    func convertDaysDatasToModels(daysDatas: NSArray, completionHandler: @escaping (_ result: [TravelDay]) -> Void) {
+        var daysDatasConverted: [TravelDay] = []
+        
+        daysDatas.forEach { day in
+            let travelDay = day as! NSDictionary
+            let dateTS = travelDay["date"] as! Timestamp
+            let date = dateTS.dateValue()
+            
+            let morningActivity = travelDay["morningActivity"] as! NSDictionary
+            let meal = travelDay["meal"] as! NSDictionary
+            let afternoonActivity = travelDay["afternoonActivity"] as! NSDictionary
+
+            daysDatasConverted.append(
+                TravelDay(day: date,
+                          price: travelDay["price"] as! Int,
+                          morningActivity: TravelActivity(price: morningActivity["price"] as! Int,
+                                                          localization: [0.0, 0.0],
+                                                          indication: morningActivity["indication"] as! String),
+                          
+                          afternoonActivity: TravelActivity(price: afternoonActivity["price"] as! Int,
+                                                            localization: [0.0, 0.0],
+                                                            indication: afternoonActivity["indication"] as! String),
+                          
+                          meal: TravelActivity(price: meal["price"] as! Int,
+                                               localization: [0.0, 0.0],
+                                               indication: meal["indication"] as! String)
+                )
+            )
+        }
+        completionHandler(daysDatasConverted)
+    }
+    
+    
 }
