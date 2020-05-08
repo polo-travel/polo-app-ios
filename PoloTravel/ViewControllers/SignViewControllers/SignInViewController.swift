@@ -34,15 +34,14 @@ class SignInViewController: UIViewController {
         self.errorLabel.text = ""
         
         guard let email = inputEmail.text, let password = inputPassword.text else { return }
-        loginManager.signIn(email: email, pass: password) {[weak self] (success) in
-            guard let `self` = self else { return }
-            if (success) {
+        loginManager.signIn(email: email, pass: password) { error in
+            if error != nil {
+                self.errorLabel.text = error?.errorMessage
                 self.activityIndicator.stopAnimating()
-    
-                self.switchStoryboard()
             } else {
-                self.errorLabel.text = "Tu as fait une erreur ! Vérifie les infos"
                 self.activityIndicator.stopAnimating()
+                
+                self.switchStoryboard()
             }
         }
     }
