@@ -17,7 +17,6 @@ class TravelService {
                 
                 if let travels = travels {
                     self.convertTravelsToModels(travels: travels) { result in
-                        print(result)
                         completionHandler(result)
                     }
                 } else {
