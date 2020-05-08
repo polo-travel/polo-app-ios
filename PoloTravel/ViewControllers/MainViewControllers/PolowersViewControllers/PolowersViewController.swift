@@ -71,7 +71,7 @@ class PolowersViewController: UIViewController {
         transparentView.alpha = 0
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
-            self.transparentView.alpha = 0.5
+            self.transparentView.alpha = 0.4
             self.menuView.frame = CGRect(x: 0, y: screenSize.height - self.height, width: screenSize.width, height: self.height)
         }, completion: nil)
         
@@ -111,7 +111,7 @@ extension PolowersViewController:UICollectionViewDelegateFlowLayout {
         let w = collectionView.frame.width
         let h = collectionView.frame.height
         
-        return CGSize(width: w/2-6, height: h/3-6)
+        return CGSize(width: w/2-6, height: h/3-8)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

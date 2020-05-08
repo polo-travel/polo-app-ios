@@ -57,9 +57,11 @@ class ProfileViewController: UIViewController {
             
             self.firstNameLabel.text = "\(String(self.user?.firstName ?? "")) \(String(self.user?.lastName ?? ""))"
         }
-
+        
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
+    
 
 }
