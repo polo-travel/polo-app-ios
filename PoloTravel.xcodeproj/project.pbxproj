@@ -39,6 +39,7 @@
 		7B3C8EFA2462D2C600EE3C6F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8EF92462D2C600EE3C6F /* DateExtension.swift */; };
 		7B3C8EFC2462D97D00EE3C6F /* TravelCreationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8EFB2462D97D00EE3C6F /* TravelCreationService.swift */; };
 		7B3C8F022462F09C00EE3C6F /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8F012462F09C00EE3C6F /* DateUtils.swift */; };
+		7B3C8F0E2465781700EE3C6F /* AuthErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8F0D2465781700EE3C6F /* AuthErrorExtension.swift */; };
 		7B45F8392460409B00A758C3 /* RadiusBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45F8382460409B00A758C3 /* RadiusBlock.swift */; };
 		7B49322F245F4673006DB7F2 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49322E245F4673006DB7F2 /* Travel.swift */; };
 		7B493231245F47D2006DB7F2 /* TravelDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493230245F47D2006DB7F2 /* TravelDay.swift */; };
@@ -123,6 +124,7 @@
 		7B3C8EF92462D2C600EE3C6F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7B3C8EFB2462D97D00EE3C6F /* TravelCreationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCreationService.swift; sourceTree = "<group>"; };
 		7B3C8F012462F09C00EE3C6F /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		7B3C8F0D2465781700EE3C6F /* AuthErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorExtension.swift; sourceTree = "<group>"; };
 		7B45F8382460409B00A758C3 /* RadiusBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusBlock.swift; sourceTree = "<group>"; };
 		7B49322E245F4673006DB7F2 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		7B493230245F47D2006DB7F2 /* TravelDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDay.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 				7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */,
 				7B4990F5245DD2F80095EA20 /* KeyboardExtension.swift */,
 				7B3C8EF92462D2C600EE3C6F /* DateExtension.swift */,
+				7B3C8F0D2465781700EE3C6F /* AuthErrorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				7B3B45C4244BA95800CD00D4 /* PolowersViewController.swift in Sources */,
 				7BFECF2B2456E23300F5096C /* OnBoardingMainViewController.swift in Sources */,
 				7B3C8EFA2462D2C600EE3C6F /* DateExtension.swift in Sources */,
+				7B3C8F0E2465781700EE3C6F /* AuthErrorExtension.swift in Sources */,
 				7B3B45DA244C5C8200CD00D4 /* TravelsNextTravelViewController.swift in Sources */,
 				7B3C8EFC2462D97D00EE3C6F /* TravelCreationService.swift in Sources */,
 				7BD538FE2449F4C900AD9CB3 /* OnBoarding5ViewController..swift in Sources */,

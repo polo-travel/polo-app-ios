@@ -30,12 +30,13 @@ class AuthentificationService {
         }
     }
     
-    func signIn(email: String, pass: String, completionBlock: @escaping (_ success: Bool) -> Void) {
+    func signIn(email: String, pass: String, completionHandler: @escaping (_ error: AuthErrorCode?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: pass) { (result, error) in
-            if let error = error, let _ = AuthErrorCode(rawValue: error._code) {
-                completionBlock(false)
+            if let error = error, let errorCode = AuthErrorCode(rawValue: error._code) {
+                completionHandler(errorCode)
             } else {
-                completionBlock(true)
+                print("success")
+                completionHandler(nil)
             }
         }
     }
