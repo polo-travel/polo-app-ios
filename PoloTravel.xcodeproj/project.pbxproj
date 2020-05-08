@@ -334,6 +334,61 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7B3C8F072465456B00EE3C6F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7BD538E52449D40A00AD9CB3 /* Fonts */,
+				7BD538E22449C1AD00AD9CB3 /* Constants */,
+				7BD538E02449C19E00AD9CB3 /* Components */,
+				7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B3C8F08246545A100EE3C6F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C8F09246545A700EE3C6F /* ApplicationLayer */,
+				7B3C8F0B246545B400EE3C6F /* BusinessLogicLayer */,
+				7B3C8F0C2465463500EE3C6F /* CoreLayer */,
+				7B3C8F0A246545AE00EE3C6F /* PresentationLayer */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7B3C8F09246545A700EE3C6F /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		7B3C8F0A246545AE00EE3C6F /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		7B3C8F0B246545B400EE3C6F /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7B2E5BB5244D8C7B00DBD221 /* Models */,
+				7B3B45DD244D73C300CD00D4 /* Services */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		7B3C8F0C2465463500EE3C6F /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C8F002462F08D00EE3C6F /* Utils */,
+				7BCDA508243E08DB00E9C4B6 /* Extensions */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
 		7B493234245F4A80006DB7F2 /* TravelModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,12 +424,9 @@
 		7BCDA4DE243DF94100E9C4B6 /* PoloTravel */ = {
 			isa = PBXGroup;
 			children = (
-				7B3C8F002462F08D00EE3C6F /* Utils */,
-				7B2E5BB5244D8C7B00DBD221 /* Models */,
-				7BCDA508243E08DB00E9C4B6 /* Extensions */,
-				7B3B45DD244D73C300CD00D4 /* Services */,
+				7B3C8F08246545A100EE3C6F /* Classes */,
+				7B3C8F072465456B00EE3C6F /* Resources */,
 				7BCDA50C243E090600E9C4B6 /* SupportingFiles */,
-				7BD538DF2449C18C00AD9CB3 /* UIFiles */,
 				7BCDA50B243E08F800E9C4B6 /* ViewControllers */,
 				7BD53904244B04B300AD9CB3 /* ViewStoryboards */,
 				7B4990F9245ED0E90095EA20 /* GoogleService-Info.plist */,
@@ -420,20 +472,8 @@
 			children = (
 				7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */,
 				7BCDA4ED243DF94300E9C4B6 /* Info.plist */,
-				7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */,
-				7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		7BD538DF2449C18C00AD9CB3 /* UIFiles */ = {
-			isa = PBXGroup;
-			children = (
-				7BD538E52449D40A00AD9CB3 /* Fonts */,
-				7BD538E22449C1AD00AD9CB3 /* Constants */,
-				7BD538E02449C19E00AD9CB3 /* Components */,
-			);
-			path = UIFiles;
 			sourceTree = "<group>";
 		};
 		7BD538E02449C19E00AD9CB3 /* Components */ = {
