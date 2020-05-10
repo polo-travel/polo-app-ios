@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RadiusBlock: UIButton {
+class RadiusBlock: UIView {
     
     override init(frame: CGRect) {
         super.init(frame : frame)
@@ -24,14 +24,6 @@ class RadiusBlock: UIButton {
         backgroundColor      = UIColor.white
         layer.cornerRadius   = 30
     }
-    
-    func setRedButton() {
-        backgroundColor = UIColor.MainTheme.mainRed
-        layer.borderWidth = 0.0
-        setTitleColor(.white, for: .normal)
-        setShadow(shadowColor: UIColor.black.cgColor)
-    }
-
     
     private func setShadow(shadowColor: CGColor) {
         layer.shadowColor   = shadowColor
