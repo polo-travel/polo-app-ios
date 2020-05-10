@@ -17,7 +17,7 @@ class UserService {
     func currentUser(completionHandler: @escaping (_ result: User?) -> Void) {
         var firstName: String?
         var lastName: String?
-        var photoURL: URL?
+        var photoURL: String?
         var travels: [NSDictionary]?
         
         if let user = user {
@@ -29,7 +29,7 @@ class UserService {
               if let document = document, document.exists {
                 firstName = document.get("firstname") as? String
                 lastName = document.get("lastname") as? String
-                photoURL = document.get("photoURL") as? URL
+                photoURL = document.get("photoURL") as? String
                 travels = document.get("travels") as? [NSDictionary]
                 
                 completionHandler(User(firstName: firstName ?? "", lastName: lastName ?? "", uid: uid, email: email ?? "", photoURL: photoURL, travels: travels))
@@ -80,6 +80,7 @@ class UserService {
                         return
                     }
                     
+                    print("typeofurl", type(of: url))
                    docRef.setData([ "photoURL": url ], merge: true)
                 }
             }

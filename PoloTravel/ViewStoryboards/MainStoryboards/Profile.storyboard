@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="bxd-1i-oHO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="bxd-1i-oHO" customClass="RoundedImage" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="70" y="135" width="99" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,6 +140,7 @@
                         <outlet property="buttonKnowMore" destination="8kW-cU-99j" id="AgD-9z-NRR"/>
                         <outlet property="firstNameLabel" destination="RUJ-bH-j3H" id="f6E-lE-GCB"/>
                         <outlet property="nextTravelDate" destination="zWG-xv-LDD" id="M9s-AE-bUY"/>
+                        <outlet property="profilePhoto" destination="bxd-1i-oHO" id="nVo-9p-VhQ"/>
                         <outlet property="typeAventurerLabel" destination="kyt-2S-0nM" id="D02-7T-5qq"/>
                     </connections>
                 </viewController>
@@ -241,7 +242,7 @@
                                     <action selector="buttonConfirmClicked:" destination="etB-B7-fsY" eventType="touchUpInside" id="iLX-it-cFC"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="b1n-Lu-61I">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="b1n-Lu-61I" customClass="RoundedImage" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="144" y="158" width="127" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
