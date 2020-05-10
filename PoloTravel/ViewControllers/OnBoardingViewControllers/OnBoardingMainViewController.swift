@@ -17,13 +17,5 @@ class OnBoardingMainViewController: UIViewController {
         // Do any additional setup after loading the view.
 
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "OnBoarding1ViewController" {
-            if segue.destination.isKind(of: OnBoardingPageViewController.self) {
-                pageVC = segue.destination as! OnBoardingPageViewController
-            }
-        }
-    }
 
 }

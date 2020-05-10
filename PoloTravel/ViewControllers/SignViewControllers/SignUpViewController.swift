@@ -24,7 +24,6 @@ class SignUpViewController: UIViewController {
     
     let signUpManager = AuthentificationService()
     let db = Firestore.firestore()
-    let onboardingController = OnBoarding1ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()

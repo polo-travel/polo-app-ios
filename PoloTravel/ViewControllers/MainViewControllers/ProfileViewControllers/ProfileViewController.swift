@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var typeAventurerLabel: UILabel!
     @IBOutlet weak var buttonKnowMore: UIButton!
+    @IBOutlet weak var profilePhoto: RoundedImage!
     var user:User?
     
     override func viewDidLoad() {
@@ -43,6 +44,13 @@ class ProfileViewController: UIViewController {
                 if let currentTravel = result {
                     let startDate = formatter.string(from: currentTravel.startDate)
                     let endDate = formatter.string(from: currentTravel.endDate)
+            
+                    if let url = self.user?.photoURL {
+                        print("url", url)
+                        self.profilePhoto.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "photo.png"))
+                    } else {
+                        print("echecbroww")
+                    }
                     
                     self.activityIndicator.stopAnimating()
                     self.nextTravelDate.text = "Du \(startDate) au \(endDate)"
@@ -57,9 +65,11 @@ class ProfileViewController: UIViewController {
             
             self.firstNameLabel.text = "\(String(self.user?.firstName ?? "")) \(String(self.user?.lastName ?? ""))"
         }
-
+        
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
+    
 
 }

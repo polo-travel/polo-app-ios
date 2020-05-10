@@ -13,10 +13,10 @@ struct User {
   let lastName: String
   let uid: String
   let email: String
-  let photoURL: URL?
+  let photoURL: String?
   let travels: [NSDictionary]?
     
-  init(firstName: String, lastName: String, uid: String, email: String, photoURL: URL? = nil, travels: [NSDictionary]? = nil) {
+  init(firstName: String, lastName: String, uid: String, email: String, photoURL: String? = nil, travels: [NSDictionary]? = nil) {
       self.firstName = firstName
       self.lastName = lastName
       self.uid = uid

@@ -26,7 +26,7 @@ class PolowersImagesService {
             userManager.currentUser() { result  in
                 self.user = result
                 
-                self.uploadMedia(imgToUpload: imgToUpload) { url in
+                MediaUploadUtils().uploadMedia(imgToUpload: imgToUpload, imgFolder: "polowers_photos") { url in
                      guard let url = url else {
                         completionBlock(false)
                         
@@ -48,23 +48,6 @@ class PolowersImagesService {
                 }
             }
         }
-    }
-    
-    func uploadMedia(imgToUpload: UIImage, completion: @escaping (_ url: String?) -> Void) {
-       storageRef = storageRef.child("polowers_photos/"+UUID().uuidString)
-        if let uploadData = imgToUpload.jpegData(compressionQuality: 0.5) {
-            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-                if error != nil {
-                    print("error")
-                    completion(nil)
-                } else {
-                    self.storageRef.downloadURL(completion: { (url, error) in
-                        completion(url?.absoluteString)
-                    })
-                }
-            }
-        }
-
     }
     
     

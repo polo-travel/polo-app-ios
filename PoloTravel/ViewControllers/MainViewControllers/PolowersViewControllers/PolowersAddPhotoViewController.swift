@@ -77,6 +77,11 @@ class PolowersAddPhotoViewController: UIViewController, UIImagePickerControllerD
                 }
         }
     }
+    
+    @IBAction func buttonBackClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)

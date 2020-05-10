@@ -16,6 +16,10 @@ class PolowersViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    var transparentView = UIView()
+    @IBOutlet weak var menuView: UIView!
+    
+    let height: CGFloat = 209
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +27,13 @@ class PolowersViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        menuView.roundCorners([.topLeft, .topRight], radius: 35)
         collectionView.backgroundColor = UIColor(white: 1, alpha: 0)
+        let screenSize = UIScreen.main.bounds.size
+        self.menuView.frame = CGRect(x: 0, y: screenSize.height, width: screenSize.width, height: self.height)
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -45,6 +54,54 @@ class PolowersViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func buttonMenuClicked(_ sender: Any) {
+        let window = UIApplication.shared.keyWindow
+        transparentView.backgroundColor = UIColor.MainTheme.mainDarkBlue.withAlphaComponent(0.9)
+        transparentView.frame = self.view.frame
+        window?.addSubview(transparentView)
+        
+        let screenSize = UIScreen.main.bounds.size
+        menuView.frame = CGRect(x: 0, y: screenSize.height, width: screenSize.width, height: height)
+        window?.addSubview(menuView)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClickTransparentView))
+        transparentView.addGestureRecognizer(tapGesture)
+        
+        transparentView.alpha = 0
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+            self.transparentView.alpha = 0.4
+            self.menuView.frame = CGRect(x: 0, y: screenSize.height - self.height, width: screenSize.width, height: self.height)
+        }, completion: nil)
+        
+    }
+    
+    @IBAction func buttonProposeClicked(_ sender: Any) {
+        closeMenuView()
+    }
+    
+    @IBAction func buttonCancelClicked(_ sender: Any) {
+        closeMenuView()
+    }
+    
+    @IBAction func buttonPublishClicked(_ sender: Any) {
+        closeMenuView()
+    }
+    
+    @objc func onClickTransparentView() {
+        closeMenuView()
+    }
+    
+    func closeMenuView() {
+        let screenSize = UIScreen.main.bounds.size
+
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+            self.transparentView.alpha = 0
+            self.menuView.frame = CGRect(x: 0, y: screenSize.height, width: screenSize.width, height: self.height)
+        }, completion: nil)
+    }
+    
 
 }
 
@@ -54,7 +111,7 @@ extension PolowersViewController:UICollectionViewDelegateFlowLayout {
         let w = collectionView.frame.width
         let h = collectionView.frame.height
         
-        return CGSize(width: w/2-6, height: h/3-6)
+        return CGSize(width: w/2-6, height: h/3-8)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -101,6 +158,17 @@ extension PolowersViewController:UICollectionViewDataSource {
         return cell
     }
     
-    
 }
+
+extension UIView {
+
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+         let mask = CAShapeLayer()
+         mask.path = path.cgPath
+         self.layer.mask = mask
+    }
+
+}
+
 
