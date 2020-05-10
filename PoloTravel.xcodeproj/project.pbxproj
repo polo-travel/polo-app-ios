@@ -22,6 +22,7 @@
 		0FB056662460572E003977CA /* Pods_PoloTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */; };
 		0FE90B1E2456E3BA00E6D51C /* Step1TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */; };
 		7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B167693245309A1008A464B /* PolowersImagesService.swift */; };
+		7B1F3D3424682C040026C5B6 /* MediaUploadUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F3D3324682C040026C5B6 /* MediaUploadUtils.swift */; };
 		7B3B45BE244BA7E900CD00D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45BD244BA7E900CD00D4 /* ProfileViewController.swift */; };
 		7B3B45C2244BA94300CD00D4 /* TravelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45C1244BA94300CD00D4 /* TravelsViewController.swift */; };
 		7B3B45C4244BA95800CD00D4 /* PolowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45C3244BA95800CD00D4 /* PolowersViewController.swift */; };
@@ -107,6 +108,7 @@
 		30138E37B599E0D360ADEA20 /* Pods_PoloTravelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloTravelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580F27B421CCFE465C3FC5B3 /* Pods-PoloTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-PoloTravelTests/Pods-PoloTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B167693245309A1008A464B /* PolowersImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersImagesService.swift; sourceTree = "<group>"; };
+		7B1F3D3324682C040026C5B6 /* MediaUploadUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaUploadUtils.swift; sourceTree = "<group>"; };
 		7B267C73243E6A8700C35032 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7B3B45BD244BA7E900CD00D4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7B3B45C1244BA94300CD00D4 /* TravelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsViewController.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				7B3C8F012462F09C00EE3C6F /* DateUtils.swift */,
+				7B1F3D3324682C040026C5B6 /* MediaUploadUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -791,6 +794,7 @@
 				7B3C8F142465E9AA00EE3C6F /* TransitionExtension.swift in Sources */,
 				7BD538FE2449F4C900AD9CB3 /* OnBoarding5ViewController..swift in Sources */,
 				7BFECF1F2455A65400F5096C /* BasicButton.swift in Sources */,
+				7B1F3D3424682C040026C5B6 /* MediaUploadUtils.swift in Sources */,
 				7BD538F62449F48A00AD9CB3 /* OnBoarding1ViewController.swift in Sources */,
 				7B3B45D8244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift in Sources */,
 				7B493231245F47D2006DB7F2 /* TravelDay.swift in Sources */,

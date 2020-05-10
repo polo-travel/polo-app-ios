@@ -74,7 +74,7 @@ class ProfileEditionViewController: UIViewController, UIImagePickerControllerDel
         
         activityIndicator.startAnimating()
         if let email = emailInput.text, let password = passwordInput.text, let firstname = firstNameInput.text, let lastname = lastNameInput.text {
-            UserService().updateProfile(firstname: firstname, lastname: lastname, email: email, password: password) {[weak self] (success) in
+            UserService().updateProfile(firstname: firstname, lastname: lastname, email: email, password: password, imgToUpload: profilePhoto.image) {[weak self] (success) in
                 guard let `self` = self else { return }
                 if (success) {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
