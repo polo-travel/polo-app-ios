@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let main =  UIStoryboard(name: "Main", bundle: nil)
         let sign =  UIStoryboard(name: "SignIn", bundle: nil)
                
-        let mainVC = main.instantiateViewController(withIdentifier: "MainTabBarController")
+        let mainVC = main.instantiateViewController(withIdentifier: "MainNavigationController")
         let signVC = sign.instantiateViewController(withIdentifier: "ViewController")
                
                
