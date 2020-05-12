@@ -17,6 +17,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var mapView: NavigationMapView!
     var navigateButton: BasicButton!
     var directionsRoute: Route?
+    let alertService = AlertService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,30 +62,19 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             }
         }
         
+        
+        
         // Do any additional setup after loading the view.
     }
     
     @objc func popupAlert(sender: UIButton!){
-        let title = "Did you bring your tennis racquet?"
-        var myMutableString = NSMutableAttributedString()
-           myMutableString = NSMutableAttributedString(string: title as String, attributes: [
-            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),
-           NSAttributedString.Key.foregroundColor : UIColor.green])
-        let alert = UIAlertController(title: "Titre de la popup", message: "", preferredStyle: .alert)
-        
-        
-        alert.setValue(myMutableString, forKey: "attributedMessage")
-        
-        let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-           subview.layer.cornerRadius = 1
-        subview.backgroundColor = UIColor.red
+
+        let alertVC = alertService.alert(title: "titre popup", body: "Description blabla.", buttonTitle: "Confirm") { [weak self] in
             
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-            print("Great! Let's Play!")}))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { action in
-            print("Time to head home!")}))
         
-        self.present(alert, animated: true)
+        }
+        
+        present(alertVC, animated: true)
         
     }
     
