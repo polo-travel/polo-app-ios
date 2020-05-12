@@ -171,6 +171,14 @@
                                     <segue destination="muB-1m-5Gu" kind="show" id="nUI-ye-xx3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHT-J4-QLQ">
+                                <rect key="frame" x="73" y="650" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="MAP"/>
+                                <connections>
+                                    <segue destination="oGv-Ve-MJm" kind="show" id="Efh-Mp-ajW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="QJv-NA-f8U"/>
@@ -394,6 +402,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cx7-iz-cNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1053" y="-485"/>
+        </scene>
+        <!--MapViewController-->
+        <scene sceneID="i3c-xK-vTK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="MapViewController" id="oGv-Ve-MJm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jcI-su-VXx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1K-rh-AbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="-435"/>
         </scene>
         <!--Voyages-->
         <scene sceneID="DWQ-TY-zks">
