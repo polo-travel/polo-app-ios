@@ -47,7 +47,7 @@ class TravelCreationService {
         
         
         for i in 0...numberOfDays {
-            daysDatas.append(["date": Calendar.current.date(byAdding: .day, value: i, to: date1)!, "price": 200, "morningActivity": ["price": 20, "localization": [45.754049903692284, 4.825830459594727], "indication": "Tourne à droite mon ami"], "meal": ["price": 20, "localization": [45.74695278493895, 4.844927787780762], "indication": "Mangerrrrrrrr"], "afternoonActivity": ["price": 20, "localization": [45.7630023652255, 4.837932586669922], "indication": "Aprèsmidiiiii indication"]])
+            daysDatas.append(["date": Calendar.current.date(byAdding: .day, value: i, to: date1)!, "price": 200, "morningActivity": ["price": 20, "localization": [45.754049903692284, 4.825830459594727], "indication": "Tourne à droite mon ami"], "meal": ["price": 20, "localization": [45.74695278493895, 4.844927787780762], "indication": "Mangerrrrrrrr !!!"], "afternoonActivity": ["price": 20, "localization": [45.7630023652255, 4.837932586669922], "indication": "Aprèsmidiiiii indication"]])
         }
         
         completionHandler(daysDatas)

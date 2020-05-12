@@ -17,6 +17,7 @@ class TravelService {
                 
                 if let travels = travels {
                     self.convertTravelsToModels(travels: travels) { result in
+                        
                         completionHandler(result)
                     }
                 } else {
@@ -32,6 +33,7 @@ class TravelService {
     func currentTravel(completionHandler: @escaping (_ result: Travel?) -> Void) {
         getTravels() { result in
             if let travels = result {
+               
                 completionHandler(travels[0])
             } else {
                 completionHandler(nil)
@@ -87,15 +89,15 @@ class TravelService {
                 TravelDay(day: date,
                           price: travelDay["price"] as! Int,
                           morningActivity: TravelActivity(price: morningActivity["price"] as! Int,
-                                                          localization: [0.0, 0.0],
+                                                          localization: morningActivity["localization"] as! [Double],
                                                           indication: morningActivity["indication"] as! String),
                           
                           afternoonActivity: TravelActivity(price: afternoonActivity["price"] as! Int,
-                                                            localization: [0.0, 0.0],
+                                                            localization: afternoonActivity["localization"] as! [Double],
                                                             indication: afternoonActivity["indication"] as! String),
                           
                           meal: TravelActivity(price: meal["price"] as! Int,
-                                               localization: [0.0, 0.0],
+                                               localization: meal["localization"] as! [Double],
                                                indication: meal["indication"] as! String)
                 )
             )

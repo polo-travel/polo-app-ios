@@ -18,8 +18,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var navigateButton: BasicButton!
     var directionsRoute: Route?
     
-    let lyonCoord = CLLocationCoordinate2D(latitude: 45.756797, longitude: 4.832319)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -32,6 +30,28 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         customNavigateButton()
+        
+        TravelService().currentTravel(){result  in
+            
+            if let user = result {
+                print(user.daysDatas[0].morningActivity.localization[0])
+            
+                
+                
+                let numberDays = user.daysDatas.count
+                for currentTravel in user.daysDatas{
+                    print("start")
+                    print(currentTravel)
+                    
+                    print(type(of: currentTravel.morningActivity.localization))
+                    
+                    print(currentTravel.morningActivity.localization)
+                    print("end")
+                }
+                print(numberDays)
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -47,18 +67,28 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     @objc func navigateButtonPressed(_ sender: BasicButton){
         mapView.setUserTrackingMode(.none, animated: true)
 
-        print("button pressed")
-        
-        let annotation = MGLPointAnnotation()
-        annotation.coordinate = lyonCoord
-        annotation.title = "Start Navigation"
-        mapView.addAnnotation(annotation)
-        
-        calculateRoute(from: (mapView.userLocation!.coordinate), to: lyonCoord) { (route, error) in
+                    
+        TravelService().currentTravel(){result  in
+                   
+           if let user = result {
+
+          
+            let MorningCoord = CLLocationCoordinate2D(latitude: user.daysDatas[0].morningActivity.localization[0], longitude: user.daysDatas[0].morningActivity.localization[1])
+            
+            let annotation = MGLPointAnnotation()
+            annotation.coordinate = MorningCoord
+            annotation.title = "Start Navigation"
+            self.mapView.addAnnotation(annotation)
+                                
+            self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: MorningCoord) { (route, error) in
                if error != nil{
                    print("error getting route")
-               }
-           }
+                }
+            }
+                    
+            }
+            
+        }
         
     }
     
@@ -82,9 +112,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             print(coordinateBounce)
             
         })
-
-        
     }
+    
     
     func drawRoute(route:Route){
     
