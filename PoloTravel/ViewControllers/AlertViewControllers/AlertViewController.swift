@@ -16,6 +16,10 @@ class AlertViewController: UIViewController {
     
     @IBOutlet weak var actionButton: UIButton!
     
+    @IBOutlet weak var popUpView: UIView!
+    
+    @IBOutlet var buttons: [UIButton]!
+    
     var alertTitle = String()
     
     var alertBody = String()
@@ -23,6 +27,7 @@ class AlertViewController: UIViewController {
     var actionButtonTitle = String()
     
     var buttonAction: (() -> Void)?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,17 +41,33 @@ class AlertViewController: UIViewController {
         
         bodyLabel.text = alertBody
         
-        actionButton.setTitle(actionButtonTitle, for: .normal)
-    }
-    
-    @IBAction func didTapCancel(_ sender: Any) {
+        actionButton?.setTitle(actionButtonTitle, for: .normal)
         
-        dismiss(animated: true)
+        setupCustomPopup()
     }
     
+    func setupCustomPopup(){
+        popUpView.layer.cornerRadius = 30
+    }
     
+
     @IBAction func didTapActionButton(_ sender: Any) {
         
+    guard let button = sender as? UIButton else {
+            return
+        }
+
+        switch button.tag {
+        case 0:
+            print("cool")
+        case 1:
+            print("neutral")
+        case 2:
+            print("angry")
+        default:
+            print("Unknown")
+            return
+        }
         dismiss(animated: true)
         
         buttonAction?()

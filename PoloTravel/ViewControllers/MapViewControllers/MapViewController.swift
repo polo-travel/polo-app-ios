@@ -31,51 +31,25 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         customNavigateButton()
-        
-        
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
-           button.setTitle("Popup Alert", for: .normal)
-           button.setTitleColor(.red, for: .normal)
-           button.backgroundColor = UIColor.white
-           button.addTarget(self, action: #selector(popupAlert), for: .touchUpInside)
-           self.view.addSubview(button)
-        
-        
-        TravelService().currentTravel(){result  in
-            
-            if let user = result {
-                print(user.daysDatas[0].morningActivity.localization[0])
-            
-                
-                
-                let numberDays = user.daysDatas.count
-                for currentTravel in user.daysDatas{
-                    print("start")
-                    print(currentTravel)
-                    
-                    print(type(of: currentTravel.morningActivity.localization))
-                    
-                    print(currentTravel.morningActivity.localization)
-                    print("end")
-                }
-                print(numberDays)
-            }
-        }
-        
-        
+        endButton()
         
         // Do any additional setup after loading the view.
     }
     
     @objc func popupAlert(sender: UIButton!){
 
-        let alertVC = alertService.alert(title: "titre popup", body: "Description blabla.", buttonTitle: "Confirm") { [weak self] in
-            
-        
+        let alertVC = alertService.alert(title: "Ton activitée est terminée  !", body: "Comment l'as tu trouvé ?", buttonTitle: "" ) { [weak self] in
         }
-        
         present(alertVC, animated: true)
-        
+    }
+    
+    func endButton(){
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
+           button.setTitle("Activité Terminé", for: .normal)
+           button.setTitleColor(.red, for: .normal)
+           button.backgroundColor = UIColor.white
+           button.addTarget(self, action: #selector(popupAlert), for: .touchUpInside)
+           self.view.addSubview(button)
     }
     
     func customNavigateButton(){
