@@ -54,14 +54,20 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             }
         }
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0 ){
+            let alertVC = self.alertService.alert(title: "Ton activitée est terminée  !", body: "Comment l'as tu trouvé ?", buttonTitle: "" ) { [weak self] in
+                 }
+            self.present(alertVC, animated: true)
+        }
+        
         // Do any additional setup after loading the view.
     }
     
     @objc func popupAlert(sender: UIButton!){
 
-        let alertVC = alertService.alert(title: "Ton activitée est terminée  !", body: "Comment l'as tu trouvé ?", buttonTitle: "" ) { [weak self] in
-        }
-        present(alertVC, animated: true)
+     let alertVC = alertService.alert(title: "Ton activitée est terminée  !", body: "Comment l'as tu trouvé ?", buttonTitle: "" ) { [weak self] in
+          }
+          present(alertVC, animated: true)
     }
     
     func endButton(){
