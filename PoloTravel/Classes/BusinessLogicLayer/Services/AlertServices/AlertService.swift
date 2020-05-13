@@ -13,7 +13,7 @@ class AlertService {
     
     func alert(title: String, body: String, buttonTitle: String, completion: @escaping () -> Void) -> AlertViewController {
         
-        let storyboard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
+        let storyboard = UIStoryboard(name: "Alert", bundle: .main)
         
         let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertVC") as! AlertViewController
         
