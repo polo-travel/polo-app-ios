@@ -54,10 +54,13 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0 ){
-            let alertVC = self.alertService.alert(title: "Ton activitée est terminée  !", body: "Comment l'as tu trouvé ?", buttonTitle: "" ) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7.0 ){
+            let alertVC = self.alertService.alert(title: "Bien arrivé ?", body: "C’est parti pour te jeter dans les airs avec « iFLY Lyon » ! \n\n Tu ne trouves pas ? Contacte-les ! 04 82 90 34 70", buttonTitle: "Je suis bien arrivé" ) { [weak self] in
                  }
+            
             self.present(alertVC, animated: true)
+            print(alertVC.ratingStackView)
+            alertVC.ratingStackView.isHidden = true
         }
         
         // Do any additional setup after loading the view.

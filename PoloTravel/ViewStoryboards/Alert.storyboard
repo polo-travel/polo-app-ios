@@ -75,6 +75,11 @@
                                     <constraint firstAttribute="trailing" secondItem="7Kl-MW-IAC" secondAttribute="trailing" constant="16" id="ogz-vN-heD"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vh-E4-wwq" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="97" y="541" width="220" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35453345070422537" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -84,8 +89,10 @@
                         <viewLayoutGuide key="safeArea" id="A05-93-Wcz"/>
                     </view>
                     <connections>
+                        <outlet property="actionButton" destination="5Vh-E4-wwq" id="Xtf-F3-VN9"/>
                         <outlet property="bodyLabel" destination="oNQ-EK-9Bg" id="LeT-cr-wk2"/>
                         <outlet property="popUpView" destination="e4X-dK-Ifp" id="sIH-k3-Dzd"/>
+                        <outlet property="ratingStackView" destination="moL-gA-Xei" id="g3B-79-JHz"/>
                         <outlet property="titleLabel" destination="7Kl-MW-IAC" id="ak2-E9-L7l"/>
                         <outletCollection property="buttons" destination="CLc-3c-VzR" collectionClass="NSMutableArray" id="8wh-bN-3ev"/>
                         <outletCollection property="buttons" destination="vkz-5J-ANd" collectionClass="NSMutableArray" id="5YX-iu-nGW"/>

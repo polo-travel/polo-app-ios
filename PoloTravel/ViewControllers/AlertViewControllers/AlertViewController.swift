@@ -12,9 +12,10 @@ class AlertViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var ratingStackView: UIStackView!
     @IBOutlet weak var bodyLabel: UILabel!
     
-    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var actionButton: BasicButton!
     
     @IBOutlet weak var popUpView: UIView!
     
@@ -41,13 +42,14 @@ class AlertViewController: UIViewController {
         
         bodyLabel.text = alertBody
         
-        actionButton?.setTitle(actionButtonTitle, for: .normal)
+        actionButton.setTitle(actionButtonTitle, for: .normal)
         
         setupCustomPopup()
     }
     
     func setupCustomPopup(){
         popUpView.layer.cornerRadius = 30
+        actionButton.setRedButton()
     }
     
 
