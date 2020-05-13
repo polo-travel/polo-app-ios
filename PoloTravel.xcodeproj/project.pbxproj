@@ -15,6 +15,9 @@
 		0F0CF605245DFD2D00018191 /* RecapStepTravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */; };
 		0F1B4D91245C485400CF759D /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1B4D90245C485400CF759D /* SignIn.storyboard */; };
 		0F461D38245CE8BF00E69741 /* Step2TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */; };
+		0F4710FB246B119100436F2A /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4710FA246B119100436F2A /* AlertService.swift */; };
+		0F4710FE246B129700436F2A /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4710FD246B129700436F2A /* AlertViewController.swift */; };
+		0F471104246C017600436F2A /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F471103246C017600436F2A /* Alert.storyboard */; };
 		0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CD561245387D200DB2DAC /* TextBlock.swift */; };
 		0F9DCECA245F2C8800DDB097 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */; };
 		0F9DCECE245F2D1000DDB097 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9DCECD245F2D1000DDB097 /* Map.storyboard */; };
@@ -101,6 +104,9 @@
 		0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapStepTravelCreationViewController.swift; sourceTree = "<group>"; };
 		0F1B4D90245C485400CF759D /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2TravelCreationViewController.swift; sourceTree = "<group>"; };
+		0F4710FA246B119100436F2A /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		0F4710FD246B129700436F2A /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		0F471103246C017600436F2A /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		0F8CD561245387D200DB2DAC /* TextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlock.swift; sourceTree = "<group>"; };
 		0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0F9DCECD245F2D1000DDB097 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
@@ -211,6 +217,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0F4710F9246B112B00436F2A /* AlertServices */ = {
+			isa = PBXGroup;
+			children = (
+				0F4710FA246B119100436F2A /* AlertService.swift */,
+			);
+			path = AlertServices;
+			sourceTree = "<group>";
+		};
+		0F4710FC246B126600436F2A /* AlertViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F4710FD246B129700436F2A /* AlertViewController.swift */,
+			);
+			path = AlertViewControllers;
+			sourceTree = "<group>";
+		};
 		0F8CD5602453879E00DB2DAC /* Blocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +325,7 @@
 		7B3B45DD244D73C300CD00D4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0F4710F9246B112B00436F2A /* AlertServices */,
 				7B3C8EF82462BEE400EE3C6F /* UserServices */,
 				7B3C8EF72462BED500EE3C6F /* TravelServices */,
 				7B3C8EF62462BEBC00EE3C6F /* PolowersServices */,
@@ -479,6 +502,7 @@
 		7BCDA50B243E08F800E9C4B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F4710FC246B126600436F2A /* AlertViewControllers */,
 				0F9DCEC8245F2C5F00DDB097 /* MapViewControllers */,
 				7B3B45B9244BA55000CD00D4 /* MainViewControllers */,
 				7BD538F42449F45F00AD9CB3 /* OnBoardingViewControllers */,
@@ -563,6 +587,7 @@
 				7B3B45D2244C55EC00CD00D4 /* MainStoryboards */,
 				7BD53906244B059200AD9CB3 /* OnBoarding.storyboard */,
 				0F1B4D90245C485400CF759D /* SignIn.storyboard */,
+				0F471103246C017600436F2A /* Alert.storyboard */,
 				7BD53908244B1F4900AD9CB3 /* TravelCreation.storyboard */,
 				0F9DCECD245F2D1000DDB097 /* Map.storyboard */,
 			);
@@ -679,6 +704,7 @@
 				7B4990FA245ED0E90095EA20 /* GoogleService-Info.plist in Resources */,
 				7B3B45CF244C503900CD00D4 /* Travels.storyboard in Resources */,
 				7BD538EF2449E9AA00AD9CB3 /* Gilroy-Bold.ttf in Resources */,
+				0F471104246C017600436F2A /* Alert.storyboard in Resources */,
 				7BD53907244B059200AD9CB3 /* OnBoarding.storyboard in Resources */,
 				7B3B45CB244C4E7700CD00D4 /* Profile.storyboard in Resources */,
 				0F9DCECE245F2D1000DDB097 /* Map.storyboard in Resources */,
@@ -795,6 +821,7 @@
 				7B49322F245F4673006DB7F2 /* Travel.swift in Sources */,
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
 				0F0CF601245DF15200018191 /* Step5TravelCreationViewController.swift in Sources */,
+				0F4710FB246B119100436F2A /* AlertService.swift in Sources */,
 				7BD538F82449F4A600AD9CB3 /* OnBoarding2ViewController.swift in Sources */,
 				7B3C8EF32461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift in Sources */,
 				7B4F4F3B2451A393000CFB75 /* ImageExtension.swift in Sources */,
@@ -808,6 +835,7 @@
 				7B3B45DA244C5C8200CD00D4 /* TravelsNextTravelViewController.swift in Sources */,
 				7B3C8EFC2462D97D00EE3C6F /* TravelCreationService.swift in Sources */,
 				7B3C8F142465E9AA00EE3C6F /* TransitionExtension.swift in Sources */,
+				0F4710FE246B129700436F2A /* AlertViewController.swift in Sources */,
 				7BD538FE2449F4C900AD9CB3 /* OnBoarding5ViewController..swift in Sources */,
 				7BFECF1F2455A65400F5096C /* BasicButton.swift in Sources */,
 				7B1F3D3424682C040026C5B6 /* MediaUploadUtils.swift in Sources */,

@@ -388,6 +388,16 @@
             </objects>
             <point key="canvasLocation" x="1053" y="-485"/>
         </scene>
+        <!--MapViewController-->
+        <scene sceneID="i3c-xK-vTK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="MapViewController" id="oGv-Ve-MJm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jcI-su-VXx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1K-rh-AbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="-435"/>
+        </scene>
         <!--Voyages-->
         <scene sceneID="DWQ-TY-zks">
             <objects>
