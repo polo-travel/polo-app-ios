@@ -31,10 +31,47 @@ class TravelService {
     }
     
     func currentTravel(completionHandler: @escaping (_ result: Travel?) -> Void) {
+        var currentTravel: Travel?
         getTravels() { result in
             if let travels = result {
-               
-                completionHandler(travels[0])
+                travels.forEach { travel in
+                    if (travel.startDate <= Date().midnight && travel.endDate >= Date().midnight) {
+                        currentTravel = travel
+                    }
+                }
+                completionHandler(currentTravel)
+            } else {
+                completionHandler(nil)
+            }
+        }
+    }
+    
+    func nextTravel(completionHandler: @escaping (_ result: Travel?) -> Void) {
+        var nextTravel: Travel?
+        getTravels() { result in
+            if let travels = result {
+                travels.forEach { travel in
+                    if (travel.startDate > Date()) {
+                        nextTravel = travel
+                    }
+                }
+                completionHandler(nextTravel)
+            } else {
+                completionHandler(nil)
+            }
+        }
+    }
+    
+    func pastTravels(completionHandler: @escaping (_ result: [Travel]?) -> Void) {
+        var pastTravels: [Travel] = []
+        getTravels() { result in
+            if let travels = result {
+                travels.forEach { travel in
+                    if travel.endDate < Date().midnight {
+                        pastTravels.append(travel)
+                    }
+                }
+                completionHandler(pastTravels)
             } else {
                 completionHandler(nil)
             }

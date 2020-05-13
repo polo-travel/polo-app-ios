@@ -163,22 +163,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta0-VY-eaV">
-                                <rect key="frame" x="229" y="650" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="EN COURS"/>
-                                <connections>
-                                    <segue destination="muB-1m-5Gu" kind="show" id="nUI-ye-xx3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHT-J4-QLQ">
-                                <rect key="frame" x="73" y="650" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MAP"/>
-                                <connections>
-                                    <segue destination="oGv-Ve-MJm" kind="show" id="Efh-Mp-ajW"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="QJv-NA-f8U"/>
@@ -198,11 +182,12 @@
                         <outlet property="nextTravelDate" destination="eql-Nt-pFS" id="9sE-JQ-xka"/>
                         <outlet property="typeAventurerLabel" destination="8Ks-uA-jbF" id="lGN-l2-4Sz"/>
                         <segue destination="Wo1-pr-x7t" kind="show" identifier="toNextTravelDetail" id="Dju-31-pnH"/>
+                        <segue destination="muB-1m-5Gu" kind="show" identifier="toCurrentTravel" id="Muy-tj-Adn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpH-Se-kRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908.69565217391312" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="909" y="1"/>
         </scene>
         <!--Travels Next Travel View Controller-->
         <scene sceneID="rHW-Fc-NN9">
@@ -391,7 +376,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIj-VZ-pT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1.4492753623188408" y="14.732142857142856"/>
+            <point key="canvasLocation" x="62" y="1"/>
         </scene>
         <!--TravelCreation1ViewController-->
         <scene sceneID="8Lf-4f-5nV">
@@ -416,7 +401,7 @@
         <!--Voyages-->
         <scene sceneID="DWQ-TY-zks">
             <objects>
-                <viewController id="muB-1m-5Gu" sceneMemberID="viewController">
+                <viewController id="muB-1m-5Gu" customClass="TravelsPendingViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H6O-fD-S8J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -443,9 +428,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IM6-69-ELW" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="45" y="306" width="324" height="342"/>
+                                <rect key="frame" x="45" y="388" width="324" height="342"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="uOY-gB-76L">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="342"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4V-Pi-IU1" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                         <rect key="frame" x="44" y="317" width="236" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -453,10 +442,17 @@
                                         <state key="normal" title="Rejoindre mon voyage">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Gf7-kE-Ftd" kind="show" id="ckj-AS-otn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="travelmap_illu" translatesAutoresizingMaskIntoConstraints="NO" id="sUD-16-GDz">
+                                <rect key="frame" x="76" y="281" width="260" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="KmW-an-o0i"/>
@@ -466,16 +462,31 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="Ofo-OO-vuY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonJoinTravel" destination="A4V-Pi-IU1" id="hkS-Ro-PsI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cW-Mn-WkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="707.8125"/>
         </scene>
+        <!--MapViewController-->
+        <scene sceneID="z8a-lX-zUx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="MapViewController" id="Gf7-kE-Ftd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T0c-sz-QeY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OoQ-QG-Wdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="796"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow_back" width="35" height="30"/>
         <image name="boussole" width="46.5" height="57"/>
+        <image name="map" width="324" height="257"/>
         <image name="tabbar_travels" width="24.5" height="24.5"/>
         <image name="tabbar_travels_active" width="23.5" height="23.5"/>
+        <image name="travelmap_illu" width="259.5" height="172.5"/>
     </resources>
 </document>

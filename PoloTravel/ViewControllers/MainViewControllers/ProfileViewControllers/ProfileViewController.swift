@@ -18,6 +18,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var typeAventurerLabel: UILabel!
     @IBOutlet weak var buttonKnowMore: UIButton!
     @IBOutlet weak var profilePhoto: RoundedImage!
+    @IBOutlet weak var travelsHistory: RadiusBlock!
+    @IBOutlet weak var travlesHistoryLabel: UILabel!
     var user:User?
     
     override func viewDidLoad() {
@@ -25,7 +27,9 @@ class ProfileViewController: UIViewController {
 
         buttonEditProfile.setRedButton()
         buttonEditProfile.titleLabel?.font = UIFont(name: "Gilroy-Medium", size: 14)
-        self.buttonKnowMore.isHidden = true
+        buttonKnowMore.isHidden = true
+        travelsHistory.isHidden = true
+        
         activityIndicator.startAnimating()
     }
     
@@ -39,6 +43,15 @@ class ProfileViewController: UIViewController {
             
             let formatter = DateFormatter()
             formatter.dateFormat = "dd.MM"
+            
+            TravelService().pastTravels() { result in
+                if let pastTravels = result {
+                    self.travelsHistory.isHidden = false
+                    
+                } else {
+                    print("PROFILE: No past travels")
+                }
+            }
             
             TravelService().currentTravel() { result in
                 if let currentTravel = result {
