@@ -118,14 +118,6 @@
                                     <segue destination="eUe-J8-JR0" kind="show" id="yph-YM-ktL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhg-yJ-cj5">
-                                <rect key="frame" x="314" y="601" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MAP"/>
-                                <connections>
-                                    <segue destination="uHG-gn-Po2" kind="show" id="cvw-hT-52q"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXk-7q-O3U">
                                 <rect key="frame" x="35" y="186" width="114" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -273,16 +265,6 @@
             </objects>
             <point key="canvasLocation" x="2013" y="472"/>
         </scene>
-        <!--MapViewController-->
-        <scene sceneID="25A-K7-fsg">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="MapViewController" id="uHG-gn-Po2" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="G99-as-gxh"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IVE-JY-QGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2870" y="-1"/>
-        </scene>
         <!--TravelCreation1ViewController-->
         <scene sceneID="xTu-fk-CpI">
             <objects>
@@ -386,7 +368,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>

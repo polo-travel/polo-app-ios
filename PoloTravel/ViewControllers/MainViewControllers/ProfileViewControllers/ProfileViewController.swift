@@ -40,6 +40,14 @@ class ProfileViewController: UIViewController {
             let formatter = DateFormatter()
             formatter.dateFormat = "dd.MM"
             
+            TravelService().pastTravels() { result in
+                if let pastTravels = result {
+                    
+                } else {
+                    
+                }
+            }
+            
             TravelService().currentTravel() { result in
                 if let currentTravel = result {
                     let startDate = formatter.string(from: currentTravel.startDate)

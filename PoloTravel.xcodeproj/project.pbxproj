@@ -43,6 +43,7 @@
 		7B3C8F0E2465781700EE3C6F /* AuthErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8F0D2465781700EE3C6F /* AuthErrorExtension.swift */; };
 		7B3C8F142465E9AA00EE3C6F /* TransitionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C8F132465E9AA00EE3C6F /* TransitionExtension.swift */; };
 		7B45D8DE246891F8008DC32B /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45D8DD246891F8008DC32B /* RoundedImage.swift */; };
+		7B45D8E0246AA12E008DC32B /* TravelsPendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45D8DF246AA12E008DC32B /* TravelsPendingViewController.swift */; };
 		7B45F8392460409B00A758C3 /* RadiusBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45F8382460409B00A758C3 /* RadiusBlock.swift */; };
 		7B49322F245F4673006DB7F2 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49322E245F4673006DB7F2 /* Travel.swift */; };
 		7B493231245F47D2006DB7F2 /* TravelDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493230245F47D2006DB7F2 /* TravelDay.swift */; };
@@ -131,6 +132,7 @@
 		7B3C8F0D2465781700EE3C6F /* AuthErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorExtension.swift; sourceTree = "<group>"; };
 		7B3C8F132465E9AA00EE3C6F /* TransitionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionExtension.swift; sourceTree = "<group>"; };
 		7B45D8DD246891F8008DC32B /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		7B45D8DF246AA12E008DC32B /* TravelsPendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsPendingViewController.swift; sourceTree = "<group>"; };
 		7B45F8382460409B00A758C3 /* RadiusBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusBlock.swift; sourceTree = "<group>"; };
 		7B49322E245F4673006DB7F2 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		7B493230245F47D2006DB7F2 /* TravelDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDay.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				7B3B45C1244BA94300CD00D4 /* TravelsViewController.swift */,
 				7B3B45D9244C5C8200CD00D4 /* TravelsNextTravelViewController.swift */,
+				7B45D8DF246AA12E008DC32B /* TravelsPendingViewController.swift */,
 			);
 			path = TravelsViewControllers;
 			sourceTree = "<group>";
@@ -768,6 +771,7 @@
 				0FE90B1E2456E3BA00E6D51C /* Step1TravelCreationViewController.swift in Sources */,
 				0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */,
 				7B493237245F5B75006DB7F2 /* TravelService.swift in Sources */,
+				7B45D8E0246AA12E008DC32B /* TravelsPendingViewController.swift in Sources */,
 				7BD5390C244B1FC300AD9CB3 /* TravelCreation1ViewController.swift in Sources */,
 				7B45D8DE246891F8008DC32B /* RoundedImage.swift in Sources */,
 				7B4990F8245DDC440095EA20 /* AddButton.swift in Sources */,

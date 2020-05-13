@@ -32,6 +32,15 @@ class TravelsViewController: UIViewController {
         
         updateTime()
         timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        
+        TravelService().currentTravel() { travel in
+            if travel != nil {
+                self.performSegue(withIdentifier: "toCurrentTravel", sender: self)
+                print("TRAVELS: A travel is pending")
+            }
+        }
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,10 +52,10 @@ class TravelsViewController: UIViewController {
             let formatter = DateFormatter()
             formatter.dateFormat = "dd.MM"
             
-            TravelService().currentTravel() { result in
-                if let currentTravel = result {
-                    let startDate = formatter.string(from: currentTravel.startDate)
-                    let endDate = formatter.string(from: currentTravel.endDate)
+            TravelService().nextTravel() { result in
+                if let nextTravel = result {
+                    let startDate = formatter.string(from: nextTravel.startDate)
+                    let endDate = formatter.string(from: nextTravel.endDate)
                     
                     self.activityIndicator.stopAnimating()
                     self.nextTravelDate.text = "Du \(startDate) au \(endDate)"
@@ -66,22 +75,29 @@ class TravelsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toNextTravelDetail" {
             if let dest = segue.destination as? TravelsNextTravelViewController {
-                TravelService().currentTravel() { result in
-                    if let currentTravel = result {
-                        dest.startDate = currentTravel.startDate
-                        dest.endDate = currentTravel.endDate
+                TravelService().nextTravel() { result in
+                    if let nextTravel = result {
+                        dest.startDate = nextTravel.startDate
+                        dest.endDate = nextTravel.endDate
                     }
                 }
             }
         }
+        
+        if segue.identifier == "toCurrentTravel" {
+            if let dest = segue.destination as? TravelsPendingViewController {
+                
+            }
+        }
     }
     
+
     @objc func updateTime() {
-        TravelService().currentTravel() { result in
-            if let currentTravel = result {
+        TravelService().nextTravel() { result in
+            if let nextTravel = result {
                 let userCalendar = Calendar.current
                 
-                let startDate = currentTravel.startDate
+                let startDate = nextTravel.startDate
                 let convertedStartDate = userCalendar.dateComponents([.year, .month, .day], from: startDate)
                 print("convertedStartDate", convertedStartDate)
                 let components = userCalendar.dateComponents([.hour, .minute, .month, .year, .day, .second], from: Date())
