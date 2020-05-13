@@ -125,6 +125,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_edit" translatesAutoresizingMaskIntoConstraints="NO" id="BV7-6b-8x8">
+                                <rect key="frame" x="131" y="135" width="38" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="aOv-4e-Reu"/>
@@ -141,6 +145,7 @@
                         <outlet property="firstNameLabel" destination="RUJ-bH-j3H" id="f6E-lE-GCB"/>
                         <outlet property="nextTravelDate" destination="zWG-xv-LDD" id="M9s-AE-bUY"/>
                         <outlet property="profilePhoto" destination="bxd-1i-oHO" id="nVo-9p-VhQ"/>
+                        <outlet property="travelsHistory" destination="Tvd-ek-myg" id="Uly-hD-0FI"/>
                         <outlet property="typeAventurerLabel" destination="kyt-2S-0nM" id="D02-7T-5qq"/>
                     </connections>
                 </viewController>
@@ -327,6 +332,7 @@
         <image name="arrow_back" width="35" height="30"/>
         <image name="boussole" width="46.5" height="57"/>
         <image name="photo" width="238" height="238"/>
+        <image name="profile_edit" width="56" height="56"/>
         <image name="tabbar_profile" width="25" height="25"/>
         <image name="tabbar_profile_active" width="25" height="24"/>
     </resources>
