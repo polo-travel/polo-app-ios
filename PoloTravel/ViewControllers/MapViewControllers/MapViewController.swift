@@ -33,6 +33,27 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         customNavigateButton()
         endButton()
         
+        TravelService().currentTravel(){result  in
+            
+            if let user = result {
+                print(user.daysDatas[0].morningActivity.localization[0])
+            
+                
+                
+                let numberDays = user.daysDatas.count
+                for currentTravel in user.daysDatas{
+                    print("start")
+                    print(currentTravel)
+                    
+                    print(type(of: currentTravel.morningActivity.localization))
+                    
+                    print(currentTravel.morningActivity.localization)
+                    print("end")
+                }
+                print(numberDays)
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
     
