@@ -15,16 +15,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--OnBoardingMainViewController-->
-        <scene sceneID="smv-h6-xgi">
-            <objects>
-                <viewControllerPlaceholder storyboardName="OnBoarding" referencedIdentifier="OnBoardingMainViewController" id="EGp-Iv-uAK" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ofH-to-D6I"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SdJ-3q-uQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="935" y="-334"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -41,10 +31,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7uv-bq-cyb">
-                                <rect key="frame" x="65.5" y="651" width="283" height="193"/>
+                                <rect key="frame" x="63" y="651" width="288" height="193"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSY-cd-ZXs" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="283" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="bGz-4T-mcg"/>
                                         </constraints>
@@ -55,14 +45,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnA-bA-24G" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="82" width="283" height="52"/>
+                                        <rect key="frame" x="0.0" y="82" width="288" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="MVF-CA-7T8"/>
                                         </constraints>
                                         <state key="normal" title="Continuer avec Google"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="wgd-OR-NCN">
-                                        <rect key="frame" x="0.0" y="164" width="283" height="29"/>
+                                        <rect key="frame" x="0.0" y="164" width="288" height="29"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu as déjà un compte ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XB4-Mc-Sxz">
                                                 <rect key="frame" x="0.0" y="0.0" width="171" height="29"/>
@@ -70,18 +60,11 @@
                                                 <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7JL-Vk-puE">
-                                                <rect key="frame" x="182" y="0.0" width="101" height="29"/>
-                                                <state key="normal">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Connecte-toi">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" metaFont="system" size="17"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JL-Vk-puE">
+                                                <rect key="frame" x="182" y="0.0" width="106" height="29"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
+                                                <state key="normal" title="Connecte-toi">
+                                                    <color key="titleColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="suA-kr-Gxt" kind="show" id="S3J-cc-vQM"/>
@@ -110,22 +93,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-6z-ZfO">
-                                <rect key="frame" x="35" y="629" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Travel"/>
-                                <connections>
-                                    <segue destination="eUe-J8-JR0" kind="show" id="yph-YM-ktL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXk-7q-O3U">
-                                <rect key="frame" x="35" y="186" width="114" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ONBOARDING"/>
-                                <connections>
-                                    <segue destination="EGp-Iv-uAK" kind="show" id="Fab-vH-LZu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -441,7 +408,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qoR-iF-qq7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NBD-dY-thn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignInNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="NBD-dY-thn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WKV-QT-ZgB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
