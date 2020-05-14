@@ -100,7 +100,7 @@ class ProfileViewController: UIViewController {
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
+   
     @IBAction func buttonSettings(_ sender: Any) {
         let window = UIApplication.shared.keyWindow
         transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)

@@ -79,6 +79,7 @@ class TravelsViewController: UIViewController {
                 let userCalendar = Calendar.current
                 
                 let startDate = nextTravel.startDate
+    
                 let convertedStartDate = userCalendar.dateComponents([.year, .month, .day], from: startDate)
                 print("convertedStartDate", convertedStartDate)
                 let components = userCalendar.dateComponents([.hour, .minute, .month, .year, .day, .second], from: Date())
@@ -100,6 +101,6 @@ class TravelsViewController: UIViewController {
             }
         }
     }
-    
+  
 }
 

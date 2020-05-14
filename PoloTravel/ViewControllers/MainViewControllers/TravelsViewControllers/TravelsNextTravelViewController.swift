@@ -20,6 +20,9 @@ class TravelsNextTravelViewController: UIViewController {
     var user: User?
     var timer: Timer!
     
+    var startDate: Date?
+    var endDate: Date?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTime()
