@@ -43,7 +43,6 @@ class AlertViewController: UIViewController {
         bodyLabel.text = alertBody
         
         actionButton.setTitle(actionButtonTitle, for: .normal)
-        
         setupCustomPopup()
     }
     
@@ -53,6 +52,7 @@ class AlertViewController: UIViewController {
     }
     
 
+    
     @IBAction func didTapActionButton(_ sender: Any) {
         
     guard let button = sender as? UIButton else {

@@ -14,14 +14,15 @@ import MapboxNavigation
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
 
+    var alertService = AlertService()
     var mapView: NavigationMapView!
     var navigateButton: BasicButton!
     var directionsRoute: Route?
-    let alertService = AlertService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        
         mapView = NavigationMapView(frame: view.bounds, styleURL: MGLStyle.lightStyleURL)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
@@ -31,7 +32,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         customNavigateButton()
-        endButton()
         
         TravelService().currentTravel(){result  in
             
@@ -54,33 +54,40 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 7.0 ){
-            let alertVC = self.alertService.alert(title: "Bien arrivé ?", body: "C’est parti pour te jeter dans les airs avec « iFLY Lyon » ! \n\n Tu ne trouves pas ? Contacte-les ! 04 82 90 34 70", buttonTitle: "Je suis bien arrivé" ) { [weak self] in
-                 }
-            
-            self.present(alertVC, animated: true)
-            print(alertVC.ratingStackView)
-            alertVC.ratingStackView.isHidden = true
-        }
+
+        displayAsyncPopUp()
         
         // Do any additional setup after loading the view.
     }
+    func displayAsyncPopUp(){
+      
     
-    @objc func popupAlert(sender: UIButton!){
+                
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0 ){
+           // let alertVC = self.alertService.alert(title: "Bien arrivé ?", body: "C’est parti pour te jeter dans les airs avec « iFLY Lyon » ! \n\n Tu ne trouves pas ? Contacte-les ! 04 82 90 34 70", buttonTitle: "Je suis bien arrivé" ) { [weak self] in}
+            self.present(serviceAlert.alert, animated: true)
+            serviceAlert.alert.actionButton.addTarget(self, action: #selector(self.switchText), for: .touchUpInside)
 
-     let alertVC = alertService.alert(title: "Ton activitée est terminée  !", body: "Comment l'as tu trouvé ?", buttonTitle: "" ) { [weak self] in
-          }
-          present(alertVC, animated: true)
+            serviceAlert.alert.ratingStackView.isHidden = true
+        }
+        
+    
+
     }
     
-    func endButton(){
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
-           button.setTitle("Activité Terminé", for: .normal)
-           button.setTitleColor(.red, for: .normal)
-           button.backgroundColor = UIColor.white
-           button.addTarget(self, action: #selector(popupAlert), for: .touchUpInside)
-           self.view.addSubview(button)
-    }
+    
+    @objc func switchText(sender: BasicButton!){
+
+
+        serviceAlert.body?.text = "Laisse ton téléphone de côté et on se retrouve après."
+        serviceAlert.title?.text = "Profite de ton activité"
+        serviceAlert.button?.setTitle("Activité est fini", for: .normal)
+
+
+        print(serviceAlert.body?.text)
+        
+        }
+    
     
     func customNavigateButton(){
         navigateButton = BasicButton(frame: CGRect(x:(view.frame.width/2 ) - 100, y: view.frame.height - 150, width: 200, height:50 ))
@@ -95,28 +102,24 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.setUserTrackingMode(.none, animated: true)
 
                     
-        TravelService().currentTravel(){result  in
+        TravelService().currentTravel(){ result  in
                    
            if let user = result {
-
           
-            let MorningCoord = CLLocationCoordinate2D(latitude: user.daysDatas[0].morningActivity.localization[0], longitude: user.daysDatas[0].morningActivity.localization[1])
-            
-            let annotation = MGLPointAnnotation()
-            annotation.coordinate = MorningCoord
-            annotation.title = "Start Navigation"
-            self.mapView.addAnnotation(annotation)
-                                
-            self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: MorningCoord) { (route, error) in
-               if error != nil{
-                   print("error getting route")
+                let MorningCoord = CLLocationCoordinate2D(latitude: user.daysDatas[0].morningActivity.localization[0], longitude: user.daysDatas[0].morningActivity.localization[1])
+                
+                let annotation = MGLPointAnnotation()
+                annotation.coordinate = MorningCoord
+                annotation.title = "Start Navigation"
+                self.mapView.addAnnotation(annotation)
+                                    
+                self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: MorningCoord) { (route, error) in
+                   if error != nil{
+                       print("error getting route")
+                    }
                 }
             }
-                    
-            }
-            
         }
-        
     }
     
     
@@ -174,8 +177,17 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         present(navigationVC,animated: true,completion: nil)
         
     }
-    
-    
-    
 
 }
+
+struct serviceAlert {
+    static var values = ["VALUE 1", "VALUE 222222"]
+    
+   static var createAlertService = AlertService()
+   static var alert = serviceAlert.createAlertService.alert(title: "Bien arrivé ?", body: "C’est parti pour te jeter dans les airs avec « iFLY Lyon » ! \n\n Tu ne trouves pas ? Contacte-les ! 04 82 90 34 70",  buttonTitle: "Je suis bien arrivé"){}
+    static var body = serviceAlert.alert.bodyLabel
+    static var title = serviceAlert.alert.titleLabel
+    static var button = serviceAlert.alert.actionButton
+    
+}
+
