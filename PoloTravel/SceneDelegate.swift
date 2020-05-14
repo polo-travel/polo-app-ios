@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let sign =  UIStoryboard(name: "SignIn", bundle: nil)
                
         let mainVC = main.instantiateViewController(withIdentifier: "MainTabBarController")
-        let signVC = sign.instantiateViewController(withIdentifier: "ViewController")
+        let signVC = sign.instantiateViewController(withIdentifier: "SignInNavigationController")
                
                
         if Auth.auth().currentUser?.uid != nil {

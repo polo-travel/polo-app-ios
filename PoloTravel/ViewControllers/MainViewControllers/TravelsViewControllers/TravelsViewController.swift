@@ -40,12 +40,6 @@ class TravelsViewController: UIViewController {
             }
         }
         
-       
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
         UserService().currentUser() { result  in
             self.user = result
             
@@ -62,35 +56,22 @@ class TravelsViewController: UIViewController {
                     self.typeAventurerLabel.text = "Aventurier expert"
                     self.buttonKnowMore.isHidden = false
                 } else {
+                    self.buttonLookTravel.isHidden = true
                     self.activityIndicator.stopAnimating()
                     self.nextTravelDate.text = "Aucun voyage prévu"
                     self.typeAventurerLabel.text = ""
                 }
             }
         }
+        
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toNextTravelDetail" {
-            if let dest = segue.destination as? TravelsNextTravelViewController {
-                TravelService().nextTravel() { result in
-                    if let nextTravel = result {
-                        dest.startDate = nextTravel.startDate
-                        dest.endDate = nextTravel.endDate
-                    }
-                }
-            }
-        }
-        
-        if segue.identifier == "toCurrentTravel" {
-            if let dest = segue.destination as? TravelsPendingViewController {
-                
-            }
-        }
-    }
-    
 
     @objc func updateTime() {
         TravelService().nextTravel() { result in
@@ -118,10 +99,6 @@ class TravelsViewController: UIViewController {
                 print("naze")
             }
         }
-    }
-    
-    @IBAction func buttonLookTravel(_ sender: Any) {
-        self.performSegue(withIdentifier: "toNextTravelDetail", sender: nil)
     }
     
 }
