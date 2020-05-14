@@ -38,9 +38,16 @@ class AlertViewController: UIViewController {
 
     func setupView() {
         
+        titleLabel.lineBreakMode = .byWordWrapping
+        titleLabel.numberOfLines = 0
         titleLabel.text = alertTitle
+         titleLabel.sizeToFit()
         
+        bodyLabel.lineBreakMode = .byWordWrapping
+        bodyLabel.numberOfLines = 0
         bodyLabel.text = alertBody
+        bodyLabel.sizeToFit()
+
         
         actionButton.setTitle(actionButtonTitle, for: .normal)
         setupCustomPopup()

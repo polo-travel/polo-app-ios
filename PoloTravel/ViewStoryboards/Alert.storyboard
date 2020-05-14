@@ -44,16 +44,16 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="init text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNQ-EK-9Bg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="init text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNQ-EK-9Bg">
                                         <rect key="frame" x="16" y="70" width="243" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kl-MW-IAC">
-                                        <rect key="frame" x="16" y="38" width="243" height="30"/>
+                                        <rect key="frame" x="16" y="29" width="243" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="vtV-wo-tOk"/>
+                                            <constraint firstAttribute="height" constant="30" id="tkI-Vg-vRG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,27 +64,31 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="00X-Lx-ah8"/>
                                     <constraint firstAttribute="height" constant="218" id="31L-GZ-nkF"/>
+                                    <constraint firstItem="oNQ-EK-9Bg" firstAttribute="top" secondItem="7Kl-MW-IAC" secondAttribute="bottom" constant="11" id="4U1-of-8HK"/>
                                     <constraint firstItem="moL-gA-Xei" firstAttribute="leading" secondItem="e4X-dK-Ifp" secondAttribute="leadingMargin" id="5t2-lq-DWm"/>
                                     <constraint firstItem="7Kl-MW-IAC" firstAttribute="centerX" secondItem="oNQ-EK-9Bg" secondAttribute="centerX" id="9m4-bQ-udV"/>
-                                    <constraint firstItem="7Kl-MW-IAC" firstAttribute="top" secondItem="e4X-dK-Ifp" secondAttribute="top" constant="38" id="BQz-fM-mQh"/>
+                                    <constraint firstItem="7Kl-MW-IAC" firstAttribute="top" secondItem="e4X-dK-Ifp" secondAttribute="top" constant="29" id="BQz-fM-mQh"/>
                                     <constraint firstAttribute="trailing" secondItem="oNQ-EK-9Bg" secondAttribute="trailing" constant="16" id="IBt-be-Prf"/>
-                                    <constraint firstItem="moL-gA-Xei" firstAttribute="top" secondItem="oNQ-EK-9Bg" secondAttribute="bottom" constant="25.999999999999986" id="Rm6-zi-zNM"/>
                                     <constraint firstItem="oNQ-EK-9Bg" firstAttribute="leading" secondItem="e4X-dK-Ifp" secondAttribute="leading" constant="16" id="VNR-7J-ZK9"/>
-                                    <constraint firstItem="oNQ-EK-9Bg" firstAttribute="top" secondItem="7Kl-MW-IAC" secondAttribute="bottom" constant="2" id="YPS-6t-o4r"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="moL-gA-Xei" secondAttribute="bottom" constant="48.666666666666686" id="bkB-1J-9hV"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="moL-gA-Xei" secondAttribute="trailing" id="nxS-Yv-IaR"/>
                                     <constraint firstAttribute="trailing" secondItem="7Kl-MW-IAC" secondAttribute="trailing" constant="16" id="ogz-vN-heD"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vh-E4-wwq" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vh-E4-wwq" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="97" y="541" width="220" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="OwF-bA-d22"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35453345070422537" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="5Vh-E4-wwq" firstAttribute="firstBaseline" secondItem="e4X-dK-Ifp" secondAttribute="baseline" constant="22" symbolType="layoutAnchor" id="4wA-ZR-et7"/>
+                            <constraint firstItem="5Vh-E4-wwq" firstAttribute="leading" secondItem="e4X-dK-Ifp" secondAttribute="trailing" constant="-247.5" id="KUZ-d6-Hcp"/>
                             <constraint firstItem="e4X-dK-Ifp" firstAttribute="centerY" secondItem="A05-93-Wcz" secondAttribute="centerY" id="eD2-KX-gzw"/>
+                            <constraint firstItem="5Vh-E4-wwq" firstAttribute="top" secondItem="e4X-dK-Ifp" secondAttribute="bottom" constant="-21" id="lNa-Kt-bsC"/>
                             <constraint firstItem="e4X-dK-Ifp" firstAttribute="centerX" secondItem="A05-93-Wcz" secondAttribute="centerX" id="mfx-mQ-J3p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A05-93-Wcz"/>
