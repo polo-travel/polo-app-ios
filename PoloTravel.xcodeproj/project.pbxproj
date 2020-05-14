@@ -18,6 +18,7 @@
 		0F4710FB246B119100436F2A /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4710FA246B119100436F2A /* AlertService.swift */; };
 		0F4710FE246B129700436F2A /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4710FD246B129700436F2A /* AlertViewController.swift */; };
 		0F471104246C017600436F2A /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F471103246C017600436F2A /* Alert.storyboard */; };
+		0F5C1454246D6E2B00E28D93 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5C1453246D6E2A00E28D93 /* Alert.swift */; };
 		0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CD561245387D200DB2DAC /* TextBlock.swift */; };
 		0F9DCECA245F2C8800DDB097 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */; };
 		0F9DCECE245F2D1000DDB097 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9DCECD245F2D1000DDB097 /* Map.storyboard */; };
@@ -107,6 +108,7 @@
 		0F4710FA246B119100436F2A /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		0F4710FD246B129700436F2A /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		0F471103246C017600436F2A /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		0F5C1453246D6E2A00E28D93 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		0F8CD561245387D200DB2DAC /* TextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlock.swift; sourceTree = "<group>"; };
 		0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0F9DCECD245F2D1000DDB097 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				7B493234245F4A80006DB7F2 /* TravelModels */,
 				7B4F4F3724518F42000CFB75 /* Photo.swift */,
 				7B4990ED245C08D80095EA20 /* User.swift */,
+				0F5C1453246D6E2A00E28D93 /* Alert.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				7B3C8F022462F09C00EE3C6F /* DateUtils.swift in Sources */,
 				7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */,
 				0F9DCECA245F2C8800DDB097 /* MapViewController.swift in Sources */,
+				0F5C1454246D6E2B00E28D93 /* Alert.swift in Sources */,
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
 				7B493233245F4955006DB7F2 /* TravelActivity.swift in Sources */,
 				7BD538FC2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift in Sources */,

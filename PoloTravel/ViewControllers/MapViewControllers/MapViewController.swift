@@ -18,6 +18,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var mapView: NavigationMapView!
     var navigateButton: BasicButton!
     var directionsRoute: Route?
+    let apparitionDelay = 2.5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,37 +55,44 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             }
         }
         
-
         displayAsyncPopUp()
         
         // Do any additional setup after loading the view.
     }
+    
     func displayAsyncPopUp(){
-      
-    
-                
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0 ){
-           // let alertVC = self.alertService.alert(title: "Bien arrivé ?", body: "C’est parti pour te jeter dans les airs avec « iFLY Lyon » ! \n\n Tu ne trouves pas ? Contacte-les ! 04 82 90 34 70", buttonTitle: "Je suis bien arrivé" ) { [weak self] in}
-            self.present(serviceAlert.alert, animated: true)
-            serviceAlert.alert.actionButton.addTarget(self, action: #selector(self.switchText), for: .touchUpInside)
 
-            serviceAlert.alert.ratingStackView.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + apparitionDelay ){
+
+            self.present(Alert.alert, animated: true)
+            Alert.alert.actionButton.addTarget(self, action: #selector(self.switchText), for: .touchUpInside)
+            Alert.alert.ratingStackView.isHidden = true
         }
-        
-    
 
     }
     
+    var counter = 0
     
     @objc func switchText(sender: BasicButton!){
 
+        counter += 1
 
-        serviceAlert.body?.text = "Laisse ton téléphone de côté et on se retrouve après."
-        serviceAlert.title?.text = "Profite de ton activité"
-        serviceAlert.button?.setTitle("Activité est fini", for: .normal)
-
-
-        print(serviceAlert.body?.text)
+        switch counter {
+        case 1:
+            Alert.body?.text = "Laisse ton téléphone de côté et on se retrouve après."
+            Alert.title?.text = "Profite de ton activité"
+            Alert.button?.setTitle("Activité est fini", for: .normal)
+        case 2:
+            Alert.body?.text = "Ton activité est terminée !"
+            Alert.title?.text = "Comment l'as tu trouvé ?"
+            Alert.alert.ratingStackView.isHidden = false
+            Alert.alert.actionButton.isHidden = true
+            counter = 0
+        default:
+           break
+        }
+        
+        print(counter)
         
         }
     
@@ -178,16 +186,5 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
     }
 
-}
-
-struct serviceAlert {
-    static var values = ["VALUE 1", "VALUE 222222"]
-    
-   static var createAlertService = AlertService()
-   static var alert = serviceAlert.createAlertService.alert(title: "Bien arrivé ?", body: "C’est parti pour te jeter dans les airs avec « iFLY Lyon » ! \n\n Tu ne trouves pas ? Contacte-les ! 04 82 90 34 70",  buttonTitle: "Je suis bien arrivé"){}
-    static var body = serviceAlert.alert.bodyLabel
-    static var title = serviceAlert.alert.titleLabel
-    static var button = serviceAlert.alert.actionButton
-    
 }
 

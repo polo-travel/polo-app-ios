@@ -63,6 +63,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="00X-Lx-ah8"/>
+                                    <constraint firstAttribute="height" constant="218" id="31L-GZ-nkF"/>
                                     <constraint firstItem="moL-gA-Xei" firstAttribute="leading" secondItem="e4X-dK-Ifp" secondAttribute="leadingMargin" id="5t2-lq-DWm"/>
                                     <constraint firstItem="7Kl-MW-IAC" firstAttribute="centerX" secondItem="oNQ-EK-9Bg" secondAttribute="centerX" id="9m4-bQ-udV"/>
                                     <constraint firstItem="7Kl-MW-IAC" firstAttribute="top" secondItem="e4X-dK-Ifp" secondAttribute="top" constant="38" id="BQz-fM-mQh"/>
