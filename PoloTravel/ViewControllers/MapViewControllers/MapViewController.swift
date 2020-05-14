@@ -17,6 +17,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var mapView: NavigationMapView!
     var navigateButton: BasicButton!
     var directionsRoute: Route?
+    let alertService = AlertService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         customNavigateButton()
+        endButton()
         
         TravelService().currentTravel(){result  in
             
@@ -53,6 +55,22 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func popupAlert(sender: UIButton!){
+
+        let alertVC = alertService.alert(title: "Ton activitée est terminée  !", body: "Comment l'as tu trouvé ?", buttonTitle: "" ) { [weak self] in
+        }
+        present(alertVC, animated: true)
+    }
+    
+    func endButton(){
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
+           button.setTitle("Activité Terminé", for: .normal)
+           button.setTitleColor(.red, for: .normal)
+           button.backgroundColor = UIColor.white
+           button.addTarget(self, action: #selector(popupAlert), for: .touchUpInside)
+           self.view.addSubview(button)
     }
     
     func customNavigateButton(){

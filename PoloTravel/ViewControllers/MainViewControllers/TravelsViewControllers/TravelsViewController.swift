@@ -32,56 +32,54 @@ class TravelsViewController: UIViewController {
         
         updateTime()
         timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
+        
+        TravelService().currentTravel() { travel in
+            if travel != nil {
+                //self.performSegue(withIdentifier: "toCurrentTravel", sender: self)
+                print("TRAVELS: A travel is pending")
+            }
+        }
+        
         UserService().currentUser() { result  in
             self.user = result
             
             let formatter = DateFormatter()
             formatter.dateFormat = "dd.MM"
             
-            TravelService().currentTravel() { result in
-                if let currentTravel = result {
-                    let startDate = formatter.string(from: currentTravel.startDate)
-                    let endDate = formatter.string(from: currentTravel.endDate)
+            TravelService().nextTravel() { result in
+                if let nextTravel = result {
+                    let startDate = formatter.string(from: nextTravel.startDate)
+                    let endDate = formatter.string(from: nextTravel.endDate)
                     
                     self.activityIndicator.stopAnimating()
                     self.nextTravelDate.text = "Du \(startDate) au \(endDate)"
                     self.typeAventurerLabel.text = "Aventurier expert"
                     self.buttonKnowMore.isHidden = false
                 } else {
+                    self.buttonLookTravel.isHidden = true
                     self.activityIndicator.stopAnimating()
                     self.nextTravelDate.text = "Aucun voyage prévu"
                     self.typeAventurerLabel.text = ""
                 }
             }
         }
+        
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toNextTravelDetail" {
-            if let dest = segue.destination as? TravelsNextTravelViewController {
-                TravelService().currentTravel() { result in
-                    if let currentTravel = result {
-                        dest.startDate = currentTravel.startDate
-                        dest.endDate = currentTravel.endDate
-                    }
-                }
-            }
-        }
-    }
-    
+
     @objc func updateTime() {
-        TravelService().currentTravel() { result in
-            if let currentTravel = result {
+        TravelService().nextTravel() { result in
+            if let nextTravel = result {
                 let userCalendar = Calendar.current
                 
-                let startDate = currentTravel.startDate
+                let startDate = nextTravel.startDate
+    
                 let convertedStartDate = userCalendar.dateComponents([.year, .month, .day], from: startDate)
                 print("convertedStartDate", convertedStartDate)
                 let components = userCalendar.dateComponents([.hour, .minute, .month, .year, .day, .second], from: Date())
@@ -103,10 +101,6 @@ class TravelsViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func buttonLookTravel(_ sender: Any) {
-        self.performSegue(withIdentifier: "toNextTravelDetail", sender: nil)
-    }
-    
+  
 }
 

@@ -38,7 +38,7 @@ class TextBlockView: UIView {
     let headerTitle = UILabel()
    // headerTitle.font = UIFont.systemFont(ofSize: 35, weight: .bold)
     headerTitle.font = UIFont(name: "Gilroy-Bold", size: 35)
-    headerTitle.text = "Hello Cédric"
+    headerTitle.text = "Hello !"
     headerTitle.textColor = UIColor.black
     headerTitle.translatesAutoresizingMaskIntoConstraints = false
     return headerTitle

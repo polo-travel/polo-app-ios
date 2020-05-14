@@ -43,5 +43,15 @@ class AuthentificationService {
             }
         }
     }
+    
+    func signOut(completionBlock: @escaping (_ success: Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completionBlock(true)
+        } catch let signOutError as NSError {
+            completionBlock(false)
+          print ("Error signing out: %@", signOutError)
+        }
+    }
 
 }

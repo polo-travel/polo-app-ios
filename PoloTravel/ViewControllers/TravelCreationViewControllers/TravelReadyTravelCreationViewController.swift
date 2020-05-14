@@ -15,25 +15,28 @@ class TravelReadyTravelCreationViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var labelReady: UILabel!
     var travelChoices: TravelChoices?
+    @IBOutlet weak var iconReady: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         buttonSeeTravel.isHidden = true
-        labelReady.isHidden = true
-        print(travelChoices)
-        buttonSeeTravel.setDarkButton()
+        iconReady.isHidden = true
+        buttonSeeTravel.setRedButton()
         activityIndicator.startAnimating()
         
         if let travelChoices = travelChoices {
             print("im in travelChoices")
             TravelCreationService().addTravelToCurrentUser(travelChoices: travelChoices) { success in
-                print("travel added")
+                print("TRAVELCREATION: travel added")
+                self.iconReady.fadeTransition(0.4)
+                self.buttonSeeTravel.fadeTransition(0.4)
+                self.iconReady.isHidden = false
                 self.buttonSeeTravel.isHidden = false
-                self.labelReady.isHidden = false
+                self.activityIndicator.stopAnimating()
             }
         } else {
-            print("fail")
+            print("TRAVELCREATION: travel addition failed")
         }
         
     }

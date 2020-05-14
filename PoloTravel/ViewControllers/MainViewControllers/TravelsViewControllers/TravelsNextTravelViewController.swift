@@ -26,27 +26,41 @@ class TravelsNextTravelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTime()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM"
         
-        if let startDate = self.startDate, let endDate = self.endDate {
-            let startDate = formatter.string(from: startDate)
-            let endDate = formatter.string(from: endDate)
-        
-            self.nextTravelDate.text = "Du \(startDate) au \(endDate)"
-            self.typeAventurerLabel.text = "Aventurier expert"
-        } else {
-            self.nextTravelDate.text = "Aucun voyage prévu"
-            self.typeAventurerLabel.text = ""
+        UserService().currentUser() { result  in
+            self.user = result
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM"
+            
+            TravelService().nextTravel() { result in
+                if let nextTravel = result {
+                    let startDate = formatter.string(from: nextTravel.startDate)
+                    let endDate = formatter.string(from: nextTravel.endDate)
+                    
+                    self.activityIndicator.stopAnimating()
+                    self.nextTravelDate.text = "Du \(startDate) au \(endDate)"
+                    self.typeAventurerLabel.text = "Aventurier expert"
+                    self.buttonKnowMore.isHidden = false
+                } else {
+                    self.activityIndicator.stopAnimating()
+                    self.nextTravelDate.text = "Aucun voyage prévu"
+                    self.typeAventurerLabel.text = ""
+                }
+            }
         }
     }
     
     @objc func updateTime() {
-            if let startDate = self.startDate {
+        TravelService().nextTravel() { result in
+            if let nextTravel = result {
                 let userCalendar = Calendar.current
                 
+                let startDate = nextTravel.startDate
                 let convertedStartDate = userCalendar.dateComponents([.year, .month, .day], from: startDate)
                 print("convertedStartDate", convertedStartDate)
                 let components = userCalendar.dateComponents([.hour, .minute, .month, .year, .day, .second], from: Date())
@@ -56,6 +70,9 @@ class TravelsNextTravelViewController: UIViewController {
                 
                 let timeLeft = userCalendar.dateComponents([.day, .hour, .minute, .second], from: currentDate, to: eventDate)
             
+                self.daysLeftLabel.fadeTransition(0.4)
+                self.hoursLeftLabel.fadeTransition(0.4)
+                self.minutesLeftLabel.fadeTransition(0.4)
                 self.daysLeftLabel.text = "\(timeLeft.day!)"
                 self.hoursLeftLabel.text = "\(timeLeft.hour!)"
                 self.minutesLeftLabel.text = "\(timeLeft.minute!)"
@@ -63,6 +80,7 @@ class TravelsNextTravelViewController: UIViewController {
             } else {
                 print("naze")
             }
+        }
     }
     
     

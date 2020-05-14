@@ -30,7 +30,10 @@ class ProfileEditionViewController: UIViewController, UIImagePickerControllerDel
         UserService().currentUser() { result  in
             self.user = result
             
-            self.profilePhoto.sd_setImage(with: URL(string: (self.user?.photoURL)!), placeholderImage: UIImage(named: "photo.png"))
+            if let profilePhoto = self.user?.photoURL {
+                self.profilePhoto.sd_setImage(with: URL(string: profilePhoto), placeholderImage: UIImage(named: "photo.png"))
+            }
+
             self.firstNameInput.text = "\(String(self.user?.firstName ?? ""))"
             self.lastNameInput.text = "\(String(self.user?.lastName ?? ""))"
             self.emailInput.text = "\(String(self.user?.email ?? ""))"
