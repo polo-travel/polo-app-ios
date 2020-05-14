@@ -18,7 +18,7 @@
         <!--Voyages-->
         <scene sceneID="LCP-75-QV1">
             <objects>
-                <viewController storyboardIdentifier="TravelsViewController" id="JPG-Q7-kCM" customClass="TravelsViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JPG-Q7-kCM" customClass="TravelsViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Pm-4R-s9B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,7 +363,7 @@
         <!--Navigation Controller-->
         <scene sceneID="R0t-cC-aez">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ab0-Lw-QT4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TravelsViewController" automaticallyAdjustsScrollViewInsets="NO" id="Ab0-Lw-QT4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZdM-z5-770">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

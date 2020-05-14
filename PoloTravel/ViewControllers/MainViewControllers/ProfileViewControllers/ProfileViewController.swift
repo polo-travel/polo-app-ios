@@ -22,9 +22,22 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var travlesHistoryLabel: UILabel!
     var user:User?
     
+    var transparentView = UIView()
+    var tableView = UITableView()
+    
+    let height: CGFloat = 300
+    
+    var settingArray = ["Profile","Favorite","Notification","Change Password","Logout", ""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.isScrollEnabled = true
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(ProfileMenuTableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.backgroundColor = UIColor.MainTheme.mainDarkBlue
+        
         buttonEditProfile.setRedButton()
         buttonEditProfile.titleLabel?.font = UIFont(name: "Gilroy-Medium", size: 14)
         buttonKnowMore.isHidden = true
@@ -46,11 +59,16 @@ class ProfileViewController: UIViewController {
             
             TravelService().pastTravels() { result in
                 if let pastTravels = result {
-                    self.travelsHistory.isHidden = false
-                    
+                    if pastTravels.count > 0 {
+                        self.travelsHistory.isHidden = false
+                        print("PROFILE: \(pastTravels.count) past travels")
+                    } else {
+                        print("PROFILE: No past travels")
+                    }
                 } else {
                     print("PROFILE: No past travels")
                 }
+                
             }
             
             TravelService().currentTravel() { result in
@@ -83,6 +101,53 @@ class ProfileViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    @IBAction func buttonSettings(_ sender: Any) {
+        let window = UIApplication.shared.keyWindow
+        transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+        transparentView.frame = self.view.frame
+        window?.addSubview(transparentView)
+        
+        let screenSize = UIScreen.main.bounds.size
+        tableView.frame = CGRect(x: 0, y: screenSize.height, width: screenSize.width, height: height)
+        window?.addSubview(tableView)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClickTransparentView))
+        transparentView.addGestureRecognizer(tapGesture)
+        
+        transparentView.alpha = 0
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+            self.transparentView.alpha = 0.5
+            self.tableView.frame = CGRect(x: 0, y: screenSize.height - self.height, width: screenSize.width, height: self.height)
+        }, completion: nil)
+    }
     
+    @objc func onClickTransparentView() {
+        let screenSize = UIScreen.main.bounds.size
 
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+            self.transparentView.alpha = 0
+            self.tableView.frame = CGRect(x: 0, y: screenSize.height, width: screenSize.width, height: self.height)
+        }, completion: nil)
+    }
+    
+}
+
+extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return settingArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ProfileMenuTableViewCell else {fatalError("Unable to deque cell")}
+        cell.lbl.text = settingArray[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    
 }
