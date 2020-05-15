@@ -14,14 +14,16 @@ import MapboxNavigation
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
 
+    var alertService = AlertService()
     var mapView: NavigationMapView!
     var navigateButton: BasicButton!
     var directionsRoute: Route?
-    let alertService = AlertService()
+    let apparitionDelay = 2.5
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        
         mapView = NavigationMapView(frame: view.bounds, styleURL: MGLStyle.lightStyleURL)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
@@ -31,7 +33,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         customNavigateButton()
-        endButton()
         
         TravelService().currentTravel(){result  in
             
@@ -54,24 +55,47 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             }
         }
         
+        displayAsyncPopUp()
+        
         // Do any additional setup after loading the view.
     }
     
-    @objc func popupAlert(sender: UIButton!){
+    func displayAsyncPopUp(){
 
-        let alertVC = alertService.alert(title: "Ton activitée est terminée  !", body: "Comment l'as tu trouvé ?", buttonTitle: "" ) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + apparitionDelay ){
+
+            self.present(Alert.alert, animated: true)
+            Alert.alert.actionButton.addTarget(self, action: #selector(self.switchText), for: .touchUpInside)
+            Alert.alert.ratingStackView.isHidden = true
         }
-        present(alertVC, animated: true)
+
     }
     
-    func endButton(){
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
-           button.setTitle("Activité Terminé", for: .normal)
-           button.setTitleColor(.red, for: .normal)
-           button.backgroundColor = UIColor.white
-           button.addTarget(self, action: #selector(popupAlert), for: .touchUpInside)
-           self.view.addSubview(button)
-    }
+    var counter = 0
+    
+    @objc func switchText(sender: BasicButton!){
+
+        counter += 1
+
+        switch counter {
+        case 1:
+            Alert.body?.text = "Laisse ton téléphone de côté et on se retrouve après."
+            Alert.title?.text = "Profite de ton activité"
+            Alert.button?.setTitle("Activité est fini", for: .normal)
+        case 2:
+            Alert.body?.text = "Ton activité est terminée !"
+            Alert.title?.text = "Comment l'as tu trouvé ?"
+            Alert.alert.ratingStackView.isHidden = false
+            Alert.alert.actionButton.isHidden = true
+            counter = 0
+        default:
+           break
+        }
+        
+        print(counter)
+        
+        }
+    
     
     func customNavigateButton(){
         navigateButton = BasicButton(frame: CGRect(x:(view.frame.width/2 ) - 100, y: view.frame.height - 150, width: 200, height:50 ))
@@ -86,28 +110,24 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.setUserTrackingMode(.none, animated: true)
 
                     
-        TravelService().currentTravel(){result  in
+        TravelService().currentTravel(){ result  in
                    
            if let user = result {
-
           
-            let MorningCoord = CLLocationCoordinate2D(latitude: user.daysDatas[0].morningActivity.localization[0], longitude: user.daysDatas[0].morningActivity.localization[1])
-            
-            let annotation = MGLPointAnnotation()
-            annotation.coordinate = MorningCoord
-            annotation.title = "Start Navigation"
-            self.mapView.addAnnotation(annotation)
-                                
-            self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: MorningCoord) { (route, error) in
-               if error != nil{
-                   print("error getting route")
+                let MorningCoord = CLLocationCoordinate2D(latitude: user.daysDatas[0].morningActivity.localization[0], longitude: user.daysDatas[0].morningActivity.localization[1])
+                
+                let annotation = MGLPointAnnotation()
+                annotation.coordinate = MorningCoord
+                annotation.title = "Start Navigation"
+                self.mapView.addAnnotation(annotation)
+                                    
+                self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: MorningCoord) { (route, error) in
+                   if error != nil{
+                       print("error getting route")
+                    }
                 }
             }
-                    
-            }
-            
         }
-        
     }
     
     
@@ -165,8 +185,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         present(navigationVC,animated: true,completion: nil)
         
     }
-    
-    
-    
 
 }
+
