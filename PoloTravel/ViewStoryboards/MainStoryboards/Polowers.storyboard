@@ -19,7 +19,7 @@
         <!--Polowers-->
         <scene sceneID="3CM-ae-kbC">
             <objects>
-                <viewController storyboardIdentifier="PolowersViewController" id="XgU-cq-c3A" customClass="PolowersViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XgU-cq-c3A" customClass="PolowersViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fYT-OF-LTK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,7 +363,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cXX-Sj-1BC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qZZ-SG-kES" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PolowersViewController" automaticallyAdjustsScrollViewInsets="NO" id="qZZ-SG-kES" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wQO-qS-gHA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

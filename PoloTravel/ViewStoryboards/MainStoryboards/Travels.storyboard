@@ -18,7 +18,7 @@
         <!--Voyages-->
         <scene sceneID="LCP-75-QV1">
             <objects>
-                <viewController storyboardIdentifier="TravelsViewController" id="JPG-Q7-kCM" customClass="TravelsViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JPG-Q7-kCM" customClass="TravelsViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Pm-4R-s9B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BIG-FX-W9P" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="27" y="187" width="361" height="342"/>
+                                <rect key="frame" x="27" y="258" width="361" height="342"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boussole" translatesAutoresizingMaskIntoConstraints="NO" id="ynB-cD-8QN">
@@ -53,8 +53,8 @@
                                         <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mon prochain voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-7p-6Md">
-                                        <rect key="frame" x="84" y="34" width="181" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ton prochain voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-7p-6Md">
+                                        <rect key="frame" x="84" y="34" width="174" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="18"/>
                                         <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,7 +80,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonLookTravel:" destination="JPG-Q7-kCM" eventType="touchUpInside" id="cCh-Zw-bEc"/>
+                                            <segue destination="Wo1-pr-x7t" kind="show" id="rUH-Vl-yXL"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Au8-xm-sZG">
@@ -171,6 +171,10 @@
                                     <segue destination="oGv-Ve-MJm" kind="show" id="0zh-kV-3Z7"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="IrI-Gp-c0u">
+                                <rect key="frame" x="282" y="184" width="73" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="QJv-NA-f8U"/>
@@ -189,7 +193,6 @@
                         <outlet property="minutesLeftLabel" destination="pzB-Wo-VXa" id="xU8-0v-Bdo"/>
                         <outlet property="nextTravelDate" destination="eql-Nt-pFS" id="9sE-JQ-xka"/>
                         <outlet property="typeAventurerLabel" destination="8Ks-uA-jbF" id="lGN-l2-4Sz"/>
-                        <segue destination="Wo1-pr-x7t" kind="show" identifier="toNextTravelDetail" id="Dju-31-pnH"/>
                         <segue destination="muB-1m-5Gu" kind="show" identifier="toCurrentTravel" id="Muy-tj-Adn"/>
                     </connections>
                 </viewController>
@@ -213,8 +216,12 @@
                                     <action selector="buttonBackClicked:" destination="Wo1-pr-x7t" eventType="touchUpInside" id="jIX-9Y-olI"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="ewr-ew-Idb">
+                                <rect key="frame" x="276" y="94" width="73" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zwz-1U-q4C" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="27" y="158" width="361" height="295"/>
+                                <rect key="frame" x="27" y="168" width="361" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boussole" translatesAutoresizingMaskIntoConstraints="NO" id="FzX-tM-DKI">
@@ -236,8 +243,8 @@
                                         <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mon prochain voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc3-bC-UmH">
-                                        <rect key="frame" x="84" y="34" width="181" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ton prochain voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc3-bC-UmH">
+                                        <rect key="frame" x="84" y="34" width="174" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="18"/>
                                         <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -336,13 +343,41 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-Aa-Fdq" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="27" y="467" width="361" height="219"/>
+                                <rect key="frame" x="27" y="477" width="361" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ce dont tu auras besoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axp-i5-dHo">
                                         <rect key="frame" x="80" y="31" width="201" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="18"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- Des chaussures de randonnées" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Y-Q7-5s5">
+                                        <rect key="frame" x="48" y="77" width="264" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- Un sac à dos étanche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fi-oo-QaI">
+                                        <rect key="frame" x="48" y="105" width="264" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- Une lampe torche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qE-sV-2dV">
+                                        <rect key="frame" x="48" y="133" width="264" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- Un maillot de bain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99A-z9-P0M">
+                                        <rect key="frame" x="48" y="162" width="159" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
                                         <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -371,7 +406,7 @@
         <!--Navigation Controller-->
         <scene sceneID="R0t-cC-aez">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ab0-Lw-QT4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TravelsViewController" automaticallyAdjustsScrollViewInsets="NO" id="Ab0-Lw-QT4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZdM-z5-770">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -385,16 +420,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIj-VZ-pT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="62" y="1"/>
-        </scene>
-        <!--TravelCreation1ViewController-->
-        <scene sceneID="8Lf-4f-5nV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TravelCreation" referencedIdentifier="TravelCreation1ViewController" id="lsc-tQ-MLR" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="0z5-Sa-scE"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cx7-iz-cNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1053" y="-485"/>
         </scene>
         <!--MapViewController-->
         <scene sceneID="i3c-xK-vTK">
@@ -501,6 +526,7 @@
         <image name="arrow_back" width="35" height="30"/>
         <image name="boussole" width="46.5" height="57"/>
         <image name="map" width="324" height="257"/>
+        <image name="polo_border" width="73" height="82.5"/>
         <image name="tabbar_travels" width="24.5" height="24.5"/>
         <image name="tabbar_travels_active" width="23.5" height="23.5"/>
         <image name="travelmap_illu" width="259.5" height="172.5"/>
