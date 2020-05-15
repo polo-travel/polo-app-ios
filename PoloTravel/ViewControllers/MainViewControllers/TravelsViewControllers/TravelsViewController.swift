@@ -35,7 +35,7 @@ class TravelsViewController: UIViewController {
         
         TravelService().currentTravel() { travel in
             if travel != nil {
-                //self.performSegue(withIdentifier: "toCurrentTravel", sender: self)
+                self.performSegue(withIdentifier: "toCurrentTravel", sender: self)
                 print("TRAVELS: A travel is pending")
             }
         }
