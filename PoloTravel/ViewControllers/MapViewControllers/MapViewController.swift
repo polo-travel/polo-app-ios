@@ -33,7 +33,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         customNavigateButton()
-        endButton()
         
         TravelService().currentTravel(){result  in
             
