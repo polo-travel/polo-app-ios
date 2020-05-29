@@ -38,6 +38,7 @@ class AlertViewController: UIViewController {
 
     func setupView() {
         
+
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.numberOfLines = 0
         titleLabel.text = alertTitle
@@ -59,7 +60,7 @@ class AlertViewController: UIViewController {
     }
     
 
-    
+   
     @IBAction func didTapActionButton(_ sender: Any) {
         
     guard let button = sender as? UIButton else {
