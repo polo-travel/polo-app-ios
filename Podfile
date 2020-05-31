@@ -13,6 +13,7 @@ target 'PoloTravel' do
   pod 'SDWebImage', '~> 5.0'
   pod 'Mapbox-iOS-SDK', '~> 5.5.1'
   pod 'MapboxNavigation', '~> 0.39.0'
+  pod 'AppCenter'
 
   target 'PoloTravelTests' do
     inherit! :search_paths
