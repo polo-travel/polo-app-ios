@@ -14,7 +14,7 @@ class TextBlockView: UIView {
     lazy var contentText: UILabel = {
       let contentText = UILabel()
       contentText.font = UIFont(name: "Gilroy-Medium", size: 16)
-      contentText.text = "Moi c’est Polo, ton assistant de voyage!, c’est moi qui vais te surprendre ! \n \nComme tu peux le voir je suis très peu équipé pour partir à l’aventure. Je vais donc te poser quelques questions pour savoir ce que je peux te préparer comme surprise.\n \n Cela te prendra 5 minutes !"
+      contentText.text = "Moi c’est Polo, votre assistant de voyage!, c’est moi qui vais vous surprendre ! \n \nComme vous le voyez, je suis très peu équipé pour partir à l’aventure. Je vais donc vous poser quelques questions pour savoir ce que je peux vous préparer comme surprise.\n \n Cela vous prendra 5 minutes !"
         contentText.lineBreakMode = .byWordWrapping
         contentText.numberOfLines = 0
         contentText.textColor = UIColor.black

@@ -14,7 +14,9 @@ class Step6TravelCreationViewController: UIViewController {
     @IBOutlet weak var nextButton: BasicButton!
     var travelChoices: TravelChoices?
     var budget: Int?
-
+    @IBOutlet weak var labelBudget: UILabel!
+    @IBOutlet weak var budgetView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,11 @@ class Step6TravelCreationViewController: UIViewController {
         sender.setValue(fixed, animated: true)
         budget = Int(sender.value)
         print(budget)
+        budgetView.frame.origin.x = CGFloat(sender.value)
+        if let budgetChoice = budget {
+            labelBudget.text = "\(budgetChoice)€"
+        }
+        
         if (nextButton.isEnabled == false) {
             nextButton.isEnabled = true
         }
