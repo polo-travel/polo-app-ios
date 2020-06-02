@@ -187,6 +187,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_bluemedium_shape" translatesAutoresizingMaskIntoConstraints="NO" id="lqN-oE-wjw">
+                                <rect key="frame" x="0.0" y="464" width="224" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_redlittle_shape" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-eM-GDy">
+                                <rect key="frame" x="0.0" y="0.0" width="73" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-Kt-DWk">
                                 <rect key="frame" x="30" y="440" width="354" height="173"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -381,6 +389,8 @@
     </scenes>
     <resources>
         <image name="arrow_back" width="35" height="30"/>
+        <image name="bg_bluemedium_shape" width="225" height="351"/>
+        <image name="bg_redlittle_shape" width="73" height="107.5"/>
         <image name="heart" width="54" height="51.5"/>
         <image name="photo" width="238" height="238"/>
         <image name="pointsMenu" width="7" height="25"/>

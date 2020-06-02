@@ -26,14 +26,16 @@ class TravelReadyTravelCreationViewController: UIViewController {
         activityIndicator.startAnimating()
         
         if let travelChoices = travelChoices {
-            print("im in travelChoices")
             TravelCreationService().addTravelToCurrentUser(travelChoices: travelChoices) { success in
-                print("TRAVELCREATION: travel added")
-                self.iconReady.fadeTransition(0.4)
-                self.buttonSeeTravel.fadeTransition(0.4)
-                self.iconReady.isHidden = false
-                self.buttonSeeTravel.isHidden = false
-                self.activityIndicator.stopAnimating()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                    print("TRAVELCREATION: travel added")
+                    self.iconReady.fadeTransition(0.4)
+                    self.buttonSeeTravel.fadeTransition(0.4)
+                    self.iconReady.isHidden = false
+                    self.buttonSeeTravel.isHidden = false
+                    self.activityIndicator.stopAnimating()
+                }
+            
             }
         } else {
             print("TRAVELCREATION: travel addition failed")
