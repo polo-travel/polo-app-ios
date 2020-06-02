@@ -12,6 +12,7 @@ import UIKit
 class PolowersAddActivityViewController:UIViewController {
     @IBOutlet weak var buttonSend: BasicButton!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     let activitiesType: [String] = ["Gastronomique", "Sportive", "Culturelle"]
     override func viewDidLoad() {
          super.viewDidLoad()
@@ -25,6 +26,32 @@ class PolowersAddActivityViewController:UIViewController {
     @IBAction func buttonBackClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func buttonSendClicked(_ sender: Any) {
+        activityIndicator.startAnimating()
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.activityIndicator.stopAnimating()
+            
+            self.present(Alert.alert, animated: true)
+            Alert.body?.text = "Ton idée a été soumise à l'équipe en charge de Polo pour validation, si c'est bon, nous la proposerons dans le futur !"
+            Alert.title?.text = "C'est tout bon"
+            Alert.button?.setTitle("D'accord", for: .normal)
+            Alert.alert.actionButton.addTarget(self, action: #selector(self.closePopup), for: .touchUpInside)
+            Alert.alert.ratingStackView.isHidden = true
+
+        }
+        
+        
+    }
+    
+    @objc func closePopup () {
+        self.navigationController?.popViewController(animated: true)
+        Alert.alert.dismissSelf()
+        
+    }
+    
 }
 
 extension PolowersAddActivityViewController:UIPickerViewDataSource {

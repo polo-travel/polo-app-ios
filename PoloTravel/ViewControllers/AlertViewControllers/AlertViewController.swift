@@ -35,6 +35,10 @@ class AlertViewController: UIViewController {
 
         setupView()
     }
+    
+    func dismissSelf() {
+        self.dismiss(animated: true)
+    }
 
     func setupView() {
         

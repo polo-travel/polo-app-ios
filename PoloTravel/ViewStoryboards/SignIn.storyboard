@@ -93,6 +93,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DW1-Zc-S96">
+                                <rect key="frame" x="359" y="772" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="7LG-WM-XfE" kind="show" id="oHg-7h-PuQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -241,6 +249,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEx-xK-qC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2898" y="-168"/>
+        </scene>
+        <!--OnBoardingMainViewController-->
+        <scene sceneID="Tdm-hj-inP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OnBoarding" referencedIdentifier="OnBoardingMainViewController" id="7LG-WM-XfE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mUo-zh-SLr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qpM-Ra-T5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095" y="-512"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="1yo-ye-IaL">

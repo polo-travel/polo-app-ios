@@ -25,9 +25,9 @@ class ProfileViewController: UIViewController {
     var transparentView = UIView()
     var tableView = UITableView()
     
-    let height: CGFloat = 250
+    let height: CGFloat = 200
     
-    var settingArray = ["", "Notifications","Se déconnecter","Annuler", ""]
+    var settingArray = ["","Se déconnecter","Annuler", ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,7 +141,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 2 {
+        if indexPath.row == 1 {
             AuthentificationService().signOut {[weak self] (success) in
                 guard let `self` = self else { return }
                 if (success) {
@@ -156,7 +156,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             }
         }
         
-        if indexPath.row == 3 {
+        if indexPath.row == 2 {
             onClickTransparentView()
         }
     }

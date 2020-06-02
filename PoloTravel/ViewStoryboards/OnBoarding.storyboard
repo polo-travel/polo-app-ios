@@ -15,17 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bg_light_shape" translatesAutoresizingMaskIntoConstraints="NO" id="FtR-Qq-nsW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="jPd-Vz-2jq"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9u-mp-Ci9">
-                                <rect key="frame" x="0.0" y="136" width="414" height="570"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9u-mp-Ci9">
+                                <rect key="frame" x="0.0" y="145" width="414" height="751"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRk-3r-bbf">
-                                        <rect key="frame" x="0.0" y="-1" width="414" height="571"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRk-3r-bbf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="751"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="hyu-3k-cWh" kind="embed" id="LdM-Hx-4mC"/>
@@ -33,28 +29,19 @@
                                     </containerView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="JRk-3r-bbf" firstAttribute="top" secondItem="m9u-mp-Ci9" secondAttribute="top" constant="-1" id="JvJ-Qu-hO7"/>
-                                    <constraint firstItem="JRk-3r-bbf" firstAttribute="leading" secondItem="m9u-mp-Ci9" secondAttribute="leading" id="Uzn-yH-HGb"/>
-                                    <constraint firstAttribute="trailing" secondItem="JRk-3r-bbf" secondAttribute="trailing" id="jwY-Ny-WKB"/>
-                                    <constraint firstAttribute="bottom" secondItem="JRk-3r-bbf" secondAttribute="bottom" id="zuK-7o-Esh"/>
-                                </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_light_shape" translatesAutoresizingMaskIntoConstraints="NO" id="ccU-CO-zME">
+                                <rect key="frame" x="0.0" y="0.0" width="370" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="EOB-CS-7gs" firstAttribute="top" secondItem="FtR-Qq-nsW" secondAttribute="top" constant="44" id="7U0-3V-OUQ"/>
-                            <constraint firstItem="JRk-3r-bbf" firstAttribute="leading" secondItem="EOB-CS-7gs" secondAttribute="leading" id="SKk-IM-MIy"/>
-                            <constraint firstItem="EOB-CS-7gs" firstAttribute="bottom" secondItem="JRk-3r-bbf" secondAttribute="bottom" constant="156" id="Srq-pE-of3"/>
-                            <constraint firstItem="EOB-CS-7gs" firstAttribute="trailing" secondItem="JRk-3r-bbf" secondAttribute="trailing" id="hAR-nP-X0Z"/>
-                            <constraint firstItem="m9u-mp-Ci9" firstAttribute="top" secondItem="FtR-Qq-nsW" secondAttribute="bottom" constant="8" id="hLg-Xb-YiK"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EOB-CS-7gs"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bru-yL-ySn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2573.5999999999999" y="-1078.0788177339903"/>
+            <point key="canvasLocation" x="2571.0144927536235" y="-1078.125"/>
         </scene>
         <!--On Boarding Page View Controller-->
         <scene sceneID="Rp4-vl-vJD">
@@ -77,157 +64,126 @@
             <objects>
                 <viewController storyboardIdentifier="OnBoarding1ViewController" id="8yW-0I-BW5" customClass="OnBoarding1ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUr-vj-Fnm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="697"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_view1" translatesAutoresizingMaskIntoConstraints="NO" id="9oS-O4-l3R">
-                                <rect key="frame" x="-37" y="222" width="488" height="295"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view1" translatesAutoresizingMaskIntoConstraints="NO" id="9oS-O4-l3R">
+                                <rect key="frame" x="-37" y="91" width="488" height="586"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H1a-T8-7f2">
-                                <rect key="frame" x="62.5" y="47" width="289" height="89"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-eO-WUa">
-                                        <rect key="frame" x="73.5" y="0.0" width="142" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="Lwe-kk-EmE"/>
-                                            <constraint firstAttribute="width" constant="142" id="WtU-Nb-wwq"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Bienvenue  !">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="25" name="Gilroy-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRE-I8-cj1">
-                                        <rect key="frame" x="0.0" y="41" width="289" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="289" id="4TK-QM-uVe"/>
-                                            <constraint firstAttribute="height" constant="48" id="fH2-dC-kri"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Polo est une application qui va vous faire voyager autrement !">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="18" name="Gilroy-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="289" id="F8V-G6-O9T"/>
-                                    <constraint firstAttribute="height" constant="89" id="hqP-VA-BGY"/>
-                                </constraints>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRE-I8-cj1">
+                                <rect key="frame" x="58" y="78" width="299" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Polo est une application qui va vous faire voyager autrement !">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Gilroy-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-eO-WUa">
+                                <rect key="frame" x="137" y="37" width="140" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Bienvenue  !">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Gilroy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vdf-Un-v4L">
+                                <rect key="frame" x="160" y="660" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="9y8-3u-NbJ" firstAttribute="bottom" secondItem="9oS-O4-l3R" secondAttribute="bottom" id="6fW-nM-5sD"/>
-                            <constraint firstItem="sk1-eO-WUa" firstAttribute="top" secondItem="9y8-3u-NbJ" secondAttribute="top" constant="47" id="DYH-Qi-YFH"/>
-                            <constraint firstItem="9oS-O4-l3R" firstAttribute="centerX" secondItem="9y8-3u-NbJ" secondAttribute="centerX" id="K5K-2M-KXb"/>
-                            <constraint firstItem="H1a-T8-7f2" firstAttribute="top" secondItem="9y8-3u-NbJ" secondAttribute="top" constant="47" id="lFu-al-rVI"/>
-                            <constraint firstItem="9oS-O4-l3R" firstAttribute="top" secondItem="H1a-T8-7f2" secondAttribute="bottom" constant="86" id="tqF-f0-bhp"/>
-                            <constraint firstItem="H1a-T8-7f2" firstAttribute="centerX" secondItem="9y8-3u-NbJ" secondAttribute="centerX" id="yDU-9f-eRz"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9y8-3u-NbJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="QNY-H7-hE3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhT-ep-u1E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4524.6376811594209" y="-2058.8169642857142"/>
+            <point key="canvasLocation" x="4524.6376811594209" y="-2652.4553571428569"/>
         </scene>
         <!--On Boarding2 View Controller-->
         <scene sceneID="FT0-yQ-0t7">
             <objects>
                 <viewController storyboardIdentifier="OnBoarding2ViewController" id="w2b-gK-HqF" customClass="OnBoarding2ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0lP-Ml-dPJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="697"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EIx-A3-1ZR">
-                                <rect key="frame" x="38.5" y="47" width="337" height="108"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmG-JU-zcY">
-                                        <rect key="frame" x="27.5" y="0.0" width="282.5" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="282.5" id="bAw-SB-c9W"/>
-                                            <constraint firstAttribute="height" constant="33" id="eb5-LC-6Qy"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Préparez votre voyage">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="25" name="Gilroy-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3Z-vk-mQF">
-                                        <rect key="frame" x="0.0" y="41" width="337" height="67"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="337" id="DAI-TB-tVX"/>
-                                            <constraint firstAttribute="height" constant="67" id="qLw-pF-wQc"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Polo vous aide à créer votre voyage en 
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmG-JU-zcY">
+                                <rect key="frame" x="76" y="37" width="261.5" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Préparez votre voyage">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Gilroy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="IpO-SN-Vx9">
+                                <rect key="frame" x="160" y="660" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view2" translatesAutoresizingMaskIntoConstraints="NO" id="Xw3-TT-H8l">
+                                <rect key="frame" x="0.0" y="91" width="414" height="586"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3Z-vk-mQF">
+                                <rect key="frame" x="38" y="78" width="337" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Polo vous aide à créer votre voyage en 
 répondant à un petit questionnaire pour 
 connaitre votre profil d’aventurier</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="18" name="Gilroy-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_view2" translatesAutoresizingMaskIntoConstraints="NO" id="Xw3-TT-H8l">
-                                <rect key="frame" x="0.0" y="222" width="414" height="295"/>
-                            </imageView>
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Gilroy-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="H2B-29-ILr" firstAttribute="bottom" secondItem="Xw3-TT-H8l" secondAttribute="bottom" id="CsG-3V-K8i"/>
-                            <constraint firstItem="Xw3-TT-H8l" firstAttribute="top" secondItem="EIx-A3-1ZR" secondAttribute="bottom" constant="67" id="jjv-Qi-owV"/>
-                            <constraint firstItem="EIx-A3-1ZR" firstAttribute="top" secondItem="H2B-29-ILr" secondAttribute="top" constant="47" id="rST-7c-mxD"/>
-                            <constraint firstItem="Xw3-TT-H8l" firstAttribute="centerX" secondItem="H2B-29-ILr" secondAttribute="centerX" id="uuV-3Z-JEx"/>
-                            <constraint firstItem="EIx-A3-1ZR" firstAttribute="centerX" secondItem="H2B-29-ILr" secondAttribute="centerX" id="wbK-dx-zGu"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="H2B-29-ILr"/>
                     </view>
                     <navigationItem key="navigationItem" id="At6-QD-uRz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8V4-Eh-w2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4524.6376811594209" y="-1574.6651785714284"/>
+            <point key="canvasLocation" x="4525" y="-2024"/>
         </scene>
         <!--On Boarding3 View Controller-->
         <scene sceneID="Tv0-lu-Aqd">
             <objects>
                 <viewController storyboardIdentifier="OnBoarding3ViewController" id="UoX-oh-1aD" customClass="OnBoarding3ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lXI-6a-9GQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="697"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view3" translatesAutoresizingMaskIntoConstraints="NO" id="JRm-wu-ITB">
-                                <rect key="frame" x="0.0" y="200" width="414" height="257"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U47-nx-9Nb">
-                                <rect key="frame" x="70" y="88" width="284" height="70"/>
+                                <rect key="frame" x="71" y="78" width="284" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Suivez les indications de Polo et découvrez tes activités tout au long de ton voyage">
@@ -241,7 +197,7 @@ connaitre votre profil d’aventurier</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVH-75-cga">
-                                <rect key="frame" x="70" y="47" width="285" height="33"/>
+                                <rect key="frame" x="70" y="37" width="285" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="De surprises en surprises">
@@ -254,6 +210,16 @@ connaitre votre profil d’aventurier</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-Lq-LDO">
+                                <rect key="frame" x="165" y="660" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view3" translatesAutoresizingMaskIntoConstraints="NO" id="JRm-wu-ITB">
+                                <rect key="frame" x="0.0" y="204" width="414" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="x3n-Gp-cUI"/>
@@ -262,107 +228,82 @@ connaitre votre profil d’aventurier</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqi-9T-boz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4524.6376811594209" y="-1078.4598214285713"/>
+            <point key="canvasLocation" x="4525" y="-1357"/>
         </scene>
         <!--On Boarding4 View Controller-->
         <scene sceneID="i90-4G-Skw">
             <objects>
                 <viewController storyboardIdentifier="OnBoarding4ViewController" id="9ql-Tu-caP" customClass="OnBoarding4ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ea5-g0-i3N">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="697"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_view4" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-gY-jKf">
-                                <rect key="frame" x="1" y="207" width="412" height="310"/>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="Tm1-rF-Hjc">
+                                <rect key="frame" x="160" y="660" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_view4" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-gY-jKf">
+                                <rect key="frame" x="-3" y="76" width="412" height="601"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Keh-cN-U7F">
-                                <rect key="frame" x="26.5" y="47" width="361.5" height="111"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcF-J8-XNZ">
-                                        <rect key="frame" x="48" y="0.0" width="265.5" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="phb-c8-RlY"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Partagez votre aventure">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="25" name="Gilroy-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEf-gM-v06">
-                                        <rect key="frame" x="0.0" y="41" width="361.5" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="qVP-Vq-wDP"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Grace à la communauté des Polowers 
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcF-J8-XNZ">
+                                <rect key="frame" x="66" y="37" width="282" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Partagez votre aventure">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Gilroy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEf-gM-v06">
+                                <rect key="frame" x="24" y="76" width="367" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Grace à la communauté des Polowers 
 vous pouvez voir les aventures des autres et 
 partager les vôtres !</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="18" name="Gilroy-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Gilroy-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bgM-gY-jKf" firstAttribute="centerX" secondItem="XvR-pv-bO9" secondAttribute="centerX" id="1hC-XG-4oU"/>
-                            <constraint firstItem="Keh-cN-U7F" firstAttribute="centerX" secondItem="XvR-pv-bO9" secondAttribute="centerX" id="CjK-WG-Nbz"/>
-                            <constraint firstItem="bgM-gY-jKf" firstAttribute="top" secondItem="Keh-cN-U7F" secondAttribute="bottom" constant="49" id="ZT0-wM-H2N"/>
-                            <constraint firstItem="Keh-cN-U7F" firstAttribute="top" secondItem="XvR-pv-bO9" secondAttribute="top" constant="47" id="gN1-eb-9OL"/>
-                            <constraint firstItem="XvR-pv-bO9" firstAttribute="bottom" secondItem="bgM-gY-jKf" secondAttribute="bottom" id="z9i-su-ObA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XvR-pv-bO9"/>
                     </view>
                     <navigationItem key="navigationItem" id="o4t-jO-vat"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGa-Yk-6SS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4524.6376811594209" y="-587.61160714285711"/>
+            <point key="canvasLocation" x="4525" y="-685"/>
         </scene>
         <!--On Boarding5 View Controller-->
         <scene sceneID="Ff6-UE-0lt">
             <objects>
                 <viewController storyboardIdentifier="OnBoarding5ViewController" id="8Ya-YQ-iuH" customClass="OnBoarding5ViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWV-il-RED">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="697"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oboarding_ready" translatesAutoresizingMaskIntoConstraints="NO" id="eBx-gn-mn6">
-                                <rect key="frame" x="27.5" y="121" width="359" height="274"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oboarding_ready" translatesAutoresizingMaskIntoConstraints="NO" id="eBx-gn-mn6">
+                                <rect key="frame" x="28" y="129" width="359" height="395"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yco-mP-Xfu" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="100.5" y="425" width="213" height="52"/>
-                                <color key="backgroundColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="213" id="D0h-vd-AWL"/>
-                                    <constraint firstAttribute="height" constant="52" id="a0R-zo-ArP"/>
-                                </constraints>
-                                <state key="normal" title="C'est parti !">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ieT-dZ-oMx" kind="show" id="Dqy-hk-DXl"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-Wv-r15">
-                                <rect key="frame" x="64.5" y="34" width="285" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="Q3C-Yt-bIA"/>
-                                    <constraint firstAttribute="width" constant="285" id="zYI-Jm-gpR"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-Wv-r15">
+                                <rect key="frame" x="65" y="42" width="285" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Prêt pour l'inconnu ?">
                                         <attributes>
@@ -374,17 +315,25 @@ partager les vôtres !</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="lTn-Kd-Xfp">
+                                <rect key="frame" x="160" y="660" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yco-mP-Xfu" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="103" y="574" width="209" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="C'est parti !">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ieT-dZ-oMx" kind="show" id="Dqy-hk-DXl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Yco-mP-Xfu" firstAttribute="centerX" secondItem="Vd5-X7-XEz" secondAttribute="centerX" id="1lq-hA-7bX"/>
-                            <constraint firstItem="eBx-gn-mn6" firstAttribute="centerX" secondItem="Vd5-X7-XEz" secondAttribute="centerX" id="Feg-6n-sSa"/>
-                            <constraint firstItem="Vd5-X7-XEz" firstAttribute="bottom" secondItem="Yco-mP-Xfu" secondAttribute="bottom" constant="40" id="UiS-wi-G5K"/>
-                            <constraint firstItem="EZ6-Wv-r15" firstAttribute="centerX" secondItem="Vd5-X7-XEz" secondAttribute="centerX" id="ZDt-bK-JM3"/>
-                            <constraint firstItem="eBx-gn-mn6" firstAttribute="top" secondItem="EZ6-Wv-r15" secondAttribute="bottom" constant="20" id="nbT-jv-k4e"/>
-                            <constraint firstItem="EZ6-Wv-r15" firstAttribute="top" secondItem="Vd5-X7-XEz" secondAttribute="top" constant="34" id="nzL-NP-rHU"/>
-                            <constraint firstItem="Yco-mP-Xfu" firstAttribute="top" secondItem="eBx-gn-mn6" secondAttribute="bottom" constant="30" id="u3g-MW-EVK"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vd5-X7-XEz"/>
                     </view>
                     <navigationItem key="navigationItem" id="qo8-xi-Ouo"/>
@@ -394,7 +343,7 @@ partager les vôtres !</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngu-Nj-Gzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4524.6376811594209" y="-90.066964285714278"/>
+            <point key="canvasLocation" x="4524.6376811594209" y="16.741071428571427"/>
         </scene>
         <!--TravelCreation1ViewController-->
         <scene sceneID="YVg-gq-Zyi">
@@ -408,7 +357,7 @@ partager les vôtres !</string>
         </scene>
     </scenes>
     <resources>
-        <image name="bg_light_shape" width="414" height="172.5"/>
+        <image name="bg_light_shape" width="370" height="138"/>
         <image name="oboarding_ready" width="358.5" height="395"/>
         <image name="onboarding_view1" width="487.5" height="378"/>
         <image name="onboarding_view2" width="414" height="379"/>
