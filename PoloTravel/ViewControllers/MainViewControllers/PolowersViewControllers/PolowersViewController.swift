@@ -127,13 +127,7 @@ extension PolowersViewController:UICollectionViewDelegateFlowLayout {
     
 }
 
-extension PolowersViewController:UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print(indexPath)
-    }
-}
-
-extension PolowersViewController:UICollectionViewDataSource {
+extension PolowersViewController:UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return feedManager.photoList.count
     }
@@ -157,6 +151,22 @@ extension PolowersViewController:UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PolowersCommentsViewController") as? PolowersCommentsViewController
+        vc?.name = feedManager.photoList[indexPath.row].userName
+        
+         if let url = URL(string: "\(feedManager.photoList[indexPath.row].imageURL)") {
+            vc?.img?.sd_setImage(with: URL(string: url.absoluteString), placeholderImage: UIImage(named: "photo.png"))
+            vc?.imgURL = url.absoluteString
+        }
+                print("okok",indexPath)
+        
+                self.navigationController?.pushViewController(vc!, animated: true)
+     }
+    
+
+
     
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qZZ-SG-kES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qZZ-SG-kES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,6 +16,39 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Polowers Comments View Controller-->
+        <scene sceneID="3k7-bI-Qws">
+            <objects>
+                <viewController storyboardIdentifier="PolowersCommentsViewController" id="jwB-wb-UpW" customClass="PolowersCommentsViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dt1-Xf-Kkp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wbE-7p-ljL">
+                                <rect key="frame" x="20" y="99" width="374" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ekippppppp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7m-Ds-jGr">
+                                <rect key="frame" x="107" y="399" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69679754969999996" green="0.87668329479999996" blue="0.94511049989999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="JBc-sJ-ncf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yc9-NI-ra4"/>
+                    <connections>
+                        <outlet property="img" destination="wbE-7p-ljL" id="GV3-mP-oH5"/>
+                        <outlet property="lbl" destination="S7m-Ds-jGr" id="Kzt-OA-NvC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1h-lA-GHz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202.8985507246377" y="-423.21428571428572"/>
+        </scene>
         <!--Polowers-->
         <scene sceneID="3CM-ae-kbC">
             <objects>
@@ -173,6 +206,7 @@
                         <outlet property="collectionView" destination="PqD-NF-ba6" id="WhG-eo-eMX"/>
                         <outlet property="menuView" destination="1yg-yy-e6V" id="tx5-TK-kSF"/>
                         <outlet property="searchBar" destination="sOh-CY-oyD" id="eV9-ow-4v6"/>
+                        <segue destination="jwB-wb-UpW" kind="show" id="Rz7-Ze-u38"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkF-Fc-khq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
