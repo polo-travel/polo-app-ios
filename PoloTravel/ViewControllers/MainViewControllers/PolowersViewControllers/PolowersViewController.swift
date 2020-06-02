@@ -127,13 +127,7 @@ extension PolowersViewController:UICollectionViewDelegateFlowLayout {
     
 }
 
-extension PolowersViewController:UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print(indexPath)
-    }
-}
-
-extension PolowersViewController:UICollectionViewDataSource {
+extension PolowersViewController:UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return feedManager.photoList.count
     }
@@ -157,6 +151,28 @@ extension PolowersViewController:UICollectionViewDataSource {
         
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//       p§rint("item at \(indexPath.section)/\(indexPath.item) tapped")
+                let vc = storyboard?.instantiateViewController(withIdentifier: "PolowersCommentsViewController") as? PolowersCommentsViewController
+                vc?.name = feedManager.photoList[indexPath.row].userName
+        
+                print(indexPath)
+                print("okok",indexPath)
+        
+                self.navigationController?.pushViewController(vc!, animated: true)
+     }
+    
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "PolowersCommentsViewController") as? PolowersCommentsViewController
+//        vc?.name = feedManager.photoList[indexPath.row].userName
+//
+//        print(indexPath)
+//        print("okok",indexPath)
+//
+//        self.navigationController?.pushViewController(vc!, animated: true)
+//    }
+
     
 }
 
