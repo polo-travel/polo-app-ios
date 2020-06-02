@@ -13,7 +13,8 @@ import UIKit
 class ProfileMenuTableViewCell: UITableViewCell {
     
     lazy var backView: UIView = {
-       let view = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 50))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 414, height: 50))
+        print("frame", self.frame)
         view.backgroundColor = UIColor.MainTheme.mainDarkBlue
         return view
     }()

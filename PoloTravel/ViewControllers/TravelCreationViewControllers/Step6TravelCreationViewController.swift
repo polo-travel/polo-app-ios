@@ -31,9 +31,10 @@ class Step6TravelCreationViewController: UIViewController {
         sender.setValue(fixed, animated: true)
         budget = Int(sender.value)
         print(budget)
-        budgetView.frame.origin.x = CGFloat(sender.value)
+        
         if let budgetChoice = budget {
             labelBudget.text = "\(budgetChoice)€"
+            budgetView.frame.origin.x = CGFloat(30+Double(budgetChoice)/2)
         }
         
         if (nextButton.isEnabled == false) {
