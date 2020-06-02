@@ -14,10 +14,15 @@ class PolowersCommentsViewController: UIViewController {
     @IBOutlet weak var lbl: UILabel!
     
     var name = ""
+    var imgURL = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(imgURL)
+      
+        
         lbl.text = name
+        //img.image = UIImage(named: imgURL)
 
         // Do any additional setup after loading the view.
     }
