@@ -18,7 +18,7 @@ class Step2TravelCreationViewController: UIViewController {
     var selectedDanger: Int?
     
 
-    let questions = ["J’adore l’adrénaline !!","Bof, mais je le fais quand même", "Jamais de la vie"]
+    let questions = ["Faire du sport, courir, nager","Visiter, découvrir la région", "Prendre soin de vous, respirer, bronzer"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

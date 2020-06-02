@@ -147,8 +147,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
                 if (success) {
                     let sign =  UIStoryboard(name: "SignIn", bundle: nil)
                     let vc = sign.instantiateViewController(withIdentifier: "ViewController")
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window?.rootViewController = vc
+                    exit(0);
                     print("logoutsuccess")
                 } else {
                     print("logout fail")
