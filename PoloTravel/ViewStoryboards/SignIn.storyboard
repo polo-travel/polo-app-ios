@@ -232,16 +232,6 @@
             </objects>
             <point key="canvasLocation" x="2013" y="472"/>
         </scene>
-        <!--TravelCreation1ViewController-->
-        <scene sceneID="xTu-fk-CpI">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TravelCreation" referencedIdentifier="TravelCreation1ViewController" id="eUe-J8-JR0" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="zrl-zO-1nu"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WOV-lx-PbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2859" y="139"/>
-        </scene>
         <!--OnBoardingMainViewController-->
         <scene sceneID="MC6-Xm-DFr">
             <objects>

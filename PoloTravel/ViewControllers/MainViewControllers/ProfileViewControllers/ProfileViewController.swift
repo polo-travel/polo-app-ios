@@ -108,6 +108,7 @@ class ProfileViewController: UIViewController {
         window?.addSubview(transparentView)
         
         let screenSize = UIScreen.main.bounds.size
+        print("screenSize", screenSize)
         tableView.frame = CGRect(x: 0, y: screenSize.height, width: screenSize.width, height: height)
         window?.addSubview(tableView)
         

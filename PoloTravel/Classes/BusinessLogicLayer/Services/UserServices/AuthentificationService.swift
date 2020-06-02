@@ -27,8 +27,9 @@ class AuthentificationService {
                         "email": email,
                     ])
                     completionHandler(nil)
+                } else {
+                    completionHandler(.wrongPassword)
                 }
-                completionHandler(nil)
             }
         }
     }
