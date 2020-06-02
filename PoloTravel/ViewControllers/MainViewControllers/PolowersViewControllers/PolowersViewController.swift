@@ -151,18 +151,15 @@ extension PolowersViewController:UICollectionViewDataSource, UICollectionViewDel
         
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//       p§rint("item at \(indexPath.section)/\(indexPath.item) tapped")
-                let vc = storyboard?.instantiateViewController(withIdentifier: "PolowersCommentsViewController") as? PolowersCommentsViewController
-                vc?.name = feedManager.photoList[indexPath.row].userName
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PolowersCommentsViewController") as? PolowersCommentsViewController
+        vc?.name = feedManager.photoList[indexPath.row].userName
         
- 
-//                feedManager.photoList[indexPath.row].imageURL
          if let url = URL(string: "\(feedManager.photoList[indexPath.row].imageURL)") {
-//            vc?.imgURL
             vc?.img?.sd_setImage(with: URL(string: url.absoluteString), placeholderImage: UIImage(named: "photo.png"))
+            vc?.imgURL = url.absoluteString
         }
-                print(indexPath)
                 print("okok",indexPath)
         
                 self.navigationController?.pushViewController(vc!, animated: true)

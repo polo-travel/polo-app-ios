@@ -19,10 +19,9 @@ class PolowersCommentsViewController: UIViewController {
         super.viewDidLoad()
         
         print(imgURL)
-      
         
         lbl.text = name
-        //img.image = UIImage(named: imgURL)
+//        img.image = UIImage(named: imgURL)
 
         // Do any additional setup after loading the view.
     }
