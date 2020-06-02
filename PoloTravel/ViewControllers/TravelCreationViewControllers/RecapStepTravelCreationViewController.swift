@@ -47,7 +47,7 @@ class RecapStepTravelCreationViewController: UIViewController {
     func getBtn(){
         for view in recapWrapper.subviews as [UIView] {
             if let btn = view as? BasicButton {
-                btn.setWhiteButton()
+                btn.setDarkButton()
                 
                 btn.setTitle(recap?[btn.tag], for: .normal)
                 btn.titleLabel?.textAlignment = .center

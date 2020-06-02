@@ -313,13 +313,16 @@
                                         <state key="normal" title="Envoyer">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonSendClicked:" destination="knq-cT-dzu" eventType="touchUpInside" id="Pqm-Hg-YIl"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6OH-He-UGZ" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
                                         <rect key="frame" x="47" y="354" width="321" height="126"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Où ce situe ce que tu proposes ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYn-m2-1I2">
-                                                <rect key="frame" x="23" y="23" width="211" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Où se situe ce que tu proposes ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYn-m2-1I2">
+                                                <rect key="frame" x="23" y="23" width="210" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
                                                 <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -336,6 +339,11 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="iar-PS-ecH">
+                                        <rect key="frame" x="272" y="517" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="m7Q-sa-0ZT"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="aQY-gm-7RL"/>
@@ -360,6 +368,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gLA-qz-uQs"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="iar-PS-ecH" id="0eN-o2-6ec"/>
                         <outlet property="buttonSend" destination="zTj-H0-yic" id="YPF-xe-B73"/>
                         <outlet property="pickerView" destination="5YR-x0-JOZ" id="pX0-8C-4rr"/>
                     </connections>

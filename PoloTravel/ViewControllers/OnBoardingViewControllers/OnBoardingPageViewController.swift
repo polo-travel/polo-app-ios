@@ -44,6 +44,7 @@ extension OnBoardingPageViewController: UIPageViewControllerDelegate, UIPageView
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let currentIndex:Int = subViewControllers.firstIndex(of: viewController) ?? 0
+        print("currentIndex", currentIndex)
         if currentIndex >= subViewControllers.count-1 {
             return nil
         }

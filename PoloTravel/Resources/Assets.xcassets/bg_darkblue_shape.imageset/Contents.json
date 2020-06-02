@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bg_light_shape.png",
+      "filename" : "bg_darkblue_shape.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bg_light_shape@2x.png",
+      "filename" : "bg_darkblue_shape@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bg_light_shape@3x.png",
+      "filename" : "bg_darkblue_shape@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
