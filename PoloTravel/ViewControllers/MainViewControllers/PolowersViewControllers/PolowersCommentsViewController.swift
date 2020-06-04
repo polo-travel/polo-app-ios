@@ -21,9 +21,9 @@ class PolowersCommentsViewController: UIViewController {
         print(imgURL)
         
         lbl.text = name
-//        img.image = UIImage(named: imgURL)
 
-        // Do any additional setup after loading the view.
+        img.sd_setImage(with: URL(string: imgURL), placeholderImage: UIImage(named: "photo.png"))
+
     }
     
 
