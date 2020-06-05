@@ -8,11 +8,12 @@
 
 import UIKit
 
-class PolowersCommentsViewController: UIViewController {
+class PolowersCommentsViewController: UIViewController,UINavigationControllerDelegate {
 
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lbl: UILabel!
     
+    @IBOutlet weak var userImage: UIImageView!
     var name = ""
     var imgURL = ""
     override func viewDidLoad() {
@@ -23,10 +24,17 @@ class PolowersCommentsViewController: UIViewController {
         lbl.text = name
 
         img.sd_setImage(with: URL(string: imgURL), placeholderImage: UIImage(named: "photo.png"))
+        
+        userImage.sd_setImage(with: URL(string: imgURL), placeholderImage: UIImage(named: "photo.png"))
+
 
     }
     
 
 
-
+    @IBAction func goBackButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        //self.navigationController?.popViewController(animated: true)
+    }
+    
 }
