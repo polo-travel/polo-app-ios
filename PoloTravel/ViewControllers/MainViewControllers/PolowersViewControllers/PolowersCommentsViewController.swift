@@ -24,8 +24,12 @@ class PolowersCommentsViewController: UIViewController,UINavigationControllerDel
         lbl.text = name
 
         img.sd_setImage(with: URL(string: imgURL), placeholderImage: UIImage(named: "photo.png"))
+        img.layer.cornerRadius = 20
+               img.clipsToBounds = true
         
         userImage.sd_setImage(with: URL(string: imgURL), placeholderImage: UIImage(named: "photo.png"))
+        userImage.layer.cornerRadius = 20
+        userImage.clipsToBounds = true
 
 
     }
