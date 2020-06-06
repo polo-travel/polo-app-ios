@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import FSCalendar
 
-class Step5TravelCreationViewController: UIViewController {
+class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
 
     @IBOutlet weak var nextButton: BasicButton!
     var travelChoices: TravelChoices?
@@ -17,10 +18,11 @@ class Step5TravelCreationViewController: UIViewController {
     var startDate: Date?
     var endDate: Date?
 
+    @IBOutlet weak var calendar: FSCalendar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        calendar.delegate = self
         nextButton.setNextButton()
         startDatePicker.minimumDate = Calendar.current.date(byAdding: .day, value: 2, to: Date())
         endDatePicker.minimumDate = Calendar.current.date(byAdding: .day, value: 3, to: Date())
@@ -36,6 +38,20 @@ class Step5TravelCreationViewController: UIViewController {
                 dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: [startDate, endDate] as? [Date])
             }
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        calendar.frame = CGRect(x:0,y:100,width: 400,height: 400)
+        
+        view.addSubview(calendar)
+    }
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE MM-dd-YYYY"
+        let string = formatter.string(from: date)
+        print("\(string)")
     }
     
     @IBAction func startDateChanged(_ sender: UIDatePicker) {

@@ -14,6 +14,7 @@ target 'PoloTravel' do
   pod 'Mapbox-iOS-SDK', '~> 5.5.1'
   pod 'MapboxNavigation', '~> 0.39.0'
   pod 'AppCenter'
+  pod 'FSCalendar'
 
   target 'PoloTravelTests' do
     inherit! :search_paths
