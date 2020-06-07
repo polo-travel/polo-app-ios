@@ -109,7 +109,9 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
             lastDate = range.last
 
             for d in range {
-                calendar.select(d)
+                if range.count <= 4{
+                    calendar.select(d)
+                }
             }
 
             datesRange = range
