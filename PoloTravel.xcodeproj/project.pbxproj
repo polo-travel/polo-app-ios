@@ -65,6 +65,7 @@
 		7B4F4F3524518A18000CFB75 /* PolowersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */; };
 		7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3724518F42000CFB75 /* Photo.swift */; };
 		7B4F4F3B2451A393000CFB75 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */; };
+		7B901754248A33F000AA32D1 /* Step0TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B901753248A33F000AA32D1 /* Step0TravelCreationViewController.swift */; };
 		7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */; };
 		7BCDA4E2243DF94100E9C4B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */; };
 		7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E3243DF94100E9C4B6 /* ViewController.swift */; };
@@ -160,6 +161,7 @@
 		7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B4F4F3724518F42000CFB75 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		7B901753248A33F000AA32D1 /* Step0TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step0TravelCreationViewController.swift; sourceTree = "<group>"; };
 		7BCDA4DC243DF94100E9C4B6 /* PoloTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoloTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCDA4DF243DF94100E9C4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCDA4E1243DF94100E9C4B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD5390B244B1FC300AD9CB3 /* TravelCreation1ViewController.swift */,
+				7B901753248A33F000AA32D1 /* Step0TravelCreationViewController.swift */,
 				0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */,
 				0F461D37245CE8BF00E69741 /* Step2TravelCreationViewController.swift */,
 				0F0CF5FC245DE04900018191 /* Step3TravelCreationViewController.swift */,
@@ -850,6 +853,7 @@
 				7BD538FE2449F4C900AD9CB3 /* OnBoarding5ViewController..swift in Sources */,
 				7BFECF1F2455A65400F5096C /* BasicButton.swift in Sources */,
 				0FF641FC2486922600CD065F /* PolowersCommentsViewController.swift in Sources */,
+				7B901754248A33F000AA32D1 /* Step0TravelCreationViewController.swift in Sources */,
 				7B1F3D3424682C040026C5B6 /* MediaUploadUtils.swift in Sources */,
 				7BD538F62449F48A00AD9CB3 /* OnBoarding1ViewController.swift in Sources */,
 				7B3B45D8244C5BE700CD00D4 /* ProfileTravelHistoryViewController.swift in Sources */,

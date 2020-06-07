@@ -45,6 +45,12 @@ class BasicButton: UIButton {
         applyGradient(colors: [UIColor.MainTheme.mainDarkBlue.cgColor, UIColor.MainTheme.mainMidBlue.cgColor])
     }
     
+    func setConfirmButton() {
+        setDarkButton()
+        layer.shadowOpacity = 0
+        layer.cornerRadius   = 10
+    }
+    
     func setWhiteButton() {
         backgroundColor = UIColor.white
         layer.borderWidth = 0.0
@@ -59,6 +65,12 @@ class BasicButton: UIButton {
         contentMode = .center
         imageView?.contentMode = .scaleAspectFit
         setDarkButton()
+        layer.shadowOpacity = 0
+    }
+    
+    func setNextLittleButton() {
+        setNextButton()
+        setImage(UIImage(named: "little_right_arrow"), for: .normal)
     }
     
     private func setShadow(shadowColor: CGColor) {

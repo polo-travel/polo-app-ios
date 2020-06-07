@@ -19,6 +19,7 @@ class Step1TravelCreationViewController: UIViewController {
     var index = 0
     let animationDuration: TimeInterval = 0.25
     let switchingInterval: TimeInterval = 3
+    var travelChoices: TravelChoices?
     
     @IBOutlet weak var picker: UIPickerView!
     let data = ["1","2","3","4","5","6"]
@@ -56,7 +57,7 @@ class Step1TravelCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStep2" {
             if let dest = segue.destination as? Step2TravelCreationViewController {
-                dest.travelChoices = TravelChoices(nbPeople: selectedNbPeople)
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: selectedNbPeople)
             }
         }
     }
