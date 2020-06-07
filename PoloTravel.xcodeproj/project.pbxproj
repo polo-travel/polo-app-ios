@@ -26,6 +26,7 @@
 		0FB056662460572E003977CA /* Pods_PoloTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */; };
 		0FE90B1E2456E3BA00E6D51C /* Step1TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */; };
 		0FF641FC2486922600CD065F /* PolowersCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF641FB2486922600CD065F /* PolowersCommentsViewController.swift */; };
+		0FF641FE248BBF8000CD065F /* PolowersAllCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF641FD248BBF8000CD065F /* PolowersAllCommentsViewController.swift */; };
 		7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B167693245309A1008A464B /* PolowersImagesService.swift */; };
 		7B1F3D3424682C040026C5B6 /* MediaUploadUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F3D3324682C040026C5B6 /* MediaUploadUtils.swift */; };
 		7B3793C1246C47C6009F97DA /* ProfileMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3793C0246C47C6009F97DA /* ProfileMenuTableViewCell.swift */; };
@@ -118,6 +119,7 @@
 		0F9DCECF245F2F4200DDB097 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE90B1D2456E3BA00E6D51C /* Step1TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1TravelCreationViewController.swift; sourceTree = "<group>"; };
 		0FF641FB2486922600CD065F /* PolowersCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersCommentsViewController.swift; sourceTree = "<group>"; };
+		0FF641FD248BBF8000CD065F /* PolowersAllCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersAllCommentsViewController.swift; sourceTree = "<group>"; };
 		20B3B4817BFFF1D3E7594A64 /* Pods_PoloTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30138E37B599E0D360ADEA20 /* Pods_PoloTravelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloTravelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580F27B421CCFE465C3FC5B3 /* Pods-PoloTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-PoloTravelTests/Pods-PoloTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			children = (
 				7B3B45C3244BA95800CD00D4 /* PolowersViewController.swift */,
 				0FF641FB2486922600CD065F /* PolowersCommentsViewController.swift */,
+				0FF641FD248BBF8000CD065F /* PolowersAllCommentsViewController.swift */,
 				7B3B45D3244C598800CD00D4 /* PolowersAddPhotoViewController.swift */,
 				7B3B45D5244C59B000CD00D4 /* PolowersAddActivityViewController.swift */,
 				7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */,
@@ -816,6 +819,7 @@
 				7B3B45D4244C598800CD00D4 /* PolowersAddPhotoViewController.swift in Sources */,
 				7B3B45DF244D75E600CD00D4 /* AuthentificationService.swift in Sources */,
 				0F0CF5FF245DEB4800018191 /* Step4TravelCreationViewController.swift in Sources */,
+				0FF641FE248BBF8000CD065F /* PolowersAllCommentsViewController.swift in Sources */,
 				7B3C8F022462F09C00EE3C6F /* DateUtils.swift in Sources */,
 				7B167694245309A1008A464B /* PolowersImagesService.swift in Sources */,
 				0F9DCECA245F2C8800DDB097 /* MapViewController.swift in Sources */,
