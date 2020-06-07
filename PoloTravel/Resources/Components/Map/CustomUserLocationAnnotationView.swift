@@ -57,9 +57,10 @@ class CustomUserLocationAnnotationView: MGLUserLocationAnnotationView {
              
             // Use CALayer’s corner radius to turn this layer into a circle.
             dot.cornerRadius = size / 2
-            dot.backgroundColor = super.tintColor.cgColor
-            dot.borderWidth = 4
-            dot.borderColor = UIColor.white.cgColor
+            dot.backgroundColor = UIColor.MainTheme.mainDarkBlue.cgColor
+            dot.borderWidth = 6
+            dot.borderColor = UIColor.MainTheme.mainRed.cgColor
+
             layer.addSublayer(dot)
         }
          
