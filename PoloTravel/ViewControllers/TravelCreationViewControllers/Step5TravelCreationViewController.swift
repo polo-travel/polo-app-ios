@@ -13,10 +13,6 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
 
     @IBOutlet weak var nextButton: BasicButton!
     var travelChoices: TravelChoices?
-    @IBOutlet weak var startDatePicker: UIDatePicker!
-    @IBOutlet weak var endDatePicker: UIDatePicker!
-    var startDate: Date?
-    var endDate: Date?
 
     // first date in the range
     private var firstDate: Date?
@@ -33,53 +29,28 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
         calendar.today = nil
 
         nextButton.setNextButton()
-        startDatePicker.minimumDate = Calendar.current.date(byAdding: .day, value: 2, to: Date())
-        endDatePicker.minimumDate = Calendar.current.date(byAdding: .day, value: 3, to: Date())
-        endDatePicker.maximumDate = Calendar.current.date(byAdding: .day, value: 7, to: Date())
-        
-        startDate = startDatePicker.date
-        endDate = endDatePicker.date
-        
-        
-        calendar.allowsMultipleSelection = true
 
+        calendar.allowsMultipleSelection = true
 
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStep6" {
+
             if let dest = segue.destination as? Step6TravelCreationViewController {
-                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: [startDate, endDate] as? [Date])
+                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: [firstDate, lastDate] as? [Date])
             }
         }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        calendar.frame = CGRect(x:0,y:100,width: 400,height: 400)
+        //calendar.frame = CGRect(x:0,y:100,width: 400,height: 400)
+        calendar.layer.cornerRadius = 10
         
         view.addSubview(calendar)
     }
     
-//    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-//
-//
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "EEEE MM-dd-YYYY"
-//        let string = formatter.string(from: date)
-//        print("\(string)")
-//
-//        var dateArray = [Date]()
-//        for cell:FSCalendarCell in calendar.visibleCells() {
-//          if cell.isPlaceholder {
-//            dateArray.append(calendar.date(for: cell)!)
-//          }
-//        }
-//
-//        calendar.select(dateArray.min())
-//        calendar.select(dateArray.max())
-//    }
-//
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         // nothing selected:
         if firstDate == nil {
@@ -111,12 +82,16 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
             for d in range {
                 if range.count <= 4{
                     calendar.select(d)
+                    
                 }
             }
 
             datesRange = range
 
             print("datesRange contains: \(datesRange!)")
+            
+            print("first date : ",firstDate)
+            print("last date : ", lastDate)
 
             return
         }
@@ -135,6 +110,7 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
             print("datesRange contains: \(datesRange!)")
         }
     }
+    
 
     func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
         // both are selected:
@@ -169,25 +145,11 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
 
         return array
     }
-
-    
-    @IBAction func startDateChanged(_ sender: UIDatePicker) {
-        startDate = sender.date
-        endDatePicker.minimumDate = Calendar.current.date(byAdding: .day, value: 1, to: startDate!)
-        endDatePicker.maximumDate = Calendar.current.date(byAdding: .day, value: 5, to: startDate!)
-        
-        print(sender.date)
-    }
-    
-    @IBAction func endDateChanged(_ sender: UIDatePicker) {
-        endDate = sender.date
-        print(sender.date)
-    }
     
     
     
     @IBAction func nextButtonClicked(_ sender: Any) {
-        if startDate != nil && endDate != nil {
+        if firstDate != nil && lastDate != nil {
             self.performSegue(withIdentifier: "toStep6", sender: nil)
         } else {
             print("choose two dates")
