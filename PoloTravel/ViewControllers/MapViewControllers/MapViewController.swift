@@ -185,6 +185,14 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         present(navigationVC,animated: true,completion: nil)
         
     }
+    
+    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+    // Substitute our custom view for the user location annotation. This custom view is defined below.
+        if annotation is MGLUserLocation && mapView.userLocation != nil {
+            return CustomUserLocationAnnotationView()
+        }
+        return nil
+    }
 
 }
 
