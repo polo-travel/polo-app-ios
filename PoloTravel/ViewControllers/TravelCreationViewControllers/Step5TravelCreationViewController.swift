@@ -18,11 +18,20 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
     var startDate: Date?
     var endDate: Date?
 
+    // first date in the range
+    private var firstDate: Date?
+    // last date in the range
+    private var lastDate: Date?
+    private var datesRange: [Date]?
+
     @IBOutlet weak var calendar: FSCalendar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         calendar.delegate = self
+        calendar.today = nil
+
         nextButton.setNextButton()
         startDatePicker.minimumDate = Calendar.current.date(byAdding: .day, value: 2, to: Date())
         endDatePicker.minimumDate = Calendar.current.date(byAdding: .day, value: 3, to: Date())
@@ -30,6 +39,11 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
         
         startDate = startDatePicker.date
         endDate = endDatePicker.date
+        
+        
+        calendar.allowsMultipleSelection = true
+
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,12 +61,113 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
         view.addSubview(calendar)
     }
     
+//    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+//
+//
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "EEEE MM-dd-YYYY"
+//        let string = formatter.string(from: date)
+//        print("\(string)")
+//
+//        var dateArray = [Date]()
+//        for cell:FSCalendarCell in calendar.visibleCells() {
+//          if cell.isPlaceholder {
+//            dateArray.append(calendar.date(for: cell)!)
+//          }
+//        }
+//
+//        calendar.select(dateArray.min())
+//        calendar.select(dateArray.max())
+//    }
+//
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE MM-dd-YYYY"
-        let string = formatter.string(from: date)
-        print("\(string)")
+        // nothing selected:
+        if firstDate == nil {
+            firstDate = date
+            datesRange = [firstDate!]
+
+            print("datesRange contains: \(datesRange!)")
+
+            return
+        }
+
+        // only first date is selected:
+        if firstDate != nil && lastDate == nil {
+            // handle the case of if the last date is less than the first date:
+            if date <= firstDate! {
+                calendar.deselect(firstDate!)
+                firstDate = date
+                datesRange = [firstDate!]
+
+                print("datesRange contains: \(datesRange!)")
+
+                return
+            }
+
+            let range = datesRange(from: firstDate!, to: date)
+
+            lastDate = range.last
+
+            for d in range {
+                calendar.select(d)
+            }
+
+            datesRange = range
+
+            print("datesRange contains: \(datesRange!)")
+
+            return
+        }
+
+        // both are selected:
+        if firstDate != nil && lastDate != nil {
+            for d in calendar.selectedDates {
+                calendar.deselect(d)
+            }
+
+            lastDate = nil
+            firstDate = nil
+
+            datesRange = []
+
+            print("datesRange contains: \(datesRange!)")
+        }
     }
+
+    func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        // both are selected:
+
+        // NOTE: the is a REDUANDENT CODE:
+        if firstDate != nil && lastDate != nil {
+            for d in calendar.selectedDates {
+                calendar.deselect(d)
+            }
+
+            lastDate = nil
+            firstDate = nil
+
+            datesRange = []
+            print("datesRange contains: \(datesRange!)")
+        }
+    }
+    
+    
+    func datesRange(from: Date, to: Date) -> [Date] {
+        // in case of the "from" date is more than "to" date,
+        // it should returns an empty array:
+        if from > to { return [Date]() }
+
+        var tempDate = from
+        var array = [tempDate]
+
+        while tempDate < to {
+            tempDate = Calendar.current.date(byAdding: .day, value: 1, to: tempDate)!
+            array.append(tempDate)
+        }
+
+        return array
+    }
+
     
     @IBAction func startDateChanged(_ sender: UIDatePicker) {
         startDate = sender.date
