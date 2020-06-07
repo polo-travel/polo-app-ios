@@ -15,6 +15,16 @@
         </array>
     </customFonts>
     <scenes>
+        <!--TravelCreation1ViewController-->
+        <scene sceneID="Nee-H5-FvB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TravelCreation" referencedIdentifier="TravelCreation1ViewController" id="fLC-ba-KUQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RDS-Sl-6qF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mt-79-uqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="-327"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -93,6 +103,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ava-nD-f1I">
+                                <rect key="frame" x="20" y="759" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="fLC-ba-KUQ" kind="show" id="Btu-Jd-iFF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

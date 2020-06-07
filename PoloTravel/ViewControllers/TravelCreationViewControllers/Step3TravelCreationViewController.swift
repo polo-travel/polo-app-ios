@@ -17,7 +17,7 @@ class Step3TravelCreationViewController: UIViewController {
     var travelChoices: TravelChoices?
     var forestLosted: Int?
     
-    let questions = ["Je me construis un abri \net je mange des sauterelles","Je crie « Au secours! »\n en courant dans tous les sens", "Je sors ma boussole et retrouve\n rapidement mon chemin"]
+    let questions = ["Perdre ses repères","Renouer avec la nature", "Vous écouter davantage"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ class Step3TravelCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStep4" {
             if let dest = segue.destination as? Step4TravelCreationViewController {
-                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: forestLosted)
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: forestLosted)
             }
         }
     }

@@ -38,7 +38,7 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
         if segue.identifier == "toStep6" {
 
             if let dest = segue.destination as? Step6TravelCreationViewController {
-                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: [firstDate, lastDate] as? [Date])
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: [startDate, endDate] as? [Date])
             }
         }
     }

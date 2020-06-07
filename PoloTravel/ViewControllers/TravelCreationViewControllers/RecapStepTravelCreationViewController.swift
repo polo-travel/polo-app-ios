@@ -47,8 +47,7 @@ class RecapStepTravelCreationViewController: UIViewController {
     func getBtn(){
         for view in recapWrapper.subviews as [UIView] {
             if let btn = view as? BasicButton {
-                btn.setDarkButton()
-                
+                btn.setConfirmButton()
                 btn.setTitle(recap?[btn.tag], for: .normal)
                 btn.titleLabel?.textAlignment = .center
                 btn.titleLabel?.font = UIFont(name: "Gilroy-Medium", size: 15)
@@ -59,7 +58,7 @@ class RecapStepTravelCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStepReady" {
             if let dest = segue.destination as? TravelReadyTravelCreationViewController {
-                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: travelChoices?.date, budget: travelChoices?.budget, adventurerLevel: 2)
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: travelChoices?.date, budget: travelChoices?.budget, adventurerLevel: 2)
             }
         }
     }

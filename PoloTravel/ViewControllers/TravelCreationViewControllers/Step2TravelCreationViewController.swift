@@ -53,7 +53,7 @@ class Step2TravelCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStep3" {
             if let dest = segue.destination as? Step3TravelCreationViewController {
-                dest.travelChoices = TravelChoices(nbPeople: travelChoices?.nbPeople, danger: selectedDanger)
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger: selectedDanger)
             }
         }
     }
