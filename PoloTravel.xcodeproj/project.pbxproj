@@ -55,7 +55,6 @@
 		7B45F8392460409B00A758C3 /* RadiusBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45F8382460409B00A758C3 /* RadiusBlock.swift */; };
 		7B49322F245F4673006DB7F2 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49322E245F4673006DB7F2 /* Travel.swift */; };
 		7B493231245F47D2006DB7F2 /* TravelDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493230245F47D2006DB7F2 /* TravelDay.swift */; };
-		7B493233245F4955006DB7F2 /* TravelActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493232245F4955006DB7F2 /* TravelActivity.swift */; };
 		7B493237245F5B75006DB7F2 /* TravelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B493236245F5B75006DB7F2 /* TravelService.swift */; };
 		7B4990EE245C08D80095EA20 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990ED245C08D80095EA20 /* User.swift */; };
 		7B4990F0245C5F860095EA20 /* PolowersFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */; };
@@ -64,6 +63,7 @@
 		7B4990F6245DD2F80095EA20 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990F5245DD2F80095EA20 /* KeyboardExtension.swift */; };
 		7B4990F8245DDC440095EA20 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990F7245DDC440095EA20 /* AddButton.swift */; };
 		7B4990FA245ED0E90095EA20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B4990F9245ED0E90095EA20 /* GoogleService-Info.plist */; };
+		7B4C0180248EE2120087D1B0 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C017F248EE2120087D1B0 /* UserTests.swift */; };
 		7B4F4F3524518A18000CFB75 /* PolowersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */; };
 		7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3724518F42000CFB75 /* Photo.swift */; };
 		7B4F4F3B2451A393000CFB75 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */; };
@@ -152,7 +152,6 @@
 		7B45F8382460409B00A758C3 /* RadiusBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusBlock.swift; sourceTree = "<group>"; };
 		7B49322E245F4673006DB7F2 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		7B493230245F47D2006DB7F2 /* TravelDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDay.swift; sourceTree = "<group>"; };
-		7B493232245F4955006DB7F2 /* TravelActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelActivity.swift; sourceTree = "<group>"; };
 		7B493236245F5B75006DB7F2 /* TravelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelService.swift; sourceTree = "<group>"; };
 		7B4990ED245C08D80095EA20 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B4990EF245C5F860095EA20 /* PolowersFeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersFeedService.swift; sourceTree = "<group>"; };
@@ -161,6 +160,8 @@
 		7B4990F5245DD2F80095EA20 /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		7B4990F7245DDC440095EA20 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		7B4990F9245ED0E90095EA20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "PoloTravel/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7B4C017E248EE2120087D1B0 /* PoloTravelTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PoloTravelTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		7B4C017F248EE2120087D1B0 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B4F4F3724518F42000CFB75 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
@@ -459,10 +460,18 @@
 			children = (
 				7B49322E245F4673006DB7F2 /* Travel.swift */,
 				7B493230245F47D2006DB7F2 /* TravelDay.swift */,
-				7B493232245F4955006DB7F2 /* TravelActivity.swift */,
 				7B3C8EF024615C5700EE3C6F /* TravelChoices.swift */,
 			);
 			path = TravelModels;
+			sourceTree = "<group>";
+		};
+		7B4C017D248EE1A70087D1B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7B4C017F248EE2120087D1B0 /* UserTests.swift */,
+				7B4C017E248EE2120087D1B0 /* PoloTravelTests-Bridging-Header.h */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7BCDA4D3243DF94100E9C4B6 = {
@@ -503,6 +512,7 @@
 		7BCDA4F5243DF94300E9C4B6 /* PoloTravelTests */ = {
 			isa = PBXGroup;
 			children = (
+				7B4C017D248EE1A70087D1B0 /* Models */,
 				7BCDA4F8243DF94300E9C4B6 /* Info.plist */,
 			);
 			path = PoloTravelTests;
@@ -689,6 +699,7 @@
 					};
 					7BCDA4F1243DF94300E9C4B6 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1140;
 						TestTargetID = 7BCDA4DB243DF94100E9C4B6;
 					};
 				};
@@ -833,7 +844,6 @@
 				0F9DCECA245F2C8800DDB097 /* MapViewController.swift in Sources */,
 				0F5C1454246D6E2B00E28D93 /* Alert.swift in Sources */,
 				7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */,
-				7B493233245F4955006DB7F2 /* TravelActivity.swift in Sources */,
 				7BD538FC2449F4BB00AD9CB3 /* OnBoarding4ViewController..swift in Sources */,
 				7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */,
 				0F0CF5FD245DE04900018191 /* Step3TravelCreationViewController.swift in Sources */,
@@ -884,6 +894,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4C0180248EE2120087D1B0 /* UserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1071,6 +1082,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L62MC7T8XG;
 				INFOPLIST_FILE = PoloTravelTests/Info.plist;
@@ -1082,6 +1094,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bddi.PoloTravelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PoloTravelTests/Models/PoloTravelTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoloTravel.app/PoloTravel";
@@ -1094,6 +1108,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L62MC7T8XG;
 				INFOPLIST_FILE = PoloTravelTests/Info.plist;
@@ -1105,6 +1120,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bddi.PoloTravelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PoloTravelTests/Models/PoloTravelTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoloTravel.app/PoloTravel";
