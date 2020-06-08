@@ -118,24 +118,11 @@ class TravelService {
             let dateTS = travelDay["date"] as! Timestamp
             let date = dateTS.dateValue()
             
-            let morningActivity = travelDay["morningActivity"] as! NSDictionary
-            let meal = travelDay["meal"] as! NSDictionary
-            let afternoonActivity = travelDay["afternoonActivity"] as! NSDictionary
 
             daysDatasConverted.append(
                 TravelDay(day: date,
                           price: travelDay["price"] as! Int,
-                          morningActivity: TravelActivity(price: morningActivity["price"] as! Int,
-                                                          localization: morningActivity["localization"] as! [Double],
-                                                          indication: morningActivity["indication"] as! String),
-                          
-                          afternoonActivity: TravelActivity(price: afternoonActivity["price"] as! Int,
-                                                            localization: afternoonActivity["localization"] as! [Double],
-                                                            indication: afternoonActivity["indication"] as! String),
-                          
-                          meal: TravelActivity(price: meal["price"] as! Int,
-                                               localization: meal["localization"] as! [Double],
-                                               indication: meal["indication"] as! String)
+                          items: travelDay["items"]
                 )
             )
         }

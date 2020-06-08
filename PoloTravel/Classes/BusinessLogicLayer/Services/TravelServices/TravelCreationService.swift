@@ -39,17 +39,39 @@ class TravelCreationService {
             }
     }
     
+    func getTravelPack(pack: Int, completionHandler: @escaping (_ travelPack: NSDictionary?) -> Void) {
+        var travelPack: NSDictionary?
+        let docRef = db.collection("pl_resources").document("r_travel_resources")
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let travelPacks = document.get("travel_packs") as! [Any]
+                travelPack = travelPacks[pack] as? NSDictionary
+              
+              completionHandler(travelPack)
+            } else {
+                print("No travel pack")
+                completionHandler(nil)
+            }
+        }
+    }
+    
     func createDaysDatas(date1: Date, date2: Date, completionHandler: @escaping (_ daysDatas: [Any]?) -> Void) {
         var daysDatas: [Any] = []
         
         let numberOfDays = DateUtils.daysBetween(start: date1, end: date2)
-        print("numberOfDays", numberOfDays, "date1", date1, "date2", date2)
         
-        
-        for i in 0...numberOfDays {
-            daysDatas.append(["date": Calendar.current.date(byAdding: .day, value: i, to: date1)!, "price": 200, "morningActivity": ["price": 20, "localization": [45.754049903692284, 4.825830459594727], "indication": "Tourne à droite mon ami"], "meal": ["price": 20, "localization": [45.74695278493895, 4.844927787780762], "indication": "Mangerrrrrrrr !!!"], "afternoonActivity": ["price": 20, "localization": [45.7630023652255, 4.837932586669922], "indication": "Aprèsmidiiiii indication"]])
+        self.getTravelPack(pack: 0) { travelPack in
+            let travelPackDays = travelPack?["days_datas"] as! NSArray
+            for i in 0...numberOfDays {
+                let travelPackDay = travelPackDays[i] as! NSDictionary
+                print(travelPackDay)
+                daysDatas.append(["date": Calendar.current.date(byAdding: .day, value: i, to: date1)!, "price": 200, "items": travelPackDay["items"]])
+            }
+            completionHandler(daysDatas)
         }
+    
         
-        completionHandler(daysDatas)
+        
     }
 }

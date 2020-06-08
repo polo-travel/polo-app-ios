@@ -72,7 +72,6 @@
 		7BCDA4E4243DF94100E9C4B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E3243DF94100E9C4B6 /* ViewController.swift */; };
 		7BCDA4E9243DF94300E9C4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDA4E8243DF94300E9C4B6 /* Assets.xcassets */; };
 		7BCDA4EC243DF94300E9C4B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCDA4EA243DF94300E9C4B6 /* LaunchScreen.storyboard */; };
-		7BCDA4F7243DF94300E9C4B6 /* PoloTravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDA4F6243DF94300E9C4B6 /* PoloTravelTests.swift */; };
 		7BD538DD2449BB0F00AD9CB3 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD538DC2449BB0F00AD9CB3 /* ColorConstants.swift */; };
 		7BD538EE2449E9AA00AD9CB3 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */; };
 		7BD538EF2449E9AA00AD9CB3 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD538ED2449E9AA00AD9CB3 /* Gilroy-Bold.ttf */; };
@@ -172,7 +171,6 @@
 		7BCDA4EB243DF94300E9C4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BCDA4ED243DF94300E9C4B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BCDA4F2243DF94300E9C4B6 /* PoloTravelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoloTravelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BCDA4F6243DF94300E9C4B6 /* PoloTravelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoloTravelTests.swift; sourceTree = "<group>"; };
 		7BCDA4F8243DF94300E9C4B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BD538DC2449BB0F00AD9CB3 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		7BD538EC2449E9AA00AD9CB3 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
@@ -495,7 +493,6 @@
 		7BCDA4F5243DF94300E9C4B6 /* PoloTravelTests */ = {
 			isa = PBXGroup;
 			children = (
-				7BCDA4F6243DF94300E9C4B6 /* PoloTravelTests.swift */,
 				7BCDA4F8243DF94300E9C4B6 /* Info.plist */,
 			);
 			path = PoloTravelTests;
@@ -875,7 +872,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BCDA4F7243DF94300E9C4B6 /* PoloTravelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

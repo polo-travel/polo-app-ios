@@ -186,7 +186,7 @@ connaitre votre profil d’aventurier</string>
                                 <rect key="frame" x="71" y="78" width="284" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Suivez les indications de Polo et découvrez tes activités tout au long de ton voyage">
+                                    <fragment content="Suivez les indications de Polo et découvrez vos activités tout au long de votre voyage">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="18" name="Gilroy-Medium"/>
@@ -228,7 +228,7 @@ connaitre votre profil d’aventurier</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqi-9T-boz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4525" y="-1357"/>
+            <point key="canvasLocation" x="4524.6376811594209" y="-1357.03125"/>
         </scene>
         <!--On Boarding4 View Controller-->
         <scene sceneID="i90-4G-Skw">
