@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Travel: Decodable {
+struct Travel {
   let startDate: Date
   let endDate: Date
   let price: Int

@@ -8,10 +8,8 @@
 
 import Foundation
 
-struct TravelDay: Decodable {
+struct TravelDay {
   let day: Date
   let price: Int
-  let morningActivity: TravelActivity
-  let afternoonActivity: TravelActivity
-  let meal: TravelActivity
+  let items: Any
 }

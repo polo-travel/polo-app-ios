@@ -37,7 +37,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         TravelService().currentTravel(){result  in
             
             if let user = result {
-                print(user.daysDatas[0].morningActivity.localization[0])
+                //print(user.daysDatas[0].morningActivity.localization[0])
             
                 
                 
@@ -46,9 +46,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                     print("start")
                     print(currentTravel)
                     
-                    print(type(of: currentTravel.morningActivity.localization))
+                    //print(type(of: currentTravel.morningActivity.localization))
                     
-                    print(currentTravel.morningActivity.localization)
+                    //print(currentTravel.morningActivity.localization)
                     print("end")
                 }
                 print(numberDays)
@@ -114,7 +114,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                    
            if let user = result {
           
-                let MorningCoord = CLLocationCoordinate2D(latitude: user.daysDatas[0].morningActivity.localization[0], longitude: user.daysDatas[0].morningActivity.localization[1])
+            let MorningCoord = CLLocationCoordinate2D(latitude: 0.5, longitude: 0.5)
                 
                 let annotation = MGLPointAnnotation()
                 annotation.coordinate = MorningCoord
