@@ -24,12 +24,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbE-7p-ljL">
-                                <rect key="frame" x="20" y="221" width="374" height="295"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="295" id="MgZ-i7-NZe"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wbE-7p-ljL">
+                                <rect key="frame" x="26" y="202" width="354" height="354"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="4cv-HJ-Fq1">
+                                <rect key="frame" x="36" y="498" width="43" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkd-82-6L5">
+                                <rect key="frame" x="45" y="516" width="25" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="10"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkx-pw-jXu">
                                 <rect key="frame" x="40" y="88" width="29.5" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,117 +49,108 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVj-kc-dqu">
-                                <rect key="frame" x="27" y="132" width="349" height="81"/>
+                                <rect key="frame" x="27" y="132" width="349" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="mnY-LN-qTU">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="mnY-LN-qTU">
                                         <rect key="frame" x="20" y="20" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="9bj-Uu-k41"/>
-                                            <constraint firstAttribute="width" constant="38" id="zuc-0l-YgP"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-6z-z8g">
-                                        <rect key="frame" x="73" y="20" width="57" height="37.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="default" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7m-Ds-jGr">
-                                                <rect key="frame" x="0.0" y="0.0" width="57" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13 mai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNv-qh-bsn">
-                                                <rect key="frame" x="0.0" y="17.5" width="57" height="20"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="default" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7m-Ds-jGr">
+                                        <rect key="frame" x="79" y="21" width="57" height="17.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13 mai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNv-qh-bsn">
+                                        <rect key="frame" x="79" y="39" width="57" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="hdB-6z-z8g" firstAttribute="leading" secondItem="mnY-LN-qTU" secondAttribute="trailing" constant="15" id="6PF-C0-7Ui"/>
-                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVw-9z-tah">
-                                <rect key="frame" x="20" y="589" width="78" height="69"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="czC-xh-idV">
-                                        <rect key="frame" x="74" y="31" width="272.5" height="17.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYF-ey-TZB">
-                                                <rect key="frame" x="0.0" y="0.0" width="44" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waaouuuuh ça a l’air top !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB3-2v-sA8">
-                                                <rect key="frame" x="67" y="0.0" width="205.5" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="k6S-MT-9eb">
-                                        <rect key="frame" x="20" y="20" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="bJr-19-ubx"/>
-                                            <constraint firstAttribute="width" constant="38" id="kdK-5d-81Q"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="czC-xh-idV" firstAttribute="leading" secondItem="k6S-MT-9eb" secondAttribute="trailing" constant="16" id="Jhs-F8-YAm"/>
-                                    <constraint firstItem="k6S-MT-9eb" firstAttribute="leading" secondItem="hVw-9z-tah" secondAttribute="leading" constant="20" id="LK0-in-BHM"/>
-                                    <constraint firstItem="k6S-MT-9eb" firstAttribute="centerY" secondItem="hVw-9z-tah" secondAttribute="centerY" id="QNl-Re-CL2"/>
-                                    <constraint firstItem="czC-xh-idV" firstAttribute="top" secondItem="k6S-MT-9eb" secondAttribute="bottom" constant="-27" id="nVB-Sj-gfL"/>
-                                    <constraint firstItem="k6S-MT-9eb" firstAttribute="centerX" secondItem="hVw-9z-tah" secondAttribute="centerX" id="rye-Hi-83S"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Super journée qui se finit plutôt bien !! Hâte de voir ce que nous réserve la suite du voyage" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6i-eu-xBX">
-                                <rect key="frame" x="40" y="542" width="336" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="Kcs-5a-twS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6i-eu-xBX">
+                                <rect key="frame" x="54" y="564" width="299" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Super journée qui se finit plutôt bien !! Hâte de voir ce que nous réserve la suite du voyage..">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Gilroy-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vg-jb-oGh">
-                                <rect key="frame" x="40" y="666" width="208" height="29"/>
-                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
-                                <state key="normal" title="Voir tous les commentaires">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVw-9z-tah">
+                                <rect key="frame" x="29" y="624" width="356" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYF-ey-TZB">
+                                        <rect key="frame" x="69" y="21" width="36" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="14"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="k6S-MT-9eb">
+                                        <rect key="frame" x="23" y="13" width="31" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" alpha="0.44999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9Z-90-fIo">
+                                        <rect key="frame" x="23" y="52" width="179" height="13"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                        <state key="normal" title="Voir tous les commentaires">
+                                            <color key="titleColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Zer-xL-ZeM" kind="show" id="dsN-oI-aXJ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Waaouuuuh ça a l’air top !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB3-2v-sA8">
+                                        <rect key="frame" x="125" y="21" width="169.5" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7NG-i8-Fmy">
+                                        <rect key="frame" x="-6" y="0.0" width="354" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="tc0-q0-13d">
+                                <rect key="frame" x="54" y="722" width="31" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OgT-0u-OWl">
+                                <rect key="frame" x="24" y="701" width="354" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcT-dH-gRc">
+                                <rect key="frame" x="93" y="723" width="186" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                <state key="normal" title="Ajouter un commentaire">
+                                    <color key="titleColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Zer-xL-ZeM" kind="show" id="RpA-sA-cpL"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.69679754969999996" green="0.87668329479999996" blue="0.94511049989999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="mnY-LN-qTU" firstAttribute="leading" secondItem="JBc-sJ-ncf" secondAttribute="leading" constant="47" id="1A0-XL-7bH"/>
-                            <constraint firstItem="wbE-7p-ljL" firstAttribute="leading" secondItem="JBc-sJ-ncf" secondAttribute="leading" constant="20" id="692-Ez-Jm1"/>
-                            <constraint firstItem="hVw-9z-tah" firstAttribute="leading" secondItem="JBc-sJ-ncf" secondAttribute="leading" constant="20" id="8WV-Q5-yLc"/>
-                            <constraint firstItem="y6i-eu-xBX" firstAttribute="trailing" secondItem="JBc-sJ-ncf" secondAttribute="trailing" constant="-38" id="A1s-8S-fto"/>
-                            <constraint firstItem="JBc-sJ-ncf" firstAttribute="trailing" secondItem="wbE-7p-ljL" secondAttribute="trailing" constant="20" id="AH2-q4-7Zh"/>
-                            <constraint firstItem="JBc-sJ-ncf" firstAttribute="trailing" secondItem="hVw-9z-tah" secondAttribute="trailing" constant="316" id="H5U-ZT-9MK"/>
-                            <constraint firstItem="y6i-eu-xBX" firstAttribute="top" secondItem="wbE-7p-ljL" secondAttribute="bottom" constant="26" id="KHX-HE-g03"/>
-                            <constraint firstItem="hVw-9z-tah" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y6i-eu-xBX" secondAttribute="bottom" constant="30" id="h2d-WI-zOD"/>
-                            <constraint firstItem="y6i-eu-xBX" firstAttribute="leading" secondItem="JBc-sJ-ncf" secondAttribute="leading" constant="40" id="kPQ-HA-NRZ"/>
-                            <constraint firstItem="hdB-6z-z8g" firstAttribute="leading" secondItem="mnY-LN-qTU" secondAttribute="trailing" constant="15" id="l6D-5Q-BgS"/>
-                            <constraint firstItem="0vg-jb-oGh" firstAttribute="top" secondItem="hVw-9z-tah" secondAttribute="bottom" constant="35" id="lkf-7Z-Z3U"/>
-                            <constraint firstItem="wbE-7p-ljL" firstAttribute="top" secondItem="JBc-sJ-ncf" secondAttribute="top" constant="133" id="pyU-8X-tkF"/>
-                            <constraint firstItem="0vg-jb-oGh" firstAttribute="leading" secondItem="JBc-sJ-ncf" secondAttribute="leading" constant="40" id="v4d-px-piE"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JBc-sJ-ncf"/>
                     </view>
                     <navigationItem key="navigationItem" id="yc9-NI-ra4"/>
                     <connections>
-                        <outlet property="allComments" destination="0vg-jb-oGh" id="sCU-oB-to1"/>
                         <outlet property="commentImage" destination="k6S-MT-9eb" id="VKV-xf-wkP"/>
-                        <outlet property="commentView" destination="hVw-9z-tah" id="jTV-04-QMn"/>
+                        <outlet property="descriptionLabel" destination="y6i-eu-xBX" id="Vkx-6Q-BbV"/>
                         <outlet property="img" destination="wbE-7p-ljL" id="GV3-mP-oH5"/>
                         <outlet property="lbl" destination="S7m-Ds-jGr" id="Kzt-OA-NvC"/>
                         <outlet property="userImage" destination="mnY-LN-qTU" id="RPf-jF-odI"/>
@@ -163,6 +163,7 @@
         <!--Polowers All Comments View Controller-->
         <scene sceneID="ppA-vM-bMO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xHk-4u-9hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Zer-xL-ZeM" customClass="PolowersAllCommentsViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cba-sS-Kso">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -178,121 +179,104 @@
                                     <action selector="goBackButton:" destination="jwB-wb-UpW" eventType="touchUpInside" id="cFB-HU-8QF"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r8x-qI-jtb">
-                                <rect key="frame" x="20" y="128" width="349" height="65"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CaS-Ey-RRa">
+                                <rect key="frame" x="27" y="132" width="349" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="dap-Ae-OOb">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="3Gq-iZ-nVw">
                                         <rect key="frame" x="20" y="20" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="4oF-64-7sj"/>
-                                            <constraint firstAttribute="height" constant="38" id="Y8c-OU-hc6"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aNO-sq-bGC">
-                                        <rect key="frame" x="73" y="20" width="57" height="37.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="default" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylX-2z-n3Y">
-                                                <rect key="frame" x="0.0" y="0.0" width="57" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13 mai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yke-vc-Dlv">
-                                                <rect key="frame" x="0.0" y="17.5" width="57" height="20"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="default" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwx-Ap-C0S">
+                                        <rect key="frame" x="79" y="21" width="57" height="17.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13 mai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugT-pj-BpL">
+                                        <rect key="frame" x="79" y="39" width="57" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="aNO-sq-bGC" firstAttribute="leading" secondItem="dap-Ae-OOb" secondAttribute="trailing" constant="15" id="GVW-Y4-Eed"/>
-                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Super journée qui se finit plutôt bien !! Hâte de voir ce que nous réserve la suite du voyage" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KC8-oc-IWR">
-                                <rect key="frame" x="39" y="206" width="330" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="Vrl-Oa-tt7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmu-Cp-FFN">
+                                <rect key="frame" x="52" y="202" width="299" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Super journée qui se finit plutôt bien !! Hâte de voir ce que nous réserve la suite du voyage..">
+                                        <attributes>
+                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Gilroy-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kr4-FH-oxi">
-                                <rect key="frame" x="20" y="281" width="78" height="69"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msq-Ig-M91">
+                                <rect key="frame" x="26" y="298" width="356" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="pDg-4P-Ktv">
-                                        <rect key="frame" x="74" y="31" width="272.5" height="17.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRC-Cg-T0d">
-                                                <rect key="frame" x="0.0" y="0.0" width="44" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waaouuuuh ça a l’air top !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuG-4O-RTb">
-                                                <rect key="frame" x="67" y="0.0" width="205.5" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="73K-eN-QiR">
-                                        <rect key="frame" x="20" y="20" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="J6e-4q-N6F"/>
-                                            <constraint firstAttribute="height" constant="38" id="NIu-NG-QnK"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU3-aC-3vH">
+                                        <rect key="frame" x="69" y="21" width="36" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="14"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="p1Z-k3-1dy">
+                                        <rect key="frame" x="23" y="13" width="31" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" alpha="0.44999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kx-nY-h8u">
+                                        <rect key="frame" x="23" y="52" width="179" height="13"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                        <state key="normal" title="Voir tous les commentaires">
+                                            <color key="titleColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Waaouuuuh ça a l’air top !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS5-nb-aQi">
+                                        <rect key="frame" x="125" y="21" width="169.5" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Dv-JC-qZM">
+                                        <rect key="frame" x="-6" y="0.0" width="354" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="pDg-4P-Ktv" firstAttribute="leading" secondItem="73K-eN-QiR" secondAttribute="trailing" constant="16" id="Cax-Oc-XMQ"/>
-                                    <constraint firstItem="pDg-4P-Ktv" firstAttribute="top" secondItem="73K-eN-QiR" secondAttribute="bottom" constant="-27" id="InJ-er-O7f"/>
-                                    <constraint firstItem="73K-eN-QiR" firstAttribute="centerY" secondItem="kr4-FH-oxi" secondAttribute="centerY" id="PGn-z9-CkH"/>
-                                    <constraint firstItem="73K-eN-QiR" firstAttribute="centerX" secondItem="kr4-FH-oxi" secondAttribute="centerX" id="YLn-qJ-oZh"/>
-                                    <constraint firstItem="73K-eN-QiR" firstAttribute="leading" secondItem="kr4-FH-oxi" secondAttribute="leading" constant="20" id="e1O-1M-h0D"/>
-                                </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="JUC-MV-Uhv">
-                                <rect key="frame" x="40" y="388" width="246" height="38"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-PL-Kn0">
-                                        <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="Gpj-Ln-ktg"/>
-                                            <constraint firstAttribute="height" constant="38" id="aXV-aO-nZA"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ajouter un commentaire" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gai-9C-0Xq">
-                                        <rect key="frame" x="63" y="0.0" width="183" height="38"/>
-                                        <color key="backgroundColor" red="0.65052300689999998" green="0.88048392529999997" blue="0.95295494790000002" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_border" translatesAutoresizingMaskIntoConstraints="NO" id="CyG-Q4-sPi">
+                                <rect key="frame" x="51" y="396" width="31" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view alpha="0.30000001192092896" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-hN-AHV">
+                                <rect key="frame" x="21" y="375" width="354" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" alpha="0.44999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vl-cW-Mk5">
+                                <rect key="frame" x="90" y="397" width="186" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                <state key="normal" title="Ajouter un commentaire">
+                                    <color key="titleColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.65052300689999998" green="0.88048392529999997" blue="0.95295494790000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="kr4-FH-oxi" firstAttribute="leading" secondItem="nqt-ln-0rB" secondAttribute="leading" constant="20" id="0IN-Gw-7zs"/>
-                            <constraint firstItem="KC8-oc-IWR" firstAttribute="top" secondItem="Yke-vc-Dlv" secondAttribute="bottom" constant="20.5" id="4su-H7-cdj"/>
-                            <constraint firstItem="kr4-FH-oxi" firstAttribute="top" secondItem="KC8-oc-IWR" secondAttribute="bottom" constant="44" id="O7F-eh-cMT"/>
-                            <constraint firstItem="dap-Ae-OOb" firstAttribute="leading" secondItem="nqt-ln-0rB" secondAttribute="leading" constant="40" id="OUi-B9-TA6"/>
-                            <constraint firstItem="nqt-ln-0rB" firstAttribute="trailing" secondItem="KC8-oc-IWR" secondAttribute="trailing" constant="45" id="Q9z-XZ-5BZ"/>
-                            <constraint firstItem="KC8-oc-IWR" firstAttribute="leading" secondItem="nqt-ln-0rB" secondAttribute="leading" constant="39" id="Vao-ka-qST"/>
-                            <constraint firstItem="JUC-MV-Uhv" firstAttribute="leading" secondItem="nqt-ln-0rB" secondAttribute="leading" constant="40" id="ZWU-5T-57v"/>
-                            <constraint firstItem="nqt-ln-0rB" firstAttribute="trailing" secondItem="kr4-FH-oxi" secondAttribute="trailing" constant="316" id="e02-QU-VGg"/>
-                            <constraint firstItem="JUC-MV-Uhv" firstAttribute="top" secondItem="73K-eN-QiR" secondAttribute="bottom" constant="49" id="hdJ-Jl-baa"/>
-                            <constraint firstItem="nqt-ln-0rB" firstAttribute="trailing" secondItem="JUC-MV-Uhv" secondAttribute="trailing" constant="128" id="utp-r6-Z7Q"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nqt-ln-0rB"/>
                     </view>
                     <navigationItem key="navigationItem" id="mpA-gF-DPs"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xHk-4u-9hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1985.5072463768117" y="-421.20535714285711"/>
         </scene>

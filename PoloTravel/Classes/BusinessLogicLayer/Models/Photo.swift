@@ -9,12 +9,14 @@
 import Foundation
 
 struct PhotoElement: Codable, Equatable {
-    let imageURL, userId, userName: String
+    let imageURL, userId, userName, description: String
     let likes: Int
+    let publicationDate: Date
 
     enum CodingKeys: String, CodingKey {
         case imageURL = "imageUrl"
-        case userId, likes, userName
+        case userId, likes, userName, description
+        case publicationDate
     }
 }
 

@@ -50,7 +50,7 @@ class PolowersViewController: UIViewController {
             if (success) {
                 self.collectionView.reloadData()
             } else {
-                print("notgood")
+                print("collection view reload failed")
             }
         }
     }
@@ -129,7 +129,7 @@ extension PolowersViewController:UICollectionViewDelegateFlowLayout {
 
 extension PolowersViewController:UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return feedManager.photoList.count
+        return feedManager.photoListSorted.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -141,11 +141,11 @@ extension PolowersViewController:UICollectionViewDataSource, UICollectionViewDel
         cell.polowerNameBkg.layer.cornerRadius = 9.0
         cell.polowerNameBkg.backgroundColor = UIColor(red: 25/255, green: 56/255, blue: 79/255, alpha: 0.8)
         
-        cell.imageLikes.text = "\(feedManager.photoList[indexPath.row].likes)"
-        cell.polowerName.text = "\(feedManager.photoList[indexPath.row].userName)"
+        cell.imageLikes.text = "\(feedManager.photoListSorted[indexPath.row].likes)"
+        cell.polowerName.text = "\(feedManager.photoListSorted[indexPath.row].userName)"
         
         cell.imagePosted?.image = imagePlaceholder
-        if let url = URL(string: "\(feedManager.photoList[indexPath.row].imageURL)") {
+        if let url = URL(string: "\(feedManager.photoListSorted[indexPath.row].imageURL)") {
             cell.imagePosted?.sd_setImage(with: URL(string: url.absoluteString), placeholderImage: UIImage(named: "photo.png"))
         }
         
@@ -154,9 +154,10 @@ extension PolowersViewController:UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "PolowersCommentsViewController") as? PolowersCommentsViewController
-        print(feedManager.photoList[indexPath.row])
-        vc?.name = feedManager.photoList[indexPath.row].userName
-        vc?.imgURL = feedManager.photoList[indexPath.row].imageURL
+        print(feedManager.photoListSorted[indexPath.row])
+        vc?.name = feedManager.photoListSorted[indexPath.row].userName
+        vc?.imgURL = feedManager.photoListSorted[indexPath.row].imageURL
+        vc?.desc = feedManager.photoListSorted[indexPath.row].description
         
         print("okok",indexPath)
 

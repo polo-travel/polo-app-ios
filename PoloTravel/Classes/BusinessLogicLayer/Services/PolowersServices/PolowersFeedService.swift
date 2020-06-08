@@ -13,8 +13,11 @@ class PolowersFeedService {
     let db = Firestore.firestore()
     
     var photoList:Photo = []
+    var photoListSorted:Photo = []
     
     func updateFeed(completionBlock: @escaping (_ success: Bool) -> Void) {
+        self.photoList = []
+        self.photoListSorted = []
         let docRef = db.collection("pl_resources").document("r_polowers_photos")
 
         docRef.getDocument { (document, error) in
@@ -25,11 +28,14 @@ class PolowersFeedService {
                     let userId = photoProps?["userId"] as? String
                     let userName = photoProps?["userName"] as? String
                     let nbLikes = photoProps?["nbLikes"] as? Int
+                    let description = photoProps?["description"] as? String
+                    let publicationDate = photoProps?["publicationDate"] as! Timestamp
                     
-                    if (self.photoList.contains(PhotoElement(imageURL: imageUrl!, userId: userId!, userName: userName!, likes: nbLikes!))) == false {
-                        self.photoList.append(PhotoElement(imageURL: imageUrl ?? "", userId: userId ?? "", userName: userName ?? "", likes: nbLikes ?? 0))
+                    if (self.photoList.contains(PhotoElement(imageURL: imageUrl!, userId: userId!, userName: userName!, description: description!, likes: nbLikes!, publicationDate: publicationDate.dateValue()))) == false {
+                        self.photoList.append(PhotoElement(imageURL: imageUrl ?? "", userId: userId ?? "", userName: userName ?? "", description: description ?? "", likes: nbLikes ?? 0, publicationDate: publicationDate.dateValue()))
                     }
                 }
+                self.photoListSorted = self.photoList.sorted{ $0.publicationDate > $1.publicationDate  }
                 
                 completionBlock(true)
             } else {
