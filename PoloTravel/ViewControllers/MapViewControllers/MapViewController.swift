@@ -19,6 +19,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var navigateButton: BasicButton!
     var directionsRoute: Route?
     let apparitionDelay = 2.5
+    var polobtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         customNavigateButton()
+        poloButton()
         
         TravelService().currentTravel(){result  in
             
@@ -96,9 +98,18 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         }
     
+    func poloButton(){
+        polobtn = UIButton(type: .custom)
+        polobtn.frame = CGRect(x:(view.frame.width / 8) , y: view.frame.height - 180, width: 60, height:60 )
+        
+        if let image = UIImage(named: "polo-tete"){
+            polobtn.setImage(image, for: .normal)
+        }
+        view.addSubview(polobtn)
+    }
     
     func customNavigateButton(){
-        navigateButton = BasicButton(frame: CGRect(x:(view.frame.width/2 ) - 100, y: view.frame.height - 150, width: 200, height:50 ))
+        navigateButton = BasicButton(frame: CGRect(x:(view.frame.width/2 ) - 100, y: view.frame.height - 350, width: 200, height:50 ))
         navigateButton.setDarkButton()
         navigateButton.setTitle("NAVIGATE", for: .normal)
         navigateButton.layer.zPosition  = 9
@@ -184,6 +195,14 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
         present(navigationVC,animated: true,completion: nil)
         
+    }
+    
+    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+    // Substitute our custom view for the user location annotation. This custom view is defined below.
+        if annotation is MGLUserLocation && mapView.userLocation != nil {
+            return CustomUserLocationAnnotationView()
+        }
+        return nil
     }
 
 }

@@ -19,6 +19,7 @@
 		0F4710FE246B129700436F2A /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4710FD246B129700436F2A /* AlertViewController.swift */; };
 		0F471104246C017600436F2A /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F471103246C017600436F2A /* Alert.storyboard */; };
 		0F5C1454246D6E2B00E28D93 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5C1453246D6E2A00E28D93 /* Alert.swift */; };
+		0F81D06C248D74C60014D7C4 /* CustomUserLocationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F81D06B248D74C60014D7C4 /* CustomUserLocationAnnotationView.swift */; };
 		0F8CD562245387D200DB2DAC /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CD561245387D200DB2DAC /* TextBlock.swift */; };
 		0F9DCECA245F2C8800DDB097 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */; };
 		0F9DCECE245F2D1000DDB097 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9DCECD245F2D1000DDB097 /* Map.storyboard */; };
@@ -112,6 +113,7 @@
 		0F4710FD246B129700436F2A /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		0F471103246C017600436F2A /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		0F5C1453246D6E2A00E28D93 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		0F81D06B248D74C60014D7C4 /* CustomUserLocationAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUserLocationAnnotationView.swift; sourceTree = "<group>"; };
 		0F8CD561245387D200DB2DAC /* TextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlock.swift; sourceTree = "<group>"; };
 		0F9DCEC9245F2C8800DDB097 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0F9DCECD245F2D1000DDB097 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
@@ -239,6 +241,14 @@
 				0F4710FD246B129700436F2A /* AlertViewController.swift */,
 			);
 			path = AlertViewControllers;
+			sourceTree = "<group>";
+		};
+		0F81D06A248D74B00014D7C4 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				0F81D06B248D74C60014D7C4 /* CustomUserLocationAnnotationView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		0F8CD5602453879E00DB2DAC /* Blocks */ = {
@@ -536,6 +546,7 @@
 		7BD538E02449C19E00AD9CB3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0F81D06A248D74B00014D7C4 /* Map */,
 				7B45D8DC246891E9008DC32B /* Images */,
 				0F8CD5602453879E00DB2DAC /* Blocks */,
 				7BD538E12449C1A400AD9CB3 /* Buttons */,
@@ -835,6 +846,7 @@
 				7B49322F245F4673006DB7F2 /* Travel.swift in Sources */,
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
 				0F0CF601245DF15200018191 /* Step5TravelCreationViewController.swift in Sources */,
+				0F81D06C248D74C60014D7C4 /* CustomUserLocationAnnotationView.swift in Sources */,
 				0F4710FB246B119100436F2A /* AlertService.swift in Sources */,
 				7BD538F82449F4A600AD9CB3 /* OnBoarding2ViewController.swift in Sources */,
 				7B3C8EF32461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift in Sources */,
