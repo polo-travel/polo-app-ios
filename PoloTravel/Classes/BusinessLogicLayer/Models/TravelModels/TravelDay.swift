@@ -11,5 +11,5 @@ import Foundation
 struct TravelDay {
   let day: Date
   let price: Int
-  let items: Any
+  let items: [NSDictionary]
 }

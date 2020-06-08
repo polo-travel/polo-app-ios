@@ -122,7 +122,7 @@ class TravelService {
             daysDatasConverted.append(
                 TravelDay(day: date,
                           price: travelDay["price"] as! Int,
-                          items: travelDay["items"]
+                          items: travelDay["items"] as! [NSDictionary]
                 )
             )
         }
