@@ -19,10 +19,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var navigateButton: BasicButton!
     var directionsRoute: Route?
     let apparitionDelay = 2.5
-<<<<<<< HEAD
     var polobtn: UIButton!
-=======
->>>>>>> Develop (#39)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +98,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         }
     
-<<<<<<< HEAD
     func poloButton(){
         polobtn = UIButton(type: .custom)
         polobtn.frame = CGRect(x:(view.frame.width / 8) , y: view.frame.height - 180, width: 60, height:60 )
@@ -111,8 +107,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         }
         view.addSubview(polobtn)
     }
-=======
->>>>>>> Develop (#39)
     
     func customNavigateButton(){
         navigateButton = BasicButton(frame: CGRect(x:(view.frame.width/2 ) - 100, y: view.frame.height - 350, width: 200, height:50 ))
@@ -131,11 +125,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                    
            if let user = result {
           
-<<<<<<< HEAD
             let MorningCoord = CLLocationCoordinate2D(latitude: 0.5, longitude: 0.5)
-=======
-                let MorningCoord = CLLocationCoordinate2D(latitude: user.daysDatas[0].morningActivity.localization[0], longitude: user.daysDatas[0].morningActivity.localization[1])
->>>>>>> Develop (#39)
                 
                 let annotation = MGLPointAnnotation()
                 annotation.coordinate = MorningCoord
@@ -206,7 +196,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         present(navigationVC,animated: true,completion: nil)
         
     }
-<<<<<<< HEAD
     
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
     // Substitute our custom view for the user location annotation. This custom view is defined below.
@@ -215,8 +204,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         }
         return nil
     }
-=======
->>>>>>> Develop (#39)
 
 }
 
