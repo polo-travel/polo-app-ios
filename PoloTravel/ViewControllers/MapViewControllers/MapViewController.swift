@@ -46,7 +46,16 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 let numberDays = user.daysDatas.count
                 for currentTravel in user.daysDatas{
                     print("start")
-                    print(currentTravel)
+                   // print(currentTravel)
+                    
+            
+                    for item in currentTravel.items{
+                        let header:String? = item.value(forKey: "header") as? String
+                        
+                        if let head = header{
+                            print(head)
+                        }
+                    }
                     
                     //print(type(of: currentTravel.morningActivity.localization))
                     
@@ -105,9 +114,24 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         if let image = UIImage(named: "polo-tete"){
             polobtn.setImage(image, for: .normal)
         }
+
+        polobtn.addTarget(self, action: #selector(launchPoloTravel(_:)), for: .touchUpInside)
         view.addSubview(polobtn)
     }
     
+    @objc func launchPoloTravel(_ sender: UIButton){
+        
+        TravelService().currentTravel(){result  in
+                   
+            if let user = result {
+                
+                print(user.daysDatas[2].items)
+   
+            }
+        }
+        
+          print("kkkkkkk")
+      }
     func customNavigateButton(){
         navigateButton = BasicButton(frame: CGRect(x:(view.frame.width/2 ) - 100, y: view.frame.height - 350, width: 200, height:50 ))
         navigateButton.setDarkButton()
@@ -116,6 +140,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         navigateButton.addTarget(self, action: #selector(navigateButtonPressed(_:)), for: .touchUpInside)
         view.addSubview(navigateButton)
     }
+    
+  
     
     @objc func navigateButtonPressed(_ sender: BasicButton){
         mapView.setUserTrackingMode(.none, animated: true)
