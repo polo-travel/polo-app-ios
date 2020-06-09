@@ -158,8 +158,9 @@ extension PolowersViewController:UICollectionViewDataSource, UICollectionViewDel
         vc?.name = feedManager.photoListSorted[indexPath.row].userName
         vc?.imgURL = feedManager.photoListSorted[indexPath.row].imageURL
         vc?.desc = feedManager.photoListSorted[indexPath.row].description
+        vc?.imageId = feedManager.photoListSorted[indexPath.row].imageId
+        vc?.publicationDate = feedManager.photoListSorted[indexPath.row].publicationDate
         
-        print("okok",indexPath)
 
         self.navigationController?.pushViewController(vc!, animated: true)
      }

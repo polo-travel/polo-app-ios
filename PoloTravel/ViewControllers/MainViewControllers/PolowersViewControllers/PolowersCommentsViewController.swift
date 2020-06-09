@@ -13,6 +13,7 @@ class PolowersCommentsViewController: UIViewController,UINavigationControllerDel
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lbl: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
 
     @IBOutlet weak var commentImage: UIImageView!
@@ -20,6 +21,8 @@ class PolowersCommentsViewController: UIViewController,UINavigationControllerDel
     var name = ""
     var imgURL = ""
     var desc = ""
+    var imageId = ""
+    var publicationDate:Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,7 @@ class PolowersCommentsViewController: UIViewController,UINavigationControllerDel
         
         lbl.text = name
         descriptionLabel.text = desc
+        dateLabel.text = publicationDate?.getFormattedDate(format: "d MMMM")
         
         img.sd_setImage(with: URL(string: imgURL), placeholderImage: UIImage(named: "photo.png"))
         img.layer.cornerRadius = 20
@@ -42,6 +46,11 @@ class PolowersCommentsViewController: UIViewController,UINavigationControllerDel
               commentImage.layer.cornerRadius = 20
               commentImage.clipsToBounds = true
 
+    }
+    
+    
+    @IBAction func addCommentClicked(_ sender: Any) {
+      PolowersCommentService().addComment(imageId: imageId, text: "testcommentaire")
     }
     
 

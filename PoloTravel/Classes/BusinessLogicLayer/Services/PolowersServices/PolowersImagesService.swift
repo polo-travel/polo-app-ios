@@ -33,8 +33,10 @@ class PolowersImagesService {
                         return
                     }
 
+                    let imageId = UUID().uuidString
                     self.db.collection("pl_resources").document("r_polowers_photos").setData([
-                        UUID().uuidString: [
+                        imageId: [
+                            "imageId": imageId,
                             "description": inputDescription.text ?? "",
                             "imageUrl": url,
                             "nbLikes": 0,
