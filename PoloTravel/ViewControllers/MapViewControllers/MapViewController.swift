@@ -71,6 +71,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         // Do any additional setup after loading the view.
     }
     
+    public typealias GeoPoint = CLLocationCoordinate2D
+
+    
     func displayAsyncPopUp(){
 
         DispatchQueue.main.asyncAfter(deadline: .now() + apparitionDelay ){
@@ -83,6 +86,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     }
     
     var counter = 0
+    var countItems = 0
     
     @objc func switchText(sender: BasicButton!){
 
@@ -121,11 +125,100 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
     @objc func launchPoloTravel(_ sender: UIButton){
         
+        
+        self.counter += 1
+        self.countItems += 1
+
+        
+        print(counter)
+        
         TravelService().currentTravel(){result  in
                    
             if let user = result {
                 
-                print(user.daysDatas[2].items)
+               // let totalDay = user.daysDatas.count
+                //let toalItems = user.daysDatas[self.counter].items.count
+                
+//                if self.counter < totalDay {
+//                    print(user.daysDatas[self.counter])
+//                }
+//                else{
+//                    return
+//                }
+              
+                switch self.counter {
+                case 1..<5:
+                    print(user.daysDatas[0])
+                    print(user.daysDatas[0].items.count)
+                    
+                    print(user.daysDatas[0].items[self.countItems-1])
+                    
+                    
+                    let header:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "header") as? String
+                    let localizations = user.daysDatas[0].items[self.countItems-1].value(forKey: "localization")
+
+                    if let localization = localizations{
+                         print(localization)
+                        
+                        localization
+                        
+                     }
+                    if let head = header{
+                         print(head)
+                        //Alert.body?.text = "Laisse ton téléphone de côté et on se retrouve après."
+                                   Alert.title?.text = head
+                     }
+                
+                    if self.countItems == user.daysDatas[0].items.count{
+                        print(" COUNTER EST EGALE A 0 MAINTENANT --------")
+                        self.countItems = 0
+                    }
+                case 5..<9:
+                    print(user.daysDatas[1])
+                    print(user.daysDatas[1].items.count)
+                    
+                    print(user.daysDatas[1].items[self.countItems-1])
+                    
+                    
+                    
+                    let header:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "header") as? String
+                    let localizations:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "localization") as? String
+
+                    if let localization = localizations{
+                         print(localization)
+                        
+                        
+                     }
+                    if let head = header{
+                         print(head)
+                     }
+                    
+                      if self.countItems == user.daysDatas[1].items.count{
+                          print(" COUNTER EST EGALE A 0 MAINTENANT ////  --------")
+                          self.countItems = 0
+                      }
+
+                case 9..<14:
+                    print(user.daysDatas[2])
+                    print(user.daysDatas[2].items.count)
+
+                    print(user.daysDatas[2].items[self.countItems-1])
+                         if self.countItems == user.daysDatas[2].items.count{
+                             print(" COUNTER EST EGALE A 0 MAINTENANT :: --------")
+                             self.countItems = 0
+                         }
+                case 14..<18:
+                    print(user.daysDatas[3])
+                    print(user.daysDatas[3].items.count)
+
+                    print(user.daysDatas[3].items[self.countItems-1])
+                         if self.countItems == user.daysDatas[3].items.count{
+                             print("COUNTER EST EGALE A 0 MAINTENANT ! --------")
+                             self.countItems = 0
+                         }
+                default:
+                   break
+                }
    
             }
         }
