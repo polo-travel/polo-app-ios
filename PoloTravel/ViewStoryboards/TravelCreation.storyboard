@@ -164,7 +164,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAW-Ff-voF">
-                                        <rect key="frame" x="30" y="75" width="277.5" height="58"/>
+                                        <rect key="frame" x="30" y="75" width="285.5" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="QyN-bs-WdJ"/>
                                         </constraints>
@@ -818,27 +818,29 @@ vous n’auriez jamais imaginé faire</string>
                                     <action selector="priceSlider:" destination="Bzb-S2-8cE" eventType="valueChanged" id="P49-5m-hE9"/>
                                 </connections>
                             </slider>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="budget_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Gg7-bL-NQk">
-                                <rect key="frame" x="30" y="477" width="60" height="42"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7SU-9g-3sC">
+                                <rect key="frame" x="30" y="471" width="60" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJI-qW-NRr">
-                                <rect key="frame" x="30" y="477" width="60" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="12"/>
-                                <color key="textColor" red="0.89019607840000003" green="0.90588235289999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJI-qW-NRr">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="12"/>
+                                        <color key="textColor" red="0.89019607840000003" green="0.90588235289999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="rBs-Pw-bac"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wfn-vn-OUe"/>
                     <connections>
-                        <outlet property="budgetView" destination="Gg7-bL-NQk" id="6CS-kG-hwK"/>
                         <outlet property="labelBudget" destination="xJI-qW-NRr" id="DKv-v2-fZo"/>
                         <outlet property="nextButton" destination="a8b-PG-wvg" id="qBF-wP-lxJ"/>
                         <outlet property="slider" destination="4I8-eM-DCd" id="jBL-vu-rKX"/>
+                        <outlet property="viewBudget" destination="7SU-9g-3sC" id="JBT-aZ-NfY"/>
                         <segue destination="H9B-HB-Wz2" kind="show" identifier="toStepRecap" id="n5Y-TA-ZTU"/>
                     </connections>
                 </viewController>
@@ -1050,7 +1052,6 @@ vous n’auriez jamais imaginé faire</string>
         <image name="arrow_back" width="35" height="30"/>
         <image name="bg_bluebig_shape" width="280.5" height="333"/>
         <image name="bg_redbig_shape" width="377" height="295"/>
-        <image name="budget_bg" width="87" height="61"/>
         <image name="polo_character" width="411" height="374"/>
         <image name="polo_step_3" width="463" height="299"/>
         <image name="polo_step_4" width="328" height="285"/>
