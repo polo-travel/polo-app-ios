@@ -163,7 +163,6 @@
         <!--Polowers All Comments View Controller-->
         <scene sceneID="ppA-vM-bMO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xHk-4u-9hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Zer-xL-ZeM" customClass="PolowersAllCommentsViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cba-sS-Kso">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -277,6 +276,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mpA-gF-DPs"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xHk-4u-9hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1985.5072463768117" y="-421.20535714285711"/>
         </scene>

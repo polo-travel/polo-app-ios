@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
+import AppCenterAnalytics
 
 class SignUpViewController: UIViewController {
     
@@ -43,7 +44,7 @@ class SignUpViewController: UIViewController {
                     self.activityIndicator.stopAnimating()
                 } else {
                     self.activityIndicator.stopAnimating()
-                    
+                    MSAnalytics.trackEvent("Account created")
                     self.switchStoryboard()
                 }
             }
