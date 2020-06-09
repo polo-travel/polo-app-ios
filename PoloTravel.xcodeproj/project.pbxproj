@@ -64,6 +64,8 @@
 		7B4990F8245DDC440095EA20 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4990F7245DDC440095EA20 /* AddButton.swift */; };
 		7B4990FA245ED0E90095EA20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B4990F9245ED0E90095EA20 /* GoogleService-Info.plist */; };
 		7B4C0180248EE2120087D1B0 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C017F248EE2120087D1B0 /* UserTests.swift */; };
+		7B4C0184248F70F60087D1B0 /* TravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C0183248F70F60087D1B0 /* TravelTests.swift */; };
+		7B4C0186248F760B0087D1B0 /* TravelDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C0185248F760B0087D1B0 /* TravelDayTests.swift */; };
 		7B4F4F3524518A18000CFB75 /* PolowersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */; };
 		7B4F4F3824518F42000CFB75 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3724518F42000CFB75 /* Photo.swift */; };
 		7B4F4F3B2451A393000CFB75 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */; };
@@ -162,6 +164,8 @@
 		7B4990F9245ED0E90095EA20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "PoloTravel/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7B4C017E248EE2120087D1B0 /* PoloTravelTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PoloTravelTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		7B4C017F248EE2120087D1B0 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		7B4C0183248F70F60087D1B0 /* TravelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTests.swift; sourceTree = "<group>"; };
+		7B4C0185248F760B0087D1B0 /* TravelDayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDayTests.swift; sourceTree = "<group>"; };
 		7B4F4F3424518A18000CFB75 /* PolowersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B4F4F3724518F42000CFB75 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		7B4F4F3A2451A393000CFB75 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
@@ -470,6 +474,8 @@
 			children = (
 				7B4C017F248EE2120087D1B0 /* UserTests.swift */,
 				7B4C017E248EE2120087D1B0 /* PoloTravelTests-Bridging-Header.h */,
+				7B4C0183248F70F60087D1B0 /* TravelTests.swift */,
+				7B4C0185248F760B0087D1B0 /* TravelDayTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -895,6 +901,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B4C0180248EE2120087D1B0 /* UserTests.swift in Sources */,
+				7B4C0184248F70F60087D1B0 /* TravelTests.swift in Sources */,
+				7B4C0186248F760B0087D1B0 /* TravelDayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

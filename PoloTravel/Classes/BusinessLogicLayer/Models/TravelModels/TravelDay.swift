@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TravelDay {
+struct TravelDay: Equatable {
   let day: Date
   let price: Int
   let items: [NSDictionary]
