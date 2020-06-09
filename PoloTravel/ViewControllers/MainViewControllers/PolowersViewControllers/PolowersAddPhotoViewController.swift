@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import AppCenterAnalytics
 
 class PolowersAddPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -69,7 +70,7 @@ class PolowersAddPhotoViewController: UIViewController, UIImagePickerControllerD
                     guard let `self` = self else { return }
                     if (success) {
                         self.activityIndicator.stopAnimating()
-            
+                        MSAnalytics.trackEvent("Polowers photo published")
                         self.navigationController?.popViewController(animated: true)
                     } else {
                         self.activityIndicator.stopAnimating()

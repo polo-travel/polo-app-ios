@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppCenterAnalytics
 
 class ProfileEditionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -83,6 +84,7 @@ class ProfileEditionViewController: UIViewController, UIImagePickerControllerDel
                 if (success) {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         self.activityIndicator.stopAnimating()
+                        MSAnalytics.trackEvent("Profile edited")
                         self.infoLabel.text = "C'est tout bon !"
                     }
                     

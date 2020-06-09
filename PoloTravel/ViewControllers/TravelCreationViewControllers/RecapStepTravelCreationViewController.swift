@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppCenterAnalytics
 
 class RecapStepTravelCreationViewController: UIViewController {
 
@@ -64,6 +65,7 @@ class RecapStepTravelCreationViewController: UIViewController {
     }
 
     @IBAction func confirmButtonClicked(_ sender: Any) {
+        MSAnalytics.trackEvent("Travel created")
         self.performSegue(withIdentifier: "toStepReady", sender: nil)
     }
     
