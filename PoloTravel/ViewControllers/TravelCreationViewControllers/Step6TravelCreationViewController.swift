@@ -15,12 +15,28 @@ class Step6TravelCreationViewController: UIViewController {
     var travelChoices: TravelChoices?
     var budget: Int?
     @IBOutlet weak var labelBudget: UILabel!
-    @IBOutlet weak var budgetView: UIImageView!
+    @IBOutlet weak var viewBudget: UIView!
+    
+    var imageView: UIImageView = {
+        let imageView = UIImageView(frame: .zero)
+        imageView.image = UIImage(named: "budget_bg")
+        imageView.contentMode = .scaleToFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewBudget.insertSubview(imageView, at: 0)
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: viewBudget.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: viewBudget.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: viewBudget.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: viewBudget.bottomAnchor)
+        ])
+        
         nextButton.setNextButton()
         nextButton.isEnabled = false
     }
@@ -30,8 +46,13 @@ class Step6TravelCreationViewController: UIViewController {
         let fixed = roundf(sender.value / 10.0) * 10.0;
         sender.setValue(fixed, animated: true)
         budget = Int(sender.value)
-        print(budget)
         
+        let trackRect: CGRect  = slider.trackRect(forBounds: slider.bounds)
+        let thumbRect: CGRect  = slider.thumbRect(forBounds: slider.bounds , trackRect: trackRect, value: slider.value)
+        let x = thumbRect.origin.x + slider.frame.origin.x + 15
+        let y = slider.frame.origin.y - 39
+        viewBudget.center = CGPoint(x: x, y: y)
+
         if let budgetChoice = budget {
             labelBudget.text = "\(budgetChoice)€"
         }
