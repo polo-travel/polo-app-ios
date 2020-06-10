@@ -43,6 +43,14 @@ class TravelReadyTravelCreationViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPayment" {
+            if let dest = segue.destination as? TravelReadyStep2TravelCreationViewController {
+                dest.budget = travelChoices?.budget
+                dest.gift = travelChoices?.gift
+            }
+        }
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

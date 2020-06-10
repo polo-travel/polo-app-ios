@@ -33,6 +33,8 @@
 		7B2AD449248FB00A00F1D963 /* PolowersCommentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2AD448248FB00A00F1D963 /* PolowersCommentsService.swift */; };
 		7B2AD44B248FB53B00F1D963 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2AD44A248FB53B00F1D963 /* Comment.swift */; };
 		7B2AD44D2490C86300F1D963 /* PolowersCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2AD44C2490C86300F1D963 /* PolowersCommentTableViewCell.swift */; };
+		7B2AD44F24911A2A00F1D963 /* TravelReadyStep2TravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2AD44E24911A2A00F1D963 /* TravelReadyStep2TravelCreationViewController.swift */; };
+		7B2AD4512491207A00F1D963 /* InvitationsTravelCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2AD4502491207A00F1D963 /* InvitationsTravelCreationViewController.swift */; };
 		7B3793C1246C47C6009F97DA /* ProfileMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3793C0246C47C6009F97DA /* ProfileMenuTableViewCell.swift */; };
 		7B3B45BE244BA7E900CD00D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45BD244BA7E900CD00D4 /* ProfileViewController.swift */; };
 		7B3B45C2244BA94300CD00D4 /* TravelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B45C1244BA94300CD00D4 /* TravelsViewController.swift */; };
@@ -135,6 +137,8 @@
 		7B2AD448248FB00A00F1D963 /* PolowersCommentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersCommentsService.swift; sourceTree = "<group>"; };
 		7B2AD44A248FB53B00F1D963 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		7B2AD44C2490C86300F1D963 /* PolowersCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolowersCommentTableViewCell.swift; sourceTree = "<group>"; };
+		7B2AD44E24911A2A00F1D963 /* TravelReadyStep2TravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelReadyStep2TravelCreationViewController.swift; sourceTree = "<group>"; };
+		7B2AD4502491207A00F1D963 /* InvitationsTravelCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationsTravelCreationViewController.swift; sourceTree = "<group>"; };
 		7B3793C0246C47C6009F97DA /* ProfileMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuTableViewCell.swift; sourceTree = "<group>"; };
 		7B3B45BD244BA7E900CD00D4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7B3B45C1244BA94300CD00D4 /* TravelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsViewController.swift; sourceTree = "<group>"; };
@@ -654,6 +658,8 @@
 				0F0CF602245DF36300018191 /* Step6TravelCreationViewController.swift */,
 				0F0CF604245DFD2D00018191 /* RecapStepTravelCreationViewController.swift */,
 				7B3C8EF22461969B00EE3C6F /* TravelReadyTravelCreationViewController.swift */,
+				7B2AD44E24911A2A00F1D963 /* TravelReadyStep2TravelCreationViewController.swift */,
+				7B2AD4502491207A00F1D963 /* InvitationsTravelCreationViewController.swift */,
 			);
 			path = TravelCreationViewControllers;
 			sourceTree = "<group>";
@@ -873,6 +879,8 @@
 				7B2AD44B248FB53B00F1D963 /* Comment.swift in Sources */,
 				7BCDA4E0243DF94100E9C4B6 /* AppDelegate.swift in Sources */,
 				0F0CF601245DF15200018191 /* Step5TravelCreationViewController.swift in Sources */,
+				7B2AD44F24911A2A00F1D963 /* TravelReadyStep2TravelCreationViewController.swift in Sources */,
+				7B2AD4512491207A00F1D963 /* InvitationsTravelCreationViewController.swift in Sources */,
 				0F81D06C248D74C60014D7C4 /* CustomUserLocationAnnotationView.swift in Sources */,
 				0F4710FB246B119100436F2A /* AlertService.swift in Sources */,
 				7BD538F82449F4A600AD9CB3 /* OnBoarding2ViewController.swift in Sources */,
