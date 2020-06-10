@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,10 +14,37 @@
                     <view key="view" contentMode="scaleToFill" id="c8h-27-q3V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60g-kd-vXL">
+                                <rect key="frame" x="20" y="774" width="60" height="60"/>
+                                <state key="normal" image="polo-tete"/>
+                                <connections>
+                                    <action selector="launchTravel:" destination="ihW-tV-HJs" eventType="touchUpInside" id="Zf8-Gk-XYC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYL-2j-VFg">
+                                <rect key="frame" x="20" y="613" width="171" height="114"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="7ws-Qb-ioa"/>
+                                    <constraint firstAttribute="height" constant="114" id="Cxu-2y-JrK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JYL-2j-VFg" firstAttribute="leading" secondItem="OWa-uV-TB3" secondAttribute="leading" constant="20" id="Ql3-vw-h1Q"/>
+                            <constraint firstItem="60g-kd-vXL" firstAttribute="leading" secondItem="OWa-uV-TB3" secondAttribute="leading" constant="20" id="fZl-Z0-ZpG"/>
+                            <constraint firstItem="60g-kd-vXL" firstAttribute="top" secondItem="JYL-2j-VFg" secondAttribute="bottom" constant="40" id="fmh-is-pbW"/>
+                            <constraint firstItem="OWa-uV-TB3" firstAttribute="bottom" secondItem="60g-kd-vXL" secondAttribute="bottom" constant="28" id="w9O-77-kQv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OWa-uV-TB3"/>
                     </view>
                     <navigationItem key="navigationItem" id="sdJ-Hs-mZy"/>
+                    <connections>
+                        <outlet property="polo" destination="60g-kd-vXL" id="eEe-ea-8fY"/>
+                        <outlet property="popIn" destination="JYL-2j-VFg" id="14H-CN-4Ku"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgh-Ne-dhv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,4 +69,7 @@
             <point key="canvasLocation" x="-223.18840579710147" y="105.80357142857143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="polo-tete" width="71" height="67"/>
+    </resources>
 </document>
