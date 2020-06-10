@@ -14,6 +14,8 @@ class PolowersCommentsViewController: UIViewController,UINavigationControllerDel
     @IBOutlet weak var lbl: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var inputCommentView: UIView!
+    @IBOutlet weak var inputComment: UITextField!
     
 
     @IBOutlet weak var commentImage: UIImageView!
@@ -23,15 +25,21 @@ class PolowersCommentsViewController: UIViewController,UINavigationControllerDel
     var desc = ""
     var imageId = ""
     var publicationDate:Date?
+    var publicationDateConverted:String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(imgURL)
+        self.hideKeyboardWhenTappedAround()
+        
+        inputCommentView.frame.origin.y=750
+       NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         lbl.text = name
         descriptionLabel.text = desc
-        dateLabel.text = publicationDate?.getFormattedDate(format: "d MMMM")
+        publicationDateConverted = publicationDate?.getFormattedDate(format: "d MMMM")
+        dateLabel.text = publicationDateConverted
         
         img.sd_setImage(with: URL(string: imgURL), placeholderImage: UIImage(named: "photo.png"))
         img.layer.cornerRadius = 20
@@ -48,14 +56,51 @@ class PolowersCommentsViewController: UIViewController,UINavigationControllerDel
 
     }
     
-    
-    @IBAction func addCommentClicked(_ sender: Any) {
-      PolowersCommentService().addComment(imageId: imageId, text: "testcommentaire")
+    @IBAction func postComment(_ sender: Any) {
+        if let comment = inputComment.text {
+           PolowersCommentService().addComment(imageId: imageId, text: comment) {[weak self] (success) in
+               guard let `self` = self else { return }
+               if (success) {
+                print("commentAdded")
+               } else {
+                   print("commentAdd error")
+               }
+           }
+        }
     }
     
-
     @IBAction func goBackButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func seeAllComments(_ sender: Any) {
+        self.performSegue(withIdentifier: "toCommentDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCommentDetail" {
+            if let dest = segue.destination as? PolowersAllCommentsViewController {
+                dest.imageId = self.imageId
+                dest.publicationDate = self.publicationDateConverted ?? ""
+                dest.name = self.name
+                dest.desc = self.desc
+            }
+        }
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        print("keyboard shown")
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.inputCommentView.frame.origin.y == 750 {
+                self.inputCommentView.frame.origin.y -= (keyboardSize.height-(self.tabBarController?.tabBar.frame.height ?? 49))
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.inputCommentView.frame.origin.y != 750 {
+            self.inputCommentView.frame.origin.y = 750
+        }
     }
     
 }
