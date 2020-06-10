@@ -20,6 +20,10 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var directionsRoute: Route?
     let apparitionDelay = 2.5
     
+
+    @IBOutlet weak var popinContent: UILabel!
+    @IBOutlet weak var popinTitle: UILabel!
+    
     @IBOutlet weak var popIn: UIView!
     @IBOutlet weak var polo: UIButton!
     override func viewDidLoad() {
@@ -57,10 +61,14 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 print(numberDays)
             }
         }
+        
                 
+        popIn.layer.cornerRadius = 10
         self.view.bringSubviewToFront(polo)
         self.view.bringSubviewToFront(popIn)
 
+
+        
        // displayAsyncPopUp()
         
         // Do any additional setup after loading the view.
@@ -126,7 +134,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                            
       
                             let header:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "header") as? String
+
                             let localizations = user.daysDatas[0].items[self.countItems-1].value(forKey: "localization")
+                            let text:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "text") as? String
 
                             // get localizations
                             if let localization = localizations{
@@ -136,8 +146,14 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             // get headers
                             if let head = header{
                                  print(head)
+                                self.popinTitle.text? = head
                              }
                         
+                            if let content = text{
+                                print(content)
+                               self.popinContent.text? = content
+                            }
+                            
                             // set countItems to 0 for the next day
                             if self.countItems == user.daysDatas[0].items.count{
                                 print(" COUNTER EST EGALE A 0 MAINTENANT --------")
@@ -151,18 +167,26 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             
                             
                             
-                            let header:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "header") as? String
-                            let localizations:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "localization") as? String
+                            let header:String? = user.daysDatas[1].items[self.countItems-1].value(forKey: "header") as? String
+                            let localizations:String? = user.daysDatas[1].items[self.countItems-1].value(forKey: "localization") as? String
 
-                            if let localization = localizations{
-                                 print(localization)
-                                
-                                
-                             }
-                            if let head = header{
-                                 print(head)
-                             }
-                            
+                            let text:String? = user.daysDatas[1].items[self.countItems-1].value(forKey: "text") as? String
+
+                              // get localizations
+                              if let localization = localizations{
+                                   print(localization)
+                                                          
+                               }
+                              // get headers
+                              if let head = header{
+                                   print(head)
+                                  self.popinTitle.text? = head
+                               }
+                          
+                              if let content = text{
+                                  print(content)
+                                 self.popinContent.text? = content
+                              }
                               if self.countItems == user.daysDatas[1].items.count{
                                   print(" COUNTER EST EGALE A 0 MAINTENANT ////  --------")
                                   self.countItems = 0
@@ -171,6 +195,26 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                         case 9..<14:
                             print(user.daysDatas[2])
                             print(user.daysDatas[2].items.count)
+                            
+                            let text:String? = user.daysDatas[2].items[self.countItems-1].value(forKey: "text") as? String
+                            let header:String? = user.daysDatas[2].items[self.countItems-1].value(forKey: "header") as? String
+                                 let localizations:String? = user.daysDatas[2].items[self.countItems-1].value(forKey: "localization") as? String
+
+                                                      // get localizations
+                                                      if let localization = localizations{
+                                                           print(localization)
+                                                                                  
+                                                       }
+                                                      // get headers
+                                                      if let head = header{
+                                                           print(head)
+                                                          self.popinTitle.text? = head
+                                                       }
+                                                  
+                                                      if let content = text{
+                                                          print(content)
+                                                         self.popinContent.text? = content
+                                                      }
 
                             print(user.daysDatas[2].items[self.countItems-1])
                                  if self.countItems == user.daysDatas[2].items.count{
@@ -181,6 +225,26 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             print(user.daysDatas[3])
                             print(user.daysDatas[3].items.count)
 
+                            let text:String? = user.daysDatas[3].items[self.countItems-1].value(forKey: "text") as? String
+                            let header:String? = user.daysDatas[3].items[self.countItems-1].value(forKey: "header") as? String
+                            let localizations:String? = user.daysDatas[3].items[self.countItems-1].value(forKey: "localization") as? String
+
+                                // get localizations
+                                if let localization = localizations{
+                                     print(localization)
+                                                            
+                                 }
+                                // get headers
+                                if let head = header{
+                                     print(head)
+                                    self.popinTitle.text? = head
+                                 }
+                            
+                                if let content = text{
+                                    print(content)
+                                   self.popinContent.text? = content
+                                }
+                            
                             print(user.daysDatas[3].items[self.countItems-1])
                                  if self.countItems == user.daysDatas[3].items.count{
                                      print("COUNTER EST EGALE A 0 MAINTENANT ! --------")
