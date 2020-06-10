@@ -164,7 +164,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAW-Ff-voF">
-                                        <rect key="frame" x="30" y="75" width="285.5" height="58"/>
+                                        <rect key="frame" x="30" y="75" width="277.5" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="QyN-bs-WdJ"/>
                                         </constraints>
