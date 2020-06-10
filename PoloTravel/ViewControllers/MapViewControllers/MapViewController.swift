@@ -135,14 +135,39 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
       
                             let header:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "header") as? String
 
-                            let localizations = user.daysDatas[0].items[self.countItems-1].value(forKey: "localization")
+                            let localizations:Array? = user.daysDatas[0].items[self.countItems-1].value(forKey: "localization") as? Array<Any>
                             let text:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "text") as? String
 
                             // get localizations
                             if let localization = localizations{
-                                 print(localization)
+                                 print(localization[0],localization[1])
+                                
+                                
+                                
+                                
+                                let MorningCoord = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
+
+                                                               
+                                   let annotation = MGLPointAnnotation()
+                                   self.mapView.removeAnnotation(annotation)
+
+                                   annotation.coordinate = MorningCoord
+                                   annotation.title = "Start Navigation"
+                                   self.mapView.addAnnotation(annotation)
+                                                       
+                                   self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: MorningCoord) { (route, error) in
+                                      if error != nil{
+                                          print("error getting route")
+                                       }
+                                   }
+    
+                                
+                                
                                                         
                              }
+                            
+                            
+                            
                             // get headers
                             if let head = header{
                                  print(head)
@@ -168,14 +193,14 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             
                             
                             let header:String? = user.daysDatas[1].items[self.countItems-1].value(forKey: "header") as? String
-                            let localizations:String? = user.daysDatas[1].items[self.countItems-1].value(forKey: "localization") as? String
+                            let localizations:Array? = user.daysDatas[1].items[self.countItems-1].value(forKey: "localization") as? Array<Any>
 
                             let text:String? = user.daysDatas[1].items[self.countItems-1].value(forKey: "text") as? String
 
                               // get localizations
                               if let localization = localizations{
-                                   print(localization)
-                                                          
+                                   print(localization[0],localization[1])
+                                
                                }
                               // get headers
                               if let head = header{
@@ -198,23 +223,23 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             
                             let text:String? = user.daysDatas[2].items[self.countItems-1].value(forKey: "text") as? String
                             let header:String? = user.daysDatas[2].items[self.countItems-1].value(forKey: "header") as? String
-                                 let localizations:String? = user.daysDatas[2].items[self.countItems-1].value(forKey: "localization") as? String
+                            let localizations:Array? = user.daysDatas[2].items[self.countItems-1].value(forKey: "localization") as? Array<Any>
 
-                                                      // get localizations
-                                                      if let localization = localizations{
-                                                           print(localization)
-                                                                                  
-                                                       }
-                                                      // get headers
-                                                      if let head = header{
-                                                           print(head)
-                                                          self.popinTitle.text? = head
-                                                       }
-                                                  
-                                                      if let content = text{
-                                                          print(content)
-                                                         self.popinContent.text? = content
-                                                      }
+                              // get localizations
+                              if let localization = localizations{
+                                   print(localization[0],localization[1])
+                                                          
+                               }
+                              // get headers
+                              if let head = header{
+                                   print(head)
+                                  self.popinTitle.text? = head
+                               }
+                          
+                              if let content = text{
+                                  print(content)
+                                 self.popinContent.text? = content
+                              }
 
                             print(user.daysDatas[2].items[self.countItems-1])
                                  if self.countItems == user.daysDatas[2].items.count{
@@ -227,11 +252,11 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
 
                             let text:String? = user.daysDatas[3].items[self.countItems-1].value(forKey: "text") as? String
                             let header:String? = user.daysDatas[3].items[self.countItems-1].value(forKey: "header") as? String
-                            let localizations:String? = user.daysDatas[3].items[self.countItems-1].value(forKey: "localization") as? String
+                            let localizations:Array? = user.daysDatas[3].items[self.countItems-1].value(forKey: "localization") as? Array<Any>
 
                                 // get localizations
                                 if let localization = localizations{
-                                     print(localization)
+                                     print(localization[0],localization[1])
                                                             
                                  }
                                 // get headers
