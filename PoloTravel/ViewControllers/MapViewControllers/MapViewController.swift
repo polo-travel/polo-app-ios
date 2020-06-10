@@ -38,7 +38,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
-        customNavigateButton()
         
         TravelService().currentTravel(){result  in
             
@@ -62,8 +61,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             }
         }
         
-                
-        popIn.layer.cornerRadius = 10
+        customPopIn()
         self.view.bringSubviewToFront(polo)
         self.view.bringSubviewToFront(popIn)
 
@@ -73,14 +71,24 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         // Do any additional setup after loading the view.
     }
+    
+    func customPopIn(){
+        popIn.isHidden = true
+        popIn.layer.cornerRadius = 30
+        popinTitle.textColor = UIColor.MainTheme.mainDarkBlue
+        popinContent.textColor = UIColor.MainTheme.mainDarkBlue
+        popIn.backgroundColor = UIColor(red: 163/255.0, green: 217/255.0, blue: 237/255.0, alpha: 1)
+
+    }
         
     func displayAsyncPopUp(){
 
         DispatchQueue.main.asyncAfter(deadline: .now() + apparitionDelay ){
 
             self.present(Alert.alert, animated: true)
+              Alert.alert.ratingStackView.isHidden = true
             Alert.alert.actionButton.addTarget(self, action: #selector(self.switchText), for: .touchUpInside)
-            Alert.alert.ratingStackView.isHidden = true
+          
         }
 
     }
@@ -116,7 +124,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
               self.counter += 1
                 self.countItems += 1
-
+        popIn.isHidden = false
                 
                 print(counter)
                 
@@ -142,27 +150,28 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                             if let localization = localizations{
                                  print(localization[0],localization[1])
                                 
-                                
-                                
-                                
-                                let MorningCoord = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
 
-                                                               
+                                let destination = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
+
+                                
                                    let annotation = MGLPointAnnotation()
-                                   self.mapView.removeAnnotation(annotation)
+                               
+                              if let annotations = self.mapView.annotations {
+                                                               self.mapView.removeAnnotations(annotations)
+                                                              }
 
-                                   annotation.coordinate = MorningCoord
+                                   annotation.coordinate = destination
                                    annotation.title = "Start Navigation"
                                    self.mapView.addAnnotation(annotation)
+                                    
                                                        
-                                   self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: MorningCoord) { (route, error) in
+                                   self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: destination) { (route, error) in
                                       if error != nil{
                                           print("error getting route")
                                        }
                                    }
     
-                                
-                                
+                            
                                                         
                              }
                             
@@ -201,6 +210,27 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                               if let localization = localizations{
                                    print(localization[0],localization[1])
                                 
+                                let destination = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
+
+                                                        
+                                
+                                   let annotation = MGLPointAnnotation()
+                               
+                              if let annotations = self.mapView.annotations {
+                                                               self.mapView.removeAnnotations(annotations)
+                                                              }
+
+                                   annotation.coordinate = destination
+                                   annotation.title = "Start Navigation"
+                                   self.mapView.addAnnotation(annotation)
+                                    
+                                                       
+                                   self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: destination) { (route, error) in
+                                      if error != nil{
+                                          print("error getting route")
+                                       }
+                                   }
+                                
                                }
                               // get headers
                               if let head = header{
@@ -229,6 +259,26 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                               if let localization = localizations{
                                    print(localization[0],localization[1])
                                                           
+                                let destination = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
+
+                                                                       
+                                               
+                                  let annotation = MGLPointAnnotation()
+                              
+                             if let annotations = self.mapView.annotations {
+                                                              self.mapView.removeAnnotations(annotations)
+                                                             }
+
+                                  annotation.coordinate = destination
+                                  annotation.title = "Start Navigation"
+                                  self.mapView.addAnnotation(annotation)
+                                   
+                                                      
+                                  self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: destination) { (route, error) in
+                                     if error != nil{
+                                         print("error getting route")
+                                      }
+                                  }
                                }
                               // get headers
                               if let head = header{
@@ -257,6 +307,27 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                                 // get localizations
                                 if let localization = localizations{
                                      print(localization[0],localization[1])
+                                    
+                                    let destination = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
+
+                                                                           
+                                                   
+                                      let annotation = MGLPointAnnotation()
+                                  
+                                 if let annotations = self.mapView.annotations {
+                                                                  self.mapView.removeAnnotations(annotations)
+                                                                 }
+
+                                      annotation.coordinate = destination
+                                      annotation.title = "Start Navigation"
+                                      self.mapView.addAnnotation(annotation)
+                                       
+                                                          
+                                      self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: destination) { (route, error) in
+                                         if error != nil{
+                                             print("error getting route")
+                                          }
+                                      }
                                                             
                                  }
                                 // get headers
@@ -275,53 +346,29 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                                      print("COUNTER EST EGALE A 0 MAINTENANT ! --------")
                                      self.countItems = 0
                                  }
+                        case 18:
+                            
+                                
+//                                if let annotations = self.mapView.annotations {
+//                                   self.mapView.removeAnnotations(annotations)
+//                                  }
+                                self.popIn.isHidden = true
+                                self.present(Alert.alert, animated: true)
+
+                                Alert.title?.text = "Votre voyage est terminé !"
+                                Alert.body?.text = "Partagez vos meilleurs souvenirs !"
+                                Alert.button?.setTitle("Communauté Polowers", for: .normal)
+                                Alert.alert.ratingStackView.isHidden = true
+                               // Alert.alert.actionButton.addTarget(self, action: storyboard!.instantiateViewControllerWithIdentifier("PolowersVC"), for: .touchUpInside)
                         default:
                            break
                         }
            
                     }
                 }
-                
-                  print("kkkkkkk")
+                        
+    }
         
-    }
-    
-
-    func customNavigateButton(){
-        navigateButton = BasicButton(frame: CGRect(x:(view.frame.width/2 ) - 100, y: view.frame.height - 750, width: 200, height:50 ))
-        navigateButton.setDarkButton()
-        navigateButton.setTitle("NAVIGATE", for: .normal)
-        navigateButton.layer.zPosition  = 9
-        navigateButton.addTarget(self, action: #selector(navigateButtonPressed(_:)), for: .touchUpInside)
-        view.addSubview(navigateButton)
-    }
-    
-  
-    
-    @objc func navigateButtonPressed(_ sender: BasicButton){
-        mapView.setUserTrackingMode(.none, animated: true)
-
-                    
-        TravelService().currentTravel(){ result  in
-                   
-           if let user = result {
-          
-            let MorningCoord = CLLocationCoordinate2D(latitude: 0.5, longitude: 0.5)
-                
-                let annotation = MGLPointAnnotation()
-                annotation.coordinate = MorningCoord
-                annotation.title = "Start Navigation"
-                self.mapView.addAnnotation(annotation)
-                                    
-                self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: MorningCoord) { (route, error) in
-                   if error != nil{
-                       print("error getting route")
-                    }
-                }
-            }
-        }
-    }
-    
     
     func calculateRoute(from originCoord:CLLocationCoordinate2D, to destinationCoord: CLLocationCoordinate2D, completion:@escaping (Route?, Error?)-> Void){
         
