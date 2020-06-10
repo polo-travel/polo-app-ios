@@ -21,19 +21,31 @@ class PolowersAllCommentsViewController: UIViewController {
     var imgURL = ""
     var desc = ""
     var publicationDate =  ""
+    var userPhotoURL = ""
     @IBOutlet weak var inputComment: UITextField!
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var postCommentImage: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       self.hideKeyboardWhenTappedAround()
         commentsTableView.delegate = self
         commentsTableView.dataSource = self
         
         labelFirstname.text = name
         labelDate.text = publicationDate
         labelDesc.text = desc
+        
+        //Photo de profil d'utilisateur en header
+        userImage.sd_setImage(with: URL(string: userPhotoURL), placeholderImage: UIImage(named: "photo.png"))
+        userImage.layer.cornerRadius = 20
+        userImage.clipsToBounds = true
+        
+        //Photo de profil d'utilisateur à l'ajout de commentaire
+        postCommentImage.sd_setImage(with: URL(string: userPhotoURL), placeholderImage: UIImage(named: "photo.png"))
+        postCommentImage.layer.cornerRadius = 15
+        postCommentImage.clipsToBounds = true
         
         
         self.loadComments()
@@ -67,6 +79,8 @@ class PolowersAllCommentsViewController: UIViewController {
                guard let `self` = self else { return }
                if (success) {
                 self.loadComments()
+                self.inputComment.text = "Ajouter un commentaire"
+                self.view.endEditing(true)
                } else {
                    print("commentsTableViewreload failed")
                }
@@ -102,6 +116,13 @@ extension PolowersAllCommentsViewController: UITableViewDataSource {
         cell.firstnameLabel.text = commentsList[indexPath.row]["userFirstName"] as? String
         cell.commentLabel.text = commentsList[indexPath.row]["text"] as? String
         
+        let commentUserPhotoURL = commentsList[indexPath.row]["userPhoto"] as? String
+        
+        if let userPhoto = commentUserPhotoURL {
+            cell.commentUserImage.sd_setImage(with: URL(string: userPhoto), placeholderImage: UIImage(named: "photo.png"))
+            cell.commentUserImage.layer.cornerRadius = 15
+            cell.commentUserImage.clipsToBounds = true
+        }
         
         return cell
     }

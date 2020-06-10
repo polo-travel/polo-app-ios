@@ -20,9 +20,7 @@ class PolowersImagesService {
     var user: User?
     
 
-    func addImageToDatabase(inputDescription:UITextView, imgToUpload: UIImage, completionBlock: @escaping (_ success: Bool) -> Void) {
-        if inputDescription.text != "" {
-            
+    func addImageToDatabase(inputDescription:String, imgToUpload: UIImage, completionBlock: @escaping (_ success: Bool) -> Void) {
             userManager.currentUser() { result  in
                 self.user = result
                 
@@ -37,19 +35,19 @@ class PolowersImagesService {
                     self.db.collection("pl_resources").document("r_polowers_photos").setData([
                         imageId: [
                             "imageId": imageId,
-                            "description": inputDescription.text ?? "",
+                            "description": inputDescription,
                             "imageUrl": url,
                             "nbLikes": 0,
                             "publicationDate": Date(),
                             "userId": self.user?.uid as Any,
                             "userName": self.user?.firstName as Any,
+                            "userPhotoURL": self.user?.photoURL ?? "",
                             "lastName": self.user?.lastName as Any,
                         ],
                     ], merge: true)
                     completionBlock(true)
                 }
             }
-        }
     }
     
     

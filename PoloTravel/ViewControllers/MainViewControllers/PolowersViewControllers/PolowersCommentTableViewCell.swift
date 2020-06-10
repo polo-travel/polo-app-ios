@@ -13,6 +13,7 @@ class PolowersCommentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var firstnameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var commentUserImage: UIImageView!
     
     
     override func awakeFromNib() {
