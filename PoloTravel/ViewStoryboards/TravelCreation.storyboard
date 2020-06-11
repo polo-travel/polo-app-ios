@@ -164,7 +164,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAW-Ff-voF">
-                                        <rect key="frame" x="30" y="75" width="285.5" height="58"/>
+                                        <rect key="frame" x="30" y="75" width="277.5" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="QyN-bs-WdJ"/>
                                         </constraints>
@@ -665,7 +665,6 @@ vous n’auriez jamais imaginé faire</string>
         <!--Step5 Travel Creation View Controller-->
         <scene sceneID="BjL-05-Xjt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-AS-W04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ULp-8f-ast" customClass="Step5TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7y-Xp-2Fr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -737,6 +736,7 @@ vous n’auriez jamais imaginé faire</string>
                         <segue destination="Bzb-S2-8cE" kind="show" identifier="toStep6" id="OyQ-ou-tK5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-AS-W04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5657" y="113"/>
         </scene>
