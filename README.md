@@ -17,11 +17,19 @@ $ pod install
 ├── PodsTravel.xcodeproj
 ├── PodsTravel.xcworkspace
 ├── PoloTravel
-│   ├── Extensions
-│   ├── Protocols
+│   ├── Classes
+|   |   ├── ApplicationLayer         // AppDelegate and most important Application Files
+|   |   ├── BusinessLogicLayer       // Models, Services, files for the application logic
+|   |   ├── CoreLayer                // Extensions, Utils, all files "in addition to basics"
+│   ├── Resources
+|   |   ├── Assets.xcassets
+|   |   ├── Components               // Reusable components in all the application
+|   |   ├── Constants
+|   |   ├── Fonts
 │   ├── SupportingFiles 
-│   ├── ViewModels
 │   ├── ViewControllers
+│   ├── ViewStoryboards
+|   ├── SceneDelegate.swift
 ├── PoloTravelTests
 ├── Podfile
 ├── Podfile.lock
@@ -31,12 +39,12 @@ $ pod install
 ### Working branch process
 
 We work on the **develop branch**, a stable version must be on the **master branch**
-To each modifications, you have to work on a **specific branch** before merging to develop
+To each modifications, we work on a **specific branch** before merging to develop
 We use the **GitHub Workflow**
 
 #### Branch naming
 
-The convention for this app is <type>-<subject>
+The convention for this app is type-subject
 > **Note:** **Example of branch :** feat-map-customization
 
 Different types are : 
