@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Bold.ttf">
+            <string>Gilroy-Bold</string>
+        </array>
+        <array key="Gilroy-Medium.ttf">
+            <string>Gilroy-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="zxa-PJ-SUE">
@@ -14,10 +22,68 @@
                     <view key="view" contentMode="scaleToFill" id="c8h-27-q3V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60g-kd-vXL">
+                                <rect key="frame" x="20" y="774" width="60" height="60"/>
+                                <state key="normal" image="polo-tete"/>
+                                <connections>
+                                    <action selector="launchTravel:" destination="ihW-tV-HJs" eventType="touchUpInside" id="Zf8-Gk-XYC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYL-2j-VFg">
+                                <rect key="frame" x="20" y="588" width="242" height="155"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiM-7a-cor">
+                                        <rect key="frame" x="14" y="57" width="215" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Gwb-86-FA6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TF-dY-9Mq">
+                                        <rect key="frame" x="14" y="17" width="215" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Kav-QS-hNz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="OiM-7a-cor" firstAttribute="top" secondItem="0TF-dY-9Mq" secondAttribute="bottom" constant="19" id="0qw-88-Suj"/>
+                                    <constraint firstAttribute="trailing" secondItem="OiM-7a-cor" secondAttribute="trailing" constant="13" id="1ll-h7-c8S"/>
+                                    <constraint firstAttribute="width" constant="242" id="7ws-Qb-ioa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="114" id="Cxu-2y-JrK"/>
+                                    <constraint firstItem="OiM-7a-cor" firstAttribute="leading" secondItem="JYL-2j-VFg" secondAttribute="leading" constant="14" id="F44-gT-be2"/>
+                                    <constraint firstItem="0TF-dY-9Mq" firstAttribute="leading" secondItem="JYL-2j-VFg" secondAttribute="leading" constant="14" id="OEU-lo-OiF"/>
+                                    <constraint firstAttribute="bottom" secondItem="OiM-7a-cor" secondAttribute="bottom" constant="67" id="Q92-SA-LhV"/>
+                                    <constraint firstAttribute="trailing" secondItem="0TF-dY-9Mq" secondAttribute="trailing" constant="13" id="SjK-y8-J8R"/>
+                                    <constraint firstItem="0TF-dY-9Mq" firstAttribute="leading" secondItem="JYL-2j-VFg" secondAttribute="leading" constant="14" id="Yj7-lp-lrR"/>
+                                    <constraint firstItem="0TF-dY-9Mq" firstAttribute="top" secondItem="JYL-2j-VFg" secondAttribute="top" constant="17" id="fKc-Ho-06V"/>
+                                    <constraint firstAttribute="trailing" secondItem="0TF-dY-9Mq" secondAttribute="trailing" constant="13" id="nZ3-xp-xCd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JYL-2j-VFg" firstAttribute="leading" secondItem="OWa-uV-TB3" secondAttribute="leading" constant="20" id="Ql3-vw-h1Q"/>
+                            <constraint firstItem="60g-kd-vXL" firstAttribute="leading" secondItem="OWa-uV-TB3" secondAttribute="leading" constant="20" id="fZl-Z0-ZpG"/>
+                            <constraint firstItem="60g-kd-vXL" firstAttribute="top" secondItem="JYL-2j-VFg" secondAttribute="bottom" constant="31" id="fmh-is-pbW"/>
+                            <constraint firstItem="OWa-uV-TB3" firstAttribute="bottom" secondItem="60g-kd-vXL" secondAttribute="bottom" constant="28" id="w9O-77-kQv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OWa-uV-TB3"/>
                     </view>
                     <navigationItem key="navigationItem" id="sdJ-Hs-mZy"/>
+                    <connections>
+                        <outlet property="polo" destination="60g-kd-vXL" id="eEe-ea-8fY"/>
+                        <outlet property="popIn" destination="JYL-2j-VFg" id="14H-CN-4Ku"/>
+                        <outlet property="popinContent" destination="OiM-7a-cor" id="mzM-iA-GQa"/>
+                        <outlet property="popinTitle" destination="0TF-dY-9Mq" id="8W2-7S-BRL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgh-Ne-dhv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,4 +108,7 @@
             <point key="canvasLocation" x="-223.18840579710147" y="105.80357142857143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="polo-tete" width="71" height="67"/>
+    </resources>
 </document>
