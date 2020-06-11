@@ -21,15 +21,16 @@ class TravelCreationService {
             userManager.currentUser() { result  in
                 self.user = result
                 
-                if let dateStart = travelChoices.date?[0], let dateEnd = travelChoices.date?[1] {
+                if let dateStart = travelChoices.date?[0], let dateEnd = travelChoices.date?[1], let budget = travelChoices.budget, let gift = travelChoices.gift {
                     self.createDaysDatas(date1: dateStart, date2: dateEnd) { daysDatas in
                         self.db.collection("pl_users").document(self.user!.uid).updateData([
                             "travels": FieldValue.arrayUnion([
                                 [
                                     "daysDatas": daysDatas as Any,
-                                    "startDate": travelChoices.date?[0] as Any,
-                                    "endDate": travelChoices.date?[1] as Any,
-                                    "price": 175,
+                                    "startDate": dateStart as Any,
+                                    "endDate": dateEnd as Any,
+                                    "price": budget,
+                                    "gift": gift as Any,
                                 ]
                              ])
                         ])

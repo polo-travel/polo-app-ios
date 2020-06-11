@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import AppCenterAnalytics
 
 class PolowersAddPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -64,12 +65,12 @@ class PolowersAddPhotoViewController: UIViewController, UIImagePickerControllerD
     @IBAction func publishButtonClicked(_ sender: Any) {
         activityIndicator.startAnimating()
         
-        if let currentImage = currentImage.image {
-            imagesManager.addImageToDatabase(inputDescription: inputDescription, imgToUpload: currentImage) {[weak self] (success) in
+        if let currentImage = currentImage.image, let description = inputDescription.text {
+            imagesManager.addImageToDatabase(inputDescription: description, imgToUpload: currentImage) {[weak self] (success) in
                     guard let `self` = self else { return }
                     if (success) {
                         self.activityIndicator.stopAnimating()
-            
+                        MSAnalytics.trackEvent("Polowers photo published")
                         self.navigationController?.popViewController(animated: true)
                     } else {
                         self.activityIndicator.stopAnimating()

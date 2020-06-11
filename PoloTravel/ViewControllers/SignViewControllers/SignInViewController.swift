@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
+import AppCenterAnalytics
 
 class SignInViewController: UIViewController {
     let loginManager = AuthentificationService()
@@ -40,7 +41,7 @@ class SignInViewController: UIViewController {
                 self.activityIndicator.stopAnimating()
             } else {
                 self.activityIndicator.stopAnimating()
-                
+                MSAnalytics.trackEvent("User connection")
                 self.switchStoryboard()
             }
         }

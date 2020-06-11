@@ -30,9 +30,11 @@ class PolowersFeedService {
                     let nbLikes = photoProps?["nbLikes"] as? Int
                     let description = photoProps?["description"] as? String
                     let publicationDate = photoProps?["publicationDate"] as! Timestamp
+                    let imageId = photoProps?["imageId"] as? String
+                    let userPhotoURL = photoProps?["userPhotoURL"] as? String
                     
-                    if (self.photoList.contains(PhotoElement(imageURL: imageUrl!, userId: userId!, userName: userName!, description: description!, likes: nbLikes!, publicationDate: publicationDate.dateValue()))) == false {
-                        self.photoList.append(PhotoElement(imageURL: imageUrl ?? "", userId: userId ?? "", userName: userName ?? "", description: description ?? "", likes: nbLikes ?? 0, publicationDate: publicationDate.dateValue()))
+                    if (self.photoList.contains(PhotoElement(imageURL: imageUrl!, userId: userId!, userName: userName!, description: description!, imageId: imageId!, userPhotoURL: userPhotoURL!, likes: nbLikes!, publicationDate: publicationDate.dateValue()))) == false {
+                        self.photoList.append(PhotoElement(imageURL: imageUrl ?? "", userId: userId ?? "", userName: userName ?? "", description: description ?? "", imageId: imageId ?? "", userPhotoURL: userPhotoURL ?? "", likes: nbLikes ?? 0, publicationDate: publicationDate.dateValue()))
                     }
                 }
                 self.photoListSorted = self.photoList.sorted{ $0.publicationDate > $1.publicationDate  }
