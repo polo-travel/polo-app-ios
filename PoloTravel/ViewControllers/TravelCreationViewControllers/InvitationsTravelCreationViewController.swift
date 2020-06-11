@@ -12,21 +12,18 @@ import UIKit
 
 class InvitationsTravelCreationViewController: UIViewController {
 
+    @IBOutlet weak var sendButton: BasicButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
 
-        
-    }
-
-    @IBAction func confirmButtonClicked(_ sender: Any) {
-        if gift == true {
-            self.performSegue(withIdentifier: "toInvitations", sender: nil)
-        } else {
-            self.performSegue(withIdentifier: "toEnd", sender: nil)
-        }
-        
+        sendButton.setDarkButton()
     }
     
-
+    @IBAction func sendButtonClicked(_ sender: Any) {
+        self.performSegue(withIdentifier: "toEnd", sender: nil)
+    }
+    
 }

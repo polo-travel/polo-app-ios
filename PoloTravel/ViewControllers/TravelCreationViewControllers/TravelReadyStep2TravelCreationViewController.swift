@@ -15,11 +15,17 @@ class TravelReadyStep2TravelCreationViewController: UIViewController {
 
     var gift:Bool?
     var budget:Int?
+    @IBOutlet weak var confirmButton: BasicButton!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let budget = budget {
+            priceLabel.text = "\(String(budget))€"
+        }
         
+
+        confirmButton.setRedButton()
     }
 
     @IBAction func confirmButtonClicked(_ sender: Any) {

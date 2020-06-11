@@ -665,6 +665,7 @@ vous n’auriez jamais imaginé faire</string>
         <!--Step5 Travel Creation View Controller-->
         <scene sceneID="BjL-05-Xjt">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-AS-W04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ULp-8f-ast" customClass="Step5TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7y-Xp-2Fr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -736,7 +737,6 @@ vous n’auriez jamais imaginé faire</string>
                         <segue destination="Bzb-S2-8cE" kind="show" identifier="toStep6" id="OyQ-ou-tK5"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-AS-W04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5657" y="113"/>
         </scene>
@@ -980,7 +980,7 @@ vous n’auriez jamais imaginé faire</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Bss-yU-J9D" kind="show" id="YZL-dT-gzc"/>
+                                    <action selector="buttonSeeTravelClicked:" destination="eiY-WI-4FL" eventType="touchUpInside" id="rCJ-TW-up6"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="travel_ready" translatesAutoresizingMaskIntoConstraints="NO" id="5Ko-5b-d4P">
@@ -1010,6 +1010,7 @@ vous n’auriez jamais imaginé faire</string>
                         <outlet property="activityIndicator" destination="MgD-DM-2Q0" id="HSX-ND-Amh"/>
                         <outlet property="buttonSeeTravel" destination="22b-F9-mIw" id="VYB-dK-egA"/>
                         <outlet property="iconReady" destination="5Ko-5b-d4P" id="pd3-3k-tpY"/>
+                        <segue destination="Bss-yU-J9D" kind="show" identifier="toPayment" id="Hve-xi-uwf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3V-6p-v3E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1060,11 +1061,15 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-qF-83Q" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="44" y="293" width="326" height="311"/>
+                                <rect key="frame" x="30" y="289" width="354" height="405"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="payment" translatesAutoresizingMaskIntoConstraints="NO" id="Tvq-j9-kU4">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="405"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8I-kF-4Gf" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                        <rect key="frame" x="67" y="289" width="192" height="52"/>
+                                        <rect key="frame" x="81" y="373" width="192" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Valider le paiement">
@@ -1075,7 +1080,6 @@ vous n’auriez jamais imaginé faire</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1083,6 +1087,8 @@ vous n’auriez jamais imaginé faire</string>
                     </view>
                     <navigationItem key="navigationItem" id="Nhc-T0-eqr"/>
                     <connections>
+                        <outlet property="confirmButton" destination="K8I-kF-4Gf" id="fyc-9h-Ef6"/>
+                        <outlet property="priceLabel" destination="e9H-z6-uR1" id="w2x-bV-2Wu"/>
                         <segue destination="L0d-P6-kfn" kind="show" identifier="toEnd" id="fag-JK-LDj"/>
                         <segue destination="9H1-ce-s8e" kind="show" identifier="toInvitations" id="V6h-8L-ay1"/>
                     </connections>
@@ -1091,10 +1097,10 @@ vous n’auriez jamais imaginé faire</string>
             </objects>
             <point key="canvasLocation" x="8663.7681159420299" y="109.82142857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Travel Ready Step3 Travel Creation View Controller-->
         <scene sceneID="Fq9-vg-68p">
             <objects>
-                <viewController id="9H1-ce-s8e" sceneMemberID="viewController">
+                <viewController id="9H1-ce-s8e" customClass="TravelReadyStep3TravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bqG-wH-Ssp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1148,6 +1154,9 @@ vous n’auriez jamais imaginé faire</string>
                         <viewLayoutGuide key="safeArea" id="n3r-ra-BDg"/>
                     </view>
                     <navigationItem key="navigationItem" id="yoG-c1-Lbv"/>
+                    <connections>
+                        <outlet property="buttonSendInvitations" destination="uiu-vi-twl" id="eTQ-Vz-3yf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGJ-sb-f7Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1181,10 +1190,10 @@ vous n’auriez jamais imaginé faire</string>
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Invitations Sent Travel Creation View Controller-->
         <scene sceneID="onj-mR-kEz">
             <objects>
-                <viewController id="uSG-Uz-w31" sceneMemberID="viewController">
+                <viewController id="uSG-Uz-w31" customClass="InvitationsSentTravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vCY-G3-Oy6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1193,17 +1202,6 @@ vous n’auriez jamais imaginé faire</string>
                                 <rect key="frame" x="161" y="400" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrc-Lz-uug" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="134" y="535" width="145" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="OK">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="J0H-25-oeR" kind="show" id="RJl-kf-ZR7"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw1-lu-h9q">
                                 <rect key="frame" x="118" y="310" width="179" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1218,15 +1216,29 @@ vous n’auriez jamais imaginé faire</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrc-Lz-uug" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                <rect key="frame" x="115" y="534" width="185" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Voir le voyage">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="J0H-25-oeR" kind="show" id="RJl-kf-ZR7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="z4Z-5M-3wo"/>
                     </view>
                     <navigationItem key="navigationItem" id="W74-gt-Y1z"/>
+                    <connections>
+                        <outlet property="buttonSeeTravel" destination="Jrc-Lz-uug" id="eFs-9i-sFA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5I-l7-TXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11396" y="110"/>
+            <point key="canvasLocation" x="11395.652173913044" y="109.82142857142857"/>
         </scene>
         <!--Invitations Travel Creation View Controller-->
         <scene sceneID="tvW-U7-AiF">
@@ -1273,11 +1285,11 @@ vous n’auriez jamais imaginé faire</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t7D-qd-dBE" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
-                                <rect key="frame" x="57" y="238" width="300" height="421"/>
+                                <rect key="frame" x="57" y="238" width="300" height="449"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tooffert_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Xqo-3u-2M4">
-                                        <rect key="frame" x="0.0" y="360" width="300" height="61"/>
+                                        <rect key="frame" x="0.0" y="388" width="300" height="61"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BMb-w5-2xU">
@@ -1366,14 +1378,14 @@ vous n’auriez jamais imaginé faire</string>
                                         <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwS-uO-50H" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                        <rect key="frame" x="89" y="298" width="127" height="39"/>
+                                        <rect key="frame" x="87" y="305" width="127" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Envoyer">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="uSG-Uz-w31" kind="show" id="kbr-QR-OAs"/>
+                                            <action selector="sendButtonClicked:" destination="L3E-Rr-7Ld" eventType="touchUpInside" id="ukx-Ow-96S"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1384,15 +1396,19 @@ vous n’auriez jamais imaginé faire</string>
                         <viewLayoutGuide key="safeArea" id="VOA-rV-PIy"/>
                     </view>
                     <navigationItem key="navigationItem" id="NxM-lL-eCp"/>
+                    <connections>
+                        <outlet property="sendButton" destination="QwS-uO-50H" id="JDG-B2-Syf"/>
+                        <segue destination="uSG-Uz-w31" kind="show" identifier="toEnd" id="fHz-Or-VXi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9K-ZH-Mes" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10630" y="110"/>
+            <point key="canvasLocation" x="10631.884057971016" y="109.82142857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Travel Ready Step3 Bis Travel Creation View Controller-->
         <scene sceneID="vqc-Sb-ubl">
             <objects>
-                <viewController id="L0d-P6-kfn" sceneMemberID="viewController">
+                <viewController id="L0d-P6-kfn" customClass="TravelReadyStep3BisTravelCreationViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bCb-GA-7E7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1446,6 +1462,9 @@ vous n’auriez jamais imaginé faire</string>
                         <viewLayoutGuide key="safeArea" id="utm-sQ-K5e"/>
                     </view>
                     <navigationItem key="navigationItem" id="6qC-wH-CrM"/>
+                    <connections>
+                        <outlet property="buttonSeeTravel" destination="4gF-i8-nqH" id="xX1-Ug-nJH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E71-KC-sRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1453,12 +1472,13 @@ vous n’auriez jamais imaginé faire</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rZq-1n-Idp"/>
+        <segue reference="RJl-kf-ZR7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow_back" width="35" height="30"/>
         <image name="bg_bluebig_shape" width="280.5" height="333"/>
         <image name="bg_redbig_shape" width="377" height="295"/>
+        <image name="payment" width="384" height="435"/>
         <image name="polo_character" width="411" height="374"/>
         <image name="polo_step_3" width="463" height="299"/>
         <image name="polo_step_4" width="328" height="285"/>
