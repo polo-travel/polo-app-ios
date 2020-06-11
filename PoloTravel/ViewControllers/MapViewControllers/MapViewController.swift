@@ -18,7 +18,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var mapView: NavigationMapView!
     var navigateButton: BasicButton!
     var directionsRoute: Route?
-    let apparitionDelay = 2.5
     
 
     @IBOutlet weak var popinContent: UILabel!
@@ -66,9 +65,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         self.view.bringSubviewToFront(popIn)
 
 
-        
-       // displayAsyncPopUp()
-        
+            
         // Do any additional setup after loading the view.
     }
     
@@ -80,44 +77,15 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         popIn.backgroundColor = UIColor(red: 163/255.0, green: 217/255.0, blue: 237/255.0, alpha: 1)
 
     }
-        
-    func displayAsyncPopUp(){
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + apparitionDelay ){
-
-            self.present(Alert.alert, animated: true)
-              Alert.alert.ratingStackView.isHidden = true
-            Alert.alert.actionButton.addTarget(self, action: #selector(self.switchText), for: .touchUpInside)
-          
-        }
-
-    }
     
+    private func switchStoryboard() {
+        let mainView: UIStoryboard = UIStoryboard(name: "Polowers", bundle: nil)
+        let mainVC = mainView.instantiateViewController(identifier: "PolowersVC")
+        self.show(mainVC, sender: nil)
+    }
+        
     var counter = 0
     var countItems = 0
-    
-    @objc func switchText(sender: BasicButton!){
-
-        counter += 1
-
-        switch counter {
-        case 1:
-            Alert.body?.text = "Laisse ton téléphone de côté et on se retrouve après."
-            Alert.title?.text = "Profite de ton activité"
-            Alert.button?.setTitle("Activité est fini", for: .normal)
-        case 2:
-            Alert.body?.text = "Ton activité est terminée !"
-            Alert.title?.text = "Comment l'as tu trouvé ?"
-            Alert.alert.ratingStackView.isHidden = false
-            Alert.alert.actionButton.isHidden = true
-            counter = 0
-        default:
-           break
-        }
-        
-        print(counter)
-        
-        }
     
     
     @IBAction func launchTravel(_ sender: UIButton) {
@@ -348,10 +316,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                                  }
                         case 18:
                             
-                                
-//                                if let annotations = self.mapView.annotations {
-//                                   self.mapView.removeAnnotations(annotations)
-//                                  }
                                 self.popIn.isHidden = true
                                 self.present(Alert.alert, animated: true)
 
@@ -359,7 +323,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                                 Alert.body?.text = "Partagez vos meilleurs souvenirs !"
                                 Alert.button?.setTitle("Communauté Polowers", for: .normal)
                                 Alert.alert.ratingStackView.isHidden = true
-                               // Alert.alert.actionButton.addTarget(self, action: storyboard!.instantiateViewControllerWithIdentifier("PolowersVC"), for: .touchUpInside)
+                                Alert.alert.actionButton.addTarget(self, action: #selector(self.display), for: .touchUpInside)
+
                         default:
                            break
                         }
@@ -368,7 +333,11 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 }
                         
     }
-        
+       
+    @objc func display(_sender: BasicButton){
+        Alert.alert.view.isHidden = true
+        switchStoryboard()
+    }
     
     func calculateRoute(from originCoord:CLLocationCoordinate2D, to destinationCoord: CLLocationCoordinate2D, completion:@escaping (Route?, Error?)-> Void){
         
