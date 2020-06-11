@@ -78,6 +78,7 @@ class TravelService {
         }
     }
     
+    // Get days datas for the current travel
     func currentTravelDays(completionHandler: @escaping (_ result: [TravelDay]?) -> Void){
         currentTravel() { result in
             if let currentTravel = result {
@@ -88,6 +89,7 @@ class TravelService {
         }
     }
     
+    // Convert travels datas from Firebase format to Model format
     func convertTravelsToModels(travels: [NSDictionary], completionHandler: @escaping (_ result: [Travel]) -> Void) {
         var travelsConverted: [Travel] = []
         
@@ -110,6 +112,7 @@ class TravelService {
         completionHandler(travelsConverted)
     }
     
+    // Convert days datas from Firebase format to Model format
     func convertDaysDatasToModels(daysDatas: NSArray, completionHandler: @escaping (_ result: [TravelDay]) -> Void) {
         var daysDatasConverted: [TravelDay] = []
         

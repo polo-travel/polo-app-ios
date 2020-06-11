@@ -13,6 +13,7 @@ class PolowersCommentService {
     let db = Firestore.firestore()
     let userManager = UserService()
     
+    // Get all the commnts for a specific Polowers photo
     func getComments(imageId: String, completionHandler: @escaping (_ travelPack: NSArray?) -> Void) {
         let docRef = db.collection("pl_resources").document("r_polowers_photos")
         
@@ -22,22 +23,25 @@ class PolowersCommentService {
             
             if let comments = photo["comments"] {
                 let commentsConverted = comments as! NSArray
-                print("yadescomments")
                 completionHandler(commentsConverted)
             } else {
-                print("yarien")
                 completionHandler(nil)
             }
           }
         }
     }
     
+    
     func addComment(imageId: String, text: String, completionBlock: @escaping (_ success: Bool) -> Void) {
         let docRef = db.collection("pl_resources").document("r_polowers_photos")
+        
+        // Check that an user is connected
         userManager.currentUser() { result  in
             if let user = result {
-                print("user ok")
+
                 var comments:[NSDictionary] = []
+                
+                // Get all te comments
                 self.getComments(imageId: imageId) { commentss in
                     if let currentComments = commentss {
                         let currentCommentsConverted = currentComments
@@ -51,6 +55,7 @@ class PolowersCommentService {
                         ]
                     }
                     
+                    // Update comments with the new commment
                     docRef.setData([ imageId: [
                         "comments": comments
                     ] ], merge: true)
