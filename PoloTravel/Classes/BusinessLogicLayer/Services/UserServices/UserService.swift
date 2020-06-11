@@ -14,6 +14,7 @@ class UserService {
     let db = Firestore.firestore()
     let user = Auth.auth().currentUser
     
+    // Get informations about the user currently connected
     func currentUser(completionHandler: @escaping (_ result: User?) -> Void) {
         var firstName: String?
         var lastName: String?
