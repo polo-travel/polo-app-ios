@@ -31,7 +31,6 @@ class PolowersCommentService {
         }
     }
     
-    
     func addComment(imageId: String, text: String, completionBlock: @escaping (_ success: Bool) -> Void) {
         let docRef = db.collection("pl_resources").document("r_polowers_photos")
         

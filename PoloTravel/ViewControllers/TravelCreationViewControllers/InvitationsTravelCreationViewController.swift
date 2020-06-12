@@ -28,8 +28,7 @@ class InvitationsTravelCreationViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.performSegue(withIdentifier: "toEnd", sender: nil)
             self.activityIndicator.stopAnimating()
-        }
-        
+        } 
     }
     
 }

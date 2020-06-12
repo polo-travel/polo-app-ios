@@ -152,8 +152,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Polo vous aide à créer votre voyage en 
-répondant à un petit questionnaire pour 
+                                        <string key="content">Polo vous aide à créer votre voyage en
+répondant à un petit questionnaire pour
 connaitre votre profil d’aventurier</string>
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -267,8 +267,8 @@ connaitre votre profil d’aventurier</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Grace à la communauté des Polowers 
-vous pouvez voir les aventures des autres et 
+                                        <string key="content">Grace à la communauté des Polowers
+vous pouvez voir les aventures des autres et
 partager les vôtres !</string>
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
