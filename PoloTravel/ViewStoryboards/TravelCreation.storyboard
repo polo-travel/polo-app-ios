@@ -424,20 +424,11 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="pageIndicatorTintColor" white="1" alpha="0.41759417808219179" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-Qf-RUN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-Qf-RUN">
                                 <rect key="frame" x="30" y="167" width="274" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Pour vous, partir en vacances, c'est plutôt..
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.058819999999999997" green="0.13725000000000001" blue="0.20784" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="20" name="Gilroy-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="20"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -448,6 +439,7 @@ vous n’auriez jamais imaginé faire</string>
                     <connections>
                         <outlet property="buttonWrapper" destination="8H0-DZ-VAx" id="Ix4-76-8iE"/>
                         <outlet property="nextButton" destination="whk-fp-VXK" id="Uqg-I1-gsh"/>
+                        <outlet property="questionLabel" destination="c4U-Qf-RUN" id="6kf-pF-Adb"/>
                         <outletCollection property="buttons" destination="C0B-km-mMw" collectionClass="NSMutableArray" id="izx-xb-cux"/>
                         <outletCollection property="buttons" destination="r7D-x8-Box" collectionClass="NSMutableArray" id="2Rw-9x-hVD"/>
                         <outletCollection property="buttons" destination="amn-cX-fqH" collectionClass="NSMutableArray" id="QGd-so-yUg"/>
@@ -528,18 +520,11 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="pageIndicatorTintColor" white="1" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMd-Ry-rSa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMd-Ry-rSa">
                                 <rect key="frame" x="30" y="156" width="268" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Quel est pour vous le secret pour un voyage réussi ?">
-                                        <attributes>
-                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="20" name="Gilroy-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="20"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -550,6 +535,7 @@ vous n’auriez jamais imaginé faire</string>
                     <connections>
                         <outlet property="buttonWrapper" destination="22S-WA-IKL" id="mTG-Y7-Ila"/>
                         <outlet property="nextButton" destination="fH5-cR-usK" id="QD5-cj-zOV"/>
+                        <outlet property="questionLabel" destination="lMd-Ry-rSa" id="PgV-zY-Qtc"/>
                         <outletCollection property="buttons" destination="78x-oX-UQP" collectionClass="NSMutableArray" id="fXF-2H-42H"/>
                         <outletCollection property="buttons" destination="4nK-pf-2ZH" collectionClass="NSMutableArray" id="MBH-NX-wfU"/>
                         <outletCollection property="buttons" destination="3tc-k5-IoS" collectionClass="NSMutableArray" id="zjK-tk-XdJ"/>
@@ -626,18 +612,11 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="pageIndicatorTintColor" white="1" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYY-py-WR7">
-                                <rect key="frame" x="30" y="155" width="355" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYY-py-WR7">
+                                <rect key="frame" x="30" y="155" width="268" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Vous associez le mot voyage à..">
-                                        <attributes>
-                                            <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="20" name="Gilroy-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="20"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_step_4" translatesAutoresizingMaskIntoConstraints="NO" id="gr9-QX-0fA">
@@ -652,6 +631,7 @@ vous n’auriez jamais imaginé faire</string>
                     <connections>
                         <outlet property="buttonWrapper" destination="IG0-aO-0GU" id="PG8-z2-TeY"/>
                         <outlet property="nextButton" destination="CKi-Q8-DhO" id="FdQ-8D-etO"/>
+                        <outlet property="questionLabel" destination="iYY-py-WR7" id="dNn-q0-CHz"/>
                         <outletCollection property="buttons" destination="dWe-kp-rNH" collectionClass="NSMutableArray" id="fxG-nq-A6x"/>
                         <outletCollection property="buttons" destination="mt0-1V-Mso" collectionClass="NSMutableArray" id="BSS-6z-Z1t"/>
                         <outletCollection property="buttons" destination="0HP-BO-GFR" collectionClass="NSMutableArray" id="FWr-UE-WDU"/>
@@ -789,7 +769,7 @@ vous n’auriez jamais imaginé faire</string>
                                 <rect key="frame" x="28" y="178" width="366" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Pour finir, quel est votre budget ?">
+                                    <fragment content="Pour finir, quel est le budget ?">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="Gilroy-Bold"/>
@@ -886,13 +866,6 @@ vous n’auriez jamais imaginé faire</string>
                                     </button>
                                 </subviews>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Niveau : aventurier expert" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpF-G3-Mgp">
-                                <rect key="frame" x="27" y="657" width="338" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="17"/>
-                                <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uy2-Xe-hzj">
                                 <rect key="frame" x="30" y="92" width="29.666666666666664" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -902,10 +875,10 @@ vous n’auriez jamais imaginé faire</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKi-mu-svK">
-                                <rect key="frame" x="30" y="214" width="364" height="70"/>
+                                <rect key="frame" x="30" y="214" width="336" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Au vu des réponses au questionnaire, rien ne vous fait peur, vous avez choisi le niveau expert !">
+                                    <fragment content="Vérifiez que les informations du voyage sont correctes puis validez !">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" metaFont="system" size="16"/>
@@ -953,7 +926,7 @@ vous n’auriez jamais imaginé faire</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMA-WL-nBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7206" y="112"/>
+            <point key="canvasLocation" x="7205.7971014492759" y="111.83035714285714"/>
         </scene>
         <!--Travel Ready Travel Creation View Controller-->
         <scene sceneID="zNK-hh-0Rk">
@@ -976,11 +949,12 @@ vous n’auriez jamais imaginé faire</string>
                                 <rect key="frame" x="110" y="737" width="192" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Passer au paiement">
+                                <state key="normal" title="Envoyer l'invitation">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonSeeTravelClicked:" destination="eiY-WI-4FL" eventType="touchUpInside" id="rCJ-TW-up6"/>
+                                    <segue destination="L3E-Rr-7Ld" kind="show" id="Zg5-P0-kkJ"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="travel_ready" translatesAutoresizingMaskIntoConstraints="NO" id="5Ko-5b-d4P">
@@ -988,10 +962,10 @@ vous n’auriez jamais imaginé faire</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7U-tG-FE5">
-                                <rect key="frame" x="93" y="176" width="229" height="54"/>
+                                <rect key="frame" x="86" y="176" width="242" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Votre voyage est en cours de préparation... ">
+                                    <fragment content="Le voyage est en cours de préparation... ">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="Gilroy-Bold"/>
@@ -1010,12 +984,11 @@ vous n’auriez jamais imaginé faire</string>
                         <outlet property="activityIndicator" destination="MgD-DM-2Q0" id="HSX-ND-Amh"/>
                         <outlet property="buttonSeeTravel" destination="22b-F9-mIw" id="VYB-dK-egA"/>
                         <outlet property="iconReady" destination="5Ko-5b-d4P" id="pd3-3k-tpY"/>
-                        <segue destination="Bss-yU-J9D" kind="show" identifier="toPayment" id="Hve-xi-uwf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3V-6p-v3E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7954" y="111"/>
+            <point key="canvasLocation" x="7953.6231884057979" y="110.49107142857143"/>
         </scene>
         <!--Travel Ready Step2 Travel Creation View Controller-->
         <scene sceneID="hcq-Hq-yg6">
@@ -1029,7 +1002,7 @@ vous n’auriez jamais imaginé faire</string>
                                 <rect key="frame" x="107" y="111" width="200" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Votre voyage coûte :">
+                                    <fragment content="Le voyage coûte :">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="Gilroy-Bold"/>
@@ -1089,8 +1062,6 @@ vous n’auriez jamais imaginé faire</string>
                     <connections>
                         <outlet property="confirmButton" destination="K8I-kF-4Gf" id="fyc-9h-Ef6"/>
                         <outlet property="priceLabel" destination="e9H-z6-uR1" id="w2x-bV-2Wu"/>
-                        <segue destination="L0d-P6-kfn" kind="show" identifier="toEnd" id="fag-JK-LDj"/>
-                        <segue destination="9H1-ce-s8e" kind="show" identifier="toInvitations" id="V6h-8L-ay1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5V0-Bo-SKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1138,9 +1109,6 @@ vous n’auriez jamais imaginé faire</string>
                                 <state key="normal" title="Envoyer les invitations">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="L3E-Rr-7Ld" kind="show" id="zm3-kJ-35S"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Votre voyage est prêt, un mail vous a été envoyé pour confirmation. Vous pouvez dès à présent inviter les participants" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbQ-kt-eki">
                                 <rect key="frame" x="47" y="375" width="320" height="63"/>
@@ -1160,7 +1128,7 @@ vous n’auriez jamais imaginé faire</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGJ-sb-f7Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9834.7826086956538" y="109.82142857142857"/>
+            <point key="canvasLocation" x="9030" y="-595"/>
         </scene>
         <!--MainTabBarController-->
         <scene sceneID="04L-dn-XDo">
@@ -1252,7 +1220,7 @@ vous n’auriez jamais imaginé faire</string>
                                 <rect key="frame" x="71" y="87" width="272" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Vous pouvez maintenant inviter les participants par mail ou par courrier">
+                                    <fragment content="Vous pouvez maintenant inviter les participants à ce voyage">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="Gilroy-Bold"/>
@@ -1284,7 +1252,7 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="textColor" red="0.82745098039999998" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t7D-qd-dBE" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t7D-qd-dBE" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="57" y="238" width="300" height="449"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1378,7 +1346,7 @@ vous n’auriez jamais imaginé faire</string>
                                         <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwS-uO-50H" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                        <rect key="frame" x="87" y="305" width="127" height="52"/>
+                                        <rect key="frame" x="61" y="305" width="179" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Envoyer">
@@ -1388,6 +1356,11 @@ vous n’auriez jamais imaginé faire</string>
                                             <action selector="sendButtonClicked:" destination="L3E-Rr-7Ld" eventType="touchUpInside" id="ukx-Ow-96S"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VCi-Lj-ZHX">
+                                        <rect key="frame" x="204" y="321" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -1397,6 +1370,7 @@ vous n’auriez jamais imaginé faire</string>
                     </view>
                     <navigationItem key="navigationItem" id="NxM-lL-eCp"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="VCi-Lj-ZHX" id="8eh-6J-abj"/>
                         <outlet property="sendButton" destination="QwS-uO-50H" id="JDG-B2-Syf"/>
                         <segue destination="uSG-Uz-w31" kind="show" identifier="toEnd" id="fHz-Or-VXi"/>
                     </connections>
@@ -1468,11 +1442,11 @@ vous n’auriez jamais imaginé faire</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E71-KC-sRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9834.7826086956538" y="-544.41964285714278"/>
+            <point key="canvasLocation" x="9738" y="-595"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RJl-kf-ZR7"/>
+        <segue reference="rZq-1n-Idp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow_back" width="35" height="30"/>

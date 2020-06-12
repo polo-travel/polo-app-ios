@@ -14,4 +14,5 @@ struct Travel {
   let price: Int
   let travelGear: [String]
   let daysDatas: [TravelDay]
+  let gift: Bool
 }

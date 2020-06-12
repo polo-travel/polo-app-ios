@@ -13,6 +13,7 @@ import UIKit
 class InvitationsTravelCreationViewController: UIViewController {
 
     @IBOutlet weak var sendButton: BasicButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
@@ -23,7 +24,12 @@ class InvitationsTravelCreationViewController: UIViewController {
     }
     
     @IBAction func sendButtonClicked(_ sender: Any) {
-        self.performSegue(withIdentifier: "toEnd", sender: nil)
+        self.activityIndicator.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.performSegue(withIdentifier: "toEnd", sender: nil)
+            self.activityIndicator.stopAnimating()
+        }
+        
     }
     
 }

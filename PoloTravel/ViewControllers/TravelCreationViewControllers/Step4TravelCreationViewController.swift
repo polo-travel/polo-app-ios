@@ -13,6 +13,7 @@ class Step4TravelCreationViewController: UIViewController {
     @IBOutlet weak var nextButton: BasicButton!
     @IBOutlet weak var buttonWrapper: UIView!
     @IBOutlet var buttons: [UIButton]!
+    @IBOutlet weak var questionLabel: UILabel!
     
     var travelChoices: TravelChoices?
     var sleepPlace: Int?
@@ -25,6 +26,15 @@ class Step4TravelCreationViewController: UIViewController {
         nextButton.setNextButton()
         nextButton.isEnabled = false
         getBtn()
+        
+        self.questionLabel.fadeTransition(0.4)
+        if let gift = self.travelChoices?.gift {
+            if gift == true {
+                self.questionLabel.text = "Il/elle associe le mot voyage à.."
+            } else {
+                self.questionLabel.text = "Vous associez le mot voyage à.."
+            }
+        }
     }
     
     
