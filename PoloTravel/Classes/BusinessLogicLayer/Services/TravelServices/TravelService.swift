@@ -101,11 +101,12 @@ class TravelService {
             let endDate = endDateTS.dateValue()
             
             let price = travel["price"] as! Int
+            let gift = travel["gift"] as! Bool
             
             let daysDatasInitial = travel["daysDatas"] as! NSArray
             
             convertDaysDatasToModels(daysDatas: daysDatasInitial) { daysDatas in
-                travelsConverted.append(Travel(startDate: startDate, endDate: endDate, price: price, travelGear: ["zz", "zz"], daysDatas: daysDatas))
+                travelsConverted.append(Travel(startDate: startDate, endDate: endDate, price: price, travelGear: ["zz", "zz"], daysDatas: daysDatas, gift: gift))
             }
         }
         
