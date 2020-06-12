@@ -16,6 +16,7 @@ class TravelsNextTravelViewController: UIViewController {
     @IBOutlet weak var daysLeftLabel: UILabel!
     @IBOutlet weak var hoursLeftLabel: UILabel!
     @IBOutlet weak var minutesLeftLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var user: User?
     var timer: Timer!
@@ -43,6 +44,15 @@ class TravelsNextTravelViewController: UIViewController {
                     let endDate = formatter.string(from: nextTravel.endDate)
                     
                     self.activityIndicator.stopAnimating()
+                    
+                    self.titleLabel.fadeTransition(0.4)
+                    
+                    if nextTravel.gift == true {
+                        self.titleLabel.text = "Voyage offert"
+                    } else {
+                        self.titleLabel.text = "Ton prochain voyage"
+                    }
+                    
                     self.nextTravelDate.text = "Du \(startDate) au \(endDate)"
                     self.typeAventurerLabel.text = "Aventurier expert"
                     self.buttonKnowMore.isHidden = false

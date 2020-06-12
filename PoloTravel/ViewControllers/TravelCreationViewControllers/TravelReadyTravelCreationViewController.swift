@@ -44,7 +44,7 @@ class TravelReadyTravelCreationViewController: UIViewController {
     }
     
     @IBAction func buttonSeeTravelClicked(_ sender: Any) {
-        self.performSegue(withIdentifier: "toPayment", sender: nil)
+        //self.performSegue(withIdentifier: "toPayment", sender: nil)
     }
     
     

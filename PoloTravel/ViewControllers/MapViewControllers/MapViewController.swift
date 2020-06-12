@@ -18,13 +18,17 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var mapView: NavigationMapView!
     var navigateButton: BasicButton!
     var directionsRoute: Route?
-    let apparitionDelay = 2.5
-    var polobtn: UIButton!
     
+
+    @IBOutlet weak var popinContent: UILabel!
+    @IBOutlet weak var popinTitle: UILabel!
+    
+    @IBOutlet weak var popIn: UIView!
+    @IBOutlet weak var polo: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        
+       
         mapView = NavigationMapView(frame: view.bounds, styleURL: MGLStyle.lightStyleURL)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
@@ -33,114 +37,307 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
-        customNavigateButton()
-        poloButton()
         
         TravelService().currentTravel(){result  in
             
             if let user = result {
-                //print(user.daysDatas[0].morningActivity.localization[0])
-            
-                
-                
+
                 let numberDays = user.daysDatas.count
                 for currentTravel in user.daysDatas{
                     print("start")
-                    print(currentTravel)
+
+                    for item in currentTravel.items{
+                        let header:String? = item.value(forKey: "header") as? String
+                        
+                        if let head = header{
+                            print(head)
+                        }
+                    }
                     
-                    //print(type(of: currentTravel.morningActivity.localization))
-                    
-                    //print(currentTravel.morningActivity.localization)
                     print("end")
                 }
                 print(numberDays)
             }
         }
         
-        displayAsyncPopUp()
-        
+        customPopIn()
+        self.view.bringSubviewToFront(polo)
+        self.view.bringSubviewToFront(popIn)
+
+
+            
         // Do any additional setup after loading the view.
     }
     
-    func displayAsyncPopUp(){
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + apparitionDelay ){
-
-            self.present(Alert.alert, animated: true)
-            Alert.alert.actionButton.addTarget(self, action: #selector(self.switchText), for: .touchUpInside)
-            Alert.alert.ratingStackView.isHidden = true
-        }
+    func customPopIn(){
+        popIn.isHidden = true
+        popIn.layer.cornerRadius = 30
+        popinTitle.textColor = UIColor.MainTheme.mainDarkBlue
+        popinContent.textColor = UIColor.MainTheme.mainDarkBlue
+        popIn.backgroundColor = UIColor(red: 163/255.0, green: 217/255.0, blue: 237/255.0, alpha: 1)
 
     }
     
+    private func switchStoryboard() {
+        let mainView: UIStoryboard = UIStoryboard(name: "Polowers", bundle: nil)
+        let mainVC = mainView.instantiateViewController(identifier: "PolowersVC")
+        self.show(mainVC, sender: nil)
+    }
+        
     var counter = 0
+    var countItems = 0
     
-    @objc func switchText(sender: BasicButton!){
-
-        counter += 1
-
-        switch counter {
-        case 1:
-            Alert.body?.text = "Laisse ton téléphone de côté et on se retrouve après."
-            Alert.title?.text = "Profite de ton activité"
-            Alert.button?.setTitle("Activité est fini", for: .normal)
-        case 2:
-            Alert.body?.text = "Ton activité est terminée !"
-            Alert.title?.text = "Comment l'as tu trouvé ?"
-            Alert.alert.ratingStackView.isHidden = false
-            Alert.alert.actionButton.isHidden = true
-            counter = 0
-        default:
-           break
-        }
+    
+    @IBAction func launchTravel(_ sender: UIButton) {
         
-        print(counter)
-        
-        }
-    
-    func poloButton(){
-        polobtn = UIButton(type: .custom)
-        polobtn.frame = CGRect(x:(view.frame.width / 8) , y: view.frame.height - 180, width: 60, height:60 )
-        
-        if let image = UIImage(named: "polo-tete"){
-            polobtn.setImage(image, for: .normal)
-        }
-        view.addSubview(polobtn)
-    }
-    
-    func customNavigateButton(){
-        navigateButton = BasicButton(frame: CGRect(x:(view.frame.width/2 ) - 100, y: view.frame.height - 350, width: 200, height:50 ))
-        navigateButton.setDarkButton()
-        navigateButton.setTitle("NAVIGATE", for: .normal)
-        navigateButton.layer.zPosition  = 9
-        navigateButton.addTarget(self, action: #selector(navigateButtonPressed(_:)), for: .touchUpInside)
-        view.addSubview(navigateButton)
-    }
-    
-    @objc func navigateButtonPressed(_ sender: BasicButton){
-        mapView.setUserTrackingMode(.none, animated: true)
-
-                    
-        TravelService().currentTravel(){ result  in
-                   
-           if let user = result {
-          
-            let MorningCoord = CLLocationCoordinate2D(latitude: 0.5, longitude: 0.5)
+              self.counter += 1
+                self.countItems += 1
+        popIn.isHidden = false
                 
-                let annotation = MGLPointAnnotation()
-                annotation.coordinate = MorningCoord
-                annotation.title = "Start Navigation"
-                self.mapView.addAnnotation(annotation)
+                print(counter)
+                
+                TravelService().currentTravel(){result  in
+                           
+                    if let user = result {
+                        
+
+                        switch self.counter {
+                        case 1..<5:
+                            print(user.daysDatas[0])
+                            print(user.daysDatas[0].items.count)
+                            
+                            print(user.daysDatas[0].items[self.countItems-1])
+                           
+      
+                            let header:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "header") as? String
+
+                            let localizations:Array? = user.daysDatas[0].items[self.countItems-1].value(forKey: "localization") as? Array<Any>
+                            let text:String? = user.daysDatas[0].items[self.countItems-1].value(forKey: "text") as? String
+
+                            // get localizations
+                            if let localization = localizations{
+                                 print(localization[0],localization[1])
+                                
+
+                                let destination = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
+
+                                
+                                   let annotation = MGLPointAnnotation()
+                               
+                              if let annotations = self.mapView.annotations {
+                                                               self.mapView.removeAnnotations(annotations)
+                                                              }
+
+                                   annotation.coordinate = destination
+                                   annotation.title = "Start Navigation"
+                                   self.mapView.addAnnotation(annotation)
                                     
-                self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: MorningCoord) { (route, error) in
-                   if error != nil{
-                       print("error getting route")
+                                                       
+                                   self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: destination) { (route, error) in
+                                      if error != nil{
+                                          print("error getting route")
+                                       }
+                                   }
+    
+                            
+                                                        
+                             }
+                            
+                            
+                            
+                            // get headers
+                            if let head = header{
+                                 print(head)
+                                self.popinTitle.text? = head
+                             }
+                        
+                            if let content = text{
+                                print(content)
+                               self.popinContent.text? = content
+                            }
+                            
+                            // set countItems to 0 for the next day
+                            if self.countItems == user.daysDatas[0].items.count{
+                                print(" COUNTER EST EGALE A 0 MAINTENANT --------")
+                                self.countItems = 0
+                            }
+                        case 5..<9:
+                            print(user.daysDatas[1])
+                            print(user.daysDatas[1].items.count)
+                            
+                            print(user.daysDatas[1].items[self.countItems-1])
+                            
+                            
+                            
+                            let header:String? = user.daysDatas[1].items[self.countItems-1].value(forKey: "header") as? String
+                            let localizations:Array? = user.daysDatas[1].items[self.countItems-1].value(forKey: "localization") as? Array<Any>
+
+                            let text:String? = user.daysDatas[1].items[self.countItems-1].value(forKey: "text") as? String
+
+                              // get localizations
+                              if let localization = localizations{
+                                   print(localization[0],localization[1])
+                                
+                                let destination = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
+
+                                                        
+                                
+                                   let annotation = MGLPointAnnotation()
+                               
+                              if let annotations = self.mapView.annotations {
+                                                               self.mapView.removeAnnotations(annotations)
+                                                              }
+
+                                   annotation.coordinate = destination
+                                   annotation.title = "Start Navigation"
+                                   self.mapView.addAnnotation(annotation)
+                                    
+                                                       
+                                   self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: destination) { (route, error) in
+                                      if error != nil{
+                                          print("error getting route")
+                                       }
+                                   }
+                                
+                               }
+                              // get headers
+                              if let head = header{
+                                   print(head)
+                                  self.popinTitle.text? = head
+                               }
+                          
+                              if let content = text{
+                                  print(content)
+                                 self.popinContent.text? = content
+                              }
+                              if self.countItems == user.daysDatas[1].items.count{
+                                  print(" COUNTER EST EGALE A 0 MAINTENANT ////  --------")
+                                  self.countItems = 0
+                              }
+
+                        case 9..<14:
+                            print(user.daysDatas[2])
+                            print(user.daysDatas[2].items.count)
+                            
+                            let text:String? = user.daysDatas[2].items[self.countItems-1].value(forKey: "text") as? String
+                            let header:String? = user.daysDatas[2].items[self.countItems-1].value(forKey: "header") as? String
+                            let localizations:Array? = user.daysDatas[2].items[self.countItems-1].value(forKey: "localization") as? Array<Any>
+
+                              // get localizations
+                              if let localization = localizations{
+                                   print(localization[0],localization[1])
+                                                          
+                                let destination = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
+
+                                                                       
+                                               
+                                  let annotation = MGLPointAnnotation()
+                              
+                             if let annotations = self.mapView.annotations {
+                                                              self.mapView.removeAnnotations(annotations)
+                                                             }
+
+                                  annotation.coordinate = destination
+                                  annotation.title = "Start Navigation"
+                                  self.mapView.addAnnotation(annotation)
+                                   
+                                                      
+                                  self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: destination) { (route, error) in
+                                     if error != nil{
+                                         print("error getting route")
+                                      }
+                                  }
+                               }
+                              // get headers
+                              if let head = header{
+                                   print(head)
+                                  self.popinTitle.text? = head
+                               }
+                          
+                              if let content = text{
+                                  print(content)
+                                 self.popinContent.text? = content
+                              }
+
+                            print(user.daysDatas[2].items[self.countItems-1])
+                                 if self.countItems == user.daysDatas[2].items.count{
+                                     print(" COUNTER EST EGALE A 0 MAINTENANT :: --------")
+                                     self.countItems = 0
+                                 }
+                        case 14..<18:
+                            print(user.daysDatas[3])
+                            print(user.daysDatas[3].items.count)
+
+                            let text:String? = user.daysDatas[3].items[self.countItems-1].value(forKey: "text") as? String
+                            let header:String? = user.daysDatas[3].items[self.countItems-1].value(forKey: "header") as? String
+                            let localizations:Array? = user.daysDatas[3].items[self.countItems-1].value(forKey: "localization") as? Array<Any>
+
+                                // get localizations
+                                if let localization = localizations{
+                                     print(localization[0],localization[1])
+                                    
+                                    let destination = CLLocationCoordinate2D(latitude: localization[0] as! CLLocationDegrees, longitude: localization[1] as! CLLocationDegrees)
+
+                                                                           
+                                                   
+                                      let annotation = MGLPointAnnotation()
+                                  
+                                 if let annotations = self.mapView.annotations {
+                                                                  self.mapView.removeAnnotations(annotations)
+                                                                 }
+
+                                      annotation.coordinate = destination
+                                      annotation.title = "Start Navigation"
+                                      self.mapView.addAnnotation(annotation)
+                                       
+                                                          
+                                      self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: destination) { (route, error) in
+                                         if error != nil{
+                                             print("error getting route")
+                                          }
+                                      }
+                                                            
+                                 }
+                                // get headers
+                                if let head = header{
+                                     print(head)
+                                    self.popinTitle.text? = head
+                                 }
+                            
+                                if let content = text{
+                                    print(content)
+                                   self.popinContent.text? = content
+                                }
+                            
+                            print(user.daysDatas[3].items[self.countItems-1])
+                                 if self.countItems == user.daysDatas[3].items.count{
+                                     print("COUNTER EST EGALE A 0 MAINTENANT ! --------")
+                                     self.countItems = 0
+                                 }
+                        case 18:
+                            
+                                self.popIn.isHidden = true
+                                self.present(Alert.alert, animated: true)
+
+                                Alert.title?.text = "Votre voyage est terminé !"
+                                Alert.body?.text = "Partagez vos meilleurs souvenirs !"
+                                Alert.button?.setTitle("Communauté Polowers", for: .normal)
+                                Alert.alert.ratingStackView.isHidden = true
+                                Alert.alert.actionButton.addTarget(self, action: #selector(self.display), for: .touchUpInside)
+
+                        default:
+                           break
+                        }
+           
                     }
                 }
-            }
-        }
+                        
     }
-    
+       
+    @objc func display(_sender: BasicButton){
+        Alert.alert.view.isHidden = true
+        switchStoryboard()
+    }
     
     func calculateRoute(from originCoord:CLLocationCoordinate2D, to destinationCoord: CLLocationCoordinate2D, completion:@escaping (Route?, Error?)-> Void){
         

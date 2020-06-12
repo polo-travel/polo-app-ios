@@ -13,12 +13,13 @@ class Step2TravelCreationViewController: UIViewController {
     @IBOutlet weak var nextButton: BasicButton!
     @IBOutlet weak var buttonWrapper: UIView!
     @IBOutlet var buttons: [UIButton]!
+    @IBOutlet weak var questionLabel: UILabel!
     
     var travelChoices: TravelChoices?
     var selectedDanger: Int?
     
 
-    let questions = ["Faire du sport, courir, nager","Visiter, découvrir la région", "Prendre soin de vous, respirer, bronzer"]
+    let questions = ["Faire du sport, courir, nager","Visiter, découvrir la région", "Prendre soin de soi, respirer, bronzer"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,16 @@ class Step2TravelCreationViewController: UIViewController {
         nextButton.setNextButton()
         nextButton.isEnabled = false
         getBtn()
+        
+        self.questionLabel.fadeTransition(0.4)
+        if let gift = self.travelChoices?.gift {
+            if gift == true {
+                self.questionLabel.text = "Pour lui/elle, partir en vacances, c'est plutôt.."
+            } else {
+                self.questionLabel.text = "Pour vous, partir en vacances, c'est plutôt.."
+            }
+        }
+        
     }
 
     func getBtn(){

@@ -19,7 +19,7 @@ class PolowersImagesService {
     let userManager = UserService()
     var user: User?
     
-
+    // Add a photo posted by an user to the database
     func addImageToDatabase(inputDescription:String, imgToUpload: UIImage, completionBlock: @escaping (_ success: Bool) -> Void) {
             userManager.currentUser() { result  in
                 self.user = result

@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wbE-7p-ljL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wbE-7p-ljL">
                                 <rect key="frame" x="26" y="202" width="354" height="354"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -370,7 +370,7 @@
         <!--Polowers-->
         <scene sceneID="3CM-ae-kbC">
             <objects>
-                <viewController id="XgU-cq-c3A" customClass="PolowersViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PolowersVC" id="XgU-cq-c3A" customClass="PolowersViewController" customModule="PoloTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fYT-OF-LTK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -708,10 +708,10 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="aQY-gm-7RL"/>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7C-ro-lIA">
-                                <rect key="frame" x="37" y="137" width="341" height="71"/>
+                                <rect key="frame" x="29" y="136" width="357" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Aide Polo à enrichir les voyages surprises en lui proposant des activités toujours plus insolites les unes que les autres !">
+                                    <fragment content="Aidez Polo à enrichir les voyages surprises en lui proposant des activités toujours plus insolites les unes que les autres !">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Gilroy-Bold"/>
