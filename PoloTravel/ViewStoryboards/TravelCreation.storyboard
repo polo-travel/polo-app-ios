@@ -77,37 +77,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTP-e1-oAF">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTP-e1-oAF">
                                 <rect key="frame" x="30" y="92" width="29.5" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29.666666666666664" id="E4w-F3-PNj"/>
-                                    <constraint firstAttribute="height" constant="24" id="Z0F-HX-Kb0"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="arrow_back"/>
                                 <connections>
                                     <action selector="backButtonClicked:" destination="2pm-vZ-otM" eventType="touchUpInside" id="Lx3-2b-Mg9"/>
                                     <action selector="backButtonClicked:" destination="ICN-Vp-AFb" eventType="touchUpInside" id="mib-6X-kwG"/>
                                 </connections>
                             </button>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkC-0N-ZyW" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkC-0N-ZyW" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="30" y="187" width="354" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour offrir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNo-ty-26t">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pour offrir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNo-ty-26t">
                                         <rect key="frame" x="30" y="30" width="161" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="161" id="8RE-Fc-dX7"/>
-                                            <constraint firstAttribute="height" constant="33" id="Fkt-Hr-QZN"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="35"/>
                                         <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4k-n8-Q5W">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4k-n8-Q5W">
                                         <rect key="frame" x="30" y="71" width="246" height="59"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="246" id="SDg-vx-Tfd"/>
-                                            <constraint firstAttribute="height" constant="59" id="mYe-rW-mH3"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Offrez cette expérience à une ou plusieurs personnes et faites-leur vivre une aventure inoubliable">
                                                 <attributes>
@@ -119,16 +111,14 @@
                                         </attributedString>
                                         <color key="highlightedColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tooffert_bg" translatesAutoresizingMaskIntoConstraints="NO" id="L1D-ia-al9">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tooffert_bg" translatesAutoresizingMaskIntoConstraints="NO" id="L1D-ia-al9">
                                         <rect key="frame" x="0.0" y="170" width="354" height="98"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXN-It-oUG" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXN-It-oUG" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                         <rect key="frame" x="30" y="210" width="79" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="79" id="0j1-bf-gCY"/>
-                                            <constraint firstAttribute="height" constant="35" id="7PF-bB-DbN"/>
-                                        </constraints>
                                         <state key="normal">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -139,22 +129,10 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="L1D-ia-al9" firstAttribute="top" secondItem="d4k-n8-Q5W" secondAttribute="bottom" constant="40" id="3rn-uR-P3Q"/>
-                                    <constraint firstItem="L1D-ia-al9" firstAttribute="leading" secondItem="QXN-It-oUG" secondAttribute="trailing" constant="-109" id="HtG-CU-AiL"/>
-                                    <constraint firstItem="d4k-n8-Q5W" firstAttribute="leading" secondItem="qkC-0N-ZyW" secondAttribute="leading" constant="30" id="IdU-qg-ahI"/>
-                                    <constraint firstAttribute="trailing" secondItem="L1D-ia-al9" secondAttribute="trailing" id="PzZ-Ew-nOc"/>
-                                    <constraint firstItem="d4k-n8-Q5W" firstAttribute="top" secondItem="LNo-ty-26t" secondAttribute="bottom" constant="8" id="T7i-Jf-Apt"/>
-                                    <constraint firstAttribute="bottom" secondItem="L1D-ia-al9" secondAttribute="bottom" id="YJh-NW-ivx"/>
-                                    <constraint firstItem="LNo-ty-26t" firstAttribute="leading" secondItem="qkC-0N-ZyW" secondAttribute="leading" constant="30" id="b6e-td-doF"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="268" id="cgb-lv-jAq"/>
-                                    <constraint firstItem="QXN-It-oUG" firstAttribute="top" secondItem="L1D-ia-al9" secondAttribute="bottom" constant="-58" id="ffp-DJ-Gjs"/>
-                                    <constraint firstItem="L1D-ia-al9" firstAttribute="leading" secondItem="qkC-0N-ZyW" secondAttribute="leading" id="k7U-Lm-FpB"/>
-                                    <constraint firstItem="LNo-ty-26t" firstAttribute="top" secondItem="qkC-0N-ZyW" secondAttribute="top" constant="30" id="w76-oN-zmg"/>
-                                </constraints>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCo-Lg-X8a" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCo-Lg-X8a" customClass="RadiusBlock" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="30" y="499" width="354" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pour vous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbm-eM-BSY">
                                         <rect key="frame" x="30" y="30" width="161" height="36"/>
@@ -163,11 +141,9 @@
                                         <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAW-Ff-voF">
-                                        <rect key="frame" x="30" y="75" width="285.5" height="58"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="QyN-bs-WdJ"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAW-Ff-voF">
+                                        <rect key="frame" x="30" y="75" width="281.5" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Partez à l’aventure seul ou à plusieurs
@@ -182,16 +158,14 @@ vous n’auriez jamais imaginé faire</string>
                                         </attributedString>
                                         <color key="highlightedColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toyou_bg" translatesAutoresizingMaskIntoConstraints="NO" id="yhH-nB-3Iw">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="toyou_bg" translatesAutoresizingMaskIntoConstraints="NO" id="yhH-nB-3Iw">
                                         <rect key="frame" x="0.0" y="170" width="354" height="98"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQc-Cp-Rbj" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="210" width="79" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQc-Cp-Rbj" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="212" width="79" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="c8X-EP-HQ3"/>
-                                            <constraint firstAttribute="width" constant="79" id="f1J-BP-bxI"/>
-                                        </constraints>
                                         <state key="normal">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -202,43 +176,15 @@ vous n’auriez jamais imaginé faire</string>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="yhH-nB-3Iw" firstAttribute="leading" secondItem="CCo-Lg-X8a" secondAttribute="leading" id="AUI-CM-clc"/>
-                                    <constraint firstItem="VQc-Cp-Rbj" firstAttribute="top" secondItem="yhH-nB-3Iw" secondAttribute="bottom" constant="-58" id="IlC-z0-qEg"/>
-                                    <constraint firstAttribute="trailing" secondItem="yhH-nB-3Iw" secondAttribute="trailing" id="LB4-5f-ghL"/>
-                                    <constraint firstItem="yhH-nB-3Iw" firstAttribute="leading" secondItem="VQc-Cp-Rbj" secondAttribute="trailing" constant="-109" id="Lpg-nv-phc"/>
-                                    <constraint firstAttribute="bottom" secondItem="yhH-nB-3Iw" secondAttribute="bottom" id="V7l-A4-g5J"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="268" id="WtH-8E-wei"/>
-                                    <constraint firstItem="dAW-Ff-voF" firstAttribute="leading" secondItem="CCo-Lg-X8a" secondAttribute="leading" constant="30" id="n7C-g7-RdD"/>
-                                    <constraint firstItem="yhH-nB-3Iw" firstAttribute="top" secondItem="dAW-Ff-voF" secondAttribute="bottom" constant="37" id="nfb-Eh-11a"/>
-                                </constraints>
                             </view>
-                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" translatesAutoresizingMaskIntoConstraints="NO" id="zhA-ae-fGP">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" translatesAutoresizingMaskIntoConstraints="NO" id="zhA-ae-fGP">
                                 <rect key="frame" x="160" y="825" width="94" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="5LI-6q-BUx"/>
-                                    <constraint firstAttribute="height" constant="37" id="QyJ-5e-hfF"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" white="1" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="qkC-0N-ZyW" firstAttribute="top" relation="lessThanOrEqual" secondItem="hTP-e1-oAF" secondAttribute="bottom" constant="71" id="3Or-B6-edr"/>
-                            <constraint firstItem="qkC-0N-ZyW" firstAttribute="leading" secondItem="H4b-pl-Y8n" secondAttribute="leading" constant="30" id="4Vw-48-aUm"/>
-                            <constraint firstItem="hTP-e1-oAF" firstAttribute="leading" secondItem="H4b-pl-Y8n" secondAttribute="leading" constant="30" id="4q0-3r-WRC"/>
-                            <constraint firstItem="zhA-ae-fGP" firstAttribute="centerX" secondItem="H4b-pl-Y8n" secondAttribute="centerX" id="D5j-kL-IrC"/>
-                            <constraint firstItem="zhA-ae-fGP" firstAttribute="top" secondItem="CCo-Lg-X8a" secondAttribute="bottom" constant="58" id="Lgs-kS-jf6"/>
-                            <constraint firstItem="H4b-pl-Y8n" firstAttribute="trailing" secondItem="qkC-0N-ZyW" secondAttribute="trailing" constant="30" id="MEK-4R-TOe"/>
-                            <constraint firstItem="CCo-Lg-X8a" firstAttribute="leading" secondItem="H4b-pl-Y8n" secondAttribute="leading" constant="30" id="bn6-mf-56O"/>
-                            <constraint firstItem="CCo-Lg-X8a" firstAttribute="centerX" secondItem="H4b-pl-Y8n" secondAttribute="centerX" id="dAI-zH-Wpc"/>
-                            <constraint firstItem="H4b-pl-Y8n" firstAttribute="bottom" secondItem="zhA-ae-fGP" secondAttribute="bottom" id="hQU-Kw-v0y"/>
-                            <constraint firstItem="CCo-Lg-X8a" firstAttribute="top" secondItem="qkC-0N-ZyW" secondAttribute="bottom" constant="44" id="juA-ZY-VOM"/>
-                            <constraint firstItem="qkC-0N-ZyW" firstAttribute="centerX" secondItem="H4b-pl-Y8n" secondAttribute="centerX" id="pda-5Z-mAD"/>
-                            <constraint firstItem="H4b-pl-Y8n" firstAttribute="trailing" secondItem="CCo-Lg-X8a" secondAttribute="trailing" constant="30" id="qv1-i9-9JQ"/>
-                            <constraint firstItem="hTP-e1-oAF" firstAttribute="top" secondItem="H4b-pl-Y8n" secondAttribute="top" constant="4" id="xdk-GP-4PZ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="H4b-pl-Y8n"/>
                     </view>
                     <navigationItem key="navigationItem" id="PCh-0F-YxD"/>
@@ -521,7 +467,7 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMd-Ry-rSa">
-                                <rect key="frame" x="30" y="156" width="268" height="55"/>
+                                <rect key="frame" x="30" y="156" width="325" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy-Bold" pointSize="20"/>
                                 <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -676,7 +622,7 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="currentPageIndicatorTintColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPg-eh-CaG" customClass="FSCalendar">
-                                <rect key="frame" x="30" y="237" width="349" height="338"/>
+                                <rect key="frame" x="33" y="276" width="349" height="338"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -692,14 +638,14 @@ vous n’auriez jamais imaginé faire</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwy-SN-0Ie">
-                                <rect key="frame" x="30" y="154" width="349" height="20"/>
+                                <rect key="frame" x="33" y="225" width="349" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Quand voulez-vous partir ?">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="Gilroy-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -713,12 +659,13 @@ vous n’auriez jamais imaginé faire</string>
                     <connections>
                         <outlet property="calendar" destination="qPg-eh-CaG" id="jSh-PV-Yji"/>
                         <outlet property="nextButton" destination="hyG-dB-Nn5" id="brE-kp-Lga"/>
+                        <outlet property="questionLabel" destination="Fwy-SN-0Ie" id="lTt-4y-8xU"/>
                         <segue destination="Bzb-S2-8cE" kind="show" identifier="toStep6" id="OyQ-ou-tK5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOb-AS-W04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5657" y="113"/>
+            <point key="canvasLocation" x="5656.521739130435" y="112.5"/>
         </scene>
         <!--Step6 Travel Creation View Controller-->
         <scene sceneID="xH6-tm-Ovd">
@@ -744,10 +691,10 @@ vous n’auriez jamais imaginé faire</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cai-M6-zd5">
-                                <rect key="frame" x="21" y="638" width="377" height="75"/>
+                                <rect key="frame" x="21" y="638" width="338" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Pour une expérience optimale, je vous conseille de choisir au minimum 40 euros par jour et par personne">
+                                    <fragment content="Pour une expérience optimale, je vous conseille de choisir au minimum 90 euros par jour et par personne">
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" metaFont="system" size="17"/>
@@ -823,7 +770,7 @@ vous n’auriez jamais imaginé faire</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKG-1w-qUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6433" y="112"/>
+            <point key="canvasLocation" x="6431.884057971015" y="111.83035714285714"/>
         </scene>
         <!--Recap Step Travel Creation View Controller-->
         <scene sceneID="kK6-wO-fWe">
