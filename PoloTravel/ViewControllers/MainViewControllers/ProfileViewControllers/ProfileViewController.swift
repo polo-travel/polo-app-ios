@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePhoto: RoundedImage!
     @IBOutlet weak var travelsHistory: RadiusBlock!
     @IBOutlet weak var travlesHistoryLabel: UILabel!
+    @IBOutlet weak var travelTitleLabel: UILabel!
     var user:User?
     
     var transparentView = UIView()
@@ -82,7 +83,12 @@ class ProfileViewController: UIViewController {
                     } else {
                         print("Profile: No photo URL")
                     }
-                    
+                    self.travelTitleLabel.fadeTransition(0.4)
+                    if nextTravel.gift == true {
+                        self.travelTitleLabel.text = "Voyage offert"
+                    } else {
+                        self.travelTitleLabel.text = "Mon prochain voyage"
+                    }
                     self.activityIndicator.stopAnimating()
                     self.nextTravelDate.text = "Du \(startDate) au \(endDate)"
                     self.typeAventurerLabel.text = "Aventurier expert"
