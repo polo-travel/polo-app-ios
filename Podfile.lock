@@ -311,6 +311,7 @@ PODS:
     - SDWebImage/Core (= 5.6.1)
   - SDWebImage/Core (5.6.1)
   - Solar (2.1.0)
+  - Stripe (19.3.0)
   - Turf (0.3.0)
 
 DEPENDENCIES:
@@ -323,6 +324,7 @@ DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 5.5.1)
   - MapboxNavigation (~> 0.39.0)
   - SDWebImage (~> 5.0)
+  - Stripe
 
 SPEC REPOS:
   trunk:
@@ -360,6 +362,7 @@ SPEC REPOS:
     - PromisesObjC
     - SDWebImage
     - Solar
+    - Stripe
     - Turf
 
 SPEC CHECKSUMS:
@@ -397,8 +400,9 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  Stripe: dd5bfdd5f1daed4f9ddbfb47e9449ec302f9f708
   Turf: c6bdf62d6a70c647874f295dd1cf4eefc0c3e9e6
 
-PODFILE CHECKSUM: 040074172594a96288b9ceb6811a63f1b7998758
+PODFILE CHECKSUM: a5b15b9ff392a5bfc16f00832e43d8a4f857701e
 
 COCOAPODS: 1.9.1

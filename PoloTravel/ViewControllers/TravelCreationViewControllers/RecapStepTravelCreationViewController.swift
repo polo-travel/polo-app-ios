@@ -59,7 +59,7 @@ class RecapStepTravelCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStepReady" {
             if let dest = segue.destination as? TravelReadyTravelCreationViewController {
-                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: travelChoices?.date, budget: travelChoices?.budget, adventurerLevel: 2)
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, q1:travelChoices?.q1, q2: travelChoices?.q2, q3: travelChoices?.q3, date: travelChoices?.date, budget: travelChoices?.budget, adventurerLevel: 2, finalPoloImage: travelChoices?.finalPoloImage)
             }
         }
     }

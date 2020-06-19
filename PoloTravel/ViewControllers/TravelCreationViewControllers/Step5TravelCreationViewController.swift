@@ -13,7 +13,8 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
 
     @IBOutlet weak var nextButton: BasicButton!
     var travelChoices: TravelChoices?
-
+    @IBOutlet weak var questionLabel: UILabel!
+    
     // first date in the range
     private var firstDate: Date?
     // last date in the range
@@ -31,6 +32,14 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
         nextButton.setNextButton()
 
         calendar.allowsMultipleSelection = true
+        self.questionLabel.fadeTransition(0.4)
+        if let gift = self.travelChoices?.gift {
+            if gift == true {
+                self.questionLabel.text = "Quand voulez-vous qu'il/elle parte ?"
+            } else {
+                self.questionLabel.text = "Quand voulez-vous partir ?"
+            }
+        }
 
     }
 
@@ -38,7 +47,7 @@ class Step5TravelCreationViewController: UIViewController, FSCalendarDelegate {
         if segue.identifier == "toStep6" {
 
             if let dest = segue.destination as? Step6TravelCreationViewController {
-                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: [firstDate, lastDate] as? [Date])
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, q1:travelChoices?.q1, q2: travelChoices?.q2, q3: travelChoices?.q3, date: [firstDate, lastDate] as? [Date], finalPoloImage: travelChoices?.finalPoloImage)
             }
         }
     }
