@@ -16,10 +16,17 @@ class TravelReadyTravelCreationViewController: UIViewController {
     @IBOutlet weak var labelReady: UILabel!
     var travelChoices: TravelChoices?
     @IBOutlet weak var iconReady: UIImageView!
+    @IBOutlet weak var poloImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let finalPoloImage = travelChoices?.finalPoloImage {
+            print(finalPoloImage)
+            poloImage.image = UIImage(named: finalPoloImage)
+        }
+        
+        
         buttonSeeTravel.isHidden = true
         iconReady.isHidden = true
         buttonSeeTravel.setRedButton()

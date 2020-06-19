@@ -16,6 +16,7 @@ class Step6TravelCreationViewController: UIViewController {
     var budget: Int?
     @IBOutlet weak var labelBudget: UILabel!
     @IBOutlet weak var viewBudget: UIView!
+    @IBOutlet weak var poloImage: UIImageView!
     
     var imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
@@ -36,6 +37,10 @@ class Step6TravelCreationViewController: UIViewController {
             imageView.trailingAnchor.constraint(equalTo: viewBudget.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: viewBudget.bottomAnchor)
         ])
+        if let finalPoloImage = travelChoices?.finalPoloImage {
+            poloImage.image = UIImage(named: finalPoloImage)
+        }
+        
         
         nextButton.setNextButton()
         nextButton.isEnabled = false
@@ -65,7 +70,7 @@ class Step6TravelCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStepRecap" {
             if let dest = segue.destination as? RecapStepTravelCreationViewController {
-                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: travelChoices?.sleepPlace, date: travelChoices?.date, budget: budget)
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, q1:travelChoices?.q1, q2: travelChoices?.q2, q3: travelChoices?.q3, date: travelChoices?.date, budget: budget, finalPoloImage: travelChoices?.finalPoloImage)
             }
         }
     }

@@ -11,6 +11,7 @@ import Firebase
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           MSAnalytics.self,
           MSCrashes.self
         ])
+        Stripe.setDefaultPublishableKey("pk_test_51Gv0hbBEWR4CpIJPnfms4SXHdMirBr7Qb30tybCb5ALM6gCemqMZaNKBy0h4xNtjAVT7JBlAojOFerVnt52Wglni00SHtn5eWJ")
         
         return true
     }

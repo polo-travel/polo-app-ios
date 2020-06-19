@@ -319,10 +319,6 @@ vous n’auriez jamais imaginé faire</string>
                                     <action selector="nextButtonClicked:" destination="Avi-vD-D33" eventType="touchUpInside" id="R3G-Fc-7uB"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="travel_creation_step2" translatesAutoresizingMaskIntoConstraints="NO" id="opm-aE-WfH">
-                                <rect key="frame" x="0.0" y="280" width="414" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfi-0J-fPJ">
                                 <rect key="frame" x="30" y="92" width="29.666666666666664" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -377,6 +373,14 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decor-R2" translatesAutoresizingMaskIntoConstraints="NO" id="ak8-Pr-MVY">
+                                <rect key="frame" x="0.0" y="273" width="414" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="R2.1" translatesAutoresizingMaskIntoConstraints="NO" id="hwH-9U-NhN">
+                                <rect key="frame" x="52" y="272" width="230" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="JYj-Aq-5i8"/>
@@ -385,6 +389,7 @@ vous n’auriez jamais imaginé faire</string>
                     <connections>
                         <outlet property="buttonWrapper" destination="8H0-DZ-VAx" id="Ix4-76-8iE"/>
                         <outlet property="nextButton" destination="whk-fp-VXK" id="Uqg-I1-gsh"/>
+                        <outlet property="poloImage" destination="hwH-9U-NhN" id="C8O-XI-RQH"/>
                         <outlet property="questionLabel" destination="c4U-Qf-RUN" id="6kf-pF-Adb"/>
                         <outletCollection property="buttons" destination="C0B-km-mMw" collectionClass="NSMutableArray" id="izx-xb-cux"/>
                         <outletCollection property="buttons" destination="r7D-x8-Box" collectionClass="NSMutableArray" id="2Rw-9x-hVD"/>
@@ -456,10 +461,6 @@ vous n’auriez jamais imaginé faire</string>
                                     <action selector="backButtonClicked:" destination="3iX-OZ-SRQ" eventType="touchUpInside" id="9eA-VS-HcS"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_step_3" translatesAutoresizingMaskIntoConstraints="NO" id="erk-8E-QxE">
-                                <rect key="frame" x="0.0" y="219" width="414" height="282"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="rDu-ZX-AvK">
                                 <rect key="frame" x="154" y="825" width="94" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -473,6 +474,14 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decor-R3" translatesAutoresizingMaskIntoConstraints="NO" id="ro3-c5-eL8">
+                                <rect key="frame" x="30" y="219" width="414" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="R2.1" translatesAutoresizingMaskIntoConstraints="NO" id="8JH-cE-A17">
+                                <rect key="frame" x="56" y="229" width="230" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="K0U-re-hpm"/>
@@ -481,6 +490,7 @@ vous n’auriez jamais imaginé faire</string>
                     <connections>
                         <outlet property="buttonWrapper" destination="22S-WA-IKL" id="mTG-Y7-Ila"/>
                         <outlet property="nextButton" destination="fH5-cR-usK" id="QD5-cj-zOV"/>
+                        <outlet property="poloImage" destination="8JH-cE-A17" id="Khr-EA-Wzy"/>
                         <outlet property="questionLabel" destination="lMd-Ry-rSa" id="PgV-zY-Qtc"/>
                         <outletCollection property="buttons" destination="78x-oX-UQP" collectionClass="NSMutableArray" id="fXF-2H-42H"/>
                         <outletCollection property="buttons" destination="4nK-pf-2ZH" collectionClass="NSMutableArray" id="MBH-NX-wfU"/>
@@ -565,8 +575,12 @@ vous n’auriez jamais imaginé faire</string>
                                 <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_step_4" translatesAutoresizingMaskIntoConstraints="NO" id="gr9-QX-0fA">
-                                <rect key="frame" x="0.0" y="231" width="414" height="258"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decor-R4" translatesAutoresizingMaskIntoConstraints="NO" id="scV-yS-J3U">
+                                <rect key="frame" x="0.0" y="242" width="414" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="R2.1" translatesAutoresizingMaskIntoConstraints="NO" id="2Eq-zA-4jd">
+                                <rect key="frame" x="56" y="229" width="230" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -577,6 +591,7 @@ vous n’auriez jamais imaginé faire</string>
                     <connections>
                         <outlet property="buttonWrapper" destination="IG0-aO-0GU" id="PG8-z2-TeY"/>
                         <outlet property="nextButton" destination="CKi-Q8-DhO" id="FdQ-8D-etO"/>
+                        <outlet property="poloImage" destination="2Eq-zA-4jd" id="CSN-98-2c9"/>
                         <outlet property="questionLabel" destination="iYY-py-WR7" id="dNn-q0-CHz"/>
                         <outletCollection property="buttons" destination="dWe-kp-rNH" collectionClass="NSMutableArray" id="fxG-nq-A6x"/>
                         <outletCollection property="buttons" destination="mt0-1V-Mso" collectionClass="NSMutableArray" id="BSS-6z-Z1t"/>
@@ -675,10 +690,6 @@ vous n’auriez jamais imaginé faire</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_step_6" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-cP-UpN">
-                                <rect key="frame" x="16" y="223" width="343" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8b-PG-wvg" customClass="BasicButton" customModule="PoloTravel" customModuleProvider="target">
                                 <rect key="frame" x="280" y="770" width="105" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -755,6 +766,10 @@ vous n’auriez jamais imaginé faire</string>
                                     </label>
                                 </subviews>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="R2.1" translatesAutoresizingMaskIntoConstraints="NO" id="5zn-lW-YVK">
+                                <rect key="frame" x="94" y="232" width="164" height="213"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="rBs-Pw-bac"/>
@@ -763,6 +778,7 @@ vous n’auriez jamais imaginé faire</string>
                     <connections>
                         <outlet property="labelBudget" destination="xJI-qW-NRr" id="DKv-v2-fZo"/>
                         <outlet property="nextButton" destination="a8b-PG-wvg" id="qBF-wP-lxJ"/>
+                        <outlet property="poloImage" destination="5zn-lW-YVK" id="hur-O5-wZB"/>
                         <outlet property="slider" destination="4I8-eM-DCd" id="jBL-vu-rKX"/>
                         <outlet property="viewBudget" destination="7SU-9g-3sC" id="JBT-aZ-NfY"/>
                         <segue destination="H9B-HB-Wz2" kind="show" identifier="toStepRecap" id="n5Y-TA-ZTU"/>
@@ -883,10 +899,6 @@ vous n’auriez jamais imaginé faire</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polo_travelers_1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7zL-n9-5Qz">
-                                <rect key="frame" x="0.0" y="407" width="414" height="292"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="MgD-DM-2Q0">
                                 <rect key="frame" x="181" y="284" width="50" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -922,6 +934,10 @@ vous n’auriez jamais imaginé faire</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="R2.1" translatesAutoresizingMaskIntoConstraints="NO" id="7zL-n9-5Qz">
+                                <rect key="frame" x="59" y="404" width="230" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85098039219999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Tbk-x9-xLT"/>
@@ -931,6 +947,7 @@ vous n’auriez jamais imaginé faire</string>
                         <outlet property="activityIndicator" destination="MgD-DM-2Q0" id="HSX-ND-Amh"/>
                         <outlet property="buttonSeeTravel" destination="22b-F9-mIw" id="VYB-dK-egA"/>
                         <outlet property="iconReady" destination="5Ko-5b-d4P" id="pd3-3k-tpY"/>
+                        <outlet property="poloImage" destination="7zL-n9-5Qz" id="rya-fi-Fks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3V-6p-v3E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1178,11 +1195,11 @@ vous n’auriez jamais imaginé faire</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20Y-yE-6pm">
-                                <rect key="frame" x="44" y="149" width="326" height="65"/>
+                                <rect key="frame" x="44" y="149" width="313" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Ils recevront les indications sur le lieu, la date et l'heure du RDV avec une liste d'affairs à prendre sans plus d'indications afin de garder la surprise</string>
+                                        <string key="content">Ils recevront les indications sur le lieu, la date et l'heure du RDV avec une liste d'affaires à prendre sans plus d'indications afin de garder la surprise</string>
                                         <attributes>
                                             <color key="NSColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="Gilroy-Medium"/>
@@ -1258,7 +1275,7 @@ vous n’auriez jamais imaginé faire</string>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Addresse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uj0-9g-Z93">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adresse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uj0-9g-Z93">
                                         <rect key="frame" x="16" y="174" width="268" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.058823529409999999" green="0.13725490200000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1396,18 +1413,18 @@ vous n’auriez jamais imaginé faire</string>
         <segue reference="rZq-1n-Idp"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="R2.1" width="1530" height="1958"/>
         <image name="arrow_back" width="35" height="30"/>
         <image name="bg_bluebig_shape" width="280.5" height="333"/>
         <image name="bg_redbig_shape" width="377" height="295"/>
+        <image name="decor-R2" width="2584" height="1337"/>
+        <image name="decor-R3" width="2992" height="1570"/>
+        <image name="decor-R4" width="2141" height="1163"/>
         <image name="payment" width="384" height="435"/>
         <image name="polo_character" width="411" height="374"/>
-        <image name="polo_step_3" width="463" height="299"/>
-        <image name="polo_step_4" width="328" height="285"/>
-        <image name="polo_step_6" width="196" height="225"/>
         <image name="polo_travelers_1" width="798" height="600"/>
         <image name="tooffert_bg" width="354" height="98.5"/>
         <image name="toyou_bg" width="354" height="98.5"/>
-        <image name="travel_creation_step2" width="414" height="286"/>
         <image name="travel_ready" width="62" height="62"/>
     </resources>
 </document>

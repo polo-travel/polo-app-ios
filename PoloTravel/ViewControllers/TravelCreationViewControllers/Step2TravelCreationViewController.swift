@@ -14,9 +14,10 @@ class Step2TravelCreationViewController: UIViewController {
     @IBOutlet weak var buttonWrapper: UIView!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var poloImage: UIImageView!
     
     var travelChoices: TravelChoices?
-    var selectedDanger: Int?
+    var r1: Int?
     
 
     let questions = ["Faire du sport, courir, nager","Visiter, découvrir la région", "Prendre soin de soi, respirer, bronzer"]
@@ -55,7 +56,15 @@ class Step2TravelCreationViewController: UIViewController {
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
         }
         print(sender.tag)
-        selectedDanger = sender.tag
+        switch sender.tag {
+        case 1:
+            poloImage.image = UIImage(named: "R2.2.png")
+        case 2:
+            poloImage.image = UIImage(named: "R2.3.png")
+        default:
+            poloImage.image = UIImage(named: "R2.1.png")
+        }
+        r1 = sender.tag
         if (nextButton.isEnabled == false) {
             nextButton.isEnabled = true
         }
@@ -64,7 +73,7 @@ class Step2TravelCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStep3" {
             if let dest = segue.destination as? Step3TravelCreationViewController {
-                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger: selectedDanger)
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, q1: r1)
             }
         }
     }

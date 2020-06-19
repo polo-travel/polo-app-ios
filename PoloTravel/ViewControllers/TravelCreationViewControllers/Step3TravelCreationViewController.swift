@@ -14,9 +14,10 @@ class Step3TravelCreationViewController: UIViewController {
     @IBOutlet weak var nextButton: BasicButton!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var poloImage: UIImageView!
     
     var travelChoices: TravelChoices?
-    var forestLosted: Int?
+    var r2: Int?
     
     let questions = ["Perdre ses repères","Renouer avec la nature", "S'écouter davantage"]
     
@@ -26,6 +27,17 @@ class Step3TravelCreationViewController: UIViewController {
         nextButton.setNextButton()
         nextButton.isEnabled = false
         getBtn()
+        
+        if let prevRep = travelChoices?.q1 {
+            switch prevRep {
+            case 1:
+                poloImage.image = UIImage(named: "R2.2.png")
+            case 2:
+                poloImage.image = UIImage(named: "R2.3.png")
+            default:
+                poloImage.image = UIImage(named: "R2.1.png")
+            }
+        }
         
         self.questionLabel.fadeTransition(0.4)
         if let gift = self.travelChoices?.gift {
@@ -54,7 +66,41 @@ class Step3TravelCreationViewController: UIViewController {
             button.backgroundColor = (button === sender) ? UIColor.MainTheme.mainDarkBlue : .white
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
         }
-        forestLosted = sender.tag
+        r2 = sender.tag
+        print(r2)
+        
+        if let prevRep = travelChoices?.q1 {
+            switch prevRep {
+            case 1:
+                switch r2 {
+                case 1:
+                    poloImage.image = UIImage(named: "R2.2+R3.2.png")
+                case 2:
+                    poloImage.image = UIImage(named: "R2.2+R3.3.png")
+                default:
+                    poloImage.image = UIImage(named: "R2.2+R3.1.png")
+                }
+            case 2:
+                switch r2 {
+                case 1:
+                    poloImage.image = UIImage(named: "R2.3+R3.2.png")
+                case 2:
+                    poloImage.image = UIImage(named: "R2.3+R3.3.png")
+                default:
+                    poloImage.image = UIImage(named: "R2.3+R3.1.png")
+                }
+            default:
+                switch r2 {
+                case 1:
+                    poloImage.image = UIImage(named: "R2.1+R3.2.png")
+                case 2:
+                    poloImage.image = UIImage(named: "R2.1+R3.3.png")
+                default:
+                    poloImage.image = UIImage(named: "R2.1+R3.1.png")
+                }
+            }
+        }
+        
         if (nextButton.isEnabled == false) {
             nextButton.isEnabled = true
         }
@@ -63,13 +109,13 @@ class Step3TravelCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStep4" {
             if let dest = segue.destination as? Step4TravelCreationViewController {
-                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: forestLosted)
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, q1:travelChoices?.q1, q2: r2)
             }
         }
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
-        if forestLosted != nil {
+        if r2 != nil {
             self.performSegue(withIdentifier: "toStep4", sender: nil)
         } else {
             print("Sélectionnez une réponse")

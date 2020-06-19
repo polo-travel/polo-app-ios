@@ -14,11 +14,13 @@ class Step4TravelCreationViewController: UIViewController {
     @IBOutlet weak var buttonWrapper: UIView!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var poloImage: UIImageView!
     
     var travelChoices: TravelChoices?
-    var sleepPlace: Int?
+    var r3: Int?
+    var finalPoloImage: String?
 
-     let questions = ["L'évasion","Le retour aux sources !", "La tranquillité"]
+     let questions = ["A l'hôtel pour le confort","A la belle étoile", "Chez lui/elle pour être tranquille"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +29,47 @@ class Step4TravelCreationViewController: UIViewController {
         nextButton.isEnabled = false
         getBtn()
         
+        if let firstRep = travelChoices?.q1 {
+            if let prevRep = travelChoices?.q2 {
+                print(firstRep, prevRep)
+                switch firstRep {
+                case 1:
+                    switch prevRep {
+                    case 1:
+                        poloImage.image = UIImage(named: "R2.2+R3.2.png")
+                    case 2:
+                        poloImage.image = UIImage(named: "R2.2+R3.3.png")
+                    default:
+                        poloImage.image = UIImage(named: "R2.2+R3.1.png")
+                    }
+                case 2:
+                    switch prevRep {
+                    case 1:
+                        poloImage.image = UIImage(named: "R2.3+R3.2.png")
+                    case 2:
+                        poloImage.image = UIImage(named: "R2.3+R3.3.png")
+                    default:
+                        poloImage.image = UIImage(named: "R2.3+R3.1.png")
+                    }
+                default:
+                    switch prevRep {
+                    case 1:
+                        poloImage.image = UIImage(named: "R2.1+R3.2.png")
+                    case 2:
+                        poloImage.image = UIImage(named: "R2.1+R3.3.png")
+                    default:
+                        poloImage.image = UIImage(named: "R2.1+R3.1.png")
+                    }
+                }
+            }
+        }
+        
         self.questionLabel.fadeTransition(0.4)
         if let gift = self.travelChoices?.gift {
             if gift == true {
-                self.questionLabel.text = "Il/elle associe le mot voyage à.."
+                self.questionLabel.text = "Pendant le voyage, il/elle préfèrerait passer ses nuits"
             } else {
-                self.questionLabel.text = "Vous associez le mot voyage à.."
+                self.questionLabel.text = "Pendant le voyage, vous préfereriez passer vos nuits"
             }
         }
     }
@@ -55,7 +92,132 @@ class Step4TravelCreationViewController: UIViewController {
             button.backgroundColor = (button === sender) ? UIColor.MainTheme.mainDarkBlue : .white
             button.setTitleColor((button === sender) ? .white : UIColor.MainTheme.mainDarkBlue, for: .normal)
         }
-        sleepPlace = sender.tag
+        r3 = sender.tag
+        
+        if let firstRep = travelChoices?.q1 {
+            if let prevRep = travelChoices?.q2 {
+                print(firstRep, prevRep)
+                switch firstRep {
+                case 1:
+                    switch prevRep {
+                    case 1:
+                        switch r3 {
+                        case 1:
+                            finalPoloImage = "R2.2+R3.2+R4.2.png"
+                            poloImage.image = UIImage(named: "R2.2+R3.2+R4.2.png")
+                        case 2:
+                            finalPoloImage = "R2.2+R3.2+R4.3.png"
+                            poloImage.image = UIImage(named: "R2.2+R3.2+R4.3.png")
+                        default:
+                            finalPoloImage = "R2.2+R3.2+R4.1.png"
+                            poloImage.image = UIImage(named: "R2.2+R3.2+R4.1.png")
+                        }
+                    case 2:
+                        switch r3 {
+                        case 1:
+                            finalPoloImage = "R2.2+R3.3+R4.2.png"
+                            poloImage.image = UIImage(named: "R2.2+R3.3+R4.2.png")
+                        case 2:
+                            finalPoloImage = "R2.2+R3.3+R4.3.png"
+                            poloImage.image = UIImage(named: "R2.2+R3.3+R4.3.png")
+                        default:
+                            finalPoloImage = "R2.2+R3.3+R4.1.png"
+                            poloImage.image = UIImage(named: "R2.2+R3.3+R4.1.png")
+                        }
+                    default:
+                        switch r3 {
+                        case 1:
+                            finalPoloImage = "R2.2+R3.1+R4.2.png"
+                            poloImage.image = UIImage(named: "R2.2+R3.1+R4.2.png")
+                        case 2:
+                            finalPoloImage = "R2.2+R3.1+R4.3.png"
+                            poloImage.image = UIImage(named: "R2.2+R3.1+R4.3.png")
+                        default:
+                            finalPoloImage = "R2.2+R3.1+R4.1.png"
+                            poloImage.image = UIImage(named: "R2.2+R3.1+R4.1.png")
+                        }
+                    }
+                case 2:
+                    switch prevRep {
+                    case 1:
+                        switch r3 {
+                        case 1:
+                            finalPoloImage = "R2.3+R3.2+R4.2.png"
+                            poloImage.image = UIImage(named: "R2.3+R3.2+R4.2.png")
+                        case 2:
+                            finalPoloImage = "R2.3+R3.2+R4.3.png"
+                            poloImage.image = UIImage(named: "R2.3+R3.2+R4.3.png")
+                        default:
+                            finalPoloImage = "R2.3+R3.2+R4.1.png"
+                            poloImage.image = UIImage(named: "R2.3+R3.2+R4.1.png")
+                        }
+                    case 2:
+                        switch r3 {
+                        case 1:
+                            finalPoloImage = "R2.3+R3.3+R4.2.png"
+                            poloImage.image = UIImage(named: "R2.3+R3.3+R4.2.png")
+                        case 2:
+                            finalPoloImage = "R2.3+R3.3+R4.3.png"
+                            poloImage.image = UIImage(named: "R2.3+R3.3+R4.3.png")
+                        default:
+                            finalPoloImage = "R2.3+R3.3+R4.1.png"
+                            poloImage.image = UIImage(named: "R2.3+R3.3+R4.1.png")
+                        }
+                    default:
+                        switch r3 {
+                        case 1:
+                            finalPoloImage = "R2.3+R3.1+R4.2.png"
+                            poloImage.image = UIImage(named: "R2.3+R3.1+R4.2.png")
+                        case 2:
+                            finalPoloImage = "R2.3+R3.1+R4.3.png"
+                            poloImage.image = UIImage(named: "R2.3+R3.1+R4.3.png")
+                        default:
+                            finalPoloImage = "R2.3+R3.1+R4.1.png"
+                            poloImage.image = UIImage(named: "R2.3+R3.1+R4.1.png")
+                        }
+                    }
+                default:
+                    switch prevRep {
+                    case 1:
+                        switch r3 {
+                        case 1:
+                            finalPoloImage = "R2.1+R3.2+R4.2.png"
+                            poloImage.image = UIImage(named: "R2.1+R3.2+R4.2.png")
+                        case 2:
+                            finalPoloImage = "R2.1+R3.2+R4.3.png"
+                            poloImage.image = UIImage(named: "R2.1+R3.2+R4.3.png")
+                        default:
+                            finalPoloImage = "R2.1+R3.2+R4.1.png"
+                            poloImage.image = UIImage(named: "R2.1+R3.2+R4.1.png")
+                        }
+                    case 2:
+                        switch r3 {
+                        case 1:
+                            finalPoloImage = "R2.1+R3.3+R4.2.png"
+                            poloImage.image = UIImage(named: "R2.1+R3.3+R4.2.png")
+                        case 2:
+                            finalPoloImage = "R2.1+R3.3+R4.3.png"
+                            poloImage.image = UIImage(named: "R2.1+R3.3+R4.3.png")
+                        default:
+                            finalPoloImage = "R2.1+R3.3+R4.1.png"
+                            poloImage.image = UIImage(named: "R2.1+R3.3+R4.1.png")
+                        }
+                    default:
+                        switch r3 {
+                        case 1:
+                            finalPoloImage = "R2.1+R3.1+R4.2.png"
+                            poloImage.image = UIImage(named: "R2.1+R3.1+R4.2.png")
+                        case 2:
+                            finalPoloImage = "R2.1+R3.1+R4.3.png"
+                            poloImage.image = UIImage(named: "R2.1+R3.1+R4.3.png")
+                        default:
+                            finalPoloImage = "R2.1+R3.1+R4.1.png"
+                            poloImage.image = UIImage(named: "R2.1+R3.1+R4.1.png")
+                        }
+                    }
+                }
+            }
+        }
         if (nextButton.isEnabled == false) {
             nextButton.isEnabled = true
         }
@@ -64,13 +226,13 @@ class Step4TravelCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStep5" {
             if let dest = segue.destination as? Step5TravelCreationViewController {
-                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, danger:travelChoices?.danger, forestLosted: travelChoices?.forestLosted, sleepPlace: sleepPlace)
+                dest.travelChoices = TravelChoices(gift: travelChoices?.gift, nbPeople: travelChoices?.nbPeople, q1:travelChoices?.q1, q2: travelChoices?.q2, q3: r3, finalPoloImage: finalPoloImage)
             }
         }
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
-        if sleepPlace != nil {
+        if r3 != nil {
             self.performSegue(withIdentifier: "toStep5", sender: nil)
         } else {
             print("Sélectionnez une réponse")
